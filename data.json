@@ -7,18 +7,18 @@
     "tagline": "World Cup Prediction Derby"
   },
   "meta": {
-    "updated_at": "2026-06-15 06:35 BJT",
-    "active_day": "2026-06-15",
+    "updated_at": "2026-06-15 07:20 BJT",
+    "active_day": "2026-06-15 / 2026-06-16",
     "timezone": "Asia/Beijing",
-    "version": "netherlands-japan-2-2-polished-sourcechecked-20260615-0635"
+    "version": "next-matches-sourcechecked-20260615-0720"
   },
   "score_summary": {
     "ray_total": 3,
     "gpt_total": 3,
-    "leader_comment": "Ray 与 GPT 5.5 回到 3:3 同一起跑线。Ray 的 3 分来自巴西 1:1 摩洛哥：Ray 预测巴西 2:2 摩洛哥，抓住“巴西拿不下摩洛哥”的方向；GPT 的 3 分来自荷兰 2:2 日本：GPT 预测 1:1，未命中具体比分，但押中平局方向。"
+    "leader_comment": "Ray 与 GPT 5.5 暂时 3:3 战平。Ray 的 3 分来自巴西 1:1 摩洛哥；GPT 的 3 分来自荷兰 2:2 日本，GPT 预测 1:1，押中平局方向但未命中具体比分。"
   },
-  "headline": "3:3！荷兰 2:2 日本，GPT 靠平局方向扳回一城。",
-  "brief": "德国 7:1 库拉索让双方都显得保守；荷兰 2:2 日本后，GPT 押中平局方向追成 3:3。下一场分歧：Ray 押科特迪瓦 1:0，GPT 押 1:1 厄瓜多尔。",
+  "headline": "总分 3:3：荷兰 2:2 日本后战局归零，F 组死亡之组正式成型。",
+  "brief": "今日剩余重点：科特迪瓦 vs 厄瓜多尔尚未结束；瑞典 vs 突尼斯决定 F 组第一轮格局。明日四场已提前录入：西班牙 vs 佛得角、比利时 vs 埃及、沙特 vs 乌拉圭、伊朗 vs 新西兰。",
   "tournament_picks": [
     {
       "name": "冠军",
@@ -131,7 +131,7 @@
         "瑞典",
         "日本"
       ],
-      "note": "最大分歧组之一：Ray 赛前押日本 2:0 荷兰，GPT 从荷兰 2:1 下调到 1:1。首战荷兰 2:2 日本后，GPT 押中平局方向追回 3 分；日本虽顽强，但久保建英伤退与三笘薰缺阵让后续进攻上限成为隐患。"
+      "note": "F 组已成死亡之组：荷兰 2:2 日本后，Ray 的“日本、瑞典、荷兰三队出线”判断更合理；GPT 仍保留荷兰、瑞典、日本三队出线，但承认荷兰并不稳，日本受久保伤情影响，瑞典首战极关键。"
     },
     {
       "group": "G",
@@ -145,7 +145,7 @@
         "伊朗",
         "埃及"
       ],
-      "note": "双方一致看低新西兰，认为伊朗硬度和效率占优。"
+      "note": "双方都看低新西兰，认为伊朗硬度和效率占优；Ray 对比利时首战更谨慎，押比利时 1:1 埃及，GPT 仍看比利时小胜。"
     },
     {
       "group": "H",
@@ -158,7 +158,7 @@
         "西班牙",
         "乌拉圭"
       ],
-      "note": "Ray 认为沙特可能以 4 分第三晋级；GPT 原未给沙特。"
+      "note": "Ray 认为沙特可能以 4 分第三晋级，并在首战押 0:0 乌拉圭；GPT 原本只给西班牙、乌拉圭出线，首战仍看乌拉圭小胜但已收缩比分。"
     },
     {
       "group": "I",
@@ -277,7 +277,7 @@
       "home": "科特迪瓦",
       "away": "厄瓜多尔",
       "group": "E",
-      "status": "未开赛",
+      "status": "进行中 / 待赛果确认",
       "ray_prediction": {
         "home_score": 1,
         "away_score": 0,
@@ -292,7 +292,99 @@
         "home_score": null,
         "away_score": null
       },
-      "review": "身体派 vs 南美技术派，是今天第二个分歧点。"
+      "review": "科特迪瓦 vs 厄瓜多尔尚未结束。Ray 押科特迪瓦 1:0，GPT 押 1:1；这是身体冲击与南美纪律性的直接对抗。"
+    },
+    {
+      "id": "swe-tun-20260615",
+      "kickoff_local": "06-15 10:00 BJT",
+      "home": "瑞典",
+      "away": "突尼斯",
+      "group": "F",
+      "status": "未开赛",
+      "ray_prediction": {
+        "home_score": 2,
+        "away_score": 0,
+        "reason": "Ray 认为 F 组现在是真正的死亡之组，但瑞典身体、定位球和双中锋冲击力更强，首战应能 2:0 拿下突尼斯。"
+      },
+      "gpt_prediction": {
+        "home_score": 1,
+        "away_score": 0,
+        "reason": "GPT 仍按原小组判断看好瑞典出线，但考虑突尼斯防守韧性和保守打法，不敢押大胜，预测瑞典 1:0。"
+      },
+      "actual_score": {
+        "home_score": null,
+        "away_score": null
+      },
+      "review": "F 组第二场。荷兰 2:2 日本后，瑞典若取胜将立刻掌握主动；突尼斯若守出平局，F 组将彻底进入死亡之组模式。"
+    },
+    {
+      "id": "esp-cpv-20260616",
+      "kickoff_local": "06-16 00:00 BJT",
+      "home": "西班牙",
+      "away": "佛得角",
+      "group": "H",
+      "status": "未开赛",
+      "ray_prediction": {
+        "home_score": 4,
+        "away_score": 0,
+        "reason": "Ray 押西班牙 4:0 佛得角。佛得角（Cape Verde / Cabo Verde）是本届新军，Ray 认为西班牙若正常发挥，技术和压迫优势会非常明显。"
+      },
+      "gpt_prediction": {
+        "home_score": 3,
+        "away_score": 0,
+        "reason": "GPT 原本预测西班牙 3:0 佛得角，仍看好西班牙稳拿三分；但考虑小组赛首战不一定全力冲净胜球，保留 3:0。"
+      },
+      "actual_score": {
+        "home_score": null,
+        "away_score": null
+      },
+      "review": "佛得角即 Cape Verde / Cabo Verde，中文通常译为“佛得角”。本场双方都看好西班牙，差异主要在净胜球。"
+    },
+    {
+      "id": "bel-egy-20260616",
+      "kickoff_local": "06-16 03:00 BJT",
+      "home": "比利时",
+      "away": "埃及",
+      "group": "G",
+      "status": "未开赛",
+      "ray_prediction": {
+        "home_score": 1,
+        "away_score": 1,
+        "reason": "Ray 担心比利时黄金一代老去，首战可能翻车；埃及有萨拉赫，防守和反击都能制造麻烦，预测 1:1。"
+      },
+      "gpt_prediction": {
+        "home_score": 2,
+        "away_score": 1,
+        "reason": "GPT 原本看好比利时小组第一，不能把判断改得过离谱；但承认埃及会制造压力，预测比利时 2:1 险胜。"
+      },
+      "actual_score": {
+        "home_score": null,
+        "away_score": null
+      },
+      "review": "G 组第一场硬仗。Ray 押比利时翻车平局，GPT 保持比利时取胜但下调为小胜。"
+    },
+    {
+      "id": "ksa-uru-20260616",
+      "kickoff_local": "06-16 06:00 BJT",
+      "home": "沙特",
+      "away": "乌拉圭",
+      "group": "H",
+      "status": "未开赛",
+      "ray_prediction": {
+        "home_score": 0,
+        "away_score": 0,
+        "reason": "Ray 认为乌拉圭未必能顺利拿下沙特，沙特如果延续高位逼抢和纪律性，可能守出 0:0。"
+      },
+      "gpt_prediction": {
+        "home_score": 0,
+        "away_score": 1,
+        "reason": "GPT 原本预测沙特 0:2 乌拉圭，但考虑乌拉圭赛前旅行/落地风波和沙特主动求战，将比分收缩为乌拉圭 1:0 小胜。"
+      },
+      "actual_score": {
+        "home_score": null,
+        "away_score": null
+      },
+      "review": "Ray 押沙特守平；GPT 仍坚持乌拉圭取胜，以保持原小组出线判断，但承认这场可能比纸面实力更难。"
     },
     {
       "id": "iri-nzl-20260616",
@@ -304,18 +396,18 @@
       "ray_prediction": {
         "home_score": 2,
         "away_score": 0,
-        "reason": "Ray 在新西兰生活十年，认为新西兰足球水平有限，肯定打不过伊朗。"
+        "reason": "Ray 在新西兰生活十年，认为新西兰足球水平有限，肯定打不过伊朗；本场预测保持不变，伊朗 2:0。"
       },
       "gpt_prediction": {
         "home_score": 2,
         "away_score": 0,
-        "reason": "GPT 同意伊朗硬度、定位球和门前效率明显高于新西兰。"
+        "reason": "GPT 同意伊朗硬度、定位球和门前效率明显高于新西兰，保持伊朗 2:0。"
       },
       "actual_score": {
         "home_score": null,
         "away_score": null
       },
-      "review": "双方意见一致，本场除非爆冷，否则不产生积分差。"
+      "review": "这场原先被提前放入今日赛程，现已校正为 06-16 09:00 BJT。双方意见一致，除非爆冷，否则不产生积分差。"
     }
   ],
   "matchdays": [
@@ -573,8 +665,8 @@
     },
     {
       "date": "2026-06-15",
-      "title": "德国 7:1 火力全开，荷兰 2:2 日本让 GPT 扳平",
-      "summary": "德国大胜库拉索，双方都押对德国胜但比分保守，不计分。荷兰 2:2 日本一战，Ray 预测日本 2:0，GPT 预测 1:1；最终 GPT 押中平局方向拿到 3 分，总比分变成 3:3。",
+      "title": "德国大胜、荷日打平，F 组死亡之组继续开火",
+      "summary": "德国 7:1 库拉索、荷兰 2:2 日本已经完成。科特迪瓦 vs 厄瓜多尔尚待赛果确认；瑞典 vs 突尼斯将决定 F 组首轮是否彻底混战。",
       "ray_points": 0,
       "gpt_points": 3,
       "matches": [
@@ -583,6 +675,7 @@
           "kickoff_local": "06-15 01:00 BJT",
           "home": "德国",
           "away": "库拉索",
+          "group": "E",
           "status": "已结束",
           "ray_prediction": {
             "home_score": 3,
@@ -598,11 +691,11 @@
             "home_score": 7,
             "away_score": 1
           },
-          "review": "德国 7:1 库拉索，双方都猜对德国取胜，但都低估了德国的大比分能力。哈弗茨梅开二度，德国还由恩梅查、施洛特贝克、穆西亚拉、内森·布朗、昂达夫等人打开进球账户；库拉索也由 Comenencia 打进队史世界杯首球。这场不改变积分，因为双方预测一致。赛后新增观察点：哈弗茨作为德国单箭头，若持续分享德国的进球盛宴，可能成为金靴竞争里的漏看变量；但双方赛前金靴预测不再修改。",
+          "review": "德国 7:1 大胜库拉索，双方原本都预测德国 3:0，方向一致但比分明显保守。这场不影响 Ray 3:0 的领先格局；真正值得记录的是德国单箭头体系和大比分属性。哈弗茨如果持续吃到这种德国前场火力，确实会进入金靴观察名单。",
           "manual_points": {
             "ray": 0,
             "gpt": 0,
-            "explanation": "双方预测完全相同，本场不计分。"
+            "explanation": "双方预测完全相同且都押德国胜，本场不产生竞争积分；比分都过于保守。"
           }
         },
         {
@@ -632,6 +725,153 @@
             "gpt": 3,
             "explanation": "Ray 预测日本 2:0，胜平负方向错误；GPT 预测 1:1，押中平局方向但没有命中比分，GPT +3。"
           }
+        },
+        {
+          "id": "civ-ecu-20260615",
+          "kickoff_local": "06-15 07:00 BJT",
+          "home": "科特迪瓦",
+          "away": "厄瓜多尔",
+          "group": "E",
+          "status": "进行中 / 待赛果确认",
+          "ray_prediction": {
+            "home_score": 1,
+            "away_score": 0,
+            "reason": "Ray 认为两队都有实力，但科特迪瓦身体更好，可能靠冲击和定位球 1:0 解决比赛。"
+          },
+          "gpt_prediction": {
+            "home_score": 1,
+            "away_score": 1,
+            "reason": "GPT 认为这是 E 组第二名关键战，厄瓜多尔技术和南美韧性会抵消科特迪瓦身体优势。"
+          },
+          "actual_score": {
+            "home_score": null,
+            "away_score": null
+          },
+          "review": "科特迪瓦 vs 厄瓜多尔尚未结束。Ray 押科特迪瓦 1:0，GPT 押 1:1；这是身体冲击与南美纪律性的直接对抗。"
+        },
+        {
+          "id": "swe-tun-20260615",
+          "kickoff_local": "06-15 10:00 BJT",
+          "home": "瑞典",
+          "away": "突尼斯",
+          "group": "F",
+          "status": "未开赛",
+          "ray_prediction": {
+            "home_score": 2,
+            "away_score": 0,
+            "reason": "Ray 认为 F 组现在是真正的死亡之组，但瑞典身体、定位球和双中锋冲击力更强，首战应能 2:0 拿下突尼斯。"
+          },
+          "gpt_prediction": {
+            "home_score": 1,
+            "away_score": 0,
+            "reason": "GPT 仍按原小组判断看好瑞典出线，但考虑突尼斯防守韧性和保守打法，不敢押大胜，预测瑞典 1:0。"
+          },
+          "actual_score": {
+            "home_score": null,
+            "away_score": null
+          },
+          "review": "F 组第二场。荷兰 2:2 日本后，瑞典若取胜将立刻掌握主动；突尼斯若守出平局，F 组将彻底进入死亡之组模式。"
+        }
+      ]
+    },
+    {
+      "date": "2026-06-16",
+      "title": "明日四场提前预测：西班牙开局、比利时防翻、乌拉圭遇沙特、伊朗战新西兰",
+      "summary": "Ray 押西班牙大胜、比利时被埃及逼平、沙特守平乌拉圭、伊朗击败新西兰；GPT 保持原小组判断，看好西班牙、比利时、乌拉圭、伊朗取分，但比分上适当收缩。",
+      "ray_points": 0,
+      "gpt_points": 0,
+      "matches": [
+        {
+          "id": "esp-cpv-20260616",
+          "kickoff_local": "06-16 00:00 BJT",
+          "home": "西班牙",
+          "away": "佛得角",
+          "group": "H",
+          "status": "未开赛",
+          "ray_prediction": {
+            "home_score": 4,
+            "away_score": 0,
+            "reason": "Ray 押西班牙 4:0 佛得角。佛得角（Cape Verde / Cabo Verde）是本届新军，Ray 认为西班牙若正常发挥，技术和压迫优势会非常明显。"
+          },
+          "gpt_prediction": {
+            "home_score": 3,
+            "away_score": 0,
+            "reason": "GPT 原本预测西班牙 3:0 佛得角，仍看好西班牙稳拿三分；但考虑小组赛首战不一定全力冲净胜球，保留 3:0。"
+          },
+          "actual_score": {
+            "home_score": null,
+            "away_score": null
+          },
+          "review": "佛得角即 Cape Verde / Cabo Verde，中文通常译为“佛得角”。本场双方都看好西班牙，差异主要在净胜球。"
+        },
+        {
+          "id": "bel-egy-20260616",
+          "kickoff_local": "06-16 03:00 BJT",
+          "home": "比利时",
+          "away": "埃及",
+          "group": "G",
+          "status": "未开赛",
+          "ray_prediction": {
+            "home_score": 1,
+            "away_score": 1,
+            "reason": "Ray 担心比利时黄金一代老去，首战可能翻车；埃及有萨拉赫，防守和反击都能制造麻烦，预测 1:1。"
+          },
+          "gpt_prediction": {
+            "home_score": 2,
+            "away_score": 1,
+            "reason": "GPT 原本看好比利时小组第一，不能把判断改得过离谱；但承认埃及会制造压力，预测比利时 2:1 险胜。"
+          },
+          "actual_score": {
+            "home_score": null,
+            "away_score": null
+          },
+          "review": "G 组第一场硬仗。Ray 押比利时翻车平局，GPT 保持比利时取胜但下调为小胜。"
+        },
+        {
+          "id": "ksa-uru-20260616",
+          "kickoff_local": "06-16 06:00 BJT",
+          "home": "沙特",
+          "away": "乌拉圭",
+          "group": "H",
+          "status": "未开赛",
+          "ray_prediction": {
+            "home_score": 0,
+            "away_score": 0,
+            "reason": "Ray 认为乌拉圭未必能顺利拿下沙特，沙特如果延续高位逼抢和纪律性，可能守出 0:0。"
+          },
+          "gpt_prediction": {
+            "home_score": 0,
+            "away_score": 1,
+            "reason": "GPT 原本预测沙特 0:2 乌拉圭，但考虑乌拉圭赛前旅行/落地风波和沙特主动求战，将比分收缩为乌拉圭 1:0 小胜。"
+          },
+          "actual_score": {
+            "home_score": null,
+            "away_score": null
+          },
+          "review": "Ray 押沙特守平；GPT 仍坚持乌拉圭取胜，以保持原小组出线判断，但承认这场可能比纸面实力更难。"
+        },
+        {
+          "id": "iri-nzl-20260616",
+          "kickoff_local": "06-16 09:00 BJT",
+          "home": "伊朗",
+          "away": "新西兰",
+          "group": "G",
+          "status": "未开赛",
+          "ray_prediction": {
+            "home_score": 2,
+            "away_score": 0,
+            "reason": "Ray 在新西兰生活十年，认为新西兰足球水平有限，肯定打不过伊朗；本场预测保持不变，伊朗 2:0。"
+          },
+          "gpt_prediction": {
+            "home_score": 2,
+            "away_score": 0,
+            "reason": "GPT 同意伊朗硬度、定位球和门前效率明显高于新西兰，保持伊朗 2:0。"
+          },
+          "actual_score": {
+            "home_score": null,
+            "away_score": null
+          },
+          "review": "这场原先被提前放入今日赛程，现已校正为 06-16 09:00 BJT。双方意见一致，除非爆冷，否则不产生积分差。"
         }
       ]
     }
@@ -672,6 +912,10 @@
     {
       "time": "06-15 06:35",
       "text": "补充核对荷兰 2:2 日本赛报：范戴克、萨默维尔为荷兰进球，中村敬斗、镰田大地为日本扳平；GPT 只押中平局方向，不命中比分，GPT +3，总分 3:3。"
+    },
+    {
+      "time": "06-15 07:20",
+      "text": "校正赛程：新西兰一场改回 06-16 09:00 BJT；新增瑞典 2:0 突尼斯 vs GPT 瑞典 1:0；新增明日四场预测：Ray 押西班牙 4:0 佛得角、比利时 1:1 埃及、沙特 0:0 乌拉圭、伊朗 2:0 新西兰；GPT 预测西班牙 3:0、比利时 2:1、乌拉圭 1:0、伊朗 2:0。"
     }
   ],
   "archive": [
@@ -697,8 +941,13 @@
     },
     {
       "date": "2026-06-15",
-      "title": "德国 7:1；荷兰 2:2 日本，GPT 追平",
+      "title": "德国 7:1、荷兰 2:2 日本、瑞典突尼斯待战",
       "url": "#day-2026-06-15"
+    },
+    {
+      "date": "2026-06-16",
+      "title": "西班牙、比利时、乌拉圭、伊朗四场预测",
+      "url": "#day-2026-06-16"
     }
   ]
 }
