@@ -1,0 +1,630 @@
+{
+  "site": {
+    "title": "Ray大战GPT 5.5",
+    "subtitle": "在懂球帝的领域，人类是否还能捍卫最后的尊严？",
+    "status": "LIVE",
+    "refresh_seconds": 30,
+    "tagline": "World Cup Prediction Derby"
+  },
+  "meta": {
+    "updated_at": "2026-06-15 00:30 BJT",
+    "active_day": "2026-06-15",
+    "timezone": "Asia/Beijing",
+    "version": "beijing-cacheproof-title-one-line-20260615-0030"
+  },
+  "score_summary": {
+    "ray_total": 3,
+    "gpt_total": 0,
+    "leader_comment": "Ray 暂时 3:0 领先。关键得分来自巴西 1:1 摩洛哥：Ray 明确预测巴西 2:2 摩洛哥，抓住“巴西拿不下摩洛哥”的方向；GPT 预测巴西 2:1 小胜。"
+  },
+  "headline": "Ray 3:0 领先：巴西 1:1 摩洛哥后，人类对足球的理解先下一城。",
+  "brief": "今天最大分歧仍是荷兰 vs 日本：Ray 押日本 2:0，GPT 押 1:1。",
+  "tournament_picks": [
+    {
+      "name": "冠军",
+      "ray": "阿根廷",
+      "gpt": "法国",
+      "note": "Ray 押阿根廷的杯赛控制力；GPT 押法国阵容厚度。"
+    },
+    {
+      "name": "亚军",
+      "ray": "英格兰",
+      "gpt": "西班牙",
+      "note": "Ray 认为英格兰纸面很强但可能决赛输给阿根廷；GPT 看好西班牙整体性。"
+    },
+    {
+      "name": "金球",
+      "ray": "凯恩",
+      "gpt": "姆巴佩",
+      "note": "Ray 押英格兰进决赛后凯恩拿奖；GPT 押姆巴佩带法国走远。"
+    },
+    {
+      "name": "金靴",
+      "ray": "劳塔罗",
+      "gpt": "姆巴佩",
+      "note": "Ray 选择阿根廷锋线终结点；GPT 选择法国头号攻击手。"
+    },
+    {
+      "name": "金童",
+      "ray": "尼克·帕斯",
+      "gpt": "亚马尔",
+      "note": "Ray 押冷门价值；GPT 原押西班牙天才，但承认伤病是风险。"
+    }
+  ],
+  "group_qualifiers": [
+    {
+      "group": "A",
+      "ray": [
+        "墨西哥",
+        "韩国"
+      ],
+      "gpt": [
+        "韩国",
+        "墨西哥",
+        "捷克"
+      ],
+      "note": "Ray 认为墨西哥第一，捷克只有 3 分不晋级；GPT 原本给韩国第一并保留捷克第三晋级。"
+    },
+    {
+      "group": "B",
+      "ray": [
+        "瑞士",
+        "加拿大",
+        "波黑"
+      ],
+      "gpt": [
+        "瑞士",
+        "加拿大",
+        "波黑"
+      ],
+      "note": "瑞士被卡塔尔绝平后，B 组四队同 1 分，形势已重开。"
+    },
+    {
+      "group": "C",
+      "ray": [
+        "巴西",
+        "摩洛哥",
+        "苏格兰"
+      ],
+      "gpt": [
+        "巴西",
+        "摩洛哥"
+      ],
+      "note": "Ray 坚持苏格兰 4 分可出线；GPT 原先没有给苏格兰出线名额。巴西 1:1 摩洛哥、苏格兰 1:0 海地后，C 组确实被搅乱。"
+    },
+    {
+      "group": "D",
+      "ray": [
+        "美国",
+        "土耳其"
+      ],
+      "gpt": [
+        "美国",
+        "巴拉圭",
+        "土耳其"
+      ],
+      "note": "出线权保留原始押注：Ray 原本看美国、土耳其出线，认为巴拉圭三平 3 分不晋级；GPT 原本看美国、巴拉圭、土耳其出线。首轮美国 4:1 巴拉圭、澳大利亚 2:0 土耳其后，双方都承认 D 组判断错了，但不临场修改出线预测。"
+    },
+    {
+      "group": "E",
+      "ray": [
+        "德国",
+        "科特迪瓦",
+        "厄瓜多尔"
+      ],
+      "gpt": [
+        "德国",
+        "厄瓜多尔",
+        "科特迪瓦"
+      ],
+      "note": "Ray 更看好科特迪瓦身体优势；GPT 倾向厄瓜多尔韧性，当前预测这场 1:1。"
+    },
+    {
+      "group": "F",
+      "ray": [
+        "日本",
+        "瑞典",
+        "荷兰"
+      ],
+      "gpt": [
+        "荷兰",
+        "瑞典",
+        "日本"
+      ],
+      "note": "最大分歧组：Ray 押日本 2:0 荷兰，GPT 从荷兰 2:1 下调到 1:1。"
+    },
+    {
+      "group": "G",
+      "ray": [
+        "比利时",
+        "伊朗",
+        "埃及"
+      ],
+      "gpt": [
+        "比利时",
+        "伊朗",
+        "埃及"
+      ],
+      "note": "双方一致看低新西兰，认为伊朗硬度和效率占优。"
+    },
+    {
+      "group": "H",
+      "ray": [
+        "西班牙",
+        "乌拉圭",
+        "沙特"
+      ],
+      "gpt": [
+        "西班牙",
+        "乌拉圭"
+      ],
+      "note": "Ray 认为沙特可能以 4 分第三晋级；GPT 原未给沙特。"
+    },
+    {
+      "group": "I",
+      "ray": [
+        "法国",
+        "挪威"
+      ],
+      "gpt": [
+        "法国",
+        "挪威",
+        "塞内加尔"
+      ],
+      "note": "Ray 认为塞内加尔 3 分不够；GPT 原给塞内加尔第三晋级。"
+    },
+    {
+      "group": "J",
+      "ray": [
+        "阿根廷",
+        "奥地利",
+        "阿尔及利亚"
+      ],
+      "gpt": [
+        "阿根廷",
+        "奥地利",
+        "阿尔及利亚"
+      ],
+      "note": "双方基本无异议。"
+    },
+    {
+      "group": "K",
+      "ray": [
+        "葡萄牙",
+        "哥伦比亚"
+      ],
+      "gpt": [
+        "葡萄牙",
+        "哥伦比亚",
+        "刚果（金）"
+      ],
+      "note": "Ray 认为刚果 3 分不晋级；GPT 原给刚果第三晋级。"
+    },
+    {
+      "group": "L",
+      "ray": [
+        "英格兰",
+        "克罗地亚",
+        "加纳"
+      ],
+      "gpt": [
+        "英格兰",
+        "克罗地亚"
+      ],
+      "note": "Ray 更看好加纳作为第三名晋级。"
+    }
+  ],
+  "today_matches": [
+    {
+      "id": "ger-cuw-20260615",
+      "kickoff_local": "06-15 01:00 BJT",
+      "home": "德国",
+      "away": "库拉索",
+      "group": "E",
+      "status": "未开赛",
+      "ray_prediction": {
+        "home_score": 3,
+        "away_score": 0,
+        "reason": "德国赢库拉索应该没问题；Ray 认为库拉索实力有限，和国足差不多档次。"
+      },
+      "gpt_prediction": {
+        "home_score": 3,
+        "away_score": 0,
+        "reason": "GPT 同意德国稳胜，但认为库拉索有荷兰体系背景，比分不宜夸张。"
+      },
+      "actual_score": {
+        "home_score": null,
+        "away_score": null
+      },
+      "review": ""
+    },
+    {
+      "id": "ned-jpn-20260615",
+      "kickoff_local": "06-15 04:00 BJT",
+      "home": "荷兰",
+      "away": "日本",
+      "group": "F",
+      "status": "未开赛",
+      "ray_prediction": {
+        "home_score": 0,
+        "away_score": 2,
+        "reason": "Ray 认为日本成熟度、逼抢和转换效率足以击败荷兰，预测日本 2:0。"
+      },
+      "gpt_prediction": {
+        "home_score": 1,
+        "away_score": 1,
+        "reason": "GPT 原本预测荷兰 2:1，赛前被 Ray 说动后下调为 1:1，仍不敢押日本 2:0 干净赢球。"
+      },
+      "actual_score": {
+        "home_score": null,
+        "away_score": null
+      },
+      "review": "今日最大分歧。若日本赢，Ray 将继续扩大领先；若荷兰不输，GPT 至少追回判断层面的颜面。"
+    },
+    {
+      "id": "civ-ecu-20260615",
+      "kickoff_local": "06-15 07:00 BJT",
+      "home": "科特迪瓦",
+      "away": "厄瓜多尔",
+      "group": "E",
+      "status": "未开赛",
+      "ray_prediction": {
+        "home_score": 1,
+        "away_score": 0,
+        "reason": "Ray 认为两队都有实力，但科特迪瓦身体更好，可能靠冲击和定位球 1:0 解决比赛。"
+      },
+      "gpt_prediction": {
+        "home_score": 1,
+        "away_score": 1,
+        "reason": "GPT 认为这是 E 组第二名关键战，厄瓜多尔技术和南美韧性会抵消科特迪瓦身体优势。"
+      },
+      "actual_score": {
+        "home_score": null,
+        "away_score": null
+      },
+      "review": "身体派 vs 南美技术派，是今天第二个分歧点。"
+    },
+    {
+      "id": "iri-nzl-20260616",
+      "kickoff_local": "06-16 09:00 BJT",
+      "home": "伊朗",
+      "away": "新西兰",
+      "group": "G",
+      "status": "未开赛",
+      "ray_prediction": {
+        "home_score": 2,
+        "away_score": 0,
+        "reason": "Ray 在新西兰生活十年，认为新西兰足球水平有限，肯定打不过伊朗。"
+      },
+      "gpt_prediction": {
+        "home_score": 2,
+        "away_score": 0,
+        "reason": "GPT 同意伊朗硬度、定位球和门前效率明显高于新西兰。"
+      },
+      "actual_score": {
+        "home_score": null,
+        "away_score": null
+      },
+      "review": "双方意见一致，本场除非爆冷，否则不产生积分差。"
+    }
+  ],
+  "matchdays": [
+    {
+      "date": "2026-06-11",
+      "title": "开幕校准：墨西哥与韩国先赢",
+      "summary": "这两场发生在双方正式开始竞猜前，作为赛程和积分背景记录。",
+      "ray_points": 0,
+      "gpt_points": 0,
+      "matches": [
+        {
+          "id": "mex-rsa-20260611",
+          "kickoff_local": "06-12 03:00 BJT",
+          "home": "墨西哥",
+          "away": "南非",
+          "status": "已结束",
+          "ray_prediction": {
+            "home_score": null,
+            "away_score": null,
+            "reason": "未参与赛前竞猜。"
+          },
+          "gpt_prediction": {
+            "home_score": null,
+            "away_score": null,
+            "reason": "未参与赛前竞猜。"
+          },
+          "actual_score": {
+            "home_score": 2,
+            "away_score": 0
+          },
+          "review": "墨西哥首战 2:0 稳拿三分，后续 Ray 判断墨西哥更可能拿 A 组第一。",
+          "manual_points": {
+            "ray": 0,
+            "gpt": 0,
+            "explanation": "本场不纳入双方竞猜。"
+          }
+        },
+        {
+          "id": "kor-cze-20260611",
+          "kickoff_local": "06-12 10:00 BJT",
+          "home": "韩国",
+          "away": "捷克",
+          "status": "已结束",
+          "ray_prediction": {
+            "home_score": null,
+            "away_score": null,
+            "reason": "未参与赛前竞猜。"
+          },
+          "gpt_prediction": {
+            "home_score": null,
+            "away_score": null,
+            "reason": "未参与赛前竞猜。"
+          },
+          "actual_score": {
+            "home_score": 2,
+            "away_score": 1
+          },
+          "review": "韩国 2:1 捷克，A 组从第一轮起就形成墨西哥、韩国双领跑。",
+          "manual_points": {
+            "ray": 0,
+            "gpt": 0,
+            "explanation": "本场不纳入双方竞猜。"
+          }
+        }
+      ]
+    },
+    {
+      "date": "2026-06-12",
+      "title": "美国 4:1 打花巴拉圭，D 组模型崩盘",
+      "summary": "美国的大胜让双方都必须重估 D 组。Ray 与 GPT 都高估了巴拉圭的防守韧性。",
+      "ray_points": 0,
+      "gpt_points": 0,
+      "matches": [
+        {
+          "id": "can-bih-20260612",
+          "kickoff_local": "06-13 03:00 BJT",
+          "home": "加拿大",
+          "away": "波黑",
+          "status": "已结束",
+          "ray_prediction": {
+            "home_score": null,
+            "away_score": null,
+            "reason": "Ray 主要给出小组判断：B 组无太大争议，但波黑 4 分可晋级。"
+          },
+          "gpt_prediction": {
+            "home_score": 1,
+            "away_score": 1,
+            "reason": "GPT 赛前预测加拿大 1:1 波黑。"
+          },
+          "actual_score": {
+            "home_score": 1,
+            "away_score": 1
+          },
+          "review": "加拿大 1:1 波黑。由于双方没有形成明确对抗预测，本场不计入当前 3:0 积分。",
+          "manual_points": {
+            "ray": 0,
+            "gpt": 0,
+            "explanation": "本场按双方约定暂不计分。"
+          }
+        },
+        {
+          "id": "usa-par-20260612",
+          "kickoff_local": "06-13 09:00 BJT",
+          "home": "美国",
+          "away": "巴拉圭",
+          "status": "已结束",
+          "ray_prediction": {
+            "home_score": null,
+            "away_score": null,
+            "reason": "Ray 原判断巴拉圭可能三场平局、3 分第三但不晋级。"
+          },
+          "gpt_prediction": {
+            "home_score": 1,
+            "away_score": 1,
+            "reason": "GPT 预测美国 1:1 巴拉圭，高估了巴拉圭防守稳定性。"
+          },
+          "actual_score": {
+            "home_score": 4,
+            "away_score": 1
+          },
+          "review": "美国 4:1 大胜，直接打穿双方对 D 组的初始判断。赛后双方都认为美国有望冲击八强。",
+          "manual_points": {
+            "ray": 0,
+            "gpt": 0,
+            "explanation": "双方都严重低估美国，本场不计分。"
+          }
+        }
+      ]
+    },
+    {
+      "date": "2026-06-13",
+      "title": "瑞士翻车，巴西被摩洛哥压住，Ray 先拿 3 分",
+      "summary": "瑞士围攻不下被卡塔尔补时绝平；巴西 1:1 摩洛哥一战，Ray 赛前预测 2:2，抓住巴西无法取胜的方向，正式取得 3:0 领先。",
+      "ray_points": 3,
+      "gpt_points": 0,
+      "matches": [
+        {
+          "id": "qat-sui-20260613",
+          "kickoff_local": "06-14 03:00 BJT",
+          "home": "卡塔尔",
+          "away": "瑞士",
+          "status": "已结束",
+          "ray_prediction": {
+            "home_score": null,
+            "away_score": null,
+            "reason": "Ray 与 GPT 都认为瑞士应当拿下卡塔尔。"
+          },
+          "gpt_prediction": {
+            "home_score": 0,
+            "away_score": 2,
+            "reason": "GPT 预测卡塔尔 0:2 瑞士。"
+          },
+          "actual_score": {
+            "home_score": 1,
+            "away_score": 1
+          },
+          "review": "瑞士猛攻全场但把握不住机会，补时被卡塔尔绝平。双方都错。",
+          "manual_points": {
+            "ray": 0,
+            "gpt": 0,
+            "explanation": "双方都判断瑞士胜，本场不计分。"
+          }
+        },
+        {
+          "id": "bra-mar-20260613",
+          "kickoff_local": "06-14 06:00 BJT",
+          "home": "巴西",
+          "away": "摩洛哥",
+          "status": "已结束",
+          "ray_prediction": {
+            "home_score": 2,
+            "away_score": 2,
+            "reason": "Ray 明确预测巴西 2:2 摩洛哥，核心判断是巴西拿不下摩洛哥。"
+          },
+          "gpt_prediction": {
+            "home_score": 2,
+            "away_score": 1,
+            "reason": "GPT 认为巴西个人能力仍足以 2:1 小胜。"
+          },
+          "actual_score": {
+            "home_score": 1,
+            "away_score": 1
+          },
+          "review": "摩洛哥一对一成功率极高，巴西开场准备不足并出现大量失误。下半场巴西换人后有所起色，但整体上摩洛哥展现出更强的身体对抗和比赛成熟度。Ray 赛前预测巴西 2:2 摩洛哥，虽然没有命中具体比分，但押中平局方向与“巴西拿不下摩洛哥”的核心判断，拿下 3 分。",
+          "manual_points": {
+            "ray": 3,
+            "gpt": 0,
+            "explanation": "Ray 预测 2:2，猜对平局方向；GPT 预测巴西 2:1 小胜。Ray +3。"
+          }
+        },
+        {
+          "id": "hti-sco-20260613",
+          "kickoff_local": "06-14 09:00 BJT",
+          "home": "海地",
+          "away": "苏格兰",
+          "status": "已结束",
+          "ray_prediction": {
+            "home_score": 0,
+            "away_score": 1,
+            "reason": "Ray 认为苏格兰会拿下海地，并在后面再平一场，以 4 分第三晋级。"
+          },
+          "gpt_prediction": {
+            "home_score": 0,
+            "away_score": 1,
+            "reason": "GPT 也预测苏格兰 1:0 海地，但原先未把苏格兰列入最终晋级名单。"
+          },
+          "actual_score": {
+            "home_score": 0,
+            "away_score": 1
+          },
+          "review": "苏格兰 1:0 小胜，赢得不多但结果符合双方判断。由于双方本场预测一致，不计分。",
+          "manual_points": {
+            "ray": 0,
+            "gpt": 0,
+            "explanation": "双方预测一致，本场不计分。"
+          }
+        }
+      ]
+    },
+    {
+      "date": "2026-06-14",
+      "title": "澳大利亚 2:0 土耳其，D 组再次重写",
+      "summary": "澳大利亚 2:0 土耳其彻底打乱 D 组。Ray 与 GPT 原本都看好美国、土耳其的出线格局，现在必须承认这组判断出现重大偏差，但原始出线押注不改。",
+      "ray_points": 0,
+      "gpt_points": 0,
+      "matches": [
+        {
+          "id": "aus-tur-20260614",
+          "kickoff_local": "06-14 12:00 BJT",
+          "home": "澳大利亚",
+          "away": "土耳其",
+          "status": "已结束",
+          "ray_prediction": {
+            "home_score": null,
+            "away_score": null,
+            "reason": "Ray 与 GPT 看法类似，原本认为美国、土耳其更可能出线。"
+          },
+          "gpt_prediction": {
+            "home_score": 0,
+            "away_score": 2,
+            "reason": "GPT 预测澳大利亚 0:2 土耳其，结果完全反了。"
+          },
+          "actual_score": {
+            "home_score": 2,
+            "away_score": 0
+          },
+          "review": "澳大利亚 2:0 土耳其，令 D 组形势大变。美国、澳大利亚暂居前二，土耳其与巴拉圭被迫死磕。",
+          "manual_points": {
+            "ray": 0,
+            "gpt": 0,
+            "explanation": "双方都高估土耳其，本场不计分；GPT 判断方向完全相反。"
+          }
+        }
+      ]
+    },
+    {
+      "date": "2026-06-15",
+      "title": "今日重点：日本能否 2:0 荷兰？",
+      "summary": "德国 vs 库拉索双方基本一致；日本 vs 荷兰与科特迪瓦 vs 厄瓜多尔是今日主要分歧。伊朗 vs 新西兰作为下一轮重点一并录入。",
+      "ray_points": 0,
+      "gpt_points": 0,
+      "matches": []
+    }
+  ],
+  "update_log": [
+    {
+      "time": "06-12",
+      "text": "正式开始记录 Ray 与 GPT 5.5 的世界杯竞猜。"
+    },
+    {
+      "time": "06-13",
+      "text": "美国 4:1 巴拉圭，双方都严重低估美国；D 组预测需要重估。"
+    },
+    {
+      "time": "06-14 04:00",
+      "text": "瑞士 1:1 卡塔尔，瑞士围攻不下被补时绝平，双方都错。"
+    },
+    {
+      "time": "06-14 07:00",
+      "text": "巴西 1:1 摩洛哥，Ray 押中巴西无法取胜，Ray +3。"
+    },
+    {
+      "time": "06-14 10:00",
+      "text": "苏格兰 1:0 海地，双方方向一致，不计分；Ray 的苏格兰 4 分出线路线继续存活。"
+    },
+    {
+      "time": "06-14 13:00",
+      "text": "澳大利亚 2:0 土耳其，D 组再度爆冷，澳大利亚出线概率大增。"
+    },
+    {
+      "time": "06-15 01:00",
+      "text": "录入今日预测：德国 3:0 库拉索；Ray 押日本 2:0 荷兰，GPT 押 1:1；Ray 押科特迪瓦 1:0 厄瓜多尔，GPT 押 1:1；双方同押伊朗 2:0 新西兰。"
+    }
+  ],
+  "archive": [
+    {
+      "date": "2026-06-11",
+      "title": "开幕校准：墨西哥与韩国取胜",
+      "url": "#day-2026-06-11"
+    },
+    {
+      "date": "2026-06-12",
+      "title": "美国 4:1 巴拉圭，双方都错",
+      "url": "#day-2026-06-12"
+    },
+    {
+      "date": "2026-06-13",
+      "title": "巴西 1:1 摩洛哥，Ray +3",
+      "url": "#day-2026-06-13"
+    },
+    {
+      "date": "2026-06-14",
+      "title": "澳大利亚 2:0 土耳其，D 组重写",
+      "url": "#day-2026-06-14"
+    },
+    {
+      "date": "2026-06-15",
+      "title": "今日预测：日本挑战荷兰",
+      "url": "#day-2026-06-15"
+    }
+  ]
+}
