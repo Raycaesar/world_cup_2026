@@ -8,7 +8,7 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Black+Ops+One&family=Bebas+Neue&family=Rajdhani:wght@500;600;700&family=Noto+Sans+SC:wght@400;500;700;900&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="style.css?v=clean-review-20260615-0105" />
+  <link rel="stylesheet" href="style.css?v=beijing-fix-20260615-0030" />
 </head>
 <body>
   <div class="stadium-light light-left" aria-hidden="true"></div>
@@ -70,6 +70,14 @@
       <div><span class="meta-label">最后更新</span><strong id="updatedAt">—</strong></div>
       <div><span class="meta-label">自动刷新</span><strong id="refreshInfo">—</strong></div>
     </div>
+
+    <section class="live-ticker" aria-label="实时比分条">
+      <div class="live-ticker-inner">
+        <span class="live-ticker-label"><span class="pulse"></span> LIVE SCORES</span>
+        <div class="live-ticker-track" id="liveTickerTrack">正在读取实时比分……</div>
+      </div>
+    </section>
+
   </header>
 
   <main class="layout">
@@ -145,7 +153,7 @@
           <div class="section-kicker">Post-match review</div>
           <h2>已结束比赛复盘</h2>
         </div>
-        <span class="badge">近五日一栏</span>
+        <span class="badge">点击展开</span>
       </div>
       <div id="reviewList" class="review-list"></div>
     </section>
@@ -165,7 +173,7 @@
         <li>小组赛晋级名单：任何晋级球队若一方猜中但另一方未猜中，猜中方得 3 分。</li>
         <li>亚军、金靴、金童、金球奖猜中方得 5 分；冠军猜中方得 10 分。</li>
       </ol>
-  
+      
     </section>
 
     <section class="panel" id="updates">
@@ -180,14 +188,14 @@
   </main>
 
   <footer class="footer">
-    <p>Ray 大战 GPT 5.5 ·  <code>json</code> 可更新页面 · 静态部署友好。</p>
+    <p>Ray 大战 GPT 5.5 · 修改 <code>data.json</code> 即可更新页面 · 静态部署友好。</p>
   </footer>
 
   <template id="emptyTemplate"><p class="empty">暂无内容。</p></template>
 
   <script>
     const FALLBACK_DATA = {
-      site: { title: "Ray大战GPT 5.5", subtitle: "在懂球帝的领域，人类是否还能捍卫最后的尊严？", status: "LIVE", refresh_seconds: 30, tagline: "World Cup Prediction Derby" },
+      site: { title: "Ray大战GPT 5.5", subtitle: "在懂球帝的领域，人类是否还能捍卫最后的尊严。", status: "LIVE", refresh_seconds: 30, tagline: "World Cup Prediction Derby" },
       meta: { updated_at: "—", active_day: "—", timezone: "Asia/Beijing" },
       headline: "等待今日预测。",
       brief: "请检查 data.json 是否存在。",
@@ -412,44 +420,27 @@
         })
       })).filter(day => day.matches.length);
       if (!finishedDays.length) return review.appendChild(create("p", "empty", "暂无已完成比赛。"));
-
-      const groupDays = finishedDays.slice(-5);
-      const firstDate = groupDays[0]?.date || "";
-      const lastDate = groupDays[groupDays.length - 1]?.date || "";
-      const totalRay = groupDays.reduce((sum, day) => sum + Number(day.ray_points || 0), 0);
-      const totalGpt = groupDays.reduce((sum, day) => sum + Number(day.gpt_points || 0), 0);
-
-      const details = create("details", "review-day review-group");
-      details.open = true;
-      const summary = create("summary", "review-day-summary");
-      summary.innerHTML = `<span>${firstDate === lastDate ? firstDate : `${firstDate} — ${lastDate}`}</span><strong>已结束比赛复盘</strong><em>Ray ${totalRay}:${totalGpt} GPT</em>`;
-      details.appendChild(summary);
-
-      const inner = create("div", "review-day-body single-review-list");
-      groupDays.slice().reverse().forEach(day => {
+      finishedDays.slice().reverse().forEach((day, index) => {
+        const details = create("details", "review-day");
+        if (index === 0) details.open = true;
+        const summary = create("summary", "review-day-summary");
+        summary.innerHTML = `<span>${day.date}</span><strong>${day.title || "比赛日"}</strong><em>${day.ray_points || 0}:${day.gpt_points || 0}</em>`;
+        details.appendChild(summary);
+        const inner = create("div", "review-day-body");
         day.matches.slice().reverse().forEach(match => {
           const points = calculateMatchPoints(match);
           const actual = match.actual_score || {};
-          const item = create("article", "review-card review-row");
-
-          const head = create("div", "review-row-head");
-          head.appendChild(create("span", "review-date", day.date));
-          head.appendChild(create("h3", "", `${text(match.home)} vs ${text(match.away)}`));
-          head.appendChild(create("strong", "review-score", actual.home_score !== null && actual.home_score !== undefined ? `${actual.home_score} : ${actual.away_score}` : "待定"));
-          item.appendChild(head);
-
+          const item = create("article", "review-card");
+          item.appendChild(create("h3", "", `${text(match.home)} vs ${text(match.away)}`));
+          item.appendChild(create("p", "review-result", actual.home_score !== null && actual.home_score !== undefined ? `赛果：${actual.home_score} : ${actual.away_score}` : "赛果：待填写"));
           item.appendChild(create("p", "", match.review || "复盘待填写。"));
-
-          const foot = create("div", "review-row-foot");
-          foot.appendChild(create("span", "points-line", `Ray +${points.ray} / GPT +${points.gpt}`));
-          foot.appendChild(create("span", "microcopy", points.explanation));
-          item.appendChild(foot);
-
+          item.appendChild(create("p", "points-line", `本场得分：Ray +${points.ray}，GPT +${points.gpt}`));
+          item.appendChild(create("p", "microcopy", points.explanation));
           inner.appendChild(item);
         });
+        details.appendChild(inner);
+        review.appendChild(details);
       });
-      details.appendChild(inner);
-      review.appendChild(details);
     }
 
     function renderCalendar(data) {
@@ -577,11 +568,51 @@
       }
     }
 
+
+
+    function escapeHtml(value) {
+      return String(value ?? "").replace(/[&<>"]/g, ch => ({ "&": "&amp;", "<": "&lt;", ">": "&gt;", "\"": "&quot;" }[ch]));
+    }
+
+    function renderLiveTicker(payload) {
+      const box = document.getElementById("liveTickerTrack");
+      if (!box) return;
+      const matches = payload && Array.isArray(payload.matches) ? payload.matches : [];
+      if (!matches.length) {
+        box.innerHTML = '<span class="live-ticker-item muted">暂无实时比分，稍后自动刷新。</span>';
+        return;
+      }
+      box.innerHTML = matches.map(match => {
+        const tag = match.tag || match.status || "INFO";
+        const tagClass = tag === "LIVE" ? "live" : tag === "NEXT" ? "next" : "final";
+        const score = match.home_score !== null && match.away_score !== null
+          ? `${match.home} ${match.home_score}:${match.away_score} ${match.away}`
+          : `${match.home} vs ${match.away}`;
+        const meta = match.tag === "NEXT" ? match.kickoff_bjt : (match.status_text || match.minute || "");
+        return `<span class="live-ticker-item"><b class="${tagClass}">${escapeHtml(tag)}</b><strong>${escapeHtml(score)}</strong>${meta ? `<em>${escapeHtml(meta)}</em>` : ""}</span>`;
+      }).join("");
+    }
+
+    async function loadLiveTicker() {
+      try {
+        const res = await fetch("/api/live?t=" + Date.now(), { cache: "no-store" });
+        if (!res.ok) throw new Error("Failed to load /api/live");
+        renderLiveTicker(await res.json());
+      } catch (err) {
+        console.warn(err);
+        const box = document.getElementById("liveTickerTrack");
+        if (box) box.innerHTML = '<span class="live-ticker-item muted">实时比分暂时不可用，不影响竞猜数据。</span>';
+      }
+    }
+
+
     window.addEventListener("hashchange", () => {
       if (location.hash.startsWith("#day-")) selectDay(location.hash.replace("#day-", ""));
     });
 
     loadData();
+    loadLiveTicker();
+    setInterval(loadLiveTicker, 30000);
   </script>
 </body>
 </html>
