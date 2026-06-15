@@ -7,18 +7,18 @@
     "tagline": "World Cup Prediction Derby"
   },
   "meta": {
-    "updated_at": "2026-06-15 21:10 BJT",
+    "updated_at": "2026-06-16 02:10 BJT",
     "active_day": "2026-06-15 / 2026-06-16",
     "timezone": "Asia/Beijing",
-    "version": "review-filter-score-lock-20260615-2110"
+    "version": "auto-score-202606151810"
   },
   "score_summary": {
     "ray_total": 7,
     "gpt_total": 3,
-    "leader_comment": "Ray 暂时 7:3 领先。当前差距来自巴西 1:1 摩洛哥和科特迪瓦 1:0 厄瓜多尔两场关键判断；瑞典 5:1 突尼斯一战双方都押中瑞典胜，但比分都偏保守，本场不计分。"
+    "leader_comment": "Ray 暂时 7:3 领先 GPT 5.5。"
   },
-  "headline": "Ray 7:3 领先：瑞典 5:1 突尼斯，F 组瑞典一枝独秀。",
-  "brief": "瑞典大胜突尼斯，Ray 与 GPT 都押中瑞典胜但比分偏保守，本场不计分。接下来进入西班牙、比利时、乌拉圭、伊朗四场预测。",
+  "headline": "总分 Ray 7:3 GPT 5.5：西班牙 0:0 佛得角 已自动更新。",
+  "brief": "本场复盘为自动简写版，只记录赛果、预测与计分；详细评论可稍后手动补充。",
   "tournament_picks": [
     {
       "name": "冠军",
@@ -221,7 +221,7 @@
       "home": "西班牙",
       "away": "佛得角",
       "group": "H",
-      "status": "未开赛",
+      "status": "已结束",
       "ray_prediction": {
         "home_score": 4,
         "away_score": 0,
@@ -233,10 +233,16 @@
         "reason": "GPT 原本预测西班牙 3:0 佛得角，仍看好西班牙稳拿三分；但考虑小组赛首战不一定全力冲净胜球，保留 3:0。"
       },
       "actual_score": {
-        "home_score": null,
-        "away_score": null
+        "home_score": 0,
+        "away_score": 0
       },
-      "review": "本场双方都看好西班牙，差异主要在净胜球。"
+      "review": "西班牙 0:0 佛得角。赛果已自动录入；Ray 预测 4:0，GPT 预测 3:0。双方都猜错，且胜平负方向没有形成差异，本场不计分。 本场得分：Ray +0，GPT +0。",
+      "espn_id": "760428",
+      "manual_points": {
+        "ray": 0,
+        "gpt": 0,
+        "explanation": "双方都猜错，且胜平负方向没有形成差异，本场不计分。"
+      }
     },
     {
       "id": "bel-egy-20260616",
@@ -695,7 +701,7 @@
           "home": "西班牙",
           "away": "佛得角",
           "group": "H",
-          "status": "未开赛",
+          "status": "已结束",
           "ray_prediction": {
             "home_score": 4,
             "away_score": 0,
@@ -707,10 +713,16 @@
             "reason": "GPT 原本预测西班牙 3:0 佛得角，仍看好西班牙稳拿三分；但考虑小组赛首战不一定全力冲净胜球，保留 3:0。"
           },
           "actual_score": {
-            "home_score": null,
-            "away_score": null
+            "home_score": 0,
+            "away_score": 0
           },
-          "review": "本场双方都看好西班牙，差异主要在净胜球。"
+          "review": "西班牙 0:0 佛得角。赛果已自动录入；Ray 预测 4:0，GPT 预测 3:0。双方都猜错，且胜平负方向没有形成差异，本场不计分。 本场得分：Ray +0，GPT +0。",
+          "espn_id": "760428",
+          "manual_points": {
+            "ray": 0,
+            "gpt": 0,
+            "explanation": "双方都猜错，且胜平负方向没有形成差异，本场不计分。"
+          }
         },
         {
           "id": "bel-egy-20260616",
@@ -786,14 +798,6 @@
   ],
   "update_log": [
     {
-      "time": "06-12",
-      "text": "正式开始记录 Ray 与 GPT 5.5 的世界杯竞猜。"
-    },
-    {
-      "time": "06-13",
-      "text": "美国 4:1 巴拉圭，双方都严重低估美国；D 组预测需要重估。"
-    },
-    {
       "time": "06-14 04:00",
       "text": "瑞士 1:1 卡塔尔，瑞士围攻不下被补时绝平，双方都错。"
     },
@@ -828,6 +832,10 @@
     {
       "time": "06-15 13:45",
       "text": "瑞典 5:1 突尼斯，双方都押中瑞典胜但比分偏保守，本场不计分。"
+    },
+    {
+      "time": "06-16 02:10",
+      "text": "自动更新：西班牙 0:0 佛得角，Ray +0，GPT +0。"
     }
   ],
   "archive": [
