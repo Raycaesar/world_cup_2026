@@ -7,18 +7,18 @@
     "tagline": "World Cup Prediction Derby"
   },
   "meta": {
-    "updated_at": "2026-06-16 02:35 BJT",
+    "updated_at": "2026-06-16 05:01 BJT",
     "active_day": "2026-06-16",
     "timezone": "Asia/Beijing",
-    "version": "manual-spain-capeverde-0-0-20260616-0235"
+    "version": "auto-score-202606152101"
   },
   "score_summary": {
-    "ray_total": 7,
+    "ray_total": 11,
     "gpt_total": 3,
-    "leader_comment": "Ray 暂时 7:3 领先 GPT 5.5。西班牙 0:0 佛得角一战，双方都高估西班牙进攻效率，本场不计分。"
+    "leader_comment": "Ray 暂时 11:3 领先 GPT 5.5。"
   },
-  "headline": "Ray 7:3 领先：西班牙 0:0 佛得角，世界杯首个真正冷门出现。",
-  "brief": "佛得角依靠严密防守和门将 Vozinha 的关键扑救逼平西班牙。Ray 预测 4:0，GPT 预测 3:0，双方都错得离谱，本场不计分。",
+  "headline": "总分 Ray 11:3 GPT 5.5：比利时 1:1 埃及 已自动更新。",
+  "brief": "本场复盘为自动简写版，只记录赛果、预测与计分；详细评论可稍后手动补充。",
   "tournament_picks": [
     {
       "name": "冠军",
@@ -221,7 +221,7 @@
       "home": "比利时",
       "away": "埃及",
       "group": "G",
-      "status": "未开赛",
+      "status": "已结束",
       "ray_prediction": {
         "home_score": 1,
         "away_score": 1,
@@ -233,10 +233,16 @@
         "reason": "GPT 原本看好比利时小组第一，不能把判断改得过离谱；但承认埃及会制造压力，预测比利时 2:1 险胜。"
       },
       "actual_score": {
-        "home_score": null,
-        "away_score": null
+        "home_score": 1,
+        "away_score": 1
       },
-      "review": "G 组第一场硬仗。Ray 押比利时翻车平局，GPT 保持比利时取胜但下调为小胜。"
+      "review": "比利时 1:1 埃及。赛果已自动录入；Ray 预测 1:1，GPT 预测 2:1。Ray 猜对胜平负且比分完全命中，得到 4 分。 本场得分：Ray +4，GPT +0。",
+      "espn_id": "760426",
+      "manual_points": {
+        "ray": 4,
+        "gpt": 0,
+        "explanation": "Ray 猜对胜平负且比分完全命中，得到 4 分。"
+      }
     },
     {
       "id": "ksa-uru-20260616",
@@ -663,7 +669,7 @@
       "date": "2026-06-16",
       "title": "西班牙被佛得角逼平，G/H 组首轮继续",
       "summary": "西班牙 0:0 佛得角爆出冷门。Ray 4:0、GPT 3:0 全部落空，本场双方 0 分；今天后续仍有比利时对埃及、沙特对乌拉圭、伊朗对新西兰。",
-      "ray_points": 0,
+      "ray_points": 4,
       "gpt_points": 0,
       "matches": [
         {
@@ -701,7 +707,7 @@
           "home": "比利时",
           "away": "埃及",
           "group": "G",
-          "status": "未开赛",
+          "status": "已结束",
           "ray_prediction": {
             "home_score": 1,
             "away_score": 1,
@@ -713,10 +719,16 @@
             "reason": "GPT 原本看好比利时小组第一，不能把判断改得过离谱；但承认埃及会制造压力，预测比利时 2:1 险胜。"
           },
           "actual_score": {
-            "home_score": null,
-            "away_score": null
+            "home_score": 1,
+            "away_score": 1
           },
-          "review": "G 组第一场硬仗。Ray 押比利时翻车平局，GPT 保持比利时取胜但下调为小胜。"
+          "review": "比利时 1:1 埃及。赛果已自动录入；Ray 预测 1:1，GPT 预测 2:1。Ray 猜对胜平负且比分完全命中，得到 4 分。 本场得分：Ray +4，GPT +0。",
+          "espn_id": "760426",
+          "manual_points": {
+            "ray": 4,
+            "gpt": 0,
+            "explanation": "Ray 猜对胜平负且比分完全命中，得到 4 分。"
+          }
         },
         {
           "id": "ksa-uru-20260616",
@@ -769,10 +781,6 @@
   ],
   "update_log": [
     {
-      "time": "06-14 04:00",
-      "text": "瑞士 1:1 卡塔尔，瑞士围攻不下被补时绝平，双方都错。"
-    },
-    {
       "time": "06-14 07:00",
       "text": "巴西 1:1 摩洛哥，Ray 押中巴西无法取胜，Ray +3。"
     },
@@ -807,6 +815,10 @@
     {
       "time": "06-16 02:35",
       "text": "西班牙 0:0 佛得角爆冷，双方都高估西班牙进攻效率，本场不计分。"
+    },
+    {
+      "time": "06-16 05:01",
+      "text": "自动更新：比利时 1:1 埃及，Ray +4，GPT +0。"
     }
   ],
   "archive": [
