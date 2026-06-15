@@ -230,11 +230,6 @@ function resultCloseness(predOutcome, actualOutcome) {
   return 0;
 }
 
-function scoreError(pred, actual) {
-  if (!pred || !actual || pred.home_score === null || pred.away_score === null) return Infinity;
-  return Math.abs(pred.home_score - actual.home_score) + Math.abs(pred.away_score - actual.away_score);
-}
-
 function calculateMatchPoints(match) {
   const actual = match.actual_score;
   if (!actual || actual.home_score === null || actual.away_score === null) {
@@ -275,18 +270,18 @@ function calculateMatchPoints(match) {
       explanation = "双方都猜对胜平负，但没有形成比分命中差异，本场不计分。";
     }
   } else {
+    // 双方都猜错时，只比较“胜/平/负方向”的接近程度；
+    // 不再用具体比分误差打破平局，避免出现“双方都押同一方向失败，但因数字更近而加分”的争议。
     const rayClose = resultCloseness(ray.outcome, actualOutcome);
     const gptClose = resultCloseness(gpt.outcome, actualOutcome);
-    const rayErr = scoreError(match.ray_prediction, actual);
-    const gptErr = scoreError(match.gpt_prediction, actual);
-    if (rayClose > gptClose || (rayClose === gptClose && rayErr < gptErr)) {
+    if (rayClose > gptClose) {
       rayPts = 1;
-      explanation = "双方都猜错，但 Ray 更接近真实赛果，得到 1 分。";
-    } else if (gptClose > rayClose || (gptClose === rayClose && gptErr < rayErr)) {
+      explanation = "双方都猜错，但 Ray 的胜平负方向更接近真实赛果，得到 1 分。";
+    } else if (gptClose > rayClose) {
       gptPts = 1;
-      explanation = "双方都猜错，但 GPT 更接近真实赛果，得到 1 分。";
+      explanation = "双方都猜错，但 GPT 的胜平负方向更接近真实赛果，得到 1 分。";
     } else {
-      explanation = "双方都猜错，且难以判定谁更接近，本场不计分。";
+      explanation = "双方都猜错，且胜平负方向没有形成差异，本场不计分。";
     }
   }
 
@@ -326,7 +321,7 @@ function isFinished(match) {
 
 function buildReview(match, pts) {
   const actual = match.actual_score || {};
-  return `${match.home} ${actual.home_score}:${actual.away_score} ${match.away}。赛果已自动录入；Ray 预测 ${predictionText(match.ray_prediction)}，GPT 预测 ${predictionText(match.gpt_prediction)}。本场得分：Ray +${pts.ray}，GPT +${pts.gpt}。`;
+  return `${match.home} ${actual.home_score}:${actual.away_score} ${match.away}。赛果已自动录入；Ray 预测 ${predictionText(match.ray_prediction)}，GPT 预测 ${predictionText(match.gpt_prediction)}。${pts.explanation} 本场得分：Ray +${pts.ray}，GPT +${pts.gpt}。`;
 }
 
 function updateOneMatch(match, event) {
@@ -410,8 +405,8 @@ function appendUpdateLog(data, updates) {
 function refreshHeadline(data, updates, totals) {
   if (!updates.length) return;
   const last = updates[updates.length - 1];
-  data.headline = `Ray ${totals.ray}:${totals.gpt} 领先：${last.home} ${last.score} ${last.away} 已自动更新。`;
-  data.brief = `本场复盘为自动简写版，Ray 醒来后可再补充细节。`;
+  data.headline = `总分 Ray ${totals.ray}:${totals.gpt} GPT 5.5：${last.home} ${last.score} ${last.away} 已自动更新。`;
+  data.brief = `本场复盘为自动简写版，只记录赛果、预测与计分；详细评论可稍后手动补充。`;
 }
 
 function ensureMeta(data) {
