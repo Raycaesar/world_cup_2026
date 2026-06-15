@@ -3,18 +3,17 @@ name: Auto update World Cup scores
 on:
   workflow_dispatch:
   schedule:
-    - cron: "*/10 * * * *"
+    # GitHub Actions 使用 UTC。这里等于每小时第 7、17、27、37、47、57 分运行。
+    # 避开整点，减少 GitHub 高峰延迟/丢任务概率。
+    - cron: "7,17,27,37,47,57 * * * *"
 
 permissions:
   contents: write
 
-concurrency:
-  group: auto-update-worldcup-scores
-  cancel-in-progress: true
-
 jobs:
   update-scores:
     runs-on: ubuntu-latest
+
     steps:
       - name: Checkout repository
         uses: actions/checkout@v4
@@ -22,19 +21,20 @@ jobs:
       - name: Set up Node.js
         uses: actions/setup-node@v4
         with:
-          node-version: 20
+          node-version: "20"
 
-      - name: Update data.json from scoreboard
+      - name: Update scores
         run: node scripts/update_scores.js
 
-      - name: Commit and push if data.json changed
+      - name: Commit changes if needed
         run: |
-          if git diff --quiet -- data.json; then
+          if git diff --quiet data.json; then
             echo "No score changes."
             exit 0
           fi
+
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
           git add data.json
-          git commit -m "auto: update World Cup scores"
+          git commit -m "auto update match scores"
           git push
