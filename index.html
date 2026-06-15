@@ -167,9 +167,9 @@
       </div>
       <ol class="rules-list">
         <li>如果两人的预测完全相同，则该场双方都不得分。</li>
-        <li>一方猜对胜平负、另一方猜错：猜对方得 3 分，猜错方 0 分。</li>
-        <li>如果两个都错，但有一方更接近，则这一方得 1 分，另一方不得分。</li>
-        <li>在猜对胜平负的基础上，如果比分完全命中，可额外加 1 分。</li>
+        <li>一方猜对胜平负、另一方猜错：猜对方得 3 分；若比分也完全命中，则共 4 分。</li>
+        <li>如果双方都猜对胜平负，胜平负本身不计分；只有比分完全命中的一方得 1 分。</li>
+        <li>如果双方都猜错，但有一方更接近，则这一方得 1 分，另一方不得分。</li>
         <li>小组赛晋级名单：任何晋级球队若一方猜中但另一方未猜中，猜中方得 3 分。</li>
         <li>亚军、金靴、金童、金球奖猜中方得 5 分；冠军猜中方得 10 分。</li>
       </ol>
@@ -261,14 +261,6 @@
     }
 
     function calculateMatchPoints(match) {
-      if (match.manual_points) {
-        return {
-          ray: Number(match.manual_points.ray || 0),
-          gpt: Number(match.manual_points.gpt || 0),
-          explanation: match.manual_points.explanation || "本场采用人工裁定。"
-        };
-      }
-
       const actual = match.actual_score;
       if (!actual || actual.home_score === null || actual.away_score === null) {
         return { ray: 0, gpt: 0, explanation: "比赛尚未结束，暂不计分。" };
@@ -279,6 +271,8 @@
       const actualOutcome = pickOutcome(actual.home_score, actual.away_score);
       const rayCorrect = ray.outcome === actualOutcome;
       const gptCorrect = gpt.outcome === actualOutcome;
+      const rayExact = exactScore(match.ray_prediction, actual);
+      const gptExact = exactScore(match.gpt_prediction, actual);
 
       if (samePrediction(match.ray_prediction, match.gpt_prediction)) {
         return { ray: 0, gpt: 0, explanation: "双方预测完全相同，本场不计分。" };
@@ -289,15 +283,22 @@
       let explanation = "";
 
       if (rayCorrect && !gptCorrect) {
-        rayPts = 3 + (exactScore(match.ray_prediction, actual) ? 1 : 0);
-        explanation = exactScore(match.ray_prediction, actual) ? "Ray 猜对胜平负且比分完全命中，得到 4 分。" : "Ray 猜对胜平负，得到 3 分。";
+        rayPts = 3 + (rayExact ? 1 : 0);
+        explanation = rayExact ? "Ray 猜对胜平负且比分完全命中，得到 4 分。" : "Ray 猜对胜平负，得到 3 分。";
       } else if (!rayCorrect && gptCorrect) {
-        gptPts = 3 + (exactScore(match.gpt_prediction, actual) ? 1 : 0);
-        explanation = exactScore(match.gpt_prediction, actual) ? "GPT 猜对胜平负且比分完全命中，得到 4 分。" : "GPT 猜对胜平负，得到 3 分。";
+        gptPts = 3 + (gptExact ? 1 : 0);
+        explanation = gptExact ? "GPT 猜对胜平负且比分完全命中，得到 4 分。" : "GPT 猜对胜平负，得到 3 分。";
       } else if (rayCorrect && gptCorrect) {
-        rayPts = 3 + (exactScore(match.ray_prediction, actual) ? 1 : 0);
-        gptPts = 3 + (exactScore(match.gpt_prediction, actual) ? 1 : 0);
-        explanation = "双方都猜对胜平负，按比分命中情况分别加分。";
+        // 双方都猜中胜平负时，胜平负本身不拉开差距；只奖励精确比分的一方 1 分。
+        if (rayExact && !gptExact) {
+          rayPts = 1;
+          explanation = "双方都猜对胜平负，胜平负不计分；Ray 比分完全命中，得到 1 分。";
+        } else if (!rayExact && gptExact) {
+          gptPts = 1;
+          explanation = "双方都猜对胜平负，胜平负不计分；GPT 比分完全命中，得到 1 分。";
+        } else {
+          explanation = "双方都猜对胜平负，但没有形成比分命中差异，本场不计分。";
+        }
       } else {
         const rayClose = resultCloseness(ray.outcome, actualOutcome);
         const gptClose = resultCloseness(gpt.outcome, actualOutcome);
@@ -313,6 +314,7 @@
           explanation = "双方都猜错，且难以判定谁更接近，本场不计分。";
         }
       }
+
       return { ray: rayPts, gpt: gptPts, explanation };
     }
 

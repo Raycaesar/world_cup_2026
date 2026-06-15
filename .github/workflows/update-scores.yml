@@ -1,0 +1,40 @@
+name: Auto update World Cup scores
+
+on:
+  workflow_dispatch:
+  schedule:
+    - cron: "*/10 * * * *"
+
+permissions:
+  contents: write
+
+concurrency:
+  group: auto-update-worldcup-scores
+  cancel-in-progress: true
+
+jobs:
+  update-scores:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Set up Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: 20
+
+      - name: Update data.json from scoreboard
+        run: node scripts/update_scores.js
+
+      - name: Commit and push if data.json changed
+        run: |
+          if git diff --quiet -- data.json; then
+            echo "No score changes."
+            exit 0
+          fi
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add data.json
+          git commit -m "auto: update World Cup scores"
+          git push
