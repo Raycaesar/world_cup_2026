@@ -1,0 +1,13 @@
+name: Schedule heartbeat
+
+on:
+  workflow_dispatch:
+  schedule:
+    - cron: "*/5 * * * *"
+
+jobs:
+  heartbeat:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Print time
+        run: date -u
