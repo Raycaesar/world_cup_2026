@@ -2,10 +2,7 @@ name: Auto update World Cup scores
 
 on:
   workflow_dispatch:
-  schedule:
-    # GitHub Actions 使用 UTC。这里等于每小时第 7、17、27、37、47、57 分运行。
-    # 避开整点，减少 GitHub 高峰延迟/丢任务概率。
-    - cron: "*/5 * * * *"
+
 
 permissions:
   contents: write
