@@ -7,15 +7,15 @@
     "tagline": "World Cup Prediction Derby"
   },
   "meta": {
-    "updated_at": "2026-06-15 13:45 BJT",
+    "updated_at": "2026-06-15 21:10 BJT",
     "active_day": "2026-06-15 / 2026-06-16",
     "timezone": "Asia/Beijing",
-    "version": "swe-tun-5-1-20260615-1345"
+    "version": "review-filter-score-lock-20260615-2110"
   },
   "score_summary": {
     "ray_total": 7,
     "gpt_total": 3,
-    "leader_comment": "Ray 暂时 7:3 领先。Ray 的领先来自巴西 1:1 摩洛哥和科特迪瓦 1:0 厄瓜多尔两场关键判断；瑞典 5:1 突尼斯一战双方都押中瑞典胜，但比分都偏保守，本场不计分。"
+    "leader_comment": "Ray 暂时 7:3 领先。当前差距来自巴西 1:1 摩洛哥和科特迪瓦 1:0 厄瓜多尔两场关键判断；瑞典 5:1 突尼斯一战双方都押中瑞典胜，但比分都偏保守，本场不计分。"
   },
   "headline": "Ray 7:3 领先：瑞典 5:1 突尼斯，F 组瑞典一枝独秀。",
   "brief": "瑞典大胜突尼斯，Ray 与 GPT 都押中瑞典胜但比分偏保守，本场不计分。接下来进入西班牙、比利时、乌拉圭、伊朗四场预测。",
@@ -399,11 +399,11 @@
             "home_score": 1,
             "away_score": 1
           },
-          "review": "加拿大 1:1 波黑。由于双方没有形成明确对抗预测，本场不计入当前 3:0 积分。",
+          "review": "加拿大 1:1 波黑。由于双方没有形成明确对抗预测，本场按约定不计分。",
           "manual_points": {
             "ray": 0,
             "gpt": 0,
-            "explanation": "本场按双方约定暂不计分。"
+            "explanation": "本场按双方约定不计分。"
           }
         },
         {
@@ -426,11 +426,11 @@
             "home_score": 4,
             "away_score": 1
           },
-          "review": "美国 4:1 大胜，直接打穿双方对 D 组的初始判断。赛后双方都认为美国有望冲击八强。",
+          "review": "美国 4:1 大胜，直接打穿双方对 D 组的初始判断。双方都严重低估美国，本场不计分。",
           "manual_points": {
             "ray": 0,
             "gpt": 0,
-            "explanation": "双方都严重低估美国，本场不计分。"
+            "explanation": "双方都猜平局方向，实际美国大胜；本场不计分。"
           }
         }
       ]
@@ -462,11 +462,11 @@
             "home_score": 1,
             "away_score": 1
           },
-          "review": "瑞士猛攻全场但把握不住机会，补时被卡塔尔绝平。双方都错。",
+          "review": "瑞士猛攻全场但把握不住机会，补时被卡塔尔绝平。双方都判断瑞士取胜，本场不计分。",
           "manual_points": {
             "ray": 0,
             "gpt": 0,
-            "explanation": "双方都判断瑞士胜，本场不计分。"
+            "explanation": "双方都判断瑞士胜，实际为平局；本场不计分。"
           }
         },
         {
@@ -552,11 +552,11 @@
             "home_score": 2,
             "away_score": 0
           },
-          "review": "澳大利亚 2:0 土耳其，令 D 组形势大变。美国、澳大利亚暂居前二，土耳其与巴拉圭被迫死磕。",
+          "review": "澳大利亚 2:0 土耳其，令 D 组形势大变。双方都高估土耳其，本场不计分。",
           "manual_points": {
             "ray": 0,
             "gpt": 0,
-            "explanation": "双方都高估土耳其，本场不计分；GPT 判断方向完全相反。"
+            "explanation": "双方都高估土耳其，实际澳大利亚取胜；本场不计分。"
           }
         }
       ]

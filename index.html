@@ -210,6 +210,7 @@
     let refreshTimer = null;
     let currentData = FALLBACK_DATA;
     let selectedCalendarDate = null;
+    const reviewOpenState = new Map();
 
     function text(value, fallback = "—") {
       return value === undefined || value === null || value === "" ? fallback : String(value);
@@ -261,6 +262,14 @@
     }
 
     function calculateMatchPoints(match) {
+      if (match.manual_points) {
+        return {
+          ray: Number(match.manual_points.ray || 0),
+          gpt: Number(match.manual_points.gpt || 0),
+          explanation: match.manual_points.explanation || "本场采用人工裁定。"
+        };
+      }
+
       const actual = match.actual_score;
       if (!actual || actual.home_score === null || actual.away_score === null) {
         return { ray: 0, gpt: 0, explanation: "比赛尚未结束，暂不计分。" };
@@ -405,9 +414,22 @@
       return card;
     }
 
+    function hasFinalScore(match) {
+      const actual = match && match.actual_score ? match.actual_score : {};
+      return actual.home_score !== null && actual.home_score !== undefined && actual.away_score !== null && actual.away_score !== undefined;
+    }
+
+    function rememberReviewState(reviewRoot) {
+      if (!reviewRoot) return;
+      reviewRoot.querySelectorAll("details.review-day[data-date]").forEach(details => {
+        reviewOpenState.set(details.dataset.date, details.open);
+      });
+    }
+
     function renderMatches(data) {
       const list = document.getElementById("matchList");
       const review = document.getElementById("reviewList");
+      rememberReviewState(review);
       list.innerHTML = "";
       review.innerHTML = "";
       const matches = data.today_matches || [];
@@ -417,15 +439,18 @@
 
       const finishedDays = (data.matchdays || []).map(day => ({
         ...day,
-        matches: (day.matches || []).filter(m => {
-          const actual = m.actual_score || {};
-          return (actual.home_score !== null && actual.home_score !== undefined) || m.review;
-        })
+        matches: (day.matches || []).filter(m => hasFinalScore(m))
       })).filter(day => day.matches.length);
       if (!finishedDays.length) return review.appendChild(create("p", "empty", "暂无已完成比赛。"));
       finishedDays.slice().reverse().forEach((day, index) => {
         const details = create("details", "review-day");
-        if (index === 0) details.open = true;
+        details.dataset.date = day.date;
+        if (reviewOpenState.has(day.date)) {
+          details.open = reviewOpenState.get(day.date);
+        } else if (index === 0) {
+          details.open = true;
+        }
+        details.addEventListener("toggle", () => reviewOpenState.set(day.date, details.open));
         const summary = create("summary", "review-day-summary");
         summary.innerHTML = `<span>${day.date}</span><strong>${day.title || "比赛日"}</strong><em>${day.ray_points || 0}:${day.gpt_points || 0}</em>`;
         details.appendChild(summary);
