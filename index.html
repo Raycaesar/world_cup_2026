@@ -9,43 +9,6 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Black+Ops+One&family=Bebas+Neue&family=Rajdhani:wght@500;600;700&family=Noto+Sans+SC:wght@400;500;700;900&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="style.css?v=beijing-fix-20260615-0030" />
-
-  <style id="live-ticker-compact-fix">
-    /* Compact live ticker: only current games + next two; never let it overflow the hero. */
-    .live-ticker { margin: 10px 0 4px; }
-    .live-ticker-inner {
-      width: 100%;
-      box-sizing: border-box;
-      overflow: hidden;
-      align-items: flex-start;
-    }
-    .live-ticker-track {
-      width: 100%;
-      min-width: 0;
-      display: flex;
-      flex-wrap: wrap;
-      gap: 8px;
-      overflow: hidden;
-      white-space: normal;
-    }
-    .live-ticker-item {
-      max-width: 100%;
-      min-width: 0;
-      box-sizing: border-box;
-    }
-    .live-ticker-item strong {
-      min-width: 0;
-      overflow: hidden;
-      text-overflow: ellipsis;
-      white-space: nowrap;
-    }
-    .live-ticker-item em { white-space: nowrap; }
-    @media (max-width: 860px) {
-      .live-ticker-inner { border-radius: 22px; flex-direction: column; }
-      .live-ticker-label { width: 100%; }
-      .live-ticker-item { width: 100%; justify-content: flex-start; }
-    }
-  </style>
 </head>
 <body>
   <div class="stadium-light light-left" aria-hidden="true"></div>
@@ -246,6 +209,7 @@
 
     let refreshTimer = null;
     let currentData = FALLBACK_DATA;
+    let selectedCalendarDate = null;
 
     function text(value, fallback = "—") {
       return value === undefined || value === null || value === "" ? fallback : String(value);
@@ -480,6 +444,24 @@
       });
     }
 
+
+
+    function resolveCalendarDate(data, days) {
+      if (!days.length) return null;
+      if (selectedCalendarDate && days.some(d => d.date === selectedCalendarDate)) return selectedCalendarDate;
+
+      if (location.hash && location.hash.startsWith("#day-")) {
+        const hashDate = location.hash.replace("#day-", "");
+        if (days.some(d => d.date === hashDate)) return hashDate;
+      }
+
+      const active = String((data.meta && data.meta.active_day) || "");
+      const activeDay = days.find(d => active.includes(d.date));
+      if (activeDay) return activeDay.date;
+
+      return days[days.length - 1].date;
+    }
+
     function renderCalendar(data) {
       const tabs = document.getElementById("dayTabs");
       tabs.innerHTML = "";
@@ -493,7 +475,7 @@
         btn.addEventListener("click", () => selectDay(day.date));
         tabs.appendChild(btn);
       });
-      selectDay(data.meta && data.meta.active_day ? data.meta.active_day : days[days.length - 1].date);
+      selectDay(resolveCalendarDate(data, days));
     }
 
     function selectDay(date) {
@@ -502,6 +484,7 @@
       const detail = document.getElementById("dayDetail");
       const day = days.find(d => d.date === date) || days[days.length - 1];
       if (!day) return;
+      selectedCalendarDate = day.date;
       document.querySelectorAll(".day-tab").forEach(btn => btn.classList.toggle("active", btn.dataset.date === day.date));
       detail.innerHTML = "";
       const head = create("div", "day-detail-head");
@@ -611,29 +594,22 @@
       return String(value ?? "").replace(/[&<>"]/g, ch => ({ "&": "&amp;", "<": "&lt;", ">": "&gt;", "\"": "&quot;" }[ch]));
     }
 
-    function pickTickerItems(matches) {
-      const list = Array.isArray(matches) ? matches : [];
-      const live = list.filter(m => m && (m.tag === "LIVE" || m.state === "in"));
-      const next = list.filter(m => m && (m.tag === "NEXT" || m.state === "pre"));
-      return live.slice(0, 2).concat(next.slice(0, 2));
-    }
-
     function renderLiveTicker(payload) {
       const box = document.getElementById("liveTickerTrack");
       if (!box) return;
-      const matches = pickTickerItems(payload && payload.matches);
+      const matches = payload && Array.isArray(payload.matches) ? payload.matches : [];
       if (!matches.length) {
-        box.innerHTML = '<span class="live-ticker-item muted">暂无进行中比赛，下一场赛程稍后刷新。</span>';
+        box.innerHTML = '<span class="live-ticker-item muted">暂无实时比分，稍后自动刷新。</span>';
         return;
       }
       box.innerHTML = matches.map(match => {
         const tag = match.tag || match.status || "INFO";
         const tagClass = tag === "LIVE" ? "live" : tag === "NEXT" ? "next" : "final";
-        const score = match.home_score !== null && match.home_score !== undefined && match.away_score !== null && match.away_score !== undefined
+        const score = match.home_score !== null && match.away_score !== null
           ? `${match.home} ${match.home_score}:${match.away_score} ${match.away}`
           : `${match.home} vs ${match.away}`;
-        const meta = tag === "NEXT" ? match.kickoff_bjt : (match.status_text || match.minute || "");
-        return `<span class="live-ticker-item"><b class="${tagClass}">${escapeHtml(tag)}</b><strong title="${escapeHtml(score)}">${escapeHtml(score)}</strong>${meta ? `<em>${escapeHtml(meta)}</em>` : ""}</span>`;
+        const meta = match.tag === "NEXT" ? match.kickoff_bjt : (match.status_text || match.minute || "");
+        return `<span class="live-ticker-item"><b class="${tagClass}">${escapeHtml(tag)}</b><strong>${escapeHtml(score)}</strong>${meta ? `<em>${escapeHtml(meta)}</em>` : ""}</span>`;
       }).join("");
     }
 
