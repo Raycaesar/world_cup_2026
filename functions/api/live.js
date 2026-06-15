@@ -19,7 +19,14 @@ const TEAM_ZH = {
   "Saudi Arabia": "沙特",
   "Uruguay": "乌拉圭",
   "Iran": "伊朗",
-  "New Zealand": "新西兰"
+  "IR Iran": "伊朗",
+  "New Zealand": "新西兰",
+  "France": "法国",
+  "Senegal": "塞内加尔",
+  "Iraq": "伊拉克",
+  "Norway": "挪威",
+  "Argentina": "阿根廷",
+  "Algeria": "阿尔及利亚"
 };
 
 function ymd(date) {
@@ -57,7 +64,6 @@ function normalizeEvent(event) {
   const state = statusType.state || "pre";
   const isPre = state === "pre";
   const isLive = state === "in";
-  const isPost = state === "post";
 
   return {
     id: event.id,
@@ -69,9 +75,7 @@ function normalizeEvent(event) {
     away_score: isPre ? null : Number(away.score ?? 0),
     status_text: isLive
       ? (competition.status?.displayClock || statusType.detail || statusType.shortDetail || "Live")
-      : isPost
-        ? "FT"
-        : "",
+      : state === "post" ? "FT" : "",
     kickoff_bjt: formatBJT(event.date),
     kickoff_ts: event.date ? new Date(event.date).getTime() : 0
   };
@@ -79,23 +83,17 @@ function normalizeEvent(event) {
 
 function pickTickerMatches(matches) {
   const now = Date.now();
-  const live = matches.filter(m => m.state === "in").sort((a, b) => a.kickoff_ts - b.kickoff_ts);
-  const next = matches.filter(m => m.state === "pre" && m.kickoff_ts >= now - 30 * 60 * 1000).sort((a, b) => a.kickoff_ts - b.kickoff_ts);
-  const finals = matches.filter(m => m.state === "post").sort((a, b) => b.kickoff_ts - a.kickoff_ts);
-  return [...live, ...next.slice(0, 5), ...finals.slice(0, 3)].slice(0, 8);
-}
+  const live = matches
+    .filter(m => m.state === "in")
+    .sort((a, b) => a.kickoff_ts - b.kickoff_ts)
+    .slice(0, 2);
 
-function fallbackPayload() {
-  return {
-    updated_at: new Date().toISOString(),
-    source: "fallback",
-    matches: [
-      { tag: "FT", home: "德国", away: "库拉索", home_score: 7, away_score: 1, status_text: "FT", kickoff_bjt: "06-15 01:00 BJT" },
-      { tag: "FT", home: "荷兰", away: "日本", home_score: 2, away_score: 2, status_text: "FT", kickoff_bjt: "06-15 04:00 BJT" },
-      { tag: "LIVE", home: "科特迪瓦", away: "厄瓜多尔", home_score: 0, away_score: 0, status_text: "Live", kickoff_bjt: "06-15 07:00 BJT" },
-      { tag: "NEXT", home: "瑞典", away: "突尼斯", home_score: null, away_score: null, status_text: "", kickoff_bjt: "06-15 10:00 BJT" }
-    ]
-  };
+  const next = matches
+    .filter(m => m.state === "pre" && m.kickoff_ts >= now - 20 * 60 * 1000)
+    .sort((a, b) => a.kickoff_ts - b.kickoff_ts)
+    .slice(0, 2);
+
+  return [...live, ...next];
 }
 
 export async function onRequestGet() {
@@ -106,21 +104,25 @@ export async function onRequestGet() {
 
   try {
     const now = new Date();
-    const start = new Date(now.getTime() - 24 * 60 * 60 * 1000);
-    const end = new Date(now.getTime() + 48 * 60 * 60 * 1000);
+    const start = new Date(now.getTime() - 6 * 60 * 60 * 1000);
+    const end = new Date(now.getTime() + 36 * 60 * 60 * 1000);
     const url = `${ESPN_SCOREBOARD}?limit=80&dates=${ymd(start)}-${ymd(end)}`;
-    const res = await fetch(url, { headers: { "accept": "application/json" } });
+    const res = await fetch(url, { headers: { accept: "application/json" } });
     if (!res.ok) throw new Error(`ESPN scoreboard failed: ${res.status}`);
+
     const data = await res.json();
     const matches = pickTickerMatches((data.events || []).map(normalizeEvent));
+
     return new Response(JSON.stringify({
       updated_at: new Date().toISOString(),
-      source: "espn-fifa-world-scoreboard",
-      matches: matches.length ? matches : fallbackPayload().matches
+      source: "espn-fifa-world-scoreboard-filtered-live-next2",
+      matches
     }), { headers });
   } catch (error) {
     return new Response(JSON.stringify({
-      ...fallbackPayload(),
+      updated_at: new Date().toISOString(),
+      source: "espn-fifa-world-scoreboard-filtered-live-next2",
+      matches: [],
       error: "live_source_unavailable"
     }), { headers });
   }

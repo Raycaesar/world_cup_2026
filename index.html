@@ -9,6 +9,43 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Black+Ops+One&family=Bebas+Neue&family=Rajdhani:wght@500;600;700&family=Noto+Sans+SC:wght@400;500;700;900&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="style.css?v=beijing-fix-20260615-0030" />
+
+  <style id="live-ticker-compact-fix">
+    /* Compact live ticker: only current games + next two; never let it overflow the hero. */
+    .live-ticker { margin: 10px 0 4px; }
+    .live-ticker-inner {
+      width: 100%;
+      box-sizing: border-box;
+      overflow: hidden;
+      align-items: flex-start;
+    }
+    .live-ticker-track {
+      width: 100%;
+      min-width: 0;
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px;
+      overflow: hidden;
+      white-space: normal;
+    }
+    .live-ticker-item {
+      max-width: 100%;
+      min-width: 0;
+      box-sizing: border-box;
+    }
+    .live-ticker-item strong {
+      min-width: 0;
+      overflow: hidden;
+      text-overflow: ellipsis;
+      white-space: nowrap;
+    }
+    .live-ticker-item em { white-space: nowrap; }
+    @media (max-width: 860px) {
+      .live-ticker-inner { border-radius: 22px; flex-direction: column; }
+      .live-ticker-label { width: 100%; }
+      .live-ticker-item { width: 100%; justify-content: flex-start; }
+    }
+  </style>
 </head>
 <body>
   <div class="stadium-light light-left" aria-hidden="true"></div>
@@ -574,22 +611,29 @@
       return String(value ?? "").replace(/[&<>"]/g, ch => ({ "&": "&amp;", "<": "&lt;", ">": "&gt;", "\"": "&quot;" }[ch]));
     }
 
+    function pickTickerItems(matches) {
+      const list = Array.isArray(matches) ? matches : [];
+      const live = list.filter(m => m && (m.tag === "LIVE" || m.state === "in"));
+      const next = list.filter(m => m && (m.tag === "NEXT" || m.state === "pre"));
+      return live.slice(0, 2).concat(next.slice(0, 2));
+    }
+
     function renderLiveTicker(payload) {
       const box = document.getElementById("liveTickerTrack");
       if (!box) return;
-      const matches = payload && Array.isArray(payload.matches) ? payload.matches : [];
+      const matches = pickTickerItems(payload && payload.matches);
       if (!matches.length) {
-        box.innerHTML = '<span class="live-ticker-item muted">暂无实时比分，稍后自动刷新。</span>';
+        box.innerHTML = '<span class="live-ticker-item muted">暂无进行中比赛，下一场赛程稍后刷新。</span>';
         return;
       }
       box.innerHTML = matches.map(match => {
         const tag = match.tag || match.status || "INFO";
         const tagClass = tag === "LIVE" ? "live" : tag === "NEXT" ? "next" : "final";
-        const score = match.home_score !== null && match.away_score !== null
+        const score = match.home_score !== null && match.home_score !== undefined && match.away_score !== null && match.away_score !== undefined
           ? `${match.home} ${match.home_score}:${match.away_score} ${match.away}`
           : `${match.home} vs ${match.away}`;
-        const meta = match.tag === "NEXT" ? match.kickoff_bjt : (match.status_text || match.minute || "");
-        return `<span class="live-ticker-item"><b class="${tagClass}">${escapeHtml(tag)}</b><strong>${escapeHtml(score)}</strong>${meta ? `<em>${escapeHtml(meta)}</em>` : ""}</span>`;
+        const meta = tag === "NEXT" ? match.kickoff_bjt : (match.status_text || match.minute || "");
+        return `<span class="live-ticker-item"><b class="${tagClass}">${escapeHtml(tag)}</b><strong title="${escapeHtml(score)}">${escapeHtml(score)}</strong>${meta ? `<em>${escapeHtml(meta)}</em>` : ""}</span>`;
       }).join("");
     }
 
