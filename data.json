@@ -7,18 +7,18 @@
     "tagline": "World Cup Prediction Derby"
   },
   "meta": {
-    "updated_at": "2026-06-16 05:05 BJT",
+    "updated_at": "2026-06-16 08:11 BJT",
     "active_day": "2026-06-16",
     "timezone": "Asia/Beijing",
-    "version": "manual-belgium-egypt-1-1-20260616-0505"
+    "version": "auto-score-202606160011"
   },
   "score_summary": {
-    "ray_total": 11,
+    "ray_total": 14,
     "gpt_total": 3,
-    "leader_comment": "Ray 通过比利时 1:1 埃及完全命中比分，再拿 4 分，总分 11:3 领先 GPT 5.5。西班牙与比利时连续被逼平，强队首战不稳的判断继续成立。"
+    "leader_comment": "Ray 暂时 14:3 领先 GPT 5.5。"
   },
-  "headline": "Ray 11:3 领先：比利时 1:1 埃及，Ray 完全命中比分。",
-  "brief": "埃及由阿舒尔先拔头筹，比利时在卢卡库替补登场后制造混乱扳平。Ray 赛前预测 1:1 完全命中，拿到 4 分；GPT 预测比利时 2:1，未得分。",
+  "headline": "总分 Ray 14:3 GPT 5.5：沙特 1:1 乌拉圭 已自动更新。",
+  "brief": "本场复盘为自动简写版，只记录赛果、预测与计分；详细评论可稍后手动补充。",
   "tournament_picks": [
     {
       "name": "冠军",
@@ -221,7 +221,7 @@
       "home": "沙特",
       "away": "乌拉圭",
       "group": "H",
-      "status": "未开赛",
+      "status": "已结束",
       "ray_prediction": {
         "home_score": 0,
         "away_score": 0,
@@ -233,10 +233,16 @@
         "reason": "GPT 原本预测沙特 0:2 乌拉圭，但考虑乌拉圭赛前旅行/落地风波和沙特主动求战，将比分收缩为乌拉圭 1:0 小胜。"
       },
       "actual_score": {
-        "home_score": null,
-        "away_score": null
+        "home_score": 1,
+        "away_score": 1
       },
-      "review": "Ray 押沙特守平；GPT 仍坚持乌拉圭取胜，以保持原小组出线判断，但承认这场可能比纸面实力更难。"
+      "review": "沙特 1:1 乌拉圭。赛果已自动录入；Ray 预测 0:0，GPT 预测 0:1。Ray 猜对胜平负，得到 3 分。 本场得分：Ray +3，GPT +0。",
+      "espn_id": "760429",
+      "manual_points": {
+        "ray": 3,
+        "gpt": 0,
+        "explanation": "Ray 猜对胜平负，得到 3 分。"
+      }
     },
     {
       "id": "iri-nzl-20260616",
@@ -640,7 +646,7 @@
       "date": "2026-06-16",
       "title": "西班牙被佛得角逼平，比利时也只拿一分",
       "summary": "西班牙 0:0 佛得角，Ray 与 GPT 双双错得离谱；比利时 1:1 埃及，Ray 完全命中比分拿到 4 分。强队连续受挫，今日比赛的冷门味道越来越浓。",
-      "ray_points": 4,
+      "ray_points": 7,
       "gpt_points": 0,
       "matches": [
         {
@@ -706,7 +712,7 @@
           "home": "沙特",
           "away": "乌拉圭",
           "group": "H",
-          "status": "未开赛",
+          "status": "已结束",
           "ray_prediction": {
             "home_score": 0,
             "away_score": 0,
@@ -718,10 +724,16 @@
             "reason": "GPT 原本预测沙特 0:2 乌拉圭，但考虑乌拉圭赛前旅行/落地风波和沙特主动求战，将比分收缩为乌拉圭 1:0 小胜。"
           },
           "actual_score": {
-            "home_score": null,
-            "away_score": null
+            "home_score": 1,
+            "away_score": 1
           },
-          "review": "Ray 押沙特守平；GPT 仍坚持乌拉圭取胜，以保持原小组出线判断，但承认这场可能比纸面实力更难。"
+          "review": "沙特 1:1 乌拉圭。赛果已自动录入；Ray 预测 0:0，GPT 预测 0:1。Ray 猜对胜平负，得到 3 分。 本场得分：Ray +3，GPT +0。",
+          "espn_id": "760429",
+          "manual_points": {
+            "ray": 3,
+            "gpt": 0,
+            "explanation": "Ray 猜对胜平负，得到 3 分。"
+          }
         },
         {
           "id": "iri-nzl-20260616",
@@ -750,10 +762,6 @@
     }
   ],
   "update_log": [
-    {
-      "time": "06-14 07:00",
-      "text": "巴西 1:1 摩洛哥，Ray 押中巴西无法取胜，Ray +3。"
-    },
     {
       "time": "06-14 10:00",
       "text": "苏格兰 1:0 海地，双方方向一致，不计分；Ray 的苏格兰 4 分出线路线继续存活。"
@@ -789,6 +797,10 @@
     {
       "time": "06-16 05:05",
       "text": "比利时 1:1 埃及，Ray 完全命中比分，Ray +4；总分变为 Ray 11:3 GPT 5.5。"
+    },
+    {
+      "time": "06-16 08:11",
+      "text": "自动更新：沙特 1:1 乌拉圭，Ray +3，GPT +0。"
     }
   ],
   "archive": [
