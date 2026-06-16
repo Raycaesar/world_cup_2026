@@ -7,18 +7,18 @@
     "tagline": "World Cup Prediction Derby"
   },
   "meta": {
-    "updated_at": "2026-06-16 11:11 BJT",
-    "active_day": "2026-06-16",
+    "updated_at": "2026-06-16 15:20 BJT",
+    "active_day": "2026-06-17",
     "timezone": "Asia/Beijing",
-    "version": "auto-score-202606160311"
+    "version": "manual-0617-predictions-20260616-1520"
   },
   "score_summary": {
     "ray_total": 14,
     "gpt_total": 3,
-    "leader_comment": "Ray 暂时 14:3 领先 GPT 5.5。"
+    "leader_comment": "Ray 暂时 14:3 领先 GPT 5.5。比利时 1:1 埃及完全命中后，沙特 1:1 乌拉圭又让 Ray 押中平局方向，领先优势进一步扩大。"
   },
-  "headline": "总分 Ray 14:3 GPT 5.5：伊朗 2:2 新西兰 已自动更新。",
-  "brief": "本场复盘为自动简写版，只记录赛果、预测与计分；详细评论可稍后手动补充。",
+  "headline": "Ray 14:3 领先：沙特逼平乌拉圭，伊朗与新西兰也打成 2:2。",
+  "brief": "6 月 16 日四场全部以平局收场：西班牙、比利时、乌拉圭、伊朗都没有赢下首战。Ray 凭比利时 1:1 埃及完全命中和沙特 1:1 乌拉圭方向命中单日拿到 7 分。今晚进入法国、挪威、阿根廷、奥地利的首秀。",
   "tournament_picks": [
     {
       "name": "冠军",
@@ -145,7 +145,7 @@
         "伊朗",
         "埃及"
       ],
-      "note": "比利时 1:1 埃及后，Ray 关于比利时老迈、首战可能翻车的判断得到验证。埃及反击机会很多但终结不足；比利时依靠卢卡库替补登场后一段冲击扳平，整体进攻质量仍然有限。双方原本都看低新西兰，伊朗仍被看作本组硬度更强的一方。"
+      "note": "G 组首轮两场都打平：比利时 1:1 埃及、伊朗 2:2 新西兰。Ray 完全命中比利时被埃及逼平，也承认低估了新西兰的进攻效率；四队同积 1 分，后续每一场都很关键。"
     },
     {
       "group": "H",
@@ -158,7 +158,7 @@
         "西班牙",
         "乌拉圭"
       ],
-      "note": "西班牙首战 0:0 被佛得角逼平，Ray 与 GPT 都明显高估了西班牙破密防能力。出线押注暂不改：Ray 仍保留沙特第三晋级可能，GPT 原本只给西班牙、乌拉圭出线。"
+      "note": "H 组首轮也全是平局：西班牙 0:0 佛得角，沙特 1:1 乌拉圭。Ray 押中沙特守平乌拉圭的方向；西班牙与乌拉圭都没有建立优势，四队同积 1 分。"
     },
     {
       "group": "I",
@@ -171,7 +171,7 @@
         "挪威",
         "塞内加尔"
       ],
-      "note": "Ray 认为塞内加尔 3 分不够；GPT 原给塞内加尔第三晋级。"
+      "note": "Ray 认为塞内加尔 3 分不够；GPT 原给塞内加尔第三晋级。首战法国对塞内加尔、伊拉克对挪威，将直接检验 I 组强弱格局。"
     },
     {
       "group": "J",
@@ -185,7 +185,7 @@
         "奥地利",
         "阿尔及利亚"
       ],
-      "note": "双方基本无异议。"
+      "note": "双方都看好阿根廷、奥地利、阿尔及利亚出线；首轮阿根廷对阿尔及利亚、奥地利对约旦，是检验小组排序的开端。"
     },
     {
       "group": "K",
@@ -216,62 +216,96 @@
   ],
   "today_matches": [
     {
-      "id": "ksa-uru-20260616",
-      "kickoff_local": "06-16 06:00 BJT",
-      "home": "沙特",
-      "away": "乌拉圭",
-      "group": "H",
-      "status": "已结束",
+      "id": "fra-sen-20260617",
+      "kickoff_local": "06-17 03:00 BJT",
+      "home": "法国",
+      "away": "塞内加尔",
+      "group": "I",
+      "status": "未开赛",
       "ray_prediction": {
-        "home_score": 0,
+        "home_score": 2,
         "away_score": 0,
-        "reason": "Ray 认为乌拉圭未必能顺利拿下沙特，沙特如果延续高位逼抢和纪律性，可能守出 0:0。"
+        "reason": "Ray 预测法国 2:0 塞内加尔。法国大赛首战可能慢热，但这届阵容厚度和个人能力太强，只要不轻敌，仍应能压住塞内加尔。"
       },
       "gpt_prediction": {
-        "home_score": 0,
+        "home_score": 2,
         "away_score": 1,
-        "reason": "GPT 原本预测沙特 0:2 乌拉圭，但考虑乌拉圭赛前旅行/落地风波和沙特主动求战，将比分收缩为乌拉圭 1:0 小胜。"
+        "reason": "GPT 仍按原出线逻辑看好法国小组第一，但保留塞内加尔的身体对抗和转换威胁，预测法国 2:1 险胜。"
       },
       "actual_score": {
-        "home_score": 1,
-        "away_score": 1
+        "home_score": null,
+        "away_score": null
       },
-      "review": "沙特 1:1 乌拉圭。赛果已自动录入；Ray 预测 0:0，GPT 预测 0:1。Ray 猜对胜平负，得到 3 分。 本场得分：Ray +3，GPT +0。",
-      "espn_id": "760429",
-      "manual_points": {
-        "ray": 3,
-        "gpt": 0,
-        "explanation": "Ray 猜对胜平负，得到 3 分。"
-      }
+      "review": "法国实力占优，但塞内加尔不是弱旅。Ray 押法国 2:0 稳住开局；GPT 认为法国会赢，但塞内加尔有能力取得进球。"
     },
     {
-      "id": "iri-nzl-20260616",
-      "kickoff_local": "06-16 09:00 BJT",
-      "home": "伊朗",
-      "away": "新西兰",
-      "group": "G",
-      "status": "已结束",
+      "id": "irq-nor-20260617",
+      "kickoff_local": "06-17 06:00 BJT",
+      "home": "伊拉克",
+      "away": "挪威",
+      "group": "I",
+      "status": "未开赛",
+      "ray_prediction": {
+        "home_score": 0,
+        "away_score": 3,
+        "reason": "Ray 预测伊拉克 0:3 挪威。伊拉克实力不好判断，且亚洲球队目前表现很硬，但挪威锋线太可怕，能双杀意大利，伊拉克很难抵御。"
+      },
+      "gpt_prediction": {
+        "home_score": 1,
+        "away_score": 3,
+        "reason": "GPT 保持挪威出线判断，看好哈兰德与索尔洛特冲击力，但考虑伊拉克可能依靠定位球或反击打入一球，预测挪威 3:1。"
+      },
+      "actual_score": {
+        "home_score": null,
+        "away_score": null
+      },
+      "review": "本场纸面差距明显，但世界杯首轮亚洲球队表现普遍强硬。Ray 押挪威 3:0，GPT 也看挪威胜但认为伊拉克可能偷到一球。"
+    },
+    {
+      "id": "arg-dza-20260617",
+      "kickoff_local": "06-17 09:00 BJT",
+      "home": "阿根廷",
+      "away": "阿尔及利亚",
+      "group": "J",
+      "status": "未开赛",
+      "ray_prediction": {
+        "home_score": 1,
+        "away_score": 0,
+        "reason": "Ray 预测阿根廷 1:0 阿尔及利亚。阿根廷也可能首战慢热，阿尔及利亚不弱，但 Ray 相信斯卡洛尼不会轻敌，阿根廷会以控制力小胜。"
+      },
+      "gpt_prediction": {
+        "home_score": 2,
+        "away_score": 1,
+        "reason": "GPT 原本看好阿根廷、奥地利、阿尔及利亚共同出线，因此不看低阿尔及利亚；但阿根廷整体成熟度更高，预测 2:1。"
+      },
+      "actual_score": {
+        "home_score": null,
+        "away_score": null
+      },
+      "review": "Ray 押阿根廷谨慎小胜；GPT 也看阿根廷取胜，但认为阿尔及利亚有能力给卫冕级别球队制造麻烦。"
+    },
+    {
+      "id": "aut-jor-20260617",
+      "kickoff_local": "06-17 12:00 BJT",
+      "home": "奥地利",
+      "away": "约旦",
+      "group": "J",
+      "status": "未开赛",
       "ray_prediction": {
         "home_score": 2,
-        "away_score": 0,
-        "reason": "Ray 在新西兰生活十年，认为新西兰足球水平有限，肯定打不过伊朗；本场预测保持不变，伊朗 2:0。"
+        "away_score": 1,
+        "reason": "Ray 预测奥地利 2:1 约旦。约旦与其他几支亚洲球队相比还是弱一些，不太看好能挡住奥地利，但仍可能靠韧性和反击取得进球。"
       },
       "gpt_prediction": {
         "home_score": 2,
         "away_score": 0,
-        "reason": "GPT 同意伊朗硬度、定位球和门前效率明显高于新西兰，保持伊朗 2:0。"
+        "reason": "GPT 保持奥地利出线判断，认为奥地利压迫和整体性会明显优于约旦，预测 2:0。"
       },
       "actual_score": {
-        "home_score": 2,
-        "away_score": 2
+        "home_score": null,
+        "away_score": null
       },
-      "review": "伊朗 2:2 新西兰。赛果已自动录入；Ray 预测 2:0，GPT 预测 2:0。双方预测完全相同，本场不计分。 本场得分：Ray +0，GPT +0。",
-      "espn_id": "760427",
-      "manual_points": {
-        "ray": 0,
-        "gpt": 0,
-        "explanation": "双方预测完全相同，本场不计分。"
-      }
+      "review": "Ray 认为约旦能制造麻烦但难挡奥地利；GPT 更看好奥地利控制比赛并零封取胜。"
     }
   ],
   "matchdays": [
@@ -650,8 +684,8 @@
     },
     {
       "date": "2026-06-16",
-      "title": "西班牙被佛得角逼平，比利时也只拿一分",
-      "summary": "西班牙 0:0 佛得角，Ray 与 GPT 双双错得离谱；比利时 1:1 埃及，Ray 完全命中比分拿到 4 分。强队连续受挫，今日比赛的冷门味道越来越浓。",
+      "title": "四场全部打平：Ray 单日 7 分扩大领先",
+      "summary": "西班牙 0:0 佛得角、比利时 1:1 埃及、沙特 1:1 乌拉圭、伊朗 2:2 新西兰。Ray 完全命中比利时平局比分，又押中沙特逼平乌拉圭的胜平负方向，单日拿到 7 分。",
       "ray_points": 7,
       "gpt_points": 0,
       "matches": [
@@ -733,13 +767,13 @@
             "home_score": 1,
             "away_score": 1
           },
-          "review": "沙特 1:1 乌拉圭。赛果已自动录入；Ray 预测 0:0，GPT 预测 0:1。Ray 猜对胜平负，得到 3 分。 本场得分：Ray +3，GPT +0。",
-          "espn_id": "760429",
+          "review": "沙特 1:1 乌拉圭。沙特在迈阿密打得非常有纪律，防守站位清楚，反击与定位球也能制造威胁。上半场第 41 分钟，Al Amri 利用角球机会头球破门，沙特一度把乌拉圭逼到非常被动。下半场乌拉圭逐渐加强压迫，并在第 80 分钟由 Maxi Araujo 扳平。乌拉圭最后阶段继续寻找反超，但沙特门将 Mohammed Al-Owais 多次救险，守住了平局。Ray 预测沙特 0:0 乌拉圭，没有命中比分，但押中沙特能够逼平乌拉圭的核心判断，得到 3 分；GPT 预测乌拉圭 1:0，小胜判断落空。",
           "manual_points": {
             "ray": 3,
             "gpt": 0,
-            "explanation": "Ray 猜对胜平负，得到 3 分。"
-          }
+            "explanation": "Ray 预测 0:0，押中平局方向但没有命中比分，得到 3 分；GPT 预测乌拉圭 1:0，胜平负方向错误。"
+          },
+          "espn_id": "66456996"
         },
         {
           "id": "iri-nzl-20260616",
@@ -762,13 +796,114 @@
             "home_score": 2,
             "away_score": 2
           },
-          "review": "伊朗 2:2 新西兰。赛果已自动录入；Ray 预测 2:0，GPT 预测 2:0。双方预测完全相同，本场不计分。 本场得分：Ray +0，GPT +0。",
-          "espn_id": "760427",
+          "review": "伊朗 2:2 新西兰。新西兰这场完全打破了双方赛前的低估，Elijah Just 梅开二度，两次帮助新西兰领先；老将 Chris Wood 在前场串联和做球上发挥明显。伊朗则展现出韧性，Ramin Rezaeian 在上半场扳平，Mohammad Mohebi 下半场再次追成 2:2。整场比赛节奏开放、防守失误不少，但观赏性很强。Ray 与 GPT 都预测伊朗 2:0 新西兰，双方预测完全相同且全部错过新西兰的进攻爆发，本场不计分。",
           "manual_points": {
             "ray": 0,
             "gpt": 0,
-            "explanation": "双方预测完全相同，本场不计分。"
-          }
+            "explanation": "双方都预测伊朗 2:0，预测完全相同；实际为 2:2 平局，本场不计分。"
+          },
+          "espn_id": "66456984"
+        }
+      ]
+    },
+    {
+      "date": "2026-06-17",
+      "title": "法国、挪威、阿根廷、奥地利首秀",
+      "summary": "今晚进入 I 组与 J 组首轮：Ray 押法国 2:0 塞内加尔、伊拉克 0:3 挪威、阿根廷 1:0 阿尔及利亚、奥地利 2:1 约旦；GPT 在保持出线名单逻辑的基础上，预测法国 2:1、挪威 3:1、阿根廷 2:1、奥地利 2:0。",
+      "ray_points": 0,
+      "gpt_points": 0,
+      "matches": [
+        {
+          "id": "fra-sen-20260617",
+          "kickoff_local": "06-17 03:00 BJT",
+          "home": "法国",
+          "away": "塞内加尔",
+          "group": "I",
+          "status": "未开赛",
+          "ray_prediction": {
+            "home_score": 2,
+            "away_score": 0,
+            "reason": "Ray 预测法国 2:0 塞内加尔。法国大赛首战可能慢热，但这届阵容厚度和个人能力太强，只要不轻敌，仍应能压住塞内加尔。"
+          },
+          "gpt_prediction": {
+            "home_score": 2,
+            "away_score": 1,
+            "reason": "GPT 仍按原出线逻辑看好法国小组第一，但保留塞内加尔的身体对抗和转换威胁，预测法国 2:1 险胜。"
+          },
+          "actual_score": {
+            "home_score": null,
+            "away_score": null
+          },
+          "review": "法国实力占优，但塞内加尔不是弱旅。Ray 押法国 2:0 稳住开局；GPT 认为法国会赢，但塞内加尔有能力取得进球。"
+        },
+        {
+          "id": "irq-nor-20260617",
+          "kickoff_local": "06-17 06:00 BJT",
+          "home": "伊拉克",
+          "away": "挪威",
+          "group": "I",
+          "status": "未开赛",
+          "ray_prediction": {
+            "home_score": 0,
+            "away_score": 3,
+            "reason": "Ray 预测伊拉克 0:3 挪威。伊拉克实力不好判断，且亚洲球队目前表现很硬，但挪威锋线太可怕，能双杀意大利，伊拉克很难抵御。"
+          },
+          "gpt_prediction": {
+            "home_score": 1,
+            "away_score": 3,
+            "reason": "GPT 保持挪威出线判断，看好哈兰德与索尔洛特冲击力，但考虑伊拉克可能依靠定位球或反击打入一球，预测挪威 3:1。"
+          },
+          "actual_score": {
+            "home_score": null,
+            "away_score": null
+          },
+          "review": "本场纸面差距明显，但世界杯首轮亚洲球队表现普遍强硬。Ray 押挪威 3:0，GPT 也看挪威胜但认为伊拉克可能偷到一球。"
+        },
+        {
+          "id": "arg-dza-20260617",
+          "kickoff_local": "06-17 09:00 BJT",
+          "home": "阿根廷",
+          "away": "阿尔及利亚",
+          "group": "J",
+          "status": "未开赛",
+          "ray_prediction": {
+            "home_score": 1,
+            "away_score": 0,
+            "reason": "Ray 预测阿根廷 1:0 阿尔及利亚。阿根廷也可能首战慢热，阿尔及利亚不弱，但 Ray 相信斯卡洛尼不会轻敌，阿根廷会以控制力小胜。"
+          },
+          "gpt_prediction": {
+            "home_score": 2,
+            "away_score": 1,
+            "reason": "GPT 原本看好阿根廷、奥地利、阿尔及利亚共同出线，因此不看低阿尔及利亚；但阿根廷整体成熟度更高，预测 2:1。"
+          },
+          "actual_score": {
+            "home_score": null,
+            "away_score": null
+          },
+          "review": "Ray 押阿根廷谨慎小胜；GPT 也看阿根廷取胜，但认为阿尔及利亚有能力给卫冕级别球队制造麻烦。"
+        },
+        {
+          "id": "aut-jor-20260617",
+          "kickoff_local": "06-17 12:00 BJT",
+          "home": "奥地利",
+          "away": "约旦",
+          "group": "J",
+          "status": "未开赛",
+          "ray_prediction": {
+            "home_score": 2,
+            "away_score": 1,
+            "reason": "Ray 预测奥地利 2:1 约旦。约旦与其他几支亚洲球队相比还是弱一些，不太看好能挡住奥地利，但仍可能靠韧性和反击取得进球。"
+          },
+          "gpt_prediction": {
+            "home_score": 2,
+            "away_score": 0,
+            "reason": "GPT 保持奥地利出线判断，认为奥地利压迫和整体性会明显优于约旦，预测 2:0。"
+          },
+          "actual_score": {
+            "home_score": null,
+            "away_score": null
+          },
+          "review": "Ray 认为约旦能制造麻烦但难挡奥地利；GPT 更看好奥地利控制比赛并零封取胜。"
         }
       ]
     }
@@ -777,10 +912,6 @@
     {
       "time": "06-14 13:00",
       "text": "澳大利亚 2:0 土耳其，D 组再度爆冷，澳大利亚出线概率大增。"
-    },
-    {
-      "time": "06-15 01:00",
-      "text": "录入今日预测：德国 3:0 库拉索；Ray 押日本 2:0 荷兰，GPT 押 1:1；Ray 押科特迪瓦 1:0 厄瓜多尔，GPT 押 1:1；双方同押伊朗 2:0 新西兰。"
     },
     {
       "time": "06-15 03:15",
@@ -807,12 +938,16 @@
       "text": "比利时 1:1 埃及，Ray 完全命中比分，Ray +4；总分变为 Ray 11:3 GPT 5.5。"
     },
     {
-      "time": "06-16 08:11",
-      "text": "自动更新：沙特 1:1 乌拉圭，Ray +3，GPT +0。"
+      "time": "06-16 08:10",
+      "text": "沙特 1:1 乌拉圭，Ray 押中沙特能逼平乌拉圭，Ray +3，总分 14:3。"
     },
     {
-      "time": "06-16 11:11",
-      "text": "自动更新：伊朗 2:2 新西兰，Ray +0，GPT +0。"
+      "time": "06-16 11:15",
+      "text": "伊朗 2:2 新西兰，双方都押伊朗 2:0 且预测相同，本场不计分。"
+    },
+    {
+      "time": "06-16 15:20",
+      "text": "录入今晚预测：法国、挪威、阿根廷、奥地利首秀。"
     }
   ],
   "archive": [
@@ -843,8 +978,13 @@
     },
     {
       "date": "2026-06-16",
-      "title": "西班牙 0:0、比利时 1:1，Ray +4",
+      "title": "四场全平，Ray 单日 7 分",
       "url": "#day-2026-06-16"
+    },
+    {
+      "date": "2026-06-17",
+      "title": "法国、挪威、阿根廷、奥地利首秀",
+      "url": "#day-2026-06-17"
     }
   ]
 }
