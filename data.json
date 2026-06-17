@@ -7,17 +7,17 @@
     "tagline": "World Cup Prediction Derby"
   },
   "meta": {
-    "updated_at": "2026-06-17 08:11 BJT",
+    "updated_at": "2026-06-17 11:11 BJT",
     "active_day": "2026-06-17",
     "timezone": "Asia/Beijing",
-    "version": "auto-score-202606170011"
+    "version": "auto-score-202606170311"
   },
   "score_summary": {
     "ray_total": 14,
     "gpt_total": 3,
     "leader_comment": "Ray 暂时 14:3 领先 GPT 5.5。"
   },
-  "headline": "总分 Ray 14:3 GPT 5.5：伊拉克 1:4 挪威 已自动更新。",
+  "headline": "总分 Ray 14:3 GPT 5.5：阿根廷 3:0 阿尔及利亚 已自动更新。",
   "brief": "本场复盘为自动简写版，只记录赛果、预测与计分；详细评论可稍后手动补充。",
   "tournament_picks": [
     {
@@ -279,7 +279,7 @@
       "home": "阿根廷",
       "away": "阿尔及利亚",
       "group": "J",
-      "status": "未开赛",
+      "status": "已结束",
       "ray_prediction": {
         "home_score": 1,
         "away_score": 0,
@@ -291,10 +291,16 @@
         "reason": "GPT 原本看好阿根廷、奥地利、阿尔及利亚共同出线，因此不看低阿尔及利亚；但阿根廷整体成熟度更高，预测 2:1。"
       },
       "actual_score": {
-        "home_score": null,
-        "away_score": null
+        "home_score": 3,
+        "away_score": 0
       },
-      "review": "Ray 押阿根廷谨慎小胜；GPT 也看阿根廷取胜，但认为阿尔及利亚有能力给卫冕级别球队制造麻烦。"
+      "review": "阿根廷 3:0 阿尔及利亚。赛果已自动录入；Ray 预测 1:0，GPT 预测 2:1。双方都猜对胜平负，但没有形成比分命中差异，本场不计分。 本场得分：Ray +0，GPT +0。",
+      "espn_id": "760433",
+      "manual_points": {
+        "ray": 0,
+        "gpt": 0,
+        "explanation": "双方都猜对胜平负，但没有形成比分命中差异，本场不计分。"
+      }
     },
     {
       "id": "aut-jor-20260617",
@@ -889,7 +895,7 @@
           "home": "阿根廷",
           "away": "阿尔及利亚",
           "group": "J",
-          "status": "未开赛",
+          "status": "已结束",
           "ray_prediction": {
             "home_score": 1,
             "away_score": 0,
@@ -901,10 +907,16 @@
             "reason": "GPT 原本看好阿根廷、奥地利、阿尔及利亚共同出线，因此不看低阿尔及利亚；但阿根廷整体成熟度更高，预测 2:1。"
           },
           "actual_score": {
-            "home_score": null,
-            "away_score": null
+            "home_score": 3,
+            "away_score": 0
           },
-          "review": "Ray 押阿根廷谨慎小胜；GPT 也看阿根廷取胜，但认为阿尔及利亚有能力给卫冕级别球队制造麻烦。"
+          "review": "阿根廷 3:0 阿尔及利亚。赛果已自动录入；Ray 预测 1:0，GPT 预测 2:1。双方都猜对胜平负，但没有形成比分命中差异，本场不计分。 本场得分：Ray +0，GPT +0。",
+          "espn_id": "760433",
+          "manual_points": {
+            "ray": 0,
+            "gpt": 0,
+            "explanation": "双方都猜对胜平负，但没有形成比分命中差异，本场不计分。"
+          }
         },
         {
           "id": "aut-jor-20260617",
@@ -933,10 +945,6 @@
     }
   ],
   "update_log": [
-    {
-      "time": "06-15 06:35",
-      "text": "补充核对荷兰 2:2 日本赛报：范戴克、萨默维尔为荷兰进球，中村敬斗、镰田大地为日本扳平；GPT 只押中平局方向，不命中比分，GPT +3，总分 3:3。"
-    },
     {
       "time": "06-15 09:15",
       "text": "科特迪瓦 1:0 厄瓜多尔，Ray 完全命中比分，Ray +4，总分 7:3。"
@@ -972,6 +980,10 @@
     {
       "time": "06-17 08:11",
       "text": "自动更新：伊拉克 1:4 挪威，Ray +0，GPT +0。"
+    },
+    {
+      "time": "06-17 11:11",
+      "text": "自动更新：阿根廷 3:0 阿尔及利亚，Ray +0，GPT +0。"
     }
   ],
   "archive": [
