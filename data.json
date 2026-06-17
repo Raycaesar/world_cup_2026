@@ -7,18 +7,18 @@
     "tagline": "World Cup Prediction Derby"
   },
   "meta": {
-    "updated_at": "2026-06-18 03:43 BJT",
+    "updated_at": "2026-06-18 06:11 BJT",
     "active_day": "2026-06-18",
     "timezone": "Asia/Beijing",
-    "version": "manual-por-cod-review-20260618-0343"
+    "version": "auto-score-202606172211"
   },
   "score_summary": {
     "ray_total": 14,
     "gpt_total": 3,
-    "leader_comment": "Ray 暂时 14:3 领先 GPT 5.5。葡萄牙 1:1 刚果（金）一战，双方都押葡萄牙胜，结果热门翻车，本场不计分。"
+    "leader_comment": "Ray 暂时 14:3 领先 GPT 5.5。"
   },
-  "headline": "Ray 14:3 领先：伊比利亚“双毒”发作，葡萄牙也被逼平。",
-  "brief": "继西班牙 0:0 佛得角后，葡萄牙 1:1 刚果（金）再度爆冷；Ray 与 GPT 都猜错，本场不改分，K 组第一轮立刻变得危险。",
+  "headline": "总分 Ray 14:3 GPT 5.5：英格兰 4:2 克罗地亚 已自动更新。",
+  "brief": "本场复盘为自动简写版，只记录赛果、预测与计分；详细评论可稍后手动补充。",
   "tournament_picks": [
     {
       "name": "冠军",
@@ -249,7 +249,7 @@
       "home": "英格兰",
       "away": "克罗地亚",
       "group": "L",
-      "status": "未开赛",
+      "status": "已结束",
       "ray_prediction": {
         "home_score": 3,
         "away_score": 0,
@@ -261,10 +261,16 @@
         "reason": "GPT 仍按原出线名单看英格兰、克罗地亚前二，因此认为克罗地亚不会轻易崩盘；预测英格兰 2:1 险胜。"
       },
       "actual_score": {
-        "home_score": null,
-        "away_score": null
+        "home_score": 4,
+        "away_score": 2
       },
-      "review": "Ray 押英格兰大胜打开 L 组；GPT 更尊重克罗地亚杯赛经验，认为英格兰小胜。"
+      "review": "英格兰 4:2 克罗地亚。赛果已自动录入；Ray 预测 3:0，GPT 预测 2:1。双方都猜对胜平负，但没有形成比分命中差异，本场不计分。 本场得分：Ray +0，GPT +0。",
+      "espn_id": "760437",
+      "manual_points": {
+        "ray": 0,
+        "gpt": 0,
+        "explanation": "双方都猜对胜平负，但没有形成比分命中差异，本场不计分。"
+      }
     },
     {
       "id": "gha-pan-20260618",
@@ -973,7 +979,7 @@
           "home": "英格兰",
           "away": "克罗地亚",
           "group": "L",
-          "status": "未开赛",
+          "status": "已结束",
           "ray_prediction": {
             "home_score": 3,
             "away_score": 0,
@@ -985,10 +991,16 @@
             "reason": "GPT 仍按原出线名单看英格兰、克罗地亚前二，因此认为克罗地亚不会轻易崩盘；预测英格兰 2:1 险胜。"
           },
           "actual_score": {
-            "home_score": null,
-            "away_score": null
+            "home_score": 4,
+            "away_score": 2
           },
-          "review": "Ray 押英格兰大胜打开 L 组；GPT 更尊重克罗地亚杯赛经验，认为英格兰小胜。"
+          "review": "英格兰 4:2 克罗地亚。赛果已自动录入；Ray 预测 3:0，GPT 预测 2:1。双方都猜对胜平负，但没有形成比分命中差异，本场不计分。 本场得分：Ray +0，GPT +0。",
+          "espn_id": "760437",
+          "manual_points": {
+            "ray": 0,
+            "gpt": 0,
+            "explanation": "双方都猜对胜平负，但没有形成比分命中差异，本场不计分。"
+          }
         },
         {
           "id": "gha-pan-20260618",
@@ -1041,14 +1053,6 @@
   ],
   "update_log": [
     {
-      "time": "06-15 06:35",
-      "text": "补充核对荷兰 2:2 日本赛报：范戴克、萨默维尔为荷兰进球，中村敬斗、镰田大地为日本扳平；GPT 只押中平局方向，不命中比分，GPT +3，总分 3:3。"
-    },
-    {
-      "time": "06-15 09:15",
-      "text": "科特迪瓦 1:0 厄瓜多尔，Ray 完全命中比分，Ray +4，总分 7:3。"
-    },
-    {
       "time": "06-15 13:45",
       "text": "瑞典 5:1 突尼斯，双方都押中瑞典胜但比分偏保守，本场不计分。"
     },
@@ -1083,6 +1087,10 @@
     {
       "time": "06-18 03:43",
       "text": "葡萄牙 1:1 刚果（金），伊比利亚“双毒”延续：西班牙被佛得角 0:0 逼平后，葡萄牙也被刚果（金）拖住。Ray 预测 2:0、GPT 预测 2:1，双方都押葡萄牙胜而失手，本场不计分，总分仍为 Ray 14:3。"
+    },
+    {
+      "time": "06-18 06:11",
+      "text": "自动更新：英格兰 4:2 克罗地亚，Ray +0，GPT +0。"
     }
   ],
   "archive": [
