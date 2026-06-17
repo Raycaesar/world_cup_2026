@@ -7,18 +7,18 @@
     "tagline": "World Cup Prediction Derby"
   },
   "meta": {
-    "updated_at": "2026-06-17 11:45 BJT",
+    "updated_at": "2026-06-17 14:21 BJT",
     "active_day": "2026-06-17",
     "timezone": "Asia/Beijing",
-    "version": "manual-mbappe-haaland-messi-20260617-1145"
+    "version": "auto-score-202606170621"
   },
   "score_summary": {
     "ray_total": 14,
     "gpt_total": 3,
-    "leader_comment": "Ray 暂时 14:3 领先 GPT 5.5。法国、挪威、阿根廷三场双方都猜中胜负关系，但比分全部失手，本轮暂不改分。"
+    "leader_comment": "Ray 暂时 14:3 领先 GPT 5.5。"
   },
-  "headline": "Ray 14:3 领先：姆巴佩、哈兰德双响，梅西帽子戏法追平克洛泽。",
-  "brief": "法国 3:1 塞内加尔、伊拉克 1:4 挪威、阿根廷 3:0 阿尔及利亚。三场比赛胜负方向双方都对，比分均未命中；伟大的夜晚属于姆巴佩、哈兰德和梅西。",
+  "headline": "总分 Ray 14:3 GPT 5.5：奥地利 3:1 约旦 已自动更新。",
+  "brief": "本场复盘为自动简写版，只记录赛果、预测与计分；详细评论可稍后手动补充。",
   "tournament_picks": [
     {
       "name": "冠军",
@@ -221,7 +221,7 @@
       "home": "奥地利",
       "away": "约旦",
       "group": "J",
-      "status": "未开赛",
+      "status": "已结束",
       "ray_prediction": {
         "home_score": 2,
         "away_score": 1,
@@ -233,10 +233,16 @@
         "reason": "GPT 保持奥地利出线判断，认为奥地利压迫和整体性会明显优于约旦，预测 2:0。"
       },
       "actual_score": {
-        "home_score": null,
-        "away_score": null
+        "home_score": 3,
+        "away_score": 1
       },
-      "review": "Ray 认为约旦能制造麻烦但难挡奥地利；GPT 更看好奥地利控制比赛并零封取胜。"
+      "review": "奥地利 3:1 约旦。赛果已自动录入；Ray 预测 2:1，GPT 预测 2:0。双方都猜对胜平负，但没有形成比分命中差异，本场不计分。 本场得分：Ray +0，GPT +0。",
+      "espn_id": "760431",
+      "manual_points": {
+        "ray": 0,
+        "gpt": 0,
+        "explanation": "双方都猜对胜平负，但没有形成比分命中差异，本场不计分。"
+      }
     }
   ],
   "matchdays": [
@@ -834,7 +840,7 @@
           "home": "奥地利",
           "away": "约旦",
           "group": "J",
-          "status": "未开赛",
+          "status": "已结束",
           "ray_prediction": {
             "home_score": 2,
             "away_score": 1,
@@ -846,19 +852,21 @@
             "reason": "GPT 保持奥地利出线判断，认为奥地利压迫和整体性会明显优于约旦，预测 2:0。"
           },
           "actual_score": {
-            "home_score": null,
-            "away_score": null
+            "home_score": 3,
+            "away_score": 1
           },
-          "review": "Ray 认为约旦能制造麻烦但难挡奥地利；GPT 更看好奥地利控制比赛并零封取胜。"
+          "review": "奥地利 3:1 约旦。赛果已自动录入；Ray 预测 2:1，GPT 预测 2:0。双方都猜对胜平负，但没有形成比分命中差异，本场不计分。 本场得分：Ray +0，GPT +0。",
+          "espn_id": "760431",
+          "manual_points": {
+            "ray": 0,
+            "gpt": 0,
+            "explanation": "双方都猜对胜平负，但没有形成比分命中差异，本场不计分。"
+          }
         }
       ]
     }
   ],
   "update_log": [
-    {
-      "time": "06-15 03:15",
-      "text": "德国 7:1 库拉索，双方都押德国胜但比分保守，本场不计分；哈弗茨进入金靴观察名单，但双方赛前大奖预测不再修改。"
-    },
     {
       "time": "06-15 06:35",
       "text": "补充核对荷兰 2:2 日本赛报：范戴克、萨默维尔为荷兰进球，中村敬斗、镰田大地为日本扳平；GPT 只押中平局方向，不命中比分，GPT +3，总分 3:3。"
@@ -894,6 +902,10 @@
     {
       "time": "06-17 11:45",
       "text": "法国 3:1、挪威 4:1、阿根廷 3:0；姆巴佩和哈兰德双响，梅西帽子戏法追平克洛泽。三场双方都中胜负但比分全失，暂不改分。"
+    },
+    {
+      "time": "06-17 14:21",
+      "text": "自动更新：奥地利 3:1 约旦，Ray +0，GPT +0。"
     }
   ],
   "archive": [
