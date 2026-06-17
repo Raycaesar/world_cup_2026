@@ -7,18 +7,18 @@
     "tagline": "World Cup Prediction Derby"
   },
   "meta": {
-    "updated_at": "2026-06-17 21:30 BJT",
+    "updated_at": "2026-06-18 03:11 BJT",
     "active_day": "2026-06-18",
     "timezone": "Asia/Beijing",
-    "version": "manual-austria-jordan-and-kl-predictions-20260617-2130"
+    "version": "auto-score-202606171911"
   },
   "score_summary": {
     "ray_total": 14,
     "gpt_total": 3,
-    "leader_comment": "Ray 暂时 14:3 领先 GPT 5.5。奥地利 3:1 约旦一战双方都猜中奥地利胜，但比分都未命中，本场不计分。"
+    "leader_comment": "Ray 暂时 14:3 领先 GPT 5.5。"
   },
-  "headline": "Ray 14:3 领先：奥地利险胜约旦，K/L 组今晚开战。",
-  "brief": "奥地利 3:1 约旦并不轻松，约旦打出速度和反击威胁；今晚进入葡萄牙、英格兰、加纳、哥伦比亚四场竞猜。",
+  "headline": "总分 Ray 14:3 GPT 5.5：葡萄牙 1:1 刚果（金） 已自动更新。",
+  "brief": "本场复盘为自动简写版，只记录赛果、预测与计分；详细评论可稍后手动补充。",
   "tournament_picks": [
     {
       "name": "冠军",
@@ -221,7 +221,7 @@
       "home": "葡萄牙",
       "away": "刚果（金）",
       "group": "K",
-      "status": "未开赛",
+      "status": "已结束",
       "ray_prediction": {
         "home_score": 2,
         "away_score": 0,
@@ -233,10 +233,16 @@
         "reason": "GPT 保持葡萄牙小组头名判断，但也保留刚果（金）第三晋级的原始逻辑，因此不看成碾压局；预测葡萄牙 2:1 小胜。"
       },
       "actual_score": {
-        "home_score": null,
-        "away_score": null
+        "home_score": 1,
+        "away_score": 1
       },
-      "review": "Ray 看葡萄牙零封取胜；GPT 认为刚果（金）身体和反击有威胁，但葡萄牙仍能拿下三分。"
+      "review": "葡萄牙 1:1 刚果（金）。赛果已自动录入；Ray 预测 2:0，GPT 预测 2:1。双方都猜错，且胜平负方向没有形成差异，本场不计分。 本场得分：Ray +0，GPT +0。",
+      "espn_id": "760435",
+      "manual_points": {
+        "ray": 0,
+        "gpt": 0,
+        "explanation": "双方都猜错，且胜平负方向没有形成差异，本场不计分。"
+      }
     },
     {
       "id": "eng-cro-20260618",
@@ -940,7 +946,7 @@
           "home": "葡萄牙",
           "away": "刚果（金）",
           "group": "K",
-          "status": "未开赛",
+          "status": "已结束",
           "ray_prediction": {
             "home_score": 2,
             "away_score": 0,
@@ -952,10 +958,16 @@
             "reason": "GPT 保持葡萄牙小组头名判断，但也保留刚果（金）第三晋级的原始逻辑，因此不看成碾压局；预测葡萄牙 2:1 小胜。"
           },
           "actual_score": {
-            "home_score": null,
-            "away_score": null
+            "home_score": 1,
+            "away_score": 1
           },
-          "review": "Ray 看葡萄牙零封取胜；GPT 认为刚果（金）身体和反击有威胁，但葡萄牙仍能拿下三分。"
+          "review": "葡萄牙 1:1 刚果（金）。赛果已自动录入；Ray 预测 2:0，GPT 预测 2:1。双方都猜错，且胜平负方向没有形成差异，本场不计分。 本场得分：Ray +0，GPT +0。",
+          "espn_id": "760435",
+          "manual_points": {
+            "ray": 0,
+            "gpt": 0,
+            "explanation": "双方都猜错，且胜平负方向没有形成差异，本场不计分。"
+          }
         },
         {
           "id": "eng-cro-20260618",
@@ -1031,10 +1043,6 @@
   ],
   "update_log": [
     {
-      "time": "06-15 06:35",
-      "text": "补充核对荷兰 2:2 日本赛报：范戴克、萨默维尔为荷兰进球，中村敬斗、镰田大地为日本扳平；GPT 只押中平局方向，不命中比分，GPT +3，总分 3:3。"
-    },
-    {
       "time": "06-15 09:15",
       "text": "科特迪瓦 1:0 厄瓜多尔，Ray 完全命中比分，Ray +4，总分 7:3。"
     },
@@ -1069,6 +1077,10 @@
     {
       "time": "06-17 21:30",
       "text": "奥地利 3:1 约旦，双方都猜中奥地利胜但比分失手，本场不计分；录入葡萄牙、英格兰、加纳、哥伦比亚四场预测。"
+    },
+    {
+      "time": "06-18 03:11",
+      "text": "自动更新：葡萄牙 1:1 刚果（金），Ray +0，GPT +0。"
     }
   ],
   "archive": [
