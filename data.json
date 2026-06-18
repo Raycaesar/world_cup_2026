@@ -7,17 +7,17 @@
     "tagline": "World Cup Prediction Derby"
   },
   "meta": {
-    "updated_at": "2026-06-18 06:11 BJT",
+    "updated_at": "2026-06-18 09:11 BJT",
     "active_day": "2026-06-18",
     "timezone": "Asia/Beijing",
-    "version": "auto-score-202606172211"
+    "version": "auto-score-202606180111"
   },
   "score_summary": {
     "ray_total": 14,
     "gpt_total": 3,
     "leader_comment": "Ray 暂时 14:3 领先 GPT 5.5。"
   },
-  "headline": "总分 Ray 14:3 GPT 5.5：英格兰 4:2 克罗地亚 已自动更新。",
+  "headline": "总分 Ray 14:3 GPT 5.5：加纳 1:0 巴拿马 已自动更新。",
   "brief": "本场复盘为自动简写版，只记录赛果、预测与计分；详细评论可稍后手动补充。",
   "tournament_picks": [
     {
@@ -278,7 +278,7 @@
       "home": "加纳",
       "away": "巴拿马",
       "group": "L",
-      "status": "未开赛",
+      "status": "已结束",
       "ray_prediction": {
         "home_score": 3,
         "away_score": 0,
@@ -290,10 +290,16 @@
         "reason": "GPT 原本没有把加纳列入 L 组前二，但承认加纳对巴拿马优势明显；预测加纳 2:0。"
       },
       "actual_score": {
-        "home_score": null,
-        "away_score": null
+        "home_score": 1,
+        "away_score": 0
       },
-      "review": "双方都看好加纳取胜，差别在于 Ray 押更大比分，GPT 保守一点。"
+      "review": "加纳 1:0 巴拿马。赛果已自动录入；Ray 预测 3:0，GPT 预测 2:0。双方都猜对胜平负，但没有形成比分命中差异，本场不计分。 本场得分：Ray +0，GPT +0。",
+      "espn_id": "760434",
+      "manual_points": {
+        "ray": 0,
+        "gpt": 0,
+        "explanation": "双方都猜对胜平负，但没有形成比分命中差异，本场不计分。"
+      }
     },
     {
       "id": "uzb-col-20260618",
@@ -1008,7 +1014,7 @@
           "home": "加纳",
           "away": "巴拿马",
           "group": "L",
-          "status": "未开赛",
+          "status": "已结束",
           "ray_prediction": {
             "home_score": 3,
             "away_score": 0,
@@ -1020,10 +1026,16 @@
             "reason": "GPT 原本没有把加纳列入 L 组前二，但承认加纳对巴拿马优势明显；预测加纳 2:0。"
           },
           "actual_score": {
-            "home_score": null,
-            "away_score": null
+            "home_score": 1,
+            "away_score": 0
           },
-          "review": "双方都看好加纳取胜，差别在于 Ray 押更大比分，GPT 保守一点。"
+          "review": "加纳 1:0 巴拿马。赛果已自动录入；Ray 预测 3:0，GPT 预测 2:0。双方都猜对胜平负，但没有形成比分命中差异，本场不计分。 本场得分：Ray +0，GPT +0。",
+          "espn_id": "760434",
+          "manual_points": {
+            "ray": 0,
+            "gpt": 0,
+            "explanation": "双方都猜对胜平负，但没有形成比分命中差异，本场不计分。"
+          }
         },
         {
           "id": "uzb-col-20260618",
@@ -1052,10 +1064,6 @@
     }
   ],
   "update_log": [
-    {
-      "time": "06-15 13:45",
-      "text": "瑞典 5:1 突尼斯，双方都押中瑞典胜但比分偏保守，本场不计分。"
-    },
     {
       "time": "06-16 02:35",
       "text": "西班牙 0:0 佛得角爆冷，双方都高估西班牙进攻效率，本场不计分。"
@@ -1091,6 +1099,10 @@
     {
       "time": "06-18 06:11",
       "text": "自动更新：英格兰 4:2 克罗地亚，Ray +0，GPT +0。"
+    },
+    {
+      "time": "06-18 09:11",
+      "text": "自动更新：加纳 1:0 巴拿马，Ray +0，GPT +0。"
     }
   ],
   "archive": [
