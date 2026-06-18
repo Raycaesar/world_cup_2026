@@ -7,17 +7,17 @@
     "tagline": "World Cup Prediction Derby"
   },
   "meta": {
-    "updated_at": "2026-06-19 02:11 BJT",
+    "updated_at": "2026-06-19 05:11 BJT",
     "active_day": "2026-06-19",
     "timezone": "Asia/Beijing",
-    "version": "auto-score-202606181811"
+    "version": "auto-score-202606182111"
   },
   "score_summary": {
     "ray_total": 15,
     "gpt_total": 3,
     "leader_comment": "Ray 暂时 15:3 领先 GPT 5.5。"
   },
-  "headline": "总分 Ray 15:3 GPT 5.5：捷克 1:1 南非 已自动更新。",
+  "headline": "总分 Ray 15:3 GPT 5.5：瑞士 4:1 波黑 已自动更新。",
   "brief": "本场复盘为自动简写版，只记录赛果、预测与计分；详细评论可稍后手动补充。",
   "tournament_picks": [
     {
@@ -362,7 +362,7 @@
       "home": "瑞士",
       "away": "波黑",
       "group": "B",
-      "status": "未开赛",
+      "status": "已结束",
       "ray_prediction": {
         "home_score": 3,
         "away_score": 1,
@@ -374,10 +374,16 @@
         "reason": "GPT 预测瑞士 2:1 波黑。我也看瑞士反弹，但 B 组首轮全平说明差距没那么大，波黑足够硬，瑞士赢球可能不会轻松。"
       },
       "actual_score": {
-        "home_score": null,
-        "away_score": null
+        "home_score": 4,
+        "away_score": 1
       },
-      "review": "赛前看点：B 组首轮四队全是 1 分，瑞士必须纠正“控制很多、收获很少”的问题。Ray 看瑞士用控制力打出 3:1 反弹；GPT 看瑞士赢，但认为波黑不会被轻易打穿。"
+      "review": "瑞士 4:1 波黑。赛果已自动录入；Ray 预测 3:1，GPT 预测 2:1。双方都猜对胜平负，但没有形成比分命中差异，本场不计分。 本场得分：Ray +0，GPT +0。",
+      "espn_id": "760439",
+      "manual_points": {
+        "ray": 0,
+        "gpt": 0,
+        "explanation": "双方都猜对胜平负，但没有形成比分命中差异，本场不计分。"
+      }
     },
     {
       "id": "can-qat-20260619",
@@ -1208,7 +1214,7 @@
           "home": "瑞士",
           "away": "波黑",
           "group": "B",
-          "status": "未开赛",
+          "status": "已结束",
           "ray_prediction": {
             "home_score": 3,
             "away_score": 1,
@@ -1220,10 +1226,16 @@
             "reason": "GPT 预测瑞士 2:1 波黑。我也看瑞士反弹，但 B 组首轮全平说明差距没那么大，波黑足够硬，瑞士赢球可能不会轻松。"
           },
           "actual_score": {
-            "home_score": null,
-            "away_score": null
+            "home_score": 4,
+            "away_score": 1
           },
-          "review": "赛前看点：B 组首轮四队全是 1 分，瑞士必须纠正“控制很多、收获很少”的问题。Ray 看瑞士用控制力打出 3:1 反弹；GPT 看瑞士赢，但认为波黑不会被轻易打穿。"
+          "review": "瑞士 4:1 波黑。赛果已自动录入；Ray 预测 3:1，GPT 预测 2:1。双方都猜对胜平负，但没有形成比分命中差异，本场不计分。 本场得分：Ray +0，GPT +0。",
+          "espn_id": "760439",
+          "manual_points": {
+            "ray": 0,
+            "gpt": 0,
+            "explanation": "双方都猜对胜平负，但没有形成比分命中差异，本场不计分。"
+          }
         },
         {
           "id": "can-qat-20260619",
@@ -1276,10 +1288,6 @@
   ],
   "update_log": [
     {
-      "time": "06-16 02:35",
-      "text": "西班牙 0:0 佛得角爆冷，双方都高估西班牙进攻效率，本场不计分。"
-    },
-    {
       "time": "06-16 05:05",
       "text": "比利时 1:1 埃及，Ray 完全命中比分，Ray +4；总分变为 Ray 11:3 GPT 5.5。"
     },
@@ -1314,6 +1322,10 @@
     {
       "time": "06-19 02:11",
       "text": "自动更新：捷克 1:1 南非，Ray +0，GPT +0。"
+    },
+    {
+      "time": "06-19 05:11",
+      "text": "自动更新：瑞士 4:1 波黑，Ray +0，GPT +0。"
     }
   ],
   "archive": [
