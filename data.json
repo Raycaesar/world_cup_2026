@@ -7,17 +7,17 @@
     "tagline": "World Cup Prediction Derby"
   },
   "meta": {
-    "updated_at": "2026-06-19 08:11 BJT",
+    "updated_at": "2026-06-19 11:01 BJT",
     "active_day": "2026-06-19",
     "timezone": "Asia/Beijing",
-    "version": "auto-score-202606190011"
+    "version": "auto-score-202606190301"
   },
   "score_summary": {
-    "ray_total": 15,
+    "ray_total": 18,
     "gpt_total": 3,
-    "leader_comment": "Ray 暂时 15:3 领先 GPT 5.5。"
+    "leader_comment": "Ray 暂时 18:3 领先 GPT 5.5。"
   },
-  "headline": "总分 Ray 15:3 GPT 5.5：加拿大 6:0 卡塔尔 已自动更新。",
+  "headline": "总分 Ray 18:3 GPT 5.5：墨西哥 1:0 韩国 已自动更新。",
   "brief": "本场复盘为自动简写版，只记录赛果、预测与计分；详细评论可稍后手动补充。",
   "tournament_picks": [
     {
@@ -420,7 +420,7 @@
       "home": "墨西哥",
       "away": "韩国",
       "group": "A",
-      "status": "未开赛",
+      "status": "已结束",
       "ray_prediction": {
         "home_score": 2,
         "away_score": 1,
@@ -432,10 +432,16 @@
         "reason": "GPT 预测墨西哥 1:1 韩国。这是我和 Ray 分歧最大的一场：墨西哥有东道主优势和控场能力，但韩国的速度、反击和压迫足以把比赛拖成平局。"
       },
       "actual_score": {
-        "home_score": null,
-        "away_score": null
+        "home_score": 1,
+        "away_score": 0
       },
-      "review": "赛前看点：A 组头名战，也是今天双方预测分歧最大的一场。Ray 认为韩国首轮已经超常发挥，面对东道主墨西哥很难继续争雄；GPT 认为韩国的压迫和反击足以把比赛拖成 1:1。"
+      "review": "墨西哥 1:0 韩国。赛果已自动录入；Ray 预测 2:1，GPT 预测 1:1。Ray 猜对胜平负，得到 3 分。 本场得分：Ray +3，GPT +0。",
+      "espn_id": "760441",
+      "manual_points": {
+        "ray": 3,
+        "gpt": 0,
+        "explanation": "Ray 猜对胜平负，得到 3 分。"
+      }
     }
   ],
   "matchdays": [
@@ -1182,7 +1188,7 @@
       "date": "2026-06-19",
       "title": "马上开战：A/B 组第二轮，捷克、瑞士、加拿大与墨韩头名战",
       "summary": "今日预测已锁定：Ray 押捷克 2:1 南非、瑞士 3:1 波黑、加拿大 3:0 卡塔尔、墨西哥 2:1 韩国；GPT 前三场同向但比分更保守，墨西哥 vs 韩国押 1:1。",
-      "ray_points": 0,
+      "ray_points": 3,
       "gpt_points": 0,
       "matches": [
         {
@@ -1278,7 +1284,7 @@
           "home": "墨西哥",
           "away": "韩国",
           "group": "A",
-          "status": "未开赛",
+          "status": "已结束",
           "ray_prediction": {
             "home_score": 2,
             "away_score": 1,
@@ -1290,19 +1296,21 @@
             "reason": "GPT 预测墨西哥 1:1 韩国。这是我和 Ray 分歧最大的一场：墨西哥有东道主优势和控场能力，但韩国的速度、反击和压迫足以把比赛拖成平局。"
           },
           "actual_score": {
-            "home_score": null,
-            "away_score": null
+            "home_score": 1,
+            "away_score": 0
           },
-          "review": "赛前看点：A 组头名战，也是今天双方预测分歧最大的一场。Ray 认为韩国首轮已经超常发挥，面对东道主墨西哥很难继续争雄；GPT 认为韩国的压迫和反击足以把比赛拖成 1:1。"
+          "review": "墨西哥 1:0 韩国。赛果已自动录入；Ray 预测 2:1，GPT 预测 1:1。Ray 猜对胜平负，得到 3 分。 本场得分：Ray +3，GPT +0。",
+          "espn_id": "760441",
+          "manual_points": {
+            "ray": 3,
+            "gpt": 0,
+            "explanation": "Ray 猜对胜平负，得到 3 分。"
+          }
         }
       ]
     }
   ],
   "update_log": [
-    {
-      "time": "06-16 08:10",
-      "text": "沙特 1:1 乌拉圭，Ray 押中沙特能逼平乌拉圭，Ray +3，总分 14:3。"
-    },
     {
       "time": "06-16 11:15",
       "text": "伊朗 2:2 新西兰，双方都押伊朗 2:0 且预测相同，本场不计分。"
@@ -1338,6 +1346,10 @@
     {
       "time": "06-19 08:11",
       "text": "自动更新：加拿大 6:0 卡塔尔，Ray +0，GPT +0。"
+    },
+    {
+      "time": "06-19 11:01",
+      "text": "自动更新：墨西哥 1:0 韩国，Ray +3，GPT +0。"
     }
   ],
   "archive": [
