@@ -7,17 +7,17 @@
     "tagline": "World Cup Prediction Derby"
   },
   "meta": {
-    "updated_at": "2026-06-19 05:11 BJT",
+    "updated_at": "2026-06-19 08:11 BJT",
     "active_day": "2026-06-19",
     "timezone": "Asia/Beijing",
-    "version": "auto-score-202606182111"
+    "version": "auto-score-202606190011"
   },
   "score_summary": {
     "ray_total": 15,
     "gpt_total": 3,
     "leader_comment": "Ray 暂时 15:3 领先 GPT 5.5。"
   },
-  "headline": "总分 Ray 15:3 GPT 5.5：瑞士 4:1 波黑 已自动更新。",
+  "headline": "总分 Ray 15:3 GPT 5.5：加拿大 6:0 卡塔尔 已自动更新。",
   "brief": "本场复盘为自动简写版，只记录赛果、预测与计分；详细评论可稍后手动补充。",
   "tournament_picks": [
     {
@@ -391,7 +391,7 @@
       "home": "加拿大",
       "away": "卡塔尔",
       "group": "B",
-      "status": "未开赛",
+      "status": "已结束",
       "ray_prediction": {
         "home_score": 3,
         "away_score": 0,
@@ -403,10 +403,16 @@
         "reason": "GPT 预测加拿大 2:0 卡塔尔。我同意加拿大应主动压制并赢球，但卡塔尔刚逼平瑞士，防线纪律性不能完全低估。"
       },
       "actual_score": {
-        "home_score": null,
-        "away_score": null
+        "home_score": 6,
+        "away_score": 0
       },
-      "review": "赛前看点：这是加拿大必须兑现主场优势的一场。Ray 明确认为卡塔尔首轮平得侥幸，第二场很难继续幸运；GPT 也押加拿大取胜，只是认为卡塔尔防线不会崩得太快。"
+      "review": "加拿大 6:0 卡塔尔。赛果已自动录入；Ray 预测 3:0，GPT 预测 2:0。双方都猜对胜平负，但没有形成比分命中差异，本场不计分。 本场得分：Ray +0，GPT +0。",
+      "espn_id": "760440",
+      "manual_points": {
+        "ray": 0,
+        "gpt": 0,
+        "explanation": "双方都猜对胜平负，但没有形成比分命中差异，本场不计分。"
+      }
     },
     {
       "id": "mex-kor-20260619",
@@ -1243,7 +1249,7 @@
           "home": "加拿大",
           "away": "卡塔尔",
           "group": "B",
-          "status": "未开赛",
+          "status": "已结束",
           "ray_prediction": {
             "home_score": 3,
             "away_score": 0,
@@ -1255,10 +1261,16 @@
             "reason": "GPT 预测加拿大 2:0 卡塔尔。我同意加拿大应主动压制并赢球，但卡塔尔刚逼平瑞士，防线纪律性不能完全低估。"
           },
           "actual_score": {
-            "home_score": null,
-            "away_score": null
+            "home_score": 6,
+            "away_score": 0
           },
-          "review": "赛前看点：这是加拿大必须兑现主场优势的一场。Ray 明确认为卡塔尔首轮平得侥幸，第二场很难继续幸运；GPT 也押加拿大取胜，只是认为卡塔尔防线不会崩得太快。"
+          "review": "加拿大 6:0 卡塔尔。赛果已自动录入；Ray 预测 3:0，GPT 预测 2:0。双方都猜对胜平负，但没有形成比分命中差异，本场不计分。 本场得分：Ray +0，GPT +0。",
+          "espn_id": "760440",
+          "manual_points": {
+            "ray": 0,
+            "gpt": 0,
+            "explanation": "双方都猜对胜平负，但没有形成比分命中差异，本场不计分。"
+          }
         },
         {
           "id": "mex-kor-20260619",
@@ -1287,10 +1299,6 @@
     }
   ],
   "update_log": [
-    {
-      "time": "06-16 05:05",
-      "text": "比利时 1:1 埃及，Ray 完全命中比分，Ray +4；总分变为 Ray 11:3 GPT 5.5。"
-    },
     {
       "time": "06-16 08:10",
       "text": "沙特 1:1 乌拉圭，Ray 押中沙特能逼平乌拉圭，Ray +3，总分 14:3。"
@@ -1326,6 +1334,10 @@
     {
       "time": "06-19 05:11",
       "text": "自动更新：瑞士 4:1 波黑，Ray +0，GPT +0。"
+    },
+    {
+      "time": "06-19 08:11",
+      "text": "自动更新：加拿大 6:0 卡塔尔，Ray +0，GPT +0。"
     }
   ],
   "archive": [
