@@ -7,17 +7,17 @@
     "tagline": "World Cup Prediction Derby"
   },
   "meta": {
-    "updated_at": "2026-06-20 08:01 BJT",
+    "updated_at": "2026-06-20 10:41 BJT",
     "active_day": "2026-06-20",
     "timezone": "Asia/Beijing",
-    "version": "auto-score-202606200001"
+    "version": "auto-score-202606200241"
   },
   "score_summary": {
     "ray_total": 21,
-    "gpt_total": 3,
-    "leader_comment": "Ray 暂时 21:3 领先 GPT 5.5。"
+    "gpt_total": 4,
+    "leader_comment": "Ray 暂时 21:4 领先 GPT 5.5。"
   },
-  "headline": "总分 Ray 21:3 GPT 5.5：苏格兰 0:1 摩洛哥 已自动更新。",
+  "headline": "总分 Ray 21:4 GPT 5.5：巴西 3:0 海地 已自动更新。",
   "brief": "本场复盘为自动简写版，只记录赛果、预测与计分；详细评论可稍后手动补充。",
   "tournament_picks": [
     {
@@ -279,7 +279,7 @@
       "home": "巴西",
       "away": "海地",
       "group": "C",
-      "status": "未开赛",
+      "status": "已结束",
       "ray_prediction": {
         "home_score": 2,
         "away_score": 0,
@@ -291,10 +291,16 @@
         "reason": "GPT 预测巴西 3:0 海地。巴西的问题是真实存在的，但海地面对五冠王只能拼奔跑和情绪；如果巴西早早进球，技术差距会让比赛变成单向推进。"
       },
       "actual_score": {
-        "home_score": null,
-        "away_score": null
+        "home_score": 3,
+        "away_score": 0
       },
-      "review": "赛前看点：巴西需要的不只是三分，而是一场能把质疑声压下去的胜利。Ray 押 2:0，认为巴西会止血但不会彻底放飞；GPT 押 3:0，认为海地很难顶住巴西整场压迫。"
+      "review": "巴西 3:0 海地。赛果已自动录入；Ray 预测 2:0，GPT 预测 3:0。双方都猜对胜平负，胜平负不计分；GPT 比分完全命中，得到 1 分。 本场得分：Ray +0，GPT +1。",
+      "espn_id": "760444",
+      "manual_points": {
+        "ray": 0,
+        "gpt": 1,
+        "explanation": "双方都猜对胜平负，胜平负不计分；GPT 比分完全命中，得到 1 分。"
+      }
     },
     {
       "id": "tur-par-20260620",
@@ -1186,7 +1192,7 @@
       "title": "C/D 组接棒：东道主遇袋鼠，巴西急需止血",
       "summary": "美国 vs 澳大利亚、苏格兰 vs 摩洛哥、巴西 vs 海地、土耳其 vs 巴拉圭。Ray 押美国、摩洛哥、巴西、土耳其取胜；GPT 在美国和土耳其两场选择平局，更看重澳大利亚防反和巴拉圭求生局韧性。",
       "ray_points": 3,
-      "gpt_points": 0,
+      "gpt_points": 1,
       "matches": [
         {
           "id": "usa-aus-20260620",
@@ -1252,7 +1258,7 @@
           "home": "巴西",
           "away": "海地",
           "group": "C",
-          "status": "未开赛",
+          "status": "已结束",
           "ray_prediction": {
             "home_score": 2,
             "away_score": 0,
@@ -1264,10 +1270,16 @@
             "reason": "GPT 预测巴西 3:0 海地。巴西的问题是真实存在的，但海地面对五冠王只能拼奔跑和情绪；如果巴西早早进球，技术差距会让比赛变成单向推进。"
           },
           "actual_score": {
-            "home_score": null,
-            "away_score": null
+            "home_score": 3,
+            "away_score": 0
           },
-          "review": "赛前看点：巴西需要的不只是三分，而是一场能把质疑声压下去的胜利。Ray 押 2:0，认为巴西会止血但不会彻底放飞；GPT 押 3:0，认为海地很难顶住巴西整场压迫。"
+          "review": "巴西 3:0 海地。赛果已自动录入；Ray 预测 2:0，GPT 预测 3:0。双方都猜对胜平负，胜平负不计分；GPT 比分完全命中，得到 1 分。 本场得分：Ray +0，GPT +1。",
+          "espn_id": "760444",
+          "manual_points": {
+            "ray": 0,
+            "gpt": 1,
+            "explanation": "双方都猜对胜平负，胜平负不计分；GPT 比分完全命中，得到 1 分。"
+          }
         },
         {
           "id": "tur-par-20260620",
@@ -1296,10 +1308,6 @@
     }
   ],
   "update_log": [
-    {
-      "time": "06-16 08:10",
-      "text": "沙特 1:1 乌拉圭，Ray 押中沙特能逼平乌拉圭，Ray +3，总分 14:3。"
-    },
     {
       "time": "06-16 11:15",
       "text": "伊朗 2:2 新西兰，双方都押伊朗 2:0 且预测相同，本场不计分。"
@@ -1335,6 +1343,10 @@
     {
       "time": "06-20 08:01",
       "text": "自动更新：苏格兰 0:1 摩洛哥，Ray +0，GPT +0。"
+    },
+    {
+      "time": "06-20 10:41",
+      "text": "自动更新：巴西 3:0 海地，Ray +0，GPT +1。"
     }
   ],
   "archive": [
