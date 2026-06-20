@@ -7,17 +7,17 @@
     "tagline": "World Cup Prediction Derby"
   },
   "meta": {
-    "updated_at": "2026-06-21 03:01 BJT",
+    "updated_at": "2026-06-21 06:11 BJT",
     "active_day": "2026-06-21",
     "timezone": "Asia/Beijing",
-    "version": "auto-score-202606201901"
+    "version": "auto-score-202606202211"
   },
   "score_summary": {
     "ray_total": 21,
-    "gpt_total": 8,
-    "leader_comment": "Ray 暂时 21:8 领先 GPT 5.5。"
+    "gpt_total": 12,
+    "leader_comment": "Ray 暂时 21:12 领先 GPT 5.5。"
   },
-  "headline": "总分 Ray 21:8 GPT 5.5：荷兰 5:1 瑞典 已自动更新。",
+  "headline": "总分 Ray 21:12 GPT 5.5：德国 2:1 科特迪瓦 已自动更新。",
   "brief": "本场复盘为自动简写版，只记录赛果、预测与计分；详细评论可稍后手动补充。",
   "tournament_picks": [
     {
@@ -250,7 +250,7 @@
       "home": "德国",
       "away": "科特迪瓦",
       "group": "E",
-      "status": "未开赛",
+      "status": "已结束",
       "ray_prediction": {
         "home_score": 1,
         "away_score": 1,
@@ -262,10 +262,16 @@
         "reason": "GPT 预测德国 2:1 科特迪瓦。我同意科特迪瓦会比库拉索硬很多，但德国首轮打出的前场流动性和定位球质量仍有优势；中锋问题会让比赛变难，却未必足以让德国丢掉三分。"
       },
       "actual_score": {
-        "home_score": null,
-        "away_score": null
+        "home_score": 2,
+        "away_score": 1
       },
-      "review": "赛前看点：这是德国首轮 7:1 后的真正压力测试。Ray 认为科特迪瓦身体和对抗足以照出德国无中锋隐患；GPT 仍押德国小胜，但承认这不会是库拉索式训练赛。"
+      "review": "德国 2:1 科特迪瓦。赛果已自动录入；Ray 预测 1:1，GPT 预测 2:1。GPT 猜对胜平负且比分完全命中，得到 4 分。 本场得分：Ray +0，GPT +4。",
+      "espn_id": "760448",
+      "manual_points": {
+        "ray": 0,
+        "gpt": 4,
+        "explanation": "GPT 猜对胜平负且比分完全命中，得到 4 分。"
+      }
     },
     {
       "id": "ecu-cuw-20260621",
@@ -1301,7 +1307,7 @@
       "title": "E/F 组开刀：德国遇真硬茬，日本失去久保仍要过关",
       "summary": "荷兰对瑞典、德国对科特迪瓦、厄瓜多尔对库拉索、突尼斯对日本。Ray 在德国与荷兰两场都押平，认为科特迪瓦和瑞典的身体/反击足以制造麻烦；GPT 更看好荷兰、德国小胜，厄瓜多尔和日本则都押低比分过关。",
       "ray_points": 0,
-      "gpt_points": 3,
+      "gpt_points": 7,
       "matches": [
         {
           "id": "ned-swe-20260621",
@@ -1338,7 +1344,7 @@
           "home": "德国",
           "away": "科特迪瓦",
           "group": "E",
-          "status": "未开赛",
+          "status": "已结束",
           "ray_prediction": {
             "home_score": 1,
             "away_score": 1,
@@ -1350,10 +1356,16 @@
             "reason": "GPT 预测德国 2:1 科特迪瓦。我同意科特迪瓦会比库拉索硬很多，但德国首轮打出的前场流动性和定位球质量仍有优势；中锋问题会让比赛变难，却未必足以让德国丢掉三分。"
           },
           "actual_score": {
-            "home_score": null,
-            "away_score": null
+            "home_score": 2,
+            "away_score": 1
           },
-          "review": "赛前看点：这是德国首轮 7:1 后的真正压力测试。Ray 认为科特迪瓦身体和对抗足以照出德国无中锋隐患；GPT 仍押德国小胜，但承认这不会是库拉索式训练赛。"
+          "review": "德国 2:1 科特迪瓦。赛果已自动录入；Ray 预测 1:1，GPT 预测 2:1。GPT 猜对胜平负且比分完全命中，得到 4 分。 本场得分：Ray +0，GPT +4。",
+          "espn_id": "760448",
+          "manual_points": {
+            "ray": 0,
+            "gpt": 4,
+            "explanation": "GPT 猜对胜平负且比分完全命中，得到 4 分。"
+          }
         },
         {
           "id": "ecu-cuw-20260621",
@@ -1420,6 +1432,10 @@
     {
       "time": "06-21 03:01",
       "text": "自动更新：荷兰 5:1 瑞典，Ray +0，GPT +3。"
+    },
+    {
+      "time": "06-21 06:11",
+      "text": "自动更新：德国 2:1 科特迪瓦，Ray +0，GPT +4。"
     }
   ],
   "archive": [
