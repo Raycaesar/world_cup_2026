@@ -7,17 +7,17 @@
     "tagline": "World Cup Prediction Derby"
   },
   "meta": {
-    "updated_at": "2026-06-20 05:11 BJT",
+    "updated_at": "2026-06-20 08:01 BJT",
     "active_day": "2026-06-20",
     "timezone": "Asia/Beijing",
-    "version": "auto-score-202606192111"
+    "version": "auto-score-202606200001"
   },
   "score_summary": {
     "ray_total": 21,
     "gpt_total": 3,
     "leader_comment": "Ray 暂时 21:3 领先 GPT 5.5。"
   },
-  "headline": "总分 Ray 21:3 GPT 5.5：美国 2:0 澳大利亚 已自动更新。",
+  "headline": "总分 Ray 21:3 GPT 5.5：苏格兰 0:1 摩洛哥 已自动更新。",
   "brief": "本场复盘为自动简写版，只记录赛果、预测与计分；详细评论可稍后手动补充。",
   "tournament_picks": [
     {
@@ -250,7 +250,7 @@
       "home": "苏格兰",
       "away": "摩洛哥",
       "group": "C",
-      "status": "未开赛",
+      "status": "已结束",
       "ray_prediction": {
         "home_score": 1,
         "away_score": 3,
@@ -262,10 +262,16 @@
         "reason": "GPT 预测苏格兰 0:2 摩洛哥。我同意摩洛哥实力更强，但苏格兰会以弱者姿态收缩防守，比分未必被拉到三球。摩洛哥更像稳稳拿下，而不是大开杀戒。"
       },
       "actual_score": {
-        "home_score": null,
-        "away_score": null
+        "home_score": 0,
+        "away_score": 1
       },
-      "review": "赛前看点：苏格兰有 3 分护身，摩洛哥却有首战逼平巴西后的上升气场。Ray 认为实力差距最终会体现为 1:3；GPT 同看摩洛哥胜，但更保守押 0:2。"
+      "review": "苏格兰 0:1 摩洛哥。赛果已自动录入；Ray 预测 1:3，GPT 预测 0:2。双方都猜对胜平负，但没有形成比分命中差异，本场不计分。 本场得分：Ray +0，GPT +0。",
+      "espn_id": "760445",
+      "manual_points": {
+        "ray": 0,
+        "gpt": 0,
+        "explanation": "双方都猜对胜平负，但没有形成比分命中差异，本场不计分。"
+      }
     },
     {
       "id": "bra-hti-20260620",
@@ -1217,7 +1223,7 @@
           "home": "苏格兰",
           "away": "摩洛哥",
           "group": "C",
-          "status": "未开赛",
+          "status": "已结束",
           "ray_prediction": {
             "home_score": 1,
             "away_score": 3,
@@ -1229,10 +1235,16 @@
             "reason": "GPT 预测苏格兰 0:2 摩洛哥。我同意摩洛哥实力更强，但苏格兰会以弱者姿态收缩防守，比分未必被拉到三球。摩洛哥更像稳稳拿下，而不是大开杀戒。"
           },
           "actual_score": {
-            "home_score": null,
-            "away_score": null
+            "home_score": 0,
+            "away_score": 1
           },
-          "review": "赛前看点：苏格兰有 3 分护身，摩洛哥却有首战逼平巴西后的上升气场。Ray 认为实力差距最终会体现为 1:3；GPT 同看摩洛哥胜，但更保守押 0:2。"
+          "review": "苏格兰 0:1 摩洛哥。赛果已自动录入；Ray 预测 1:3，GPT 预测 0:2。双方都猜对胜平负，但没有形成比分命中差异，本场不计分。 本场得分：Ray +0，GPT +0。",
+          "espn_id": "760445",
+          "manual_points": {
+            "ray": 0,
+            "gpt": 0,
+            "explanation": "双方都猜对胜平负，但没有形成比分命中差异，本场不计分。"
+          }
         },
         {
           "id": "bra-hti-20260620",
@@ -1285,10 +1297,6 @@
   ],
   "update_log": [
     {
-      "time": "06-16 05:05",
-      "text": "比利时 1:1 埃及，Ray 完全命中比分，Ray +4；总分变为 Ray 11:3 GPT 5.5。"
-    },
-    {
       "time": "06-16 08:10",
       "text": "沙特 1:1 乌拉圭，Ray 押中沙特能逼平乌拉圭，Ray +3，总分 14:3。"
     },
@@ -1323,6 +1331,10 @@
     {
       "time": "06-20 05:11",
       "text": "自动更新：美国 2:0 澳大利亚，Ray +3，GPT +0。"
+    },
+    {
+      "time": "06-20 08:01",
+      "text": "自动更新：苏格兰 0:1 摩洛哥，Ray +0，GPT +0。"
     }
   ],
   "archive": [
