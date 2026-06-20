@@ -7,17 +7,17 @@
     "tagline": "World Cup Prediction Derby"
   },
   "meta": {
-    "updated_at": "2026-06-20 10:41 BJT",
+    "updated_at": "2026-06-20 13:11 BJT",
     "active_day": "2026-06-20",
     "timezone": "Asia/Beijing",
-    "version": "auto-score-202606200241"
+    "version": "auto-score-202606200511"
   },
   "score_summary": {
     "ray_total": 21,
-    "gpt_total": 4,
-    "leader_comment": "Ray 暂时 21:4 领先 GPT 5.5。"
+    "gpt_total": 5,
+    "leader_comment": "Ray 暂时 21:5 领先 GPT 5.5。"
   },
-  "headline": "总分 Ray 21:4 GPT 5.5：巴西 3:0 海地 已自动更新。",
+  "headline": "总分 Ray 21:5 GPT 5.5：土耳其 0:1 巴拉圭 已自动更新。",
   "brief": "本场复盘为自动简写版，只记录赛果、预测与计分；详细评论可稍后手动补充。",
   "tournament_picks": [
     {
@@ -308,7 +308,7 @@
       "home": "土耳其",
       "away": "巴拉圭",
       "group": "D",
-      "status": "未开赛",
+      "status": "已结束",
       "ray_prediction": {
         "home_score": 2,
         "away_score": 1,
@@ -320,10 +320,16 @@
         "reason": "GPT 预测土耳其 1:1 巴拉圭。两队首轮都被打疼，心理压力都很大；土耳其上限更高，但混乱感也更强，巴拉圭在生死局里未必会继续崩盘。"
       },
       "actual_score": {
-        "home_score": null,
-        "away_score": null
+        "home_score": 0,
+        "away_score": 1
       },
-      "review": "赛前看点：这是 D 组真正的乱战，也是今天最难押的一场。Ray 相信土耳其把状态打回来后 2:1 过关；GPT 更担心双方都怕输，押 1:1。"
+      "review": "土耳其 0:1 巴拉圭。赛果已自动录入；Ray 预测 2:1，GPT 预测 1:1。双方都猜错，但 GPT 的胜平负方向更接近真实赛果，得到 1 分。 本场得分：Ray +0，GPT +1。",
+      "espn_id": "760443",
+      "manual_points": {
+        "ray": 0,
+        "gpt": 1,
+        "explanation": "双方都猜错，但 GPT 的胜平负方向更接近真实赛果，得到 1 分。"
+      }
     }
   ],
   "matchdays": [
@@ -1192,7 +1198,7 @@
       "title": "C/D 组接棒：东道主遇袋鼠，巴西急需止血",
       "summary": "美国 vs 澳大利亚、苏格兰 vs 摩洛哥、巴西 vs 海地、土耳其 vs 巴拉圭。Ray 押美国、摩洛哥、巴西、土耳其取胜；GPT 在美国和土耳其两场选择平局，更看重澳大利亚防反和巴拉圭求生局韧性。",
       "ray_points": 3,
-      "gpt_points": 1,
+      "gpt_points": 2,
       "matches": [
         {
           "id": "usa-aus-20260620",
@@ -1287,7 +1293,7 @@
           "home": "土耳其",
           "away": "巴拉圭",
           "group": "D",
-          "status": "未开赛",
+          "status": "已结束",
           "ray_prediction": {
             "home_score": 2,
             "away_score": 1,
@@ -1299,19 +1305,21 @@
             "reason": "GPT 预测土耳其 1:1 巴拉圭。两队首轮都被打疼，心理压力都很大；土耳其上限更高，但混乱感也更强，巴拉圭在生死局里未必会继续崩盘。"
           },
           "actual_score": {
-            "home_score": null,
-            "away_score": null
+            "home_score": 0,
+            "away_score": 1
           },
-          "review": "赛前看点：这是 D 组真正的乱战，也是今天最难押的一场。Ray 相信土耳其把状态打回来后 2:1 过关；GPT 更担心双方都怕输，押 1:1。"
+          "review": "土耳其 0:1 巴拉圭。赛果已自动录入；Ray 预测 2:1，GPT 预测 1:1。双方都猜错，但 GPT 的胜平负方向更接近真实赛果，得到 1 分。 本场得分：Ray +0，GPT +1。",
+          "espn_id": "760443",
+          "manual_points": {
+            "ray": 0,
+            "gpt": 1,
+            "explanation": "双方都猜错，但 GPT 的胜平负方向更接近真实赛果，得到 1 分。"
+          }
         }
       ]
     }
   ],
   "update_log": [
-    {
-      "time": "06-16 11:15",
-      "text": "伊朗 2:2 新西兰，双方都押伊朗 2:0 且预测相同，本场不计分。"
-    },
     {
       "time": "06-16 15:20",
       "text": "录入今晚预测：法国、挪威、阿根廷、奥地利首秀。"
@@ -1347,6 +1355,10 @@
     {
       "time": "06-20 10:41",
       "text": "自动更新：巴西 3:0 海地，Ray +0，GPT +1。"
+    },
+    {
+      "time": "06-20 13:11",
+      "text": "自动更新：土耳其 0:1 巴拉圭，Ray +0，GPT +1。"
     }
   ],
   "archive": [
