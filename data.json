@@ -7,18 +7,18 @@
     "tagline": "World Cup Prediction Derby"
   },
   "meta": {
-    "updated_at": "2026-06-20 13:35 BJT",
+    "updated_at": "2026-06-21 03:01 BJT",
     "active_day": "2026-06-21",
     "timezone": "Asia/Beijing",
-    "version": "worldcup-20260620-verified-scrubbed-ef-preview"
+    "version": "auto-score-202606201901"
   },
   "score_summary": {
     "ray_total": 21,
-    "gpt_total": 5,
-    "leader_comment": "Ray 21:5 继续领先。C/D 组第二轮刚刚收官：美国锁死澳大利亚、摩洛哥小胜苏格兰、巴西三球止血、巴拉圭偷袭土耳其；今晚 E/F 组登场，德国和荷兰都要接受真正硬度测试。"
+    "gpt_total": 8,
+    "leader_comment": "Ray 暂时 21:8 领先 GPT 5.5。"
   },
-  "headline": "美国锁门，巴西开刃：Ray 21:5 继续压住 GPT 5.5",
-  "brief": "C/D 组第二轮收官：美国 2:0 澳大利亚提前出线，摩洛哥 1:0 小胜苏格兰，巴西 3:0 海地完成止血，巴拉圭 1:0 偷走土耳其命门。本轮竞猜 Ray 3:2 GPT 5.5，差距仍然很大；今晚 E/F 组接棒，德国面对科特迪瓦的身体冲击，荷兰遭遇瑞典反击，日本则要在久保伤缺阴影下啃突尼斯。",
+  "headline": "总分 Ray 21:8 GPT 5.5：荷兰 5:1 瑞典 已自动更新。",
+  "brief": "本场复盘为自动简写版，只记录赛果、预测与计分；详细评论可稍后手动补充。",
   "tournament_picks": [
     {
       "name": "冠军",
@@ -221,7 +221,7 @@
       "home": "荷兰",
       "away": "瑞典",
       "group": "F",
-      "status": "未开赛",
+      "status": "已结束",
       "ray_prediction": {
         "home_score": 2,
         "away_score": 2,
@@ -233,10 +233,16 @@
         "reason": "GPT 预测荷兰 2:1 瑞典。我承认瑞典的反击和双前锋冲击很危险，但荷兰中后场控制力、范戴克的定位球威胁以及前场个人点更多，第二轮更可能小胜拿回主动权。"
       },
       "actual_score": {
-        "home_score": null,
-        "away_score": null
+        "home_score": 5,
+        "away_score": 1
       },
-      "review": "赛前看点：F 组最像强强对话的一场。Ray 押荷兰被瑞典拖成 2:2，核心是瑞典反击火力和身体冲击；GPT 则认为荷兰经历日本一战后会收紧防线，用更成熟的控制力 2:1 过关。"
+      "review": "荷兰 5:1 瑞典。赛果已自动录入；Ray 预测 2:2，GPT 预测 2:1。GPT 猜对胜平负，得到 3 分。 本场得分：Ray +0，GPT +3。",
+      "espn_id": "760447",
+      "manual_points": {
+        "ray": 0,
+        "gpt": 3,
+        "explanation": "GPT 猜对胜平负，得到 3 分。"
+      }
     },
     {
       "id": "ger-civ-20260621",
@@ -1295,7 +1301,7 @@
       "title": "E/F 组开刀：德国遇真硬茬，日本失去久保仍要过关",
       "summary": "荷兰对瑞典、德国对科特迪瓦、厄瓜多尔对库拉索、突尼斯对日本。Ray 在德国与荷兰两场都押平，认为科特迪瓦和瑞典的身体/反击足以制造麻烦；GPT 更看好荷兰、德国小胜，厄瓜多尔和日本则都押低比分过关。",
       "ray_points": 0,
-      "gpt_points": 0,
+      "gpt_points": 3,
       "matches": [
         {
           "id": "ned-swe-20260621",
@@ -1303,7 +1309,7 @@
           "home": "荷兰",
           "away": "瑞典",
           "group": "F",
-          "status": "未开赛",
+          "status": "已结束",
           "ray_prediction": {
             "home_score": 2,
             "away_score": 2,
@@ -1315,10 +1321,16 @@
             "reason": "GPT 预测荷兰 2:1 瑞典。我承认瑞典的反击和双前锋冲击很危险，但荷兰中后场控制力、范戴克的定位球威胁以及前场个人点更多，第二轮更可能小胜拿回主动权。"
           },
           "actual_score": {
-            "home_score": null,
-            "away_score": null
+            "home_score": 5,
+            "away_score": 1
           },
-          "review": "赛前看点：F 组最像强强对话的一场。Ray 押荷兰被瑞典拖成 2:2，核心是瑞典反击火力和身体冲击；GPT 则认为荷兰经历日本一战后会收紧防线，用更成熟的控制力 2:1 过关。"
+          "review": "荷兰 5:1 瑞典。赛果已自动录入；Ray 预测 2:2，GPT 预测 2:1。GPT 猜对胜平负，得到 3 分。 本场得分：Ray +0，GPT +3。",
+          "espn_id": "760447",
+          "manual_points": {
+            "ray": 0,
+            "gpt": 3,
+            "explanation": "GPT 猜对胜平负，得到 3 分。"
+          }
         },
         {
           "id": "ger-civ-20260621",
@@ -1404,6 +1416,10 @@
     {
       "time": "06-19 20:10",
       "text": "A/B 组第二轮曾让比分牌拉开到 18:3：墨西哥 1:0 韩国成为 Ray 的关键得分点，加拿大和瑞士大胜，捷克被南非拖住。"
+    },
+    {
+      "time": "06-21 03:01",
+      "text": "自动更新：荷兰 5:1 瑞典，Ray +0，GPT +3。"
     }
   ],
   "archive": [
