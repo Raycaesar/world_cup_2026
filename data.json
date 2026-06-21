@@ -7,17 +7,17 @@
     "tagline": "World Cup Prediction Derby"
   },
   "meta": {
-    "updated_at": "2026-06-21 06:11 BJT",
+    "updated_at": "2026-06-21 10:11 BJT",
     "active_day": "2026-06-21",
     "timezone": "Asia/Beijing",
-    "version": "auto-score-202606202211"
+    "version": "auto-score-202606210211"
   },
   "score_summary": {
     "ray_total": 21,
     "gpt_total": 12,
     "leader_comment": "Ray 暂时 21:12 领先 GPT 5.5。"
   },
-  "headline": "总分 Ray 21:12 GPT 5.5：德国 2:1 科特迪瓦 已自动更新。",
+  "headline": "总分 Ray 21:12 GPT 5.5：厄瓜多尔 0:0 库拉索 已自动更新。",
   "brief": "本场复盘为自动简写版，只记录赛果、预测与计分；详细评论可稍后手动补充。",
   "tournament_picks": [
     {
@@ -279,7 +279,7 @@
       "home": "厄瓜多尔",
       "away": "库拉索",
       "group": "E",
-      "status": "未开赛",
+      "status": "已结束",
       "ray_prediction": {
         "home_score": 3,
         "away_score": 0,
@@ -291,10 +291,16 @@
         "reason": "GPT 预测厄瓜多尔 2:0 库拉索。我也看好厄瓜多尔拿下，但不认为他们会像德国那样把比赛打成惨案；厄瓜多尔更需要的是稳住节奏、修复信心。"
       },
       "actual_score": {
-        "home_score": null,
-        "away_score": null
+        "home_score": 0,
+        "away_score": 0
       },
-      "review": "赛前看点：厄瓜多尔没有退路，但也不能把库拉索只当背景板。Ray 押实力差距直接变成 3:0；GPT 则看厄瓜多尔稳胜但比分更收。"
+      "review": "厄瓜多尔 0:0 库拉索。赛果已自动录入；Ray 预测 3:0，GPT 预测 2:0。双方都猜错，且胜平负方向没有形成差异，本场不计分。 本场得分：Ray +0，GPT +0。",
+      "espn_id": "760446",
+      "manual_points": {
+        "ray": 0,
+        "gpt": 0,
+        "explanation": "双方都猜错，且胜平负方向没有形成差异，本场不计分。"
+      }
     },
     {
       "id": "tun-jpn-20260621",
@@ -1373,7 +1379,7 @@
           "home": "厄瓜多尔",
           "away": "库拉索",
           "group": "E",
-          "status": "未开赛",
+          "status": "已结束",
           "ray_prediction": {
             "home_score": 3,
             "away_score": 0,
@@ -1385,10 +1391,16 @@
             "reason": "GPT 预测厄瓜多尔 2:0 库拉索。我也看好厄瓜多尔拿下，但不认为他们会像德国那样把比赛打成惨案；厄瓜多尔更需要的是稳住节奏、修复信心。"
           },
           "actual_score": {
-            "home_score": null,
-            "away_score": null
+            "home_score": 0,
+            "away_score": 0
           },
-          "review": "赛前看点：厄瓜多尔没有退路，但也不能把库拉索只当背景板。Ray 押实力差距直接变成 3:0；GPT 则看厄瓜多尔稳胜但比分更收。"
+          "review": "厄瓜多尔 0:0 库拉索。赛果已自动录入；Ray 预测 3:0，GPT 预测 2:0。双方都猜错，且胜平负方向没有形成差异，本场不计分。 本场得分：Ray +0，GPT +0。",
+          "espn_id": "760446",
+          "manual_points": {
+            "ray": 0,
+            "gpt": 0,
+            "explanation": "双方都猜错，且胜平负方向没有形成差异，本场不计分。"
+          }
         },
         {
           "id": "tun-jpn-20260621",
@@ -1436,6 +1448,10 @@
     {
       "time": "06-21 06:11",
       "text": "自动更新：德国 2:1 科特迪瓦，Ray +0，GPT +4。"
+    },
+    {
+      "time": "06-21 10:11",
+      "text": "自动更新：厄瓜多尔 0:0 库拉索，Ray +0，GPT +0。"
     }
   ],
   "archive": [
