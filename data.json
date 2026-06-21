@@ -7,17 +7,17 @@
     "tagline": "World Cup Prediction Derby"
   },
   "meta": {
-    "updated_at": "2026-06-21 10:11 BJT",
+    "updated_at": "2026-06-21 14:11 BJT",
     "active_day": "2026-06-21",
     "timezone": "Asia/Beijing",
-    "version": "auto-score-202606210211"
+    "version": "auto-score-202606210611"
   },
   "score_summary": {
     "ray_total": 21,
     "gpt_total": 12,
     "leader_comment": "Ray 暂时 21:12 领先 GPT 5.5。"
   },
-  "headline": "总分 Ray 21:12 GPT 5.5：厄瓜多尔 0:0 库拉索 已自动更新。",
+  "headline": "总分 Ray 21:12 GPT 5.5：突尼斯 0:4 日本 已自动更新。",
   "brief": "本场复盘为自动简写版，只记录赛果、预测与计分；详细评论可稍后手动补充。",
   "tournament_picks": [
     {
@@ -308,7 +308,7 @@
       "home": "突尼斯",
       "away": "日本",
       "group": "F",
-      "status": "未开赛",
+      "status": "已结束",
       "ray_prediction": {
         "home_score": 1,
         "away_score": 2,
@@ -320,10 +320,16 @@
         "reason": "GPT 预测日本 1:0 突尼斯。久保伤缺会降低日本进攻上限，突尼斯也会把比赛踢得很硬很碎；日本更可能靠整体纪律、边路轮转和一次关键机会低比分拿下。"
       },
       "actual_score": {
-        "home_score": null,
-        "away_score": null
+        "home_score": 0,
+        "away_score": 4
       },
-      "review": "赛前看点：这是最容易被低估难度的一场。Ray 押日本吸取上届输哥斯达黎加的教训，2:1 小胜；GPT 更担心久保缺阵后的创造力，押日本 1:0 苦胜。"
+      "review": "突尼斯 0:4 日本。赛果已自动录入；Ray 预测 1:2，GPT 预测 0:1。双方都猜对胜平负，但没有形成比分命中差异，本场不计分。 本场得分：Ray +0，GPT +0。",
+      "espn_id": "760449",
+      "manual_points": {
+        "ray": 0,
+        "gpt": 0,
+        "explanation": "双方都猜对胜平负，但没有形成比分命中差异，本场不计分。"
+      }
     }
   ],
   "matchdays": [
@@ -1408,7 +1414,7 @@
           "home": "突尼斯",
           "away": "日本",
           "group": "F",
-          "status": "未开赛",
+          "status": "已结束",
           "ray_prediction": {
             "home_score": 1,
             "away_score": 2,
@@ -1420,10 +1426,16 @@
             "reason": "GPT 预测日本 1:0 突尼斯。久保伤缺会降低日本进攻上限，突尼斯也会把比赛踢得很硬很碎；日本更可能靠整体纪律、边路轮转和一次关键机会低比分拿下。"
           },
           "actual_score": {
-            "home_score": null,
-            "away_score": null
+            "home_score": 0,
+            "away_score": 4
           },
-          "review": "赛前看点：这是最容易被低估难度的一场。Ray 押日本吸取上届输哥斯达黎加的教训，2:1 小胜；GPT 更担心久保缺阵后的创造力，押日本 1:0 苦胜。"
+          "review": "突尼斯 0:4 日本。赛果已自动录入；Ray 预测 1:2，GPT 预测 0:1。双方都猜对胜平负，但没有形成比分命中差异，本场不计分。 本场得分：Ray +0，GPT +0。",
+          "espn_id": "760449",
+          "manual_points": {
+            "ray": 0,
+            "gpt": 0,
+            "explanation": "双方都猜对胜平负，但没有形成比分命中差异，本场不计分。"
+          }
         }
       ]
     }
@@ -1452,6 +1464,10 @@
     {
       "time": "06-21 10:11",
       "text": "自动更新：厄瓜多尔 0:0 库拉索，Ray +0，GPT +0。"
+    },
+    {
+      "time": "06-21 14:11",
+      "text": "自动更新：突尼斯 0:4 日本，Ray +0，GPT +0。"
     }
   ],
   "archive": [
