@@ -7,18 +7,18 @@
     "tagline": "World Cup Prediction Derby"
   },
   "meta": {
-    "updated_at": "2026-06-21 23:05 BJT",
+    "updated_at": "2026-06-22 02:20 BJT",
     "active_day": "2026-06-22",
     "timezone": "Asia/Beijing",
-    "version": "worldcup-20260621-ef-recap-gh-preview"
+    "version": "auto-score-202606211820"
   },
   "score_summary": {
     "ray_total": 21,
     "gpt_total": 12,
-    "leader_comment": "GPT 5.5 昨日终于打出一场 7:0：荷兰 5:1 打穿瑞典，德国 2:1 补时绝杀科特迪瓦，两场都落在机器预测点上；Ray 仍以 21:12 领先，但比分差距被追回一大截。今晚 G/H 组接棒，Ray 收起冷门刀，转向更稳的西班牙、比利时、埃及方向。"
+    "leader_comment": "Ray 暂时 21:12 领先 GPT 5.5。"
   },
-  "headline": "荷兰橙潮翻涌，德国补时偷心：GPT 7:0 追回一城",
-  "brief": "E/F 组第二轮收官：荷兰 5:1 瑞典打出本届最狠强队宣言，德国 2:1 科特迪瓦靠 Undav 补时绝杀过关，厄瓜多尔 0:0 库拉索被 Eloy Room 挡到无语，日本 4:0 突尼斯在世界杯第 1000 场比赛中大胜。GPT 5.5 昨日 7:0 大胜，把总比分追到 21:12；今晚西班牙、比利时、乌拉圭、埃及登场，Ray 决定不再冒险。",
+  "headline": "总分 Ray 21:12 GPT 5.5：西班牙 4:0 沙特 已自动更新。",
+  "brief": "本场复盘为自动简写版，只记录赛果、预测与计分；详细评论可稍后手动补充。",
   "tournament_picks": [
     {
       "name": "冠军",
@@ -221,7 +221,7 @@
       "home": "西班牙",
       "away": "沙特",
       "group": "H",
-      "status": "未开赛",
+      "status": "已结束",
       "ray_prediction": {
         "home_score": 2,
         "away_score": 0,
@@ -233,10 +233,16 @@
         "reason": "GPT 预测西班牙 3:1 沙特。我同意西班牙会反弹，但沙特首轮能逼平乌拉圭，纪律性和定位球威胁不能忽视；西班牙可能赢得更开放，也可能被偷一球。"
       },
       "actual_score": {
-        "home_score": null,
-        "away_score": null
+        "home_score": 4,
+        "away_score": 0
       },
-      "review": "赛前看点：西班牙必须从佛得角平局里醒过来。Ray 收起冷门刀，押西班牙 2:0 稳胜；GPT 更相信亚马尔首发后西班牙进攻会打开，但保留沙特偷到一球的可能。"
+      "review": "西班牙 4:0 沙特。赛果已自动录入；Ray 预测 2:0，GPT 预测 3:1。双方都猜对胜平负，但没有形成比分命中差异，本场不计分。 本场得分：Ray +0，GPT +0。",
+      "espn_id": "760453",
+      "manual_points": {
+        "ray": 0,
+        "gpt": 0,
+        "explanation": "双方都猜对胜平负，但没有形成比分命中差异，本场不计分。"
+      }
     },
     {
       "id": "bel-iri-20260622",
@@ -1424,7 +1430,7 @@
           "home": "西班牙",
           "away": "沙特",
           "group": "H",
-          "status": "未开赛",
+          "status": "已结束",
           "ray_prediction": {
             "home_score": 2,
             "away_score": 0,
@@ -1436,10 +1442,16 @@
             "reason": "GPT 预测西班牙 3:1 沙特。我同意西班牙会反弹，但沙特首轮能逼平乌拉圭，纪律性和定位球威胁不能忽视；西班牙可能赢得更开放，也可能被偷一球。"
           },
           "actual_score": {
-            "home_score": null,
-            "away_score": null
+            "home_score": 4,
+            "away_score": 0
           },
-          "review": "赛前看点：西班牙必须从佛得角平局里醒过来。Ray 收起冷门刀，押西班牙 2:0 稳胜；GPT 更相信亚马尔首发后西班牙进攻会打开，但保留沙特偷到一球的可能。"
+          "review": "西班牙 4:0 沙特。赛果已自动录入；Ray 预测 2:0，GPT 预测 3:1。双方都猜对胜平负，但没有形成比分命中差异，本场不计分。 本场得分：Ray +0，GPT +0。",
+          "espn_id": "760453",
+          "manual_points": {
+            "ray": 0,
+            "gpt": 0,
+            "explanation": "双方都猜对胜平负，但没有形成比分命中差异，本场不计分。"
+          }
         },
         {
           "id": "bel-iri-20260622",
@@ -1533,6 +1545,10 @@
     {
       "time": "06-19 20:10",
       "text": "A/B 组第二轮曾让比分牌拉开到 18:3：墨西哥 1:0 韩国成为 Ray 的关键得分点，加拿大和瑞士大胜，捷克被南非拖住。"
+    },
+    {
+      "time": "06-22 02:20",
+      "text": "自动更新：西班牙 4:0 沙特，Ray +0，GPT +0。"
     }
   ],
   "archive": [
