@@ -7,17 +7,17 @@
     "tagline": "World Cup Prediction Derby"
   },
   "meta": {
-    "updated_at": "2026-06-22 08:10 BJT",
+    "updated_at": "2026-06-22 11:10 BJT",
     "active_day": "2026-06-22",
     "timezone": "Asia/Beijing",
-    "version": "auto-score-202606220010"
+    "version": "auto-score-202606220310"
   },
   "score_summary": {
-    "ray_total": 24,
+    "ray_total": 25,
     "gpt_total": 12,
-    "leader_comment": "Ray 暂时 24:12 领先 GPT 5.5。"
+    "leader_comment": "Ray 暂时 25:12 领先 GPT 5.5。"
   },
-  "headline": "总分 Ray 24:12 GPT 5.5：乌拉圭 2:2 佛得角 已自动更新。",
+  "headline": "总分 Ray 25:12 GPT 5.5：新西兰 1:3 埃及 已自动更新。",
   "brief": "本场复盘为自动简写版，只记录赛果、预测与计分；详细评论可稍后手动补充。",
   "tournament_picks": [
     {
@@ -308,7 +308,7 @@
       "home": "新西兰",
       "away": "埃及",
       "group": "G",
-      "status": "未开赛",
+      "status": "已结束",
       "ray_prediction": {
         "home_score": 1,
         "away_score": 3,
@@ -320,10 +320,16 @@
         "reason": "GPT 预测新西兰 1:2 埃及。我同意埃及更强，但新西兰首轮进攻效率不能再低估，Wood 和 Elijah Just 的前场存在感足以让埃及后防紧张；埃及赢球但未必大胜。"
       },
       "actual_score": {
-        "home_score": null,
-        "away_score": null
+        "home_score": 1,
+        "away_score": 3
       },
-      "review": "赛前看点：G 组两支首轮都拿到 1 分的球队正面相撞。Ray 押埃及 3:1 打穿，新西兰虽能进球但挡不住萨拉赫；GPT 也看埃及胜，只是比分更保守。"
+      "review": "新西兰 1:3 埃及。赛果已自动录入；Ray 预测 1:3，GPT 预测 1:2。双方都猜对胜平负，胜平负不计分；Ray 比分完全命中，得到 1 分。 本场得分：Ray +1，GPT +0。",
+      "espn_id": "760452",
+      "manual_points": {
+        "ray": 1,
+        "gpt": 0,
+        "explanation": "双方都猜对胜平负，胜平负不计分；Ray 比分完全命中，得到 1 分。"
+      }
     }
   ],
   "matchdays": [
@@ -1433,7 +1439,7 @@
       "date": "2026-06-22",
       "title": "G/H 组接棒：Ray 收刀求稳，西班牙比利时必须反弹",
       "summary": "西班牙 vs 沙特、比利时 vs 伊朗、乌拉圭 vs 佛得角、新西兰 vs 埃及。Ray 今日不再冒险，押西班牙、比利时、埃及取胜，并看佛得角继续把乌拉圭拖成 0:0；GPT 5.5 则押西班牙 3:1、比利时 2:0、乌拉圭 1:0、埃及 2:1。",
-      "ray_points": 3,
+      "ray_points": 4,
       "gpt_points": 0,
       "matches": [
         {
@@ -1529,7 +1535,7 @@
           "home": "新西兰",
           "away": "埃及",
           "group": "G",
-          "status": "未开赛",
+          "status": "已结束",
           "ray_prediction": {
             "home_score": 1,
             "away_score": 3,
@@ -1541,10 +1547,16 @@
             "reason": "GPT 预测新西兰 1:2 埃及。我同意埃及更强，但新西兰首轮进攻效率不能再低估，Wood 和 Elijah Just 的前场存在感足以让埃及后防紧张；埃及赢球但未必大胜。"
           },
           "actual_score": {
-            "home_score": null,
-            "away_score": null
+            "home_score": 1,
+            "away_score": 3
           },
-          "review": "赛前看点：G 组两支首轮都拿到 1 分的球队正面相撞。Ray 押埃及 3:1 打穿，新西兰虽能进球但挡不住萨拉赫；GPT 也看埃及胜，只是比分更保守。"
+          "review": "新西兰 1:3 埃及。赛果已自动录入；Ray 预测 1:3，GPT 预测 1:2。双方都猜对胜平负，胜平负不计分；Ray 比分完全命中，得到 1 分。 本场得分：Ray +1，GPT +0。",
+          "espn_id": "760452",
+          "manual_points": {
+            "ray": 1,
+            "gpt": 0,
+            "explanation": "双方都猜对胜平负，胜平负不计分；Ray 比分完全命中，得到 1 分。"
+          }
         }
       ]
     }
@@ -1581,6 +1593,10 @@
     {
       "time": "06-22 08:10",
       "text": "自动更新：乌拉圭 2:2 佛得角，Ray +3，GPT +0。"
+    },
+    {
+      "time": "06-22 11:10",
+      "text": "自动更新：新西兰 1:3 埃及，Ray +1，GPT +0。"
     }
   ],
   "archive": [
