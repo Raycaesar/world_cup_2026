@@ -7,17 +7,17 @@
     "tagline": "World Cup Prediction Derby"
   },
   "meta": {
-    "updated_at": "2026-06-22 05:10 BJT",
+    "updated_at": "2026-06-22 08:10 BJT",
     "active_day": "2026-06-22",
     "timezone": "Asia/Beijing",
-    "version": "auto-score-202606212110"
+    "version": "auto-score-202606220010"
   },
   "score_summary": {
-    "ray_total": 21,
+    "ray_total": 24,
     "gpt_total": 12,
-    "leader_comment": "Ray 暂时 21:12 领先 GPT 5.5。"
+    "leader_comment": "Ray 暂时 24:12 领先 GPT 5.5。"
   },
-  "headline": "总分 Ray 21:12 GPT 5.5：比利时 0:0 伊朗 已自动更新。",
+  "headline": "总分 Ray 24:12 GPT 5.5：乌拉圭 2:2 佛得角 已自动更新。",
   "brief": "本场复盘为自动简写版，只记录赛果、预测与计分；详细评论可稍后手动补充。",
   "tournament_picks": [
     {
@@ -279,7 +279,7 @@
       "home": "乌拉圭",
       "away": "佛得角",
       "group": "H",
-      "status": "未开赛",
+      "status": "已结束",
       "ray_prediction": {
         "home_score": 0,
         "away_score": 0,
@@ -291,10 +291,16 @@
         "reason": "GPT 预测乌拉圭 1:0 佛得角。佛得角防守很硬，但乌拉圭的小组赛经验和身体对抗仍然占优；这不像大胜，更像靠一次定位球或二点球解决。"
       },
       "actual_score": {
-        "home_score": null,
-        "away_score": null
+        "home_score": 2,
+        "away_score": 2
       },
-      "review": "赛前看点：佛得角已经证明自己能把强队拖进泥潭，乌拉圭则急需一场胜利。Ray 押 0:0，GPT 押乌拉圭 1:0，小比分是双方共识。"
+      "review": "乌拉圭 2:2 佛得角。赛果已自动录入；Ray 预测 0:0，GPT 预测 1:0。Ray 猜对胜平负，得到 3 分。 本场得分：Ray +3，GPT +0。",
+      "espn_id": "760450",
+      "manual_points": {
+        "ray": 3,
+        "gpt": 0,
+        "explanation": "Ray 猜对胜平负，得到 3 分。"
+      }
     },
     {
       "id": "nzl-egy-20260622",
@@ -1427,7 +1433,7 @@
       "date": "2026-06-22",
       "title": "G/H 组接棒：Ray 收刀求稳，西班牙比利时必须反弹",
       "summary": "西班牙 vs 沙特、比利时 vs 伊朗、乌拉圭 vs 佛得角、新西兰 vs 埃及。Ray 今日不再冒险，押西班牙、比利时、埃及取胜，并看佛得角继续把乌拉圭拖成 0:0；GPT 5.5 则押西班牙 3:1、比利时 2:0、乌拉圭 1:0、埃及 2:1。",
-      "ray_points": 0,
+      "ray_points": 3,
       "gpt_points": 0,
       "matches": [
         {
@@ -1494,7 +1500,7 @@
           "home": "乌拉圭",
           "away": "佛得角",
           "group": "H",
-          "status": "未开赛",
+          "status": "已结束",
           "ray_prediction": {
             "home_score": 0,
             "away_score": 0,
@@ -1506,10 +1512,16 @@
             "reason": "GPT 预测乌拉圭 1:0 佛得角。佛得角防守很硬，但乌拉圭的小组赛经验和身体对抗仍然占优；这不像大胜，更像靠一次定位球或二点球解决。"
           },
           "actual_score": {
-            "home_score": null,
-            "away_score": null
+            "home_score": 2,
+            "away_score": 2
           },
-          "review": "赛前看点：佛得角已经证明自己能把强队拖进泥潭，乌拉圭则急需一场胜利。Ray 押 0:0，GPT 押乌拉圭 1:0，小比分是双方共识。"
+          "review": "乌拉圭 2:2 佛得角。赛果已自动录入；Ray 预测 0:0，GPT 预测 1:0。Ray 猜对胜平负，得到 3 分。 本场得分：Ray +3，GPT +0。",
+          "espn_id": "760450",
+          "manual_points": {
+            "ray": 3,
+            "gpt": 0,
+            "explanation": "Ray 猜对胜平负，得到 3 分。"
+          }
         },
         {
           "id": "nzl-egy-20260622",
@@ -1565,6 +1577,10 @@
     {
       "time": "06-22 05:10",
       "text": "自动更新：比利时 0:0 伊朗，Ray +0，GPT +0。"
+    },
+    {
+      "time": "06-22 08:10",
+      "text": "自动更新：乌拉圭 2:2 佛得角，Ray +3，GPT +0。"
     }
   ],
   "archive": [
