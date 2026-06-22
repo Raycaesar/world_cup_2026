@@ -7,18 +7,18 @@
     "tagline": "World Cup Prediction Derby"
   },
   "meta": {
-    "updated_at": "2026-06-22 11:28 BJT",
+    "updated_at": "2026-06-23 03:20 BJT",
     "active_day": "2026-06-23",
     "timezone": "Asia/Beijing",
-    "version": "recap-20260622-plus-predictions-20260623"
+    "version": "auto-score-202606221920"
   },
   "score_summary": {
-    "ray_total": 25,
+    "ray_total": 26,
     "gpt_total": 12,
-    "leader_comment": "Ray 昨日凭佛得角 2:2 逼平乌拉圭的方向判断，以及新西兰 1:3 埃及的精准比分，再拿 4 分；GPT 5.5 本日未能得分。总比分来到 Ray 25:12 GPT 5.5。今天 I/J 组开战，阿根廷与法国都在冲提前出线，挪威和塞内加尔则是火力与身体的硬碰硬。"
+    "leader_comment": "Ray 暂时 26:12 领先 GPT 5.5。"
   },
-  "headline": "佛得角再立旗，新西兰倒在后手：Ray 25:12 扩大领先",
-  "brief": "G/H 组第二轮收官：西班牙 4:0 沙特完成反弹，比利时 0:0 伊朗继续迷路，乌拉圭 2:2 被佛得角再次拖住，新西兰 1:3 埃及先声夺人却后劲不足。Ray 押中佛得角逼平乌拉圭，又精准命中新西兰 1:3 埃及，本日 4:0 拉开差距，总分扩大为 25:12。今晚 I/J 组接棒：阿根廷、法国、挪威、约旦/阿尔及利亚之战决定提前出线与生死局走向。",
+  "headline": "总分 Ray 26:12 GPT 5.5：阿根廷 2:0 奥地利 已自动更新。",
+  "brief": "本场复盘为自动简写版，只记录赛果、预测与计分；详细评论可稍后手动补充。",
   "tournament_picks": [
     {
       "name": "冠军",
@@ -221,7 +221,7 @@
       "home": "阿根廷",
       "away": "奥地利",
       "group": "J",
-      "status": "未开赛",
+      "status": "已结束",
       "ray_prediction": {
         "home_score": 2,
         "away_score": 0,
@@ -233,10 +233,16 @@
         "reason": "GPT 预测阿根廷 2:1 奥地利。我同意阿根廷会赢，但朗尼克的奥地利压迫强度更高，不会像阿尔及利亚那样被完全闷死，至少有机会偷到一球。"
       },
       "actual_score": {
-        "home_score": null,
-        "away_score": null
+        "home_score": 2,
+        "away_score": 0
       },
-      "review": "赛前看点：阿根廷如果取胜基本锁定出线主动权，梅西也在冲击世界杯历史射手纪录。Ray 看阿根廷 2:0 稳稳收下，GPT 认为奥地利能靠高压和转换制造一次伤害。"
+      "review": "阿根廷 2:0 奥地利。赛果已自动录入；Ray 预测 2:0，GPT 预测 2:1。双方都猜对胜平负，胜平负不计分；Ray 比分完全命中，得到 1 分。 本场得分：Ray +1，GPT +0。",
+      "espn_id": "760456",
+      "manual_points": {
+        "ray": 1,
+        "gpt": 0,
+        "explanation": "双方都猜对胜平负，胜平负不计分；Ray 比分完全命中，得到 1 分。"
+      }
     },
     {
       "id": "fra-irq-20260623",
@@ -1536,7 +1542,7 @@
       "date": "2026-06-23",
       "title": "I/J 组登场：阿根廷法国冲提前出线，挪威塞内加尔硬碰硬",
       "summary": "阿根廷 vs 奥地利、法国 vs 伊拉克、挪威 vs 塞内加尔、约旦 vs 阿尔及利亚即将开战。Ray 押阿根廷 2:0、法国 3:0、挪威 3:2、约旦 2:2；GPT 5.5 押阿根廷 2:1、法国 4:0、挪威 2:1、阿尔及利亚 2:1。",
-      "ray_points": 0,
+      "ray_points": 1,
       "gpt_points": 0,
       "matches": [
         {
@@ -1545,7 +1551,7 @@
           "home": "阿根廷",
           "away": "奥地利",
           "group": "J",
-          "status": "未开赛",
+          "status": "已结束",
           "ray_prediction": {
             "home_score": 2,
             "away_score": 0,
@@ -1557,10 +1563,16 @@
             "reason": "GPT 预测阿根廷 2:1 奥地利。我同意阿根廷会赢，但朗尼克的奥地利压迫强度更高，不会像阿尔及利亚那样被完全闷死，至少有机会偷到一球。"
           },
           "actual_score": {
-            "home_score": null,
-            "away_score": null
+            "home_score": 2,
+            "away_score": 0
           },
-          "review": "赛前看点：阿根廷如果取胜基本锁定出线主动权，梅西也在冲击世界杯历史射手纪录。Ray 看阿根廷 2:0 稳稳收下，GPT 认为奥地利能靠高压和转换制造一次伤害。"
+          "review": "阿根廷 2:0 奥地利。赛果已自动录入；Ray 预测 2:0，GPT 预测 2:1。双方都猜对胜平负，胜平负不计分；Ray 比分完全命中，得到 1 分。 本场得分：Ray +1，GPT +0。",
+          "espn_id": "760456",
+          "manual_points": {
+            "ray": 1,
+            "gpt": 0,
+            "explanation": "双方都猜对胜平负，胜平负不计分；Ray 比分完全命中，得到 1 分。"
+          }
         },
         {
           "id": "fra-irq-20260623",
@@ -1662,6 +1674,10 @@
     {
       "time": "06-19 20:10",
       "text": "A/B 组第二轮曾让比分牌拉开到 18:3：墨西哥 1:0 韩国成为 Ray 的关键得分点，加拿大和瑞士大胜，捷克被南非拖住。"
+    },
+    {
+      "time": "06-23 03:20",
+      "text": "自动更新：阿根廷 2:0 奥地利，Ray +1，GPT +0。"
     }
   ],
   "archive": [
