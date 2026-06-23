@@ -7,17 +7,17 @@
     "tagline": "World Cup Prediction Derby"
   },
   "meta": {
-    "updated_at": "2026-06-24 03:10 BJT",
+    "updated_at": "2026-06-24 06:10 BJT",
     "active_day": "2026-06-24",
     "timezone": "Asia/Beijing",
-    "version": "auto-score-202606231910"
+    "version": "auto-score-202606232210"
   },
   "score_summary": {
     "ray_total": 28,
     "gpt_total": 16,
     "leader_comment": "Ray 暂时 28:16 领先 GPT 5.5。"
   },
-  "headline": "总分 Ray 28:16 GPT 5.5：葡萄牙 5:0 乌兹别克斯坦 已自动更新。",
+  "headline": "总分 Ray 28:16 GPT 5.5：英格兰 0:0 加纳 已自动更新。",
   "brief": "本场复盘为自动简写版，只记录赛果、预测与计分；详细评论可稍后手动补充。",
   "tournament_picks": [
     {
@@ -250,7 +250,7 @@
       "home": "英格兰",
       "away": "加纳",
       "group": "L",
-      "status": "未开赛",
+      "status": "已结束",
       "ray_prediction": {
         "home_score": 3,
         "away_score": 1,
@@ -262,10 +262,16 @@
         "reason": "GPT 预测英格兰 2:1 加纳。我看好英格兰赢球，但首战对克罗地亚暴露了防线混乱，加纳的速度和反击会比比分表面更麻烦。"
       },
       "actual_score": {
-        "home_score": null,
-        "away_score": null
+        "home_score": 0,
+        "away_score": 0
       },
-      "review": "赛前看点：英格兰攻击线状态正热，但首战 4:2 也暴露防守问题；加纳首轮靠补时绝杀拿三分，反击速度不能小看。Ray 押英格兰 3:1，GPT 押 2:1。"
+      "review": "英格兰 0:0 加纳。赛果已自动录入；Ray 预测 3:1，GPT 预测 2:1。双方都猜错，且胜平负方向没有形成差异，本场不计分。 本场得分：Ray +0，GPT +0。",
+      "espn_id": "760458",
+      "manual_points": {
+        "ray": 0,
+        "gpt": 0,
+        "explanation": "双方都猜错，且胜平负方向没有形成差异，本场不计分。"
+      }
     },
     {
       "id": "pan-cro-20260624",
@@ -1701,7 +1707,7 @@
           "home": "英格兰",
           "away": "加纳",
           "group": "L",
-          "status": "未开赛",
+          "status": "已结束",
           "ray_prediction": {
             "home_score": 3,
             "away_score": 1,
@@ -1713,10 +1719,16 @@
             "reason": "GPT 预测英格兰 2:1 加纳。我看好英格兰赢球，但首战对克罗地亚暴露了防线混乱，加纳的速度和反击会比比分表面更麻烦。"
           },
           "actual_score": {
-            "home_score": null,
-            "away_score": null
+            "home_score": 0,
+            "away_score": 0
           },
-          "review": "赛前看点：英格兰攻击线状态正热，但首战 4:2 也暴露防守问题；加纳首轮靠补时绝杀拿三分，反击速度不能小看。Ray 押英格兰 3:1，GPT 押 2:1。"
+          "review": "英格兰 0:0 加纳。赛果已自动录入；Ray 预测 3:1，GPT 预测 2:1。双方都猜错，且胜平负方向没有形成差异，本场不计分。 本场得分：Ray +0，GPT +0。",
+          "espn_id": "760458",
+          "manual_points": {
+            "ray": 0,
+            "gpt": 0,
+            "explanation": "双方都猜错，且胜平负方向没有形成差异，本场不计分。"
+          }
         },
         {
           "id": "pan-cro-20260624",
@@ -1803,6 +1815,10 @@
     {
       "time": "06-24 03:10",
       "text": "自动更新：葡萄牙 5:0 乌兹别克斯坦，Ray +0，GPT +0。"
+    },
+    {
+      "time": "06-24 06:10",
+      "text": "自动更新：英格兰 0:0 加纳，Ray +0，GPT +0。"
     }
   ],
   "archive": [
