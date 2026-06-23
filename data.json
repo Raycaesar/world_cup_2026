@@ -7,17 +7,17 @@
     "tagline": "World Cup Prediction Derby"
   },
   "meta": {
-    "updated_at": "2026-06-23 03:20 BJT",
+    "updated_at": "2026-06-23 08:50 BJT",
     "active_day": "2026-06-23",
     "timezone": "Asia/Beijing",
-    "version": "auto-score-202606221920"
+    "version": "auto-score-202606230050"
   },
   "score_summary": {
-    "ray_total": 26,
+    "ray_total": 27,
     "gpt_total": 12,
-    "leader_comment": "Ray 暂时 26:12 领先 GPT 5.5。"
+    "leader_comment": "Ray 暂时 27:12 领先 GPT 5.5。"
   },
-  "headline": "总分 Ray 26:12 GPT 5.5：阿根廷 2:0 奥地利 已自动更新。",
+  "headline": "总分 Ray 27:12 GPT 5.5：法国 3:0 伊拉克 已自动更新。",
   "brief": "本场复盘为自动简写版，只记录赛果、预测与计分；详细评论可稍后手动补充。",
   "tournament_picks": [
     {
@@ -250,7 +250,7 @@
       "home": "法国",
       "away": "伊拉克",
       "group": "I",
-      "status": "未开赛",
+      "status": "已结束",
       "ray_prediction": {
         "home_score": 3,
         "away_score": 0,
@@ -262,10 +262,16 @@
         "reason": "GPT 预测法国 4:0 伊拉克。我比 Ray 更激进：伊拉克首战已经暴露出防线抗压问题，如果法国早早进球，后面可能会直接变成净胜球局。"
       },
       "actual_score": {
-        "home_score": null,
-        "away_score": null
+        "home_score": 3,
+        "away_score": 0
       },
-      "review": "赛前看点：法国面对被逼到墙角的伊拉克，既要提前出线，也要继续刷净胜球和前场状态。Ray 看 3:0，GPT 看 4:0，分歧只在屠杀规模。"
+      "review": "法国 3:0 伊拉克。赛果已自动录入；Ray 预测 3:0，GPT 预测 4:0。双方都猜对胜平负，胜平负不计分；Ray 比分完全命中，得到 1 分。 本场得分：Ray +1，GPT +0。",
+      "espn_id": "760457",
+      "manual_points": {
+        "ray": 1,
+        "gpt": 0,
+        "explanation": "双方都猜对胜平负，胜平负不计分；Ray 比分完全命中，得到 1 分。"
+      }
     },
     {
       "id": "nor-sen-20260623",
@@ -1542,7 +1548,7 @@
       "date": "2026-06-23",
       "title": "I/J 组登场：阿根廷法国冲提前出线，挪威塞内加尔硬碰硬",
       "summary": "阿根廷 vs 奥地利、法国 vs 伊拉克、挪威 vs 塞内加尔、约旦 vs 阿尔及利亚即将开战。Ray 押阿根廷 2:0、法国 3:0、挪威 3:2、约旦 2:2；GPT 5.5 押阿根廷 2:1、法国 4:0、挪威 2:1、阿尔及利亚 2:1。",
-      "ray_points": 1,
+      "ray_points": 2,
       "gpt_points": 0,
       "matches": [
         {
@@ -1580,7 +1586,7 @@
           "home": "法国",
           "away": "伊拉克",
           "group": "I",
-          "status": "未开赛",
+          "status": "已结束",
           "ray_prediction": {
             "home_score": 3,
             "away_score": 0,
@@ -1592,10 +1598,16 @@
             "reason": "GPT 预测法国 4:0 伊拉克。我比 Ray 更激进：伊拉克首战已经暴露出防线抗压问题，如果法国早早进球，后面可能会直接变成净胜球局。"
           },
           "actual_score": {
-            "home_score": null,
-            "away_score": null
+            "home_score": 3,
+            "away_score": 0
           },
-          "review": "赛前看点：法国面对被逼到墙角的伊拉克，既要提前出线，也要继续刷净胜球和前场状态。Ray 看 3:0，GPT 看 4:0，分歧只在屠杀规模。"
+          "review": "法国 3:0 伊拉克。赛果已自动录入；Ray 预测 3:0，GPT 预测 4:0。双方都猜对胜平负，胜平负不计分；Ray 比分完全命中，得到 1 分。 本场得分：Ray +1，GPT +0。",
+          "espn_id": "760457",
+          "manual_points": {
+            "ray": 1,
+            "gpt": 0,
+            "explanation": "双方都猜对胜平负，胜平负不计分；Ray 比分完全命中，得到 1 分。"
+          }
         },
         {
           "id": "nor-sen-20260623",
@@ -1678,6 +1690,10 @@
     {
       "time": "06-23 03:20",
       "text": "自动更新：阿根廷 2:0 奥地利，Ray +1，GPT +0。"
+    },
+    {
+      "time": "06-23 08:50",
+      "text": "自动更新：法国 3:0 伊拉克，Ray +1，GPT +0。"
     }
   ],
   "archive": [
