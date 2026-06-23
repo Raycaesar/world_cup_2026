@@ -7,17 +7,17 @@
     "tagline": "World Cup Prediction Derby"
   },
   "meta": {
-    "updated_at": "2026-06-23 10:10 BJT",
+    "updated_at": "2026-06-23 13:10 BJT",
     "active_day": "2026-06-23",
     "timezone": "Asia/Beijing",
-    "version": "auto-score-202606230210"
+    "version": "auto-score-202606230510"
   },
   "score_summary": {
     "ray_total": 28,
-    "gpt_total": 12,
-    "leader_comment": "Ray 暂时 28:12 领先 GPT 5.5。"
+    "gpt_total": 16,
+    "leader_comment": "Ray 暂时 28:16 领先 GPT 5.5。"
   },
-  "headline": "总分 Ray 28:12 GPT 5.5：挪威 3:2 塞内加尔 已自动更新。",
+  "headline": "总分 Ray 28:16 GPT 5.5：约旦 1:2 阿尔及利亚 已自动更新。",
   "brief": "本场复盘为自动简写版，只记录赛果、预测与计分；详细评论可稍后手动补充。",
   "tournament_picks": [
     {
@@ -308,7 +308,7 @@
       "home": "约旦",
       "away": "阿尔及利亚",
       "group": "J",
-      "status": "未开赛",
+      "status": "已结束",
       "ray_prediction": {
         "home_score": 2,
         "away_score": 2,
@@ -320,10 +320,16 @@
         "reason": "GPT 预测约旦 1:2 阿尔及利亚。我承认约旦首战有活力，但阿尔及利亚个人能力和攻击深度更好，在必须赢的局里更可能压出结果。"
       },
       "actual_score": {
-        "home_score": null,
-        "away_score": null
+        "home_score": 1,
+        "away_score": 2
       },
-      "review": "赛前看点：这是一场输不起的阿拉伯德比。约旦已经摆脱世界杯首秀紧张，阿尔及利亚也知道命运仍在自己手里；Ray 押 2:2 乱战，GPT 押阿尔及利亚 2:1 过关。"
+      "review": "约旦 1:2 阿尔及利亚。赛果已自动录入；Ray 预测 2:2，GPT 预测 1:2。GPT 猜对胜平负且比分完全命中，得到 4 分。 本场得分：Ray +0，GPT +4。",
+      "espn_id": "760455",
+      "manual_points": {
+        "ray": 0,
+        "gpt": 4,
+        "explanation": "GPT 猜对胜平负且比分完全命中，得到 4 分。"
+      }
     }
   ],
   "matchdays": [
@@ -1555,7 +1561,7 @@
       "title": "I/J 组登场：阿根廷法国冲提前出线，挪威塞内加尔硬碰硬",
       "summary": "阿根廷 vs 奥地利、法国 vs 伊拉克、挪威 vs 塞内加尔、约旦 vs 阿尔及利亚即将开战。Ray 押阿根廷 2:0、法国 3:0、挪威 3:2、约旦 2:2；GPT 5.5 押阿根廷 2:1、法国 4:0、挪威 2:1、阿尔及利亚 2:1。",
       "ray_points": 3,
-      "gpt_points": 0,
+      "gpt_points": 4,
       "matches": [
         {
           "id": "arg-aut-20260623",
@@ -1650,7 +1656,7 @@
           "home": "约旦",
           "away": "阿尔及利亚",
           "group": "J",
-          "status": "未开赛",
+          "status": "已结束",
           "ray_prediction": {
             "home_score": 2,
             "away_score": 2,
@@ -1662,19 +1668,21 @@
             "reason": "GPT 预测约旦 1:2 阿尔及利亚。我承认约旦首战有活力，但阿尔及利亚个人能力和攻击深度更好，在必须赢的局里更可能压出结果。"
           },
           "actual_score": {
-            "home_score": null,
-            "away_score": null
+            "home_score": 1,
+            "away_score": 2
           },
-          "review": "赛前看点：这是一场输不起的阿拉伯德比。约旦已经摆脱世界杯首秀紧张，阿尔及利亚也知道命运仍在自己手里；Ray 押 2:2 乱战，GPT 押阿尔及利亚 2:1 过关。"
+          "review": "约旦 1:2 阿尔及利亚。赛果已自动录入；Ray 预测 2:2，GPT 预测 1:2。GPT 猜对胜平负且比分完全命中，得到 4 分。 本场得分：Ray +0，GPT +4。",
+          "espn_id": "760455",
+          "manual_points": {
+            "ray": 0,
+            "gpt": 4,
+            "explanation": "GPT 猜对胜平负且比分完全命中，得到 4 分。"
+          }
         }
       ]
     }
   ],
   "update_log": [
-    {
-      "time": "06-22 11:28",
-      "text": "G/H 组第二轮收官：西班牙 4:0 沙特反弹，比利时 0:0 伊朗闷平，佛得角 2:2 再拖乌拉圭，新西兰 1:3 被埃及逆转。Ray 凭佛得角平局方向和新西兰精准比分拿到 4 分，总分扩大到 25:12。"
-    },
     {
       "time": "06-22 11:28",
       "text": "I/J 组今晚接棒：Ray 看阿根廷、法国、挪威取胜，并押约旦 2:2 阿尔及利亚；GPT 5.5 也看阿根廷、法国、挪威，但在阿尔及利亚一战选择小胜。"
@@ -1710,6 +1718,10 @@
     {
       "time": "06-23 10:10",
       "text": "自动更新：挪威 3:2 塞内加尔，Ray +1，GPT +0。"
+    },
+    {
+      "time": "06-23 13:10",
+      "text": "自动更新：约旦 1:2 阿尔及利亚，Ray +0，GPT +4。"
     }
   ],
   "archive": [
