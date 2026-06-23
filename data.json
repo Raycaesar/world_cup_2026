@@ -7,18 +7,18 @@
     "tagline": "World Cup Prediction Derby"
   },
   "meta": {
-    "updated_at": "2026-06-23 16:50 BJT",
+    "updated_at": "2026-06-24 03:10 BJT",
     "active_day": "2026-06-24",
     "timezone": "Asia/Beijing",
-    "version": "recap-20260623-plus-predictions-20260624"
+    "version": "auto-score-202606231910"
   },
   "score_summary": {
     "ray_total": 28,
     "gpt_total": 16,
-    "leader_comment": "Ray 昨日三场精准命中阿根廷 2:0、法国 3:0、挪威 3:2，本应是漂亮的一天；但约旦 1:2 被阿尔及利亚逆转，GPT 5.5 精准命中末场比分拿到 4 分。单日 Ray 3:4 GPT，总比分来到 Ray 28:16 GPT 5.5。"
+    "leader_comment": "Ray 暂时 28:16 领先 GPT 5.5。"
   },
-  "headline": "三刀精准仍遭末场反杀：Ray 28:16 守住优势",
-  "brief": "I/J 组第二轮收官：阿根廷 2:0 奥地利、法国 3:0 伊拉克、挪威 3:2 塞内加尔，Ray 连中三场精准比分；但约旦 1:2 被阿尔及利亚逆转，GPT 5.5 押中比分追回 4 分。今晚 K/L 组接棒：葡萄牙求反弹，英格兰碰加纳，克罗地亚与巴拿马生死战，Ray 则在哥伦比亚 vs 刚果（金）一战继续押冷。",
+  "headline": "总分 Ray 28:16 GPT 5.5：葡萄牙 5:0 乌兹别克斯坦 已自动更新。",
+  "brief": "本场复盘为自动简写版，只记录赛果、预测与计分；详细评论可稍后手动补充。",
   "tournament_picks": [
     {
       "name": "冠军",
@@ -221,7 +221,7 @@
       "home": "葡萄牙",
       "away": "乌兹别克斯坦",
       "group": "K",
-      "status": "未开赛",
+      "status": "已结束",
       "ray_prediction": {
         "home_score": 3,
         "away_score": 1,
@@ -233,10 +233,16 @@
         "reason": "GPT 预测葡萄牙 2:0 乌兹别克斯坦。我也看葡萄牙反弹，但更看重首轮暴露出的节奏和中锋问题，因此不押大开大合。"
       },
       "actual_score": {
-        "home_score": null,
-        "away_score": null
+        "home_score": 5,
+        "away_score": 0
       },
-      "review": "赛前看点：葡萄牙需要从 1:1 刚果（金）的尴尬里爬出来，C 罗是否继续首发也成了舆论焦点。Ray 看葡萄牙 3:1 反弹，GPT 看 2:0，更保守地押一个控局胜。"
+      "review": "葡萄牙 5:0 乌兹别克斯坦。赛果已自动录入；Ray 预测 3:1，GPT 预测 2:0。双方都猜对胜平负，但没有形成比分命中差异，本场不计分。 本场得分：Ray +0，GPT +0。",
+      "espn_id": "760461",
+      "manual_points": {
+        "ray": 0,
+        "gpt": 0,
+        "explanation": "双方都猜对胜平负，但没有形成比分命中差异，本场不计分。"
+      }
     },
     {
       "id": "eng-gha-20260624",
@@ -1666,7 +1672,7 @@
           "home": "葡萄牙",
           "away": "乌兹别克斯坦",
           "group": "K",
-          "status": "未开赛",
+          "status": "已结束",
           "ray_prediction": {
             "home_score": 3,
             "away_score": 1,
@@ -1678,10 +1684,16 @@
             "reason": "GPT 预测葡萄牙 2:0 乌兹别克斯坦。我也看葡萄牙反弹，但更看重首轮暴露出的节奏和中锋问题，因此不押大开大合。"
           },
           "actual_score": {
-            "home_score": null,
-            "away_score": null
+            "home_score": 5,
+            "away_score": 0
           },
-          "review": "赛前看点：葡萄牙需要从 1:1 刚果（金）的尴尬里爬出来，C 罗是否继续首发也成了舆论焦点。Ray 看葡萄牙 3:1 反弹，GPT 看 2:0，更保守地押一个控局胜。"
+          "review": "葡萄牙 5:0 乌兹别克斯坦。赛果已自动录入；Ray 预测 3:1，GPT 预测 2:0。双方都猜对胜平负，但没有形成比分命中差异，本场不计分。 本场得分：Ray +0，GPT +0。",
+          "espn_id": "760461",
+          "manual_points": {
+            "ray": 0,
+            "gpt": 0,
+            "explanation": "双方都猜对胜平负，但没有形成比分命中差异，本场不计分。"
+          }
         },
         {
           "id": "eng-gha-20260624",
@@ -1787,6 +1799,10 @@
     {
       "time": "06-20 13:35",
       "text": "E/F 组今晚接棒：Ray 押德国被科特迪瓦逼平、荷兰与瑞典打成 2:2；GPT 5.5 则看德国和荷兰都能险胜，日本小胜突尼斯。"
+    },
+    {
+      "time": "06-24 03:10",
+      "text": "自动更新：葡萄牙 5:0 乌兹别克斯坦，Ray +0，GPT +0。"
     }
   ],
   "archive": [
