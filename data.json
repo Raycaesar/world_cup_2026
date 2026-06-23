@@ -7,17 +7,17 @@
     "tagline": "World Cup Prediction Derby"
   },
   "meta": {
-    "updated_at": "2026-06-23 08:50 BJT",
+    "updated_at": "2026-06-23 10:10 BJT",
     "active_day": "2026-06-23",
     "timezone": "Asia/Beijing",
-    "version": "auto-score-202606230050"
+    "version": "auto-score-202606230210"
   },
   "score_summary": {
-    "ray_total": 27,
+    "ray_total": 28,
     "gpt_total": 12,
-    "leader_comment": "Ray 暂时 27:12 领先 GPT 5.5。"
+    "leader_comment": "Ray 暂时 28:12 领先 GPT 5.5。"
   },
-  "headline": "总分 Ray 27:12 GPT 5.5：法国 3:0 伊拉克 已自动更新。",
+  "headline": "总分 Ray 28:12 GPT 5.5：挪威 3:2 塞内加尔 已自动更新。",
   "brief": "本场复盘为自动简写版，只记录赛果、预测与计分；详细评论可稍后手动补充。",
   "tournament_picks": [
     {
@@ -279,7 +279,7 @@
       "home": "挪威",
       "away": "塞内加尔",
       "group": "I",
-      "status": "未开赛",
+      "status": "已结束",
       "ray_prediction": {
         "home_score": 3,
         "away_score": 2,
@@ -291,10 +291,16 @@
         "reason": "GPT 预测挪威 2:1 塞内加尔。我也看挪威赢，但不会押得太开放：塞内加尔身体和冲击力仍在，挪威更可能靠哈兰德、定位球和效率小胜。"
       },
       "actual_score": {
-        "home_score": null,
-        "away_score": null
+        "home_score": 3,
+        "away_score": 2
       },
-      "review": "赛前看点：这是 I 组真正的硬仗。塞内加尔必须抢分，挪威则想和法国携手提前上岸；Ray 押五球对攻，GPT 认为会更紧。"
+      "review": "挪威 3:2 塞内加尔。赛果已自动录入；Ray 预测 3:2，GPT 预测 2:1。双方都猜对胜平负，胜平负不计分；Ray 比分完全命中，得到 1 分。 本场得分：Ray +1，GPT +0。",
+      "espn_id": "760454",
+      "manual_points": {
+        "ray": 1,
+        "gpt": 0,
+        "explanation": "双方都猜对胜平负，胜平负不计分；Ray 比分完全命中，得到 1 分。"
+      }
     },
     {
       "id": "jor-dza-20260623",
@@ -1548,7 +1554,7 @@
       "date": "2026-06-23",
       "title": "I/J 组登场：阿根廷法国冲提前出线，挪威塞内加尔硬碰硬",
       "summary": "阿根廷 vs 奥地利、法国 vs 伊拉克、挪威 vs 塞内加尔、约旦 vs 阿尔及利亚即将开战。Ray 押阿根廷 2:0、法国 3:0、挪威 3:2、约旦 2:2；GPT 5.5 押阿根廷 2:1、法国 4:0、挪威 2:1、阿尔及利亚 2:1。",
-      "ray_points": 2,
+      "ray_points": 3,
       "gpt_points": 0,
       "matches": [
         {
@@ -1615,7 +1621,7 @@
           "home": "挪威",
           "away": "塞内加尔",
           "group": "I",
-          "status": "未开赛",
+          "status": "已结束",
           "ray_prediction": {
             "home_score": 3,
             "away_score": 2,
@@ -1627,10 +1633,16 @@
             "reason": "GPT 预测挪威 2:1 塞内加尔。我也看挪威赢，但不会押得太开放：塞内加尔身体和冲击力仍在，挪威更可能靠哈兰德、定位球和效率小胜。"
           },
           "actual_score": {
-            "home_score": null,
-            "away_score": null
+            "home_score": 3,
+            "away_score": 2
           },
-          "review": "赛前看点：这是 I 组真正的硬仗。塞内加尔必须抢分，挪威则想和法国携手提前上岸；Ray 押五球对攻，GPT 认为会更紧。"
+          "review": "挪威 3:2 塞内加尔。赛果已自动录入；Ray 预测 3:2，GPT 预测 2:1。双方都猜对胜平负，胜平负不计分；Ray 比分完全命中，得到 1 分。 本场得分：Ray +1，GPT +0。",
+          "espn_id": "760454",
+          "manual_points": {
+            "ray": 1,
+            "gpt": 0,
+            "explanation": "双方都猜对胜平负，胜平负不计分；Ray 比分完全命中，得到 1 分。"
+          }
         },
         {
           "id": "jor-dza-20260623",
@@ -1694,6 +1706,10 @@
     {
       "time": "06-23 08:50",
       "text": "自动更新：法国 3:0 伊拉克，Ray +1，GPT +0。"
+    },
+    {
+      "time": "06-23 10:10",
+      "text": "自动更新：挪威 3:2 塞内加尔，Ray +1，GPT +0。"
     }
   ],
   "archive": [
