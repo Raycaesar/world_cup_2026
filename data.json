@@ -7,18 +7,18 @@
     "tagline": "World Cup Prediction Derby"
   },
   "meta": {
-    "updated_at": "2026-06-24 17:18 BJT",
+    "updated_at": "2026-06-25 05:00 BJT",
     "active_day": "2026-06-25",
     "timezone": "Asia/Beijing",
-    "version": "recap-20260624-plus-predictions-20260625"
+    "version": "auto-score-202606242100"
   },
   "score_summary": {
-    "ray_total": 28,
+    "ray_total": 29,
     "gpt_total": 19,
-    "leader_comment": "K/L 组第二轮收官，Ray 高看刚果（金）导致末场失手；GPT 5.5 押中哥伦比亚取胜，本日追回 3 分。总比分来到 Ray 28:19 GPT 5.5，Ray 仍保持明显优势。"
+    "leader_comment": "Ray 暂时 29:19 领先 GPT 5.5。"
   },
-  "headline": "哥伦比亚一刀止乱，刚果火花熄灭：Ray 28:19 继续领跑",
-  "brief": "K/L 组第二轮结束：葡萄牙 5:0 横扫乌兹别克斯坦，英格兰 0:0 被加纳锁死，克罗地亚 1:0 小胜巴拿马，哥伦比亚 1:0 击破刚果（金）。Ray 本轮高看刚果，GPT 5.5 凭哥伦比亚方向拿回 3 分；今晚 B/C 组末轮开战，瑞士对加拿大、波黑对卡塔尔、摩洛哥对海地、巴西对苏格兰登场。",
+  "headline": "总分 Ray 29:19 GPT 5.5：波黑 3:1 卡塔尔 已自动更新。",
+  "brief": "本场复盘为自动简写版，只记录赛果、预测与计分；详细评论可稍后手动补充。",
   "tournament_picks": [
     {
       "name": "冠军",
@@ -221,7 +221,7 @@
       "home": "瑞士",
       "away": "加拿大",
       "group": "B",
-      "status": "未开赛",
+      "status": "已结束",
       "ray_prediction": {
         "home_score": 1,
         "away_score": 1,
@@ -233,10 +233,16 @@
         "reason": "GPT 预测瑞士 1:2 加拿大。我同意瑞士没必要冒险，但加拿大在主场、净胜球和气势都更好，如果比赛后段仍有机会，东道主更可能主动争头名。"
       },
       "actual_score": {
-        "home_score": null,
-        "away_score": null
+        "home_score": 2,
+        "away_score": 1
       },
-      "review": "赛前看点：这是一场双方都能接受平局、但加拿大更有动力争小组第一的比赛。Ray 押 1:1，认为瑞士会控制风险；GPT 押加拿大 2:1，赌东道主借主场气势抢下头名。"
+      "review": "瑞士 2:1 加拿大。赛果已自动录入；Ray 预测 1:1，GPT 预测 1:2。双方都猜错，但 Ray 的胜平负方向更接近真实赛果，得到 1 分。 本场得分：Ray +1，GPT +0。",
+      "espn_id": "760463",
+      "manual_points": {
+        "ray": 1,
+        "gpt": 0,
+        "explanation": "双方都猜错，但 Ray 的胜平负方向更接近真实赛果，得到 1 分。"
+      }
     },
     {
       "id": "bih-qat-20260625",
@@ -244,7 +250,7 @@
       "home": "波黑",
       "away": "卡塔尔",
       "group": "B",
-      "status": "未开赛",
+      "status": "已结束",
       "ray_prediction": {
         "home_score": 2,
         "away_score": 0,
@@ -256,10 +262,16 @@
         "reason": "GPT 预测波黑 2:1 卡塔尔。我也看波黑赢，但这场会很开放，卡塔尔为了最后机会不可能只守，可能偷到一球。"
       },
       "actual_score": {
-        "home_score": null,
-        "away_score": null
+        "home_score": 3,
+        "away_score": 1
       },
-      "review": "赛前看点：波黑主帅已经明说这是一场必须进攻的比赛，平局几乎不够用。Ray 看波黑 2:0 干净赢球；GPT 也押波黑，但认为卡塔尔在压力下会打出一点反击。"
+      "review": "波黑 3:1 卡塔尔。赛果已自动录入；Ray 预测 2:0，GPT 预测 2:1。双方都猜对胜平负，但没有形成比分命中差异，本场不计分。 本场得分：Ray +0，GPT +0。",
+      "espn_id": "760462",
+      "manual_points": {
+        "ray": 0,
+        "gpt": 0,
+        "explanation": "双方都猜对胜平负，但没有形成比分命中差异，本场不计分。"
+      }
     },
     {
       "id": "sco-bra-20260625",
@@ -1778,7 +1790,7 @@
       "date": "2026-06-25",
       "title": "B/C 组末轮：瑞加默契球疑云，Ray 押苏格兰逼平巴西",
       "summary": "瑞士 vs 加拿大、波黑 vs 卡塔尔、苏格兰 vs 巴西、摩洛哥 vs 海地即将开战。Ray 认为瑞士和加拿大很可能各取所需，押 1:1；同时看苏格兰拼下 2:2。GPT 5.5 则押加拿大、波黑、巴西、摩洛哥分别取胜。",
-      "ray_points": 0,
+      "ray_points": 1,
       "gpt_points": 0,
       "matches": [
         {
@@ -1787,7 +1799,7 @@
           "home": "瑞士",
           "away": "加拿大",
           "group": "B",
-          "status": "未开赛",
+          "status": "已结束",
           "ray_prediction": {
             "home_score": 1,
             "away_score": 1,
@@ -1799,10 +1811,16 @@
             "reason": "GPT 预测瑞士 1:2 加拿大。我同意瑞士没必要冒险，但加拿大在主场、净胜球和气势都更好，如果比赛后段仍有机会，东道主更可能主动争头名。"
           },
           "actual_score": {
-            "home_score": null,
-            "away_score": null
+            "home_score": 2,
+            "away_score": 1
           },
-          "review": "赛前看点：这是一场双方都能接受平局、但加拿大更有动力争小组第一的比赛。Ray 押 1:1，认为瑞士会控制风险；GPT 押加拿大 2:1，赌东道主借主场气势抢下头名。"
+          "review": "瑞士 2:1 加拿大。赛果已自动录入；Ray 预测 1:1，GPT 预测 1:2。双方都猜错，但 Ray 的胜平负方向更接近真实赛果，得到 1 分。 本场得分：Ray +1，GPT +0。",
+          "espn_id": "760463",
+          "manual_points": {
+            "ray": 1,
+            "gpt": 0,
+            "explanation": "双方都猜错，但 Ray 的胜平负方向更接近真实赛果，得到 1 分。"
+          }
         },
         {
           "id": "bih-qat-20260625",
@@ -1810,7 +1828,7 @@
           "home": "波黑",
           "away": "卡塔尔",
           "group": "B",
-          "status": "未开赛",
+          "status": "已结束",
           "ray_prediction": {
             "home_score": 2,
             "away_score": 0,
@@ -1822,10 +1840,16 @@
             "reason": "GPT 预测波黑 2:1 卡塔尔。我也看波黑赢，但这场会很开放，卡塔尔为了最后机会不可能只守，可能偷到一球。"
           },
           "actual_score": {
-            "home_score": null,
-            "away_score": null
+            "home_score": 3,
+            "away_score": 1
           },
-          "review": "赛前看点：波黑主帅已经明说这是一场必须进攻的比赛，平局几乎不够用。Ray 看波黑 2:0 干净赢球；GPT 也押波黑，但认为卡塔尔在压力下会打出一点反击。"
+          "review": "波黑 3:1 卡塔尔。赛果已自动录入；Ray 预测 2:0，GPT 预测 2:1。双方都猜对胜平负，但没有形成比分命中差异，本场不计分。 本场得分：Ray +0，GPT +0。",
+          "espn_id": "760462",
+          "manual_points": {
+            "ray": 0,
+            "gpt": 0,
+            "explanation": "双方都猜对胜平负，但没有形成比分命中差异，本场不计分。"
+          }
         },
         {
           "id": "sco-bra-20260625",
@@ -1884,6 +1908,14 @@
     {
       "time": "06-24 17:18",
       "text": "B/C 组末轮接棒：Ray 押瑞士 1:1 加拿大、波黑 2:0 卡塔尔、摩洛哥 3:0 海地、巴西 2:2 苏格兰；GPT 5.5 则看加拿大、波黑、巴西、摩洛哥取胜。"
+    },
+    {
+      "time": "06-25 05:00",
+      "text": "自动更新：瑞士 2:1 加拿大，Ray +1，GPT +0。"
+    },
+    {
+      "time": "06-25 05:00",
+      "text": "自动更新：波黑 3:1 卡塔尔，Ray +0，GPT +0。"
     }
   ],
   "archive": [
