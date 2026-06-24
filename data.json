@@ -7,17 +7,17 @@
     "tagline": "World Cup Prediction Derby"
   },
   "meta": {
-    "updated_at": "2026-06-24 09:00 BJT",
+    "updated_at": "2026-06-24 12:00 BJT",
     "active_day": "2026-06-24",
     "timezone": "Asia/Beijing",
-    "version": "auto-score-202606240100"
+    "version": "auto-score-202606240400"
   },
   "score_summary": {
     "ray_total": 28,
-    "gpt_total": 16,
-    "leader_comment": "Ray 暂时 28:16 领先 GPT 5.5。"
+    "gpt_total": 19,
+    "leader_comment": "Ray 暂时 28:19 领先 GPT 5.5。"
   },
-  "headline": "总分 Ray 28:16 GPT 5.5：巴拿马 0:1 克罗地亚 已自动更新。",
+  "headline": "总分 Ray 28:19 GPT 5.5：哥伦比亚 1:0 刚果（金） 已自动更新。",
   "brief": "本场复盘为自动简写版，只记录赛果、预测与计分；详细评论可稍后手动补充。",
   "tournament_picks": [
     {
@@ -308,7 +308,7 @@
       "home": "哥伦比亚",
       "away": "刚果（金）",
       "group": "K",
-      "status": "未开赛",
+      "status": "已结束",
       "ray_prediction": {
         "home_score": 1,
         "away_score": 2,
@@ -320,10 +320,16 @@
         "reason": "GPT 预测哥伦比亚 2:1 刚果（金）。我承认刚果（金）很危险，但哥伦比亚前场质量、边路推进和大赛经验仍略占上风，可能小胜。"
       },
       "actual_score": {
-        "home_score": null,
-        "away_score": null
+        "home_score": 1,
+        "away_score": 0
       },
-      "review": "赛前看点：这是今天分歧最大的一场。Ray 继续押刚果（金）爆冷，认为他们首轮逼平葡萄牙不是偶然；GPT 认为哥伦比亚虽然会被冲击，但仍能靠前场质量 2:1 过关。"
+      "review": "哥伦比亚 1:0 刚果（金）。赛果已自动录入；Ray 预测 1:2，GPT 预测 2:1。GPT 猜对胜平负，得到 3 分。 本场得分：Ray +0，GPT +3。",
+      "espn_id": "760459",
+      "manual_points": {
+        "ray": 0,
+        "gpt": 3,
+        "explanation": "GPT 猜对胜平负，得到 3 分。"
+      }
     }
   ],
   "matchdays": [
@@ -1676,7 +1682,7 @@
       "title": "K/L 组接棒：葡萄牙求反弹，Ray 押刚果再爆冷",
       "summary": "葡萄牙 vs 乌兹别克斯坦、英格兰 vs 加纳、巴拿马 vs 克罗地亚、哥伦比亚 vs 刚果（金）即将开战。Ray 看葡萄牙、英格兰、克罗地亚取胜，并在哥伦比亚一战押刚果（金）继续爆冷；GPT 5.5 则四场都选择热门小胜或稳胜。",
       "ray_points": 0,
-      "gpt_points": 0,
+      "gpt_points": 3,
       "matches": [
         {
           "id": "por-uzb-20260624",
@@ -1771,7 +1777,7 @@
           "home": "哥伦比亚",
           "away": "刚果（金）",
           "group": "K",
-          "status": "未开赛",
+          "status": "已结束",
           "ray_prediction": {
             "home_score": 1,
             "away_score": 2,
@@ -1783,19 +1789,21 @@
             "reason": "GPT 预测哥伦比亚 2:1 刚果（金）。我承认刚果（金）很危险，但哥伦比亚前场质量、边路推进和大赛经验仍略占上风，可能小胜。"
           },
           "actual_score": {
-            "home_score": null,
-            "away_score": null
+            "home_score": 1,
+            "away_score": 0
           },
-          "review": "赛前看点：这是今天分歧最大的一场。Ray 继续押刚果（金）爆冷，认为他们首轮逼平葡萄牙不是偶然；GPT 认为哥伦比亚虽然会被冲击，但仍能靠前场质量 2:1 过关。"
+          "review": "哥伦比亚 1:0 刚果（金）。赛果已自动录入；Ray 预测 1:2，GPT 预测 2:1。GPT 猜对胜平负，得到 3 分。 本场得分：Ray +0，GPT +3。",
+          "espn_id": "760459",
+          "manual_points": {
+            "ray": 0,
+            "gpt": 3,
+            "explanation": "GPT 猜对胜平负，得到 3 分。"
+          }
         }
       ]
     }
   ],
   "update_log": [
-    {
-      "time": "06-23 16:50",
-      "text": "K/L 组今晚接棒：Ray 押葡萄牙 3:1、英格兰 3:1、克罗地亚 3:0，并在哥伦比亚 vs 刚果（金）一战选择刚果（金）2:1 爆冷；GPT 5.5 四场都偏向热门。"
-    },
     {
       "time": "06-22 11:28",
       "text": "G/H 组第二轮收官：西班牙 4:0 沙特反弹，比利时 0:0 伊朗闷平，佛得角 2:2 再拖乌拉圭，新西兰 1:3 被埃及逆转。Ray 凭佛得角平局方向和新西兰精准比分拿到 4 分，总分扩大到 25:12。"
@@ -1831,6 +1839,10 @@
     {
       "time": "06-24 09:00",
       "text": "自动更新：巴拿马 0:1 克罗地亚，Ray +0，GPT +0。"
+    },
+    {
+      "time": "06-24 12:00",
+      "text": "自动更新：哥伦比亚 1:0 刚果（金），Ray +0，GPT +3。"
     }
   ],
   "archive": [
