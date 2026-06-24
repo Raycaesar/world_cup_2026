@@ -7,17 +7,17 @@
     "tagline": "World Cup Prediction Derby"
   },
   "meta": {
-    "updated_at": "2026-06-24 06:10 BJT",
+    "updated_at": "2026-06-24 09:00 BJT",
     "active_day": "2026-06-24",
     "timezone": "Asia/Beijing",
-    "version": "auto-score-202606232210"
+    "version": "auto-score-202606240100"
   },
   "score_summary": {
     "ray_total": 28,
     "gpt_total": 16,
     "leader_comment": "Ray 暂时 28:16 领先 GPT 5.5。"
   },
-  "headline": "总分 Ray 28:16 GPT 5.5：英格兰 0:0 加纳 已自动更新。",
+  "headline": "总分 Ray 28:16 GPT 5.5：巴拿马 0:1 克罗地亚 已自动更新。",
   "brief": "本场复盘为自动简写版，只记录赛果、预测与计分；详细评论可稍后手动补充。",
   "tournament_picks": [
     {
@@ -279,7 +279,7 @@
       "home": "巴拿马",
       "away": "克罗地亚",
       "group": "L",
-      "status": "未开赛",
+      "status": "已结束",
       "ray_prediction": {
         "home_score": 0,
         "away_score": 3,
@@ -291,10 +291,16 @@
         "reason": "GPT 预测克罗地亚 2:0 巴拿马。我也看克罗地亚赢，但首轮防守问题不小，进攻端也未必能顺到 3 球。"
       },
       "actual_score": {
-        "home_score": null,
-        "away_score": null
+        "home_score": 0,
+        "away_score": 1
       },
-      "review": "赛前看点：两队首轮都输球，这已经接近生死战。Ray 认为克罗地亚该拿巴拿马出气，押 3:0；GPT 同样看克罗地亚胜，但押 2:0。"
+      "review": "巴拿马 0:1 克罗地亚。赛果已自动录入；Ray 预测 0:3，GPT 预测 0:2。双方都猜对胜平负，但没有形成比分命中差异，本场不计分。 本场得分：Ray +0，GPT +0。",
+      "espn_id": "760460",
+      "manual_points": {
+        "ray": 0,
+        "gpt": 0,
+        "explanation": "双方都猜对胜平负，但没有形成比分命中差异，本场不计分。"
+      }
     },
     {
       "id": "col-cod-20260624",
@@ -1736,7 +1742,7 @@
           "home": "巴拿马",
           "away": "克罗地亚",
           "group": "L",
-          "status": "未开赛",
+          "status": "已结束",
           "ray_prediction": {
             "home_score": 0,
             "away_score": 3,
@@ -1748,10 +1754,16 @@
             "reason": "GPT 预测克罗地亚 2:0 巴拿马。我也看克罗地亚赢，但首轮防守问题不小，进攻端也未必能顺到 3 球。"
           },
           "actual_score": {
-            "home_score": null,
-            "away_score": null
+            "home_score": 0,
+            "away_score": 1
           },
-          "review": "赛前看点：两队首轮都输球，这已经接近生死战。Ray 认为克罗地亚该拿巴拿马出气，押 3:0；GPT 同样看克罗地亚胜，但押 2:0。"
+          "review": "巴拿马 0:1 克罗地亚。赛果已自动录入；Ray 预测 0:3，GPT 预测 0:2。双方都猜对胜平负，但没有形成比分命中差异，本场不计分。 本场得分：Ray +0，GPT +0。",
+          "espn_id": "760460",
+          "manual_points": {
+            "ray": 0,
+            "gpt": 0,
+            "explanation": "双方都猜对胜平负，但没有形成比分命中差异，本场不计分。"
+          }
         },
         {
           "id": "col-cod-20260624",
@@ -1780,10 +1792,6 @@
     }
   ],
   "update_log": [
-    {
-      "time": "06-23 16:50",
-      "text": "I/J 组第二轮收官：Ray 连中阿根廷 2:0、法国 3:0、挪威 3:2 三场精准比分，但约旦 1:2 被阿尔及利亚逆转，GPT 5.5 末场精准命中拿到 4 分。本日 Ray 3:4 GPT，总分来到 Ray 28:16。"
-    },
     {
       "time": "06-23 16:50",
       "text": "K/L 组今晚接棒：Ray 押葡萄牙 3:1、英格兰 3:1、克罗地亚 3:0，并在哥伦比亚 vs 刚果（金）一战选择刚果（金）2:1 爆冷；GPT 5.5 四场都偏向热门。"
@@ -1819,6 +1827,10 @@
     {
       "time": "06-24 06:10",
       "text": "自动更新：英格兰 0:0 加纳，Ray +0，GPT +0。"
+    },
+    {
+      "time": "06-24 09:00",
+      "text": "自动更新：巴拿马 0:1 克罗地亚，Ray +0，GPT +0。"
     }
   ],
   "archive": [
