@@ -7,17 +7,17 @@
     "tagline": "World Cup Prediction Derby"
   },
   "meta": {
-    "updated_at": "2026-06-25 05:00 BJT",
+    "updated_at": "2026-06-25 08:10 BJT",
     "active_day": "2026-06-25",
     "timezone": "Asia/Beijing",
-    "version": "auto-score-202606242100"
+    "version": "auto-score-202606250010"
   },
   "score_summary": {
     "ray_total": 29,
-    "gpt_total": 19,
-    "leader_comment": "Ray 暂时 29:19 领先 GPT 5.5。"
+    "gpt_total": 22,
+    "leader_comment": "Ray 暂时 29:22 领先 GPT 5.5。"
   },
-  "headline": "总分 Ray 29:19 GPT 5.5：波黑 3:1 卡塔尔 已自动更新。",
+  "headline": "总分 Ray 29:22 GPT 5.5：摩洛哥 4:2 海地 已自动更新。",
   "brief": "本场复盘为自动简写版，只记录赛果、预测与计分；详细评论可稍后手动补充。",
   "tournament_picks": [
     {
@@ -279,7 +279,7 @@
       "home": "苏格兰",
       "away": "巴西",
       "group": "C",
-      "status": "未开赛",
+      "status": "已结束",
       "ray_prediction": {
         "home_score": 2,
         "away_score": 2,
@@ -291,10 +291,16 @@
         "reason": "GPT 预测苏格兰 1:2 巴西。我承认苏格兰有斗志和定位球威胁，但巴西若想争小组第一，不能只满足于平局；内马尔可能回归也会改变最后三十米的创造力。"
       },
       "actual_score": {
-        "home_score": null,
-        "away_score": null
+        "home_score": 0,
+        "away_score": 3
       },
-      "review": "赛前看点：苏格兰的目标很现实——拿到 4 分就很可能出线；巴西则在摩洛哥追头名的压力下不能太保守。Ray 押 2:2，GPT 押巴西 2:1 小胜。"
+      "review": "苏格兰 0:3 巴西。赛果已自动录入；Ray 预测 2:2，GPT 预测 1:2。GPT 猜对胜平负，得到 3 分。 本场得分：Ray +0，GPT +3。",
+      "espn_id": "760465",
+      "manual_points": {
+        "ray": 0,
+        "gpt": 3,
+        "explanation": "GPT 猜对胜平负，得到 3 分。"
+      }
     },
     {
       "id": "mar-hti-20260625",
@@ -302,7 +308,7 @@
       "home": "摩洛哥",
       "away": "海地",
       "group": "C",
-      "status": "未开赛",
+      "status": "已结束",
       "ray_prediction": {
         "home_score": 3,
         "away_score": 0,
@@ -314,10 +320,16 @@
         "reason": "GPT 预测摩洛哥 2:0 海地。我同意摩洛哥赢，但末轮可能有轮换，海地即使出局也未必会完全放弃，因此不押三球。"
       },
       "actual_score": {
-        "home_score": null,
-        "away_score": null
+        "home_score": 4,
+        "away_score": 2
       },
-      "review": "赛前看点：摩洛哥已经握有出线主动，但小组第一仍有价值；海地出局后可能轮换，心态反而轻。Ray 押摩洛哥 3:0，GPT 更保守押 2:0。"
+      "review": "摩洛哥 4:2 海地。赛果已自动录入；Ray 预测 3:0，GPT 预测 2:0。双方都猜对胜平负，但没有形成比分命中差异，本场不计分。 本场得分：Ray +0，GPT +0。",
+      "espn_id": "760464",
+      "manual_points": {
+        "ray": 0,
+        "gpt": 0,
+        "explanation": "双方都猜对胜平负，但没有形成比分命中差异，本场不计分。"
+      }
     }
   ],
   "matchdays": [
@@ -1791,7 +1803,7 @@
       "title": "B/C 组末轮：瑞加默契球疑云，Ray 押苏格兰逼平巴西",
       "summary": "瑞士 vs 加拿大、波黑 vs 卡塔尔、苏格兰 vs 巴西、摩洛哥 vs 海地即将开战。Ray 认为瑞士和加拿大很可能各取所需，押 1:1；同时看苏格兰拼下 2:2。GPT 5.5 则押加拿大、波黑、巴西、摩洛哥分别取胜。",
       "ray_points": 1,
-      "gpt_points": 0,
+      "gpt_points": 3,
       "matches": [
         {
           "id": "sui-can-20260625",
@@ -1857,7 +1869,7 @@
           "home": "苏格兰",
           "away": "巴西",
           "group": "C",
-          "status": "未开赛",
+          "status": "已结束",
           "ray_prediction": {
             "home_score": 2,
             "away_score": 2,
@@ -1869,10 +1881,16 @@
             "reason": "GPT 预测苏格兰 1:2 巴西。我承认苏格兰有斗志和定位球威胁，但巴西若想争小组第一，不能只满足于平局；内马尔可能回归也会改变最后三十米的创造力。"
           },
           "actual_score": {
-            "home_score": null,
-            "away_score": null
+            "home_score": 0,
+            "away_score": 3
           },
-          "review": "赛前看点：苏格兰的目标很现实——拿到 4 分就很可能出线；巴西则在摩洛哥追头名的压力下不能太保守。Ray 押 2:2，GPT 押巴西 2:1 小胜。"
+          "review": "苏格兰 0:3 巴西。赛果已自动录入；Ray 预测 2:2，GPT 预测 1:2。GPT 猜对胜平负，得到 3 分。 本场得分：Ray +0，GPT +3。",
+          "espn_id": "760465",
+          "manual_points": {
+            "ray": 0,
+            "gpt": 3,
+            "explanation": "GPT 猜对胜平负，得到 3 分。"
+          }
         },
         {
           "id": "mar-hti-20260625",
@@ -1880,7 +1898,7 @@
           "home": "摩洛哥",
           "away": "海地",
           "group": "C",
-          "status": "未开赛",
+          "status": "已结束",
           "ray_prediction": {
             "home_score": 3,
             "away_score": 0,
@@ -1892,10 +1910,16 @@
             "reason": "GPT 预测摩洛哥 2:0 海地。我同意摩洛哥赢，但末轮可能有轮换，海地即使出局也未必会完全放弃，因此不押三球。"
           },
           "actual_score": {
-            "home_score": null,
-            "away_score": null
+            "home_score": 4,
+            "away_score": 2
           },
-          "review": "赛前看点：摩洛哥已经握有出线主动，但小组第一仍有价值；海地出局后可能轮换，心态反而轻。Ray 押摩洛哥 3:0，GPT 更保守押 2:0。"
+          "review": "摩洛哥 4:2 海地。赛果已自动录入；Ray 预测 3:0，GPT 预测 2:0。双方都猜对胜平负，但没有形成比分命中差异，本场不计分。 本场得分：Ray +0，GPT +0。",
+          "espn_id": "760464",
+          "manual_points": {
+            "ray": 0,
+            "gpt": 0,
+            "explanation": "双方都猜对胜平负，但没有形成比分命中差异，本场不计分。"
+          }
         }
       ]
     }
@@ -1916,6 +1940,14 @@
     {
       "time": "06-25 05:00",
       "text": "自动更新：波黑 3:1 卡塔尔，Ray +0，GPT +0。"
+    },
+    {
+      "time": "06-25 08:10",
+      "text": "自动更新：苏格兰 0:3 巴西，Ray +0，GPT +3。"
+    },
+    {
+      "time": "06-25 08:10",
+      "text": "自动更新：摩洛哥 4:2 海地，Ray +0，GPT +0。"
     }
   ],
   "archive": [
