@@ -7,18 +7,18 @@
     "tagline": "World Cup Prediction Derby"
   },
   "meta": {
-    "updated_at": "2026-06-25 18:42 BJT",
+    "updated_at": "2026-06-26 06:00 BJT",
     "active_day": "2026-06-26",
     "timezone": "Asia/Beijing",
-    "version": "worldcup-20260625-a-group-recap-20260626-def-preview"
+    "version": "auto-score-202606252200"
   },
   "score_summary": {
-    "ray_total": 32,
-    "gpt_total": 22,
-    "leader_comment": "A 组末轮补完后，今天六场总账定为 Ray 4:3 GPT 5.5：前四场 Ray 凭瑞士—加拿大更接近拿 1 分，GPT 凭巴西方向拿 3 分；随后墨西哥 3:0 捷克，Ray 押中墨西哥取胜追回 3 分。总比分来到 Ray 32:22。下一轮进入 D/E/F 组末轮，单场竞猜与原 32 强名单分离，不为名单强行押胜负。"
+    "ray_total": 33,
+    "gpt_total": 28,
+    "leader_comment": "Ray 暂时 33:28 领先 GPT 5.5。"
   },
-  "headline": "墨西哥三球收官，南非逆命出线：Ray 32:22 稳住领先",
-  "brief": "B/C/A 组六场全部收官：瑞士 2:1 加拿大、波黑 3:1 卡塔尔、巴西 3:0 苏格兰、摩洛哥 4:2 海地、南非 1:0 韩国、墨西哥 3:0 捷克。当天计分 Ray 4:3 小胜：Ray 在瑞加战更接近，又靠墨西哥胜追回三分；GPT 凭巴西胜拿到三分。接下来 D/E/F 组末轮六场同时进入生死盘。",
+  "headline": "总分 Ray 33:28 GPT 5.5：厄瓜多尔 2:1 德国 已自动更新。",
+  "brief": "本场复盘为自动简写版，只记录赛果、预测与计分；详细评论可稍后手动补充。",
   "tournament_picks": [
     {
       "name": "冠军",
@@ -221,7 +221,7 @@
       "home": "库拉索",
       "away": "科特迪瓦",
       "group": "E",
-      "status": "未开赛",
+      "status": "已结束",
       "ray_prediction": {
         "home_score": 1,
         "away_score": 3,
@@ -233,10 +233,16 @@
         "reason": "GPT 预测库拉索 0:2 科特迪瓦。我也看科特迪瓦赢，但库拉索刚逼平厄瓜多尔，防线和门将状态有底气，不太像会被打成四球战。"
       },
       "actual_score": {
-        "home_score": null,
-        "away_score": null
+        "home_score": 0,
+        "away_score": 2
       },
-      "review": "赛前看点：科特迪瓦需要把对德国的遗憾转化为强度，库拉索则刚用 0:0 厄瓜多尔证明自己不是陪跑。Ray 押 1:3，GPT 5.5 押 0:2。"
+      "review": "库拉索 0:2 科特迪瓦。赛果已自动录入；Ray 预测 1:3，GPT 预测 0:2。双方都猜对胜平负，胜平负不计分；GPT 比分完全命中，得到 1 分。 本场得分：Ray +0，GPT +1。",
+      "espn_id": "760473",
+      "manual_points": {
+        "ray": 0,
+        "gpt": 1,
+        "explanation": "双方都猜对胜平负，胜平负不计分；GPT 比分完全命中，得到 1 分。"
+      }
     },
     {
       "id": "ecu-ger-20260626",
@@ -244,7 +250,7 @@
       "home": "厄瓜多尔",
       "away": "德国",
       "group": "E",
-      "status": "未开赛",
+      "status": "已结束",
       "ray_prediction": {
         "home_score": 2,
         "away_score": 2,
@@ -256,10 +262,16 @@
         "reason": "GPT 预测厄瓜多尔 1:2 德国。德国可能轮换，但他们仍想保持连胜和势头；厄瓜多尔至今一球未进，压力越大越容易被德国替补深度惩罚。"
       },
       "actual_score": {
-        "home_score": null,
-        "away_score": null
+        "home_score": 2,
+        "away_score": 1
       },
-      "review": "赛前看点：厄瓜多尔急需进球和积分，德国则已经出线但要保住胜势。Ray 押高比分平局，GPT 5.5 押德国小胜。"
+      "review": "厄瓜多尔 2:1 德国。赛果已自动录入；Ray 预测 2:2，GPT 预测 1:2。双方都猜错，但 Ray 的胜平负方向更接近真实赛果，得到 1 分。 本场得分：Ray +1，GPT +0。",
+      "espn_id": "760468",
+      "manual_points": {
+        "ray": 1,
+        "gpt": 0,
+        "explanation": "双方都猜错，但 Ray 的胜平负方向更接近真实赛果，得到 1 分。"
+      }
     },
     {
       "id": "tun-ned-20260626",
@@ -413,7 +425,7 @@
       "title": "美国大胜巴拉圭，加拿大波黑打平",
       "summary": "加拿大 1:1 波黑、美国 4:1 巴拉圭。这两场虽影响小组判断，但按双方约定不计入当前积分。",
       "ray_points": 0,
-      "gpt_points": 0,
+      "gpt_points": 5,
       "matches": [
         {
           "id": "can-bih-20260612",
@@ -1736,8 +1748,8 @@
       "date": "2026-06-26",
       "title": "D/E/F 组末轮开盘：德国要势头，日本要算路，美国要守热度",
       "summary": "库拉索 vs 科特迪瓦、厄瓜多尔 vs 德国、突尼斯 vs 荷兰、日本 vs 瑞典、土耳其 vs 美国、巴拉圭 vs 澳大利亚。Ray 这轮押科特迪瓦、德国平局、荷兰、日本、美国、澳大利亚；GPT 5.5 押科特迪瓦、德国、荷兰、日瑞平局、美国、巴澳平局。原 32 强名单保持不变，单场竞猜不再被名单约束。",
-      "ray_points": 0,
-      "gpt_points": 0,
+      "ray_points": 1,
+      "gpt_points": 1,
       "matches": [
         {
           "id": "cuw-civ-20260626",
@@ -1745,7 +1757,7 @@
           "home": "库拉索",
           "away": "科特迪瓦",
           "group": "E",
-          "status": "未开赛",
+          "status": "已结束",
           "ray_prediction": {
             "home_score": 1,
             "away_score": 3,
@@ -1757,10 +1769,16 @@
             "reason": "GPT 预测库拉索 0:2 科特迪瓦。我也看科特迪瓦赢，但库拉索刚逼平厄瓜多尔，防线和门将状态有底气，不太像会被打成四球战。"
           },
           "actual_score": {
-            "home_score": null,
-            "away_score": null
+            "home_score": 0,
+            "away_score": 2
           },
-          "review": "赛前看点：科特迪瓦需要把对德国的遗憾转化为强度，库拉索则刚用 0:0 厄瓜多尔证明自己不是陪跑。Ray 押 1:3，GPT 5.5 押 0:2。"
+          "review": "库拉索 0:2 科特迪瓦。赛果已自动录入；Ray 预测 1:3，GPT 预测 0:2。双方都猜对胜平负，胜平负不计分；GPT 比分完全命中，得到 1 分。 本场得分：Ray +0，GPT +1。",
+          "espn_id": "760473",
+          "manual_points": {
+            "ray": 0,
+            "gpt": 1,
+            "explanation": "双方都猜对胜平负，胜平负不计分；GPT 比分完全命中，得到 1 分。"
+          }
         },
         {
           "id": "ecu-ger-20260626",
@@ -1768,7 +1786,7 @@
           "home": "厄瓜多尔",
           "away": "德国",
           "group": "E",
-          "status": "未开赛",
+          "status": "已结束",
           "ray_prediction": {
             "home_score": 2,
             "away_score": 2,
@@ -1780,10 +1798,16 @@
             "reason": "GPT 预测厄瓜多尔 1:2 德国。德国可能轮换，但他们仍想保持连胜和势头；厄瓜多尔至今一球未进，压力越大越容易被德国替补深度惩罚。"
           },
           "actual_score": {
-            "home_score": null,
-            "away_score": null
+            "home_score": 2,
+            "away_score": 1
           },
-          "review": "赛前看点：厄瓜多尔急需进球和积分，德国则已经出线但要保住胜势。Ray 押高比分平局，GPT 5.5 押德国小胜。"
+          "review": "厄瓜多尔 2:1 德国。赛果已自动录入；Ray 预测 2:2，GPT 预测 1:2。双方都猜错，但 Ray 的胜平负方向更接近真实赛果，得到 1 分。 本场得分：Ray +1，GPT +0。",
+          "espn_id": "760468",
+          "manual_points": {
+            "ray": 1,
+            "gpt": 0,
+            "explanation": "双方都猜错，但 Ray 的胜平负方向更接近真实赛果，得到 1 分。"
+          }
         },
         {
           "id": "tun-ned-20260626",
@@ -1896,6 +1920,14 @@
     {
       "time": "06-25 18:42",
       "text": "A 组末轮补完：南非 1:0 韩国历史性出线，墨西哥 3:0 捷克三战全胜零封收官。今天六场总账 Ray 4:3 GPT 5.5，总比分来到 Ray 32:22。D/E/F 组末轮六场已开盘，单场竞猜与原 32 强名单分离。"
+    },
+    {
+      "time": "06-26 06:00",
+      "text": "自动更新：库拉索 0:2 科特迪瓦，Ray +0，GPT +1。"
+    },
+    {
+      "time": "06-26 06:00",
+      "text": "自动更新：厄瓜多尔 2:1 德国，Ray +1，GPT +0。"
     }
   ],
   "archive": [
