@@ -7,24 +7,24 @@
     "tagline": "World Cup Prediction Derby"
   },
   "meta": {
-    "updated_at": "2026-06-26 12:10 BJT",
-    "active_day": "2026-06-26",
+    "updated_at": "2026-06-26 16:30 BJT",
+    "active_day": "2026-06-27",
     "timezone": "Asia/Beijing",
-    "version": "auto-score-202606260410"
+    "version": "update-20260627-gh-i-preview"
   },
   "score_summary": {
-    "ray_total": 1,
-    "gpt_total": 8,
-    "leader_comment": "GPT 5.5 暂时 8:1 领先 Ray。"
+    "ray_total": 33,
+    "gpt_total": 30,
+    "leader_comment": "Ray 仍以 33:30 领先 GPT 5.5，但第三轮小组赛 GPT 追分很猛：E/F/D 组六场合计 Ray 1:8 GPT。土耳其 3:2 击败美国体面告别，巴拉圭与澳大利亚 0:0 互相过关，GPT 凭澳巴平局再追 3 分。"
   },
-  "headline": "总分 Ray 1:8 GPT 5.5：巴拉圭 0:0 澳大利亚 已自动更新。",
-  "brief": "本场复盘为自动简写版，只记录赛果、预测与计分；详细评论可稍后手动补充。",
+  "headline": "土耳其体面告别，澳巴握手过关：GPT 单日 8:1 追到 33:30",
+  "brief": "E/F/D 组末轮全部收官：科特迪瓦 2:0 库拉索，厄瓜多尔 2:1 德国，荷兰 3:1 突尼斯，日本 1:1 瑞典，土耳其 3:2 美国，巴拉圭 0:0 澳大利亚。Ray 本日只拿 1 分，GPT 靠科特迪瓦比分、日本平局比分和澳巴平局方向拿到 8 分。下一轮进入 G/H/I 组末轮：法国与挪威争头名，塞内加尔为净胜球搏命，佛得角继续童话，比利时、伊朗、埃及都还要算账。",
   "scoring_note": {
-    "rule": "双方都猜中胜平负时，只看是否有人精确命中比分；只有一方猜中胜平负而另一方没猜中时，胜平负方向给 3 分；双方都猜错时，除非另有明确赛前约定，不随意给接近分。",
-    "manual_audit": [
+    "rule": "只有一方猜中胜平负而另一方没猜中时，胜平负方向给 3 分；双方都猜中胜平负时，只看是否有人精确命中比分，精确比分按约定给分；双方都猜错时通常不得分，若该轮系统接近度规则已启用，则只给更接近一方 1 分。",
+    "audit": [
       "2026-06-12 加拿大 1:1 波黑：双方未正式开始玩，不计分。",
       "2026-06-12 美国 4:1 巴拉圭：当时双方都猜错，不计分。",
-      "2026-06-26 已结束四场：科特迪瓦 2:0 库拉索 GPT 精确 +1；厄瓜多尔 2:1 德国 Ray 按人工约定 +1；突尼斯 1:3 荷兰双方只中方向 0:0；日本 1:1 瑞典 GPT 精确 +4。今日暂计 Ray 1:5 GPT。"
+      "2026-06-26 六场合计 Ray 1:8 GPT：科特迪瓦 2:0 库拉索 GPT 精确 +1；厄瓜多尔 2:1 德国 Ray 更接近 +1；日本 1:1 瑞典 GPT 精确 +4；巴拉圭 0:0 澳大利亚 GPT 押中平局方向 +3；土耳其 3:2 美国双方方向都错，0:0。"
     ]
   },
   "tournament_picks": [
@@ -111,7 +111,7 @@
         "巴拉圭",
         "土耳其"
       ],
-      "note": "D 组末轮进行中/未完：美国已提前掌握主动；澳大利亚与巴拉圭直接争第二，土耳其仍为体面和理论机会而战。"
+      "note": "D 组结束：美国虽 2:3 输给土耳其，但仍以 6 分拿到小组第一；澳大利亚 0:0 巴拉圭后以 4 分和更好净胜球排第二，巴拉圭同积 4 分第三晋级比较，土耳其 3 分体面告别。"
     },
     {
       "group": "E",
@@ -153,7 +153,7 @@
         "伊朗",
         "埃及"
       ],
-      "note": "G 组两轮后仍混乱：埃及 4 分暂占有利位置，伊朗和比利时均 2 分，新西兰 1 分。"
+      "note": "G 组末轮前：埃及 4 分，比利时和伊朗各 2 分，新西兰 1 分。新西兰必须击败比利时才有生路，伊朗与埃及一战可能决定第二名和第三名命运。"
     },
     {
       "group": "H",
@@ -166,7 +166,7 @@
         "西班牙",
         "乌拉圭"
       ],
-      "note": "H 组末轮前：西班牙 4 分，乌拉圭、佛得角各 2 分，沙特 1 分；佛得角连续逼平西班牙和乌拉圭，是最大变量。"
+      "note": "H 组末轮前：西班牙 4 分领跑，乌拉圭和佛得角各 2 分，沙特 1 分。佛得角若击败沙特，将把黑马童话直接送进淘汰赛；乌拉圭与西班牙的结果也会牵动小组第一。"
     },
     {
       "group": "I",
@@ -179,7 +179,7 @@
         "挪威",
         "塞内加尔"
       ],
-      "note": "I 组第二轮后：法国与挪威同积 6 分提前出线，末轮直接争第一；塞内加尔和伊拉克均 0 分。"
+      "note": "I 组末轮前：法国和挪威均两战全胜提前出线，末轮直接争第一；塞内加尔和伊拉克均 0 分，塞内加尔必须大胜才有机会进入第三名比较。"
     },
     {
       "group": "J",
@@ -224,187 +224,142 @@
   ],
   "today_matches": [
     {
-      "id": "cuw-civ-20260626",
-      "kickoff_local": "06-26 04:00 BJT",
-      "home": "库拉索",
-      "away": "科特迪瓦",
-      "group": "E",
-      "status": "已结束",
+      "id": "nor-fra-20260627",
+      "kickoff_local": "06-27 03:00 BJT",
+      "home": "挪威",
+      "away": "法国",
+      "group": "I",
+      "status": "未开始",
       "ray_prediction": {
         "home_score": 1,
         "away_score": 3,
-        "reason": "Ray 预测库拉索 1:3 科特迪瓦。库拉索拿到队史首分后士气不错，但科特迪瓦身体、速度和战意都更强，必须为首次淘汰赛资格而冲。"
+        "reason": "Ray 预测挪威 1:3 法国。双方都可能上替补，但法国替补厚度明显更强；法国若拿小组第一，淘汰赛路径也更舒服。"
       },
       "gpt_prediction": {
-        "home_score": 0,
+        "home_score": 1,
         "away_score": 2,
-        "reason": "GPT 预测库拉索 0:2 科特迪瓦。我也看科特迪瓦赢，但库拉索刚逼平厄瓜多尔，防线和门将状态有底气，不太像会被打成四球战。"
+        "reason": "GPT 预测挪威 1:2 法国。挪威主帅已经强调要聪明轮换，哈兰德也可能减少消耗；法国阵容深度更足，但同样会控制风险，不一定打成大比分。"
       },
       "actual_score": {
-        "home_score": 0,
-        "away_score": 2
+        "home_score": null,
+        "away_score": null
       },
-      "review": "库拉索 0:2 科特迪瓦。尼古拉斯·佩佩梅开二度，科特迪瓦以小组第二晋级淘汰赛；库拉索虽出局，但本届世界杯首秀已经留下队史首分。计分：双方都押科特迪瓦胜，胜负方向不重复给分；GPT 精确命中 0:2，GPT +1。",
-      "manual_points": {
-        "ray": 0,
-        "gpt": 1,
-        "explanation": "双方都猜对胜平负，只奖励精确比分；GPT 命中 0:2。"
-      },
-      "sources": [
-        "Reuters: Ivory Coast advance as Pepe scores twice to send Curacao home"
-      ]
+      "review": "赛前预测。"
     },
     {
-      "id": "ecu-ger-20260626",
-      "kickoff_local": "06-26 04:00 BJT",
-      "home": "厄瓜多尔",
-      "away": "德国",
-      "group": "E",
-      "status": "已结束",
+      "id": "sen-irq-20260627",
+      "kickoff_local": "06-27 03:00 BJT",
+      "home": "塞内加尔",
+      "away": "伊拉克",
+      "group": "I",
+      "status": "未开始",
       "ray_prediction": {
-        "home_score": 2,
-        "away_score": 2,
-        "reason": "Ray 预测厄瓜多尔 2:2 德国。德国已经出线，不必死拼；厄瓜多尔至少要拿分才安全，会把比赛当生死战踢。"
-      },
-      "gpt_prediction": {
-        "home_score": 1,
-        "away_score": 2,
-        "reason": "GPT 预测厄瓜多尔 1:2 德国。德国可能轮换，但他们仍想保持连胜和势头；厄瓜多尔此前一球未进，压力越大越容易被德国替补深度惩罚。"
-      },
-      "actual_score": {
-        "home_score": 2,
-        "away_score": 1
-      },
-      "review": "厄瓜多尔 2:1 德国。德国第 2 分钟由萨内先进球，但厄瓜多尔很快由安古洛扳平，并在第 77 分钟靠普拉塔的制胜球完成逆转。这个结果让厄瓜多尔以 4 分进入强势第三名行列，也终结了德国连胜势头。计分：Ray 虽未命中胜负，但判断到德国末轮会被厄瓜多尔拖入麻烦，按本轮人工约定 Ray +1；GPT 押德国胜失手。",
-      "manual_points": {
-        "ray": 1,
-        "gpt": 0,
-        "explanation": "双方都未精确命中；按本轮人工约定，Ray 的平局/德国不稳判断更接近实际，Ray +1。"
-      },
-      "sources": [
-        "Guardian live report: Ecuador 2-1 Germany",
-        "Reuters/NY Post match reports"
-      ]
-    },
-    {
-      "id": "tun-ned-20260626",
-      "kickoff_local": "06-26 07:00 BJT",
-      "home": "突尼斯",
-      "away": "荷兰",
-      "group": "F",
-      "status": "已结束",
-      "ray_prediction": {
-        "home_score": 0,
-        "away_score": 3,
-        "reason": "Ray 预测突尼斯 0:3 荷兰。突尼斯连续两场大败，士气受损；荷兰若想避开巴西，需要继续抢净胜球争小组第一。"
-      },
-      "gpt_prediction": {
-        "home_score": 0,
-        "away_score": 2,
-        "reason": "GPT 预测突尼斯 0:2 荷兰。荷兰确实要抢净胜球，但末轮可能控制消耗；突尼斯出局后会为尊严而战，未必再次大崩。"
-      },
-      "actual_score": {
-        "home_score": 1,
-        "away_score": 3
-      },
-      "review": "突尼斯 1:3 荷兰。荷兰开场靠斯希里乌龙和布罗贝伊进球迅速建立优势，突尼斯下半场由马斯图里追回一球，但范赫克很快重新拉开差距。荷兰 7 分锁定 F 组第一，将对阵摩洛哥。计分：Ray 押 0:3，GPT 押 0:2，双方都押中荷兰胜但都没命中比分，本场 0:0。",
-      "manual_points": {
-        "ray": 0,
-        "gpt": 0,
-        "explanation": "双方都猜中胜负方向，但无人精确命中比分。"
-      },
-      "sources": [
-        "Guardian live report: Tunisia 1-3 Netherlands"
-      ]
-    },
-    {
-      "id": "jpn-swe-20260626",
-      "kickoff_local": "06-26 07:00 BJT",
-      "home": "日本",
-      "away": "瑞典",
-      "group": "F",
-      "status": "已结束",
-      "ray_prediction": {
-        "home_score": 2,
-        "away_score": 1,
-        "reason": "Ray 预测日本 2:1 瑞典。这场最难：日本有争第一的诱惑，也有第三名路径的算盘；瑞典刚被荷兰打穿，但不太可能同样输给日本大比分。"
-      },
-      "gpt_prediction": {
-        "home_score": 1,
-        "away_score": 1,
-        "reason": "GPT 预测日本 1:1 瑞典。我认为两队都会先看另一场走势再决定冒险程度；日本控球更细，瑞典身体和反击仍有威胁，平局最像末轮复杂心理下的结果。"
-      },
-      "actual_score": {
-        "home_score": 1,
-        "away_score": 1
-      },
-      "review": "日本 1:1 瑞典。前田大然下半场为日本先开纪录，埃兰加随后远射扳平；补时阶段伊萨克头球险些绝杀，但铃木彩艳将球托到横梁上。日本 5 分排名 F 组第二，将在 32 强战对阵巴西；瑞典 4 分以第三名晋级。计分：GPT 精确命中 1:1，且押中平局方向，GPT +4。",
-      "manual_points": {
-        "ray": 0,
-        "gpt": 4,
-        "explanation": "GPT 精确命中 1:1，Ray 押日本胜失手。"
-      },
-      "sources": [
-        "Reuters: Japan draw 1-1 with Sweden to finish second in Group F"
-      ]
-    },
-    {
-      "id": "tur-usa-20260626",
-      "kickoff_local": "06-26 10:00 BJT",
-      "home": "土耳其",
-      "away": "美国",
-      "group": "D",
-      "status": "已结束",
-      "ray_prediction": {
-        "home_score": 1,
-        "away_score": 3,
-        "reason": "Ray 预测土耳其 1:3 美国。美国已经出线但仍要保持主场气势；土耳其两连败一球未进，Ray 很难接受他们零进球离开世界杯。"
-      },
-      "gpt_prediction": {
-        "home_score": 0,
-        "away_score": 2,
-        "reason": "GPT 预测土耳其 0:2 美国。美国可能保护有黄牌风险的主力，但整体秩序仍强；土耳其前两场进攻混乱，我继续不看好他们破门。"
-      },
-      "actual_score": {
         "home_score": 3,
-        "away_score": 2
+        "away_score": 0,
+        "reason": "Ray 预测塞内加尔 3:0 伊拉克。塞内加尔需要净胜球，如果能拿到三个净胜球，就可能在第三名比较中压过韩国；伊拉克实力有限，前两场消耗也很大。"
       },
-      "review": "土耳其 3:2 美国。赛果已自动录入；Ray 预测 1:3，GPT 预测 0:2。双方都猜错，且胜平负方向没有形成差异，本场不计分。 本场得分：Ray +0，GPT +0。",
-      "espn_id": "760470",
-      "manual_points": {
-        "ray": 0,
-        "gpt": 0,
-        "explanation": "双方都猜错，且胜平负方向没有形成差异，本场不计分。"
-      }
+      "gpt_prediction": {
+        "home_score": 2,
+        "away_score": 0,
+        "reason": "GPT 预测塞内加尔 2:0 伊拉克。我同意塞内加尔必须搏命，但他们前两场进攻效率并不稳定；伊拉克会低位死守，塞内加尔赢球更可能是两球差。"
+      },
+      "actual_score": {
+        "home_score": null,
+        "away_score": null
+      },
+      "review": "赛前预测。"
     },
     {
-      "id": "par-aus-20260626",
-      "kickoff_local": "06-26 10:00 BJT",
-      "home": "巴拉圭",
-      "away": "澳大利亚",
-      "group": "D",
-      "status": "已结束",
+      "id": "cpv-ksa-20260627",
+      "kickoff_local": "06-27 08:00 BJT",
+      "home": "佛得角",
+      "away": "沙特",
+      "group": "H",
+      "status": "未开始",
       "ray_prediction": {
-        "home_score": 2,
-        "away_score": 3,
-        "reason": "Ray 预测澳大利亚 3:2 巴拉圭。双方都有出线动机，平局并不绝对安全；巴拉圭想争第二，澳大利亚也不能只把命运押在第三名比较上。"
+        "home_score": 1,
+        "away_score": 0,
+        "reason": "Ray 预测佛得角 1:0 沙特。佛得角 2 分在手，可以接受平局，但如果能维持微弱领先，出线形势会更主动；亚洲球队第三轮普遍表现差强人意。"
       },
       "gpt_prediction": {
         "home_score": 1,
         "away_score": 1,
-        "reason": "GPT 预测巴拉圭 1:1 澳大利亚。澳大利亚平局即可稳住第二，巴拉圭缺少阿尔米隆后进攻上限受损；这场更像双方谨慎试探后互相接受一个结果。"
+        "reason": "GPT 预测佛得角 1:1 沙特。佛得角已经证明能扛强队，但沙特也还有出线动机；这场更像一场紧张的心理战，佛得角未必能把领先守到底。"
       },
       "actual_score": {
-        "home_score": 0,
-        "away_score": 0
+        "home_score": null,
+        "away_score": null
       },
-      "review": "巴拉圭 0:0 澳大利亚。赛果已自动录入；Ray 预测 2:3，GPT 预测 1:1。GPT 猜对胜平负，得到 3 分。 本场得分：Ray +0，GPT +3。",
-      "espn_id": "760469",
-      "manual_points": {
-        "ray": 0,
-        "gpt": 3,
-        "explanation": "GPT 猜对胜平负，得到 3 分。"
-      }
+      "review": "赛前预测。"
+    },
+    {
+      "id": "uru-esp-20260627",
+      "kickoff_local": "06-27 08:00 BJT",
+      "home": "乌拉圭",
+      "away": "西班牙",
+      "group": "H",
+      "status": "未开始",
+      "ray_prediction": {
+        "home_score": 1,
+        "away_score": 2,
+        "reason": "Ray 预测乌拉圭 1:2 西班牙。双方都能接受平局或小比分，但如果让佛得角拿到第一，西班牙淘汰赛路径会很难看；西班牙可能隐藏亚马尔，攻击力不会太爆，但仍会争取微弱领先。"
+      },
+      "gpt_prediction": {
+        "home_score": 1,
+        "away_score": 1,
+        "reason": "GPT 预测乌拉圭 1:1 西班牙。乌拉圭急需结果但进攻不稳，西班牙也可能控制消耗；这场的心理底色是双方都不能输，平局最像末轮算账局。"
+      },
+      "actual_score": {
+        "home_score": null,
+        "away_score": null
+      },
+      "review": "赛前预测。"
+    },
+    {
+      "id": "nzl-bel-20260627",
+      "kickoff_local": "06-27 11:00 BJT",
+      "home": "新西兰",
+      "away": "比利时",
+      "group": "G",
+      "status": "未开始",
+      "ray_prediction": {
+        "home_score": 1,
+        "away_score": 3,
+        "reason": "Ray 预测新西兰 1:3 比利时。比利时可以接受平局，但为了淘汰赛对阵和小组排名，应该会努力取胜；新西兰前两场开局都不错，但后手明显不足。"
+      },
+      "gpt_prediction": {
+        "home_score": 0,
+        "away_score": 2,
+        "reason": "GPT 预测新西兰 0:2 比利时。比利时前两轮进攻很沉闷，但这场非赢不可的压力会逼他们提速；新西兰必须攻出来，反而会留下身后空间。"
+      },
+      "actual_score": {
+        "home_score": null,
+        "away_score": null
+      },
+      "review": "赛前预测。"
+    },
+    {
+      "id": "iri-egy-20260627",
+      "kickoff_local": "06-27 11:00 BJT",
+      "home": "伊朗",
+      "away": "埃及",
+      "group": "G",
+      "status": "未开始",
+      "ray_prediction": {
+        "home_score": 1,
+        "away_score": 1,
+        "reason": "Ray 预测伊朗 1:1 埃及。伊朗三场平局拿 3 分，仍可能压过韩国；埃及放伊朗一口气的可能性也不低，让伊朗留在世界杯可以恶心美国，哈哈。"
+      },
+      "gpt_prediction": {
+        "home_score": 0,
+        "away_score": 1,
+        "reason": "GPT 预测伊朗 0:1 埃及。伊朗韧性强，但埃及 4 分在手也想争更好的淘汰赛位置；萨拉赫和埃及前场一旦有一次空间，可能就足够决定比赛。"
+      },
+      "actual_score": {
+        "home_score": null,
+        "away_score": null
+      },
+      "review": "赛前预测。"
     }
   ],
   "matchdays": [
@@ -483,7 +438,7 @@
       "date": "2026-06-13",
       "title": "瑞士翻车，巴西被摩洛哥压住，Ray 先拿 3 分",
       "summary": "巴西 1:1 摩洛哥，Ray 押中巴西拿不下摩洛哥，Ray +3。",
-      "ray_points": 0,
+      "ray_points": 3,
       "gpt_points": 0,
       "matches": []
     },
@@ -499,15 +454,15 @@
       "date": "2026-06-15",
       "title": "德国大胜、荷日打平、科特迪瓦命中、瑞典狂胜",
       "summary": "Ray 通过科特迪瓦 1:0 完全命中拿 4 分；GPT 通过荷日平局拿 3 分。",
-      "ray_points": 0,
-      "gpt_points": 0,
+      "ray_points": 4,
+      "gpt_points": 3,
       "matches": []
     },
     {
       "date": "2026-06-16",
       "title": "四场全部打平：Ray 单日 7 分扩大领先",
       "summary": "Ray 完全命中比利时 1:1 埃及，又押中沙特逼平乌拉圭。",
-      "ray_points": 0,
+      "ray_points": 7,
       "gpt_points": 0,
       "matches": []
     },
@@ -523,7 +478,7 @@
       "date": "2026-06-18",
       "title": "葡萄牙被逼平，Ray 命中哥伦比亚 3:1",
       "summary": "Ray 凭哥伦比亚比分精准命中拿到 1 分。",
-      "ray_points": 0,
+      "ray_points": 1,
       "gpt_points": 0,
       "matches": []
     },
@@ -531,7 +486,7 @@
       "date": "2026-06-19",
       "title": "墨西哥一球定局，Ray 借东道主再取三分",
       "summary": "Ray 在墨韩战押中墨西哥胜，GPT 押平失手，Ray +3。",
-      "ray_points": 0,
+      "ray_points": 3,
       "gpt_points": 0,
       "matches": []
     },
@@ -539,8 +494,8 @@
       "date": "2026-06-20",
       "title": "美国锁门，巴西开刃：C/D 组夜里 Ray 3:2 小胜",
       "summary": "Ray 靠美国取胜方向拿到 3 分，GPT 凭巴西 3:0 和土巴战更接近追回 2 分。",
-      "ray_points": 0,
-      "gpt_points": 0,
+      "ray_points": 3,
+      "gpt_points": 2,
       "matches": []
     },
     {
@@ -548,14 +503,14 @@
       "title": "橙衣五球拆瑞典，德国补时绝杀：GPT 单日 7:0 还魂",
       "summary": "GPT 押中荷兰胜并精准命中德国 2:1，本日 GPT +7。",
       "ray_points": 0,
-      "gpt_points": 0,
+      "gpt_points": 7,
       "matches": []
     },
     {
       "date": "2026-06-22",
       "title": "佛得角再扛乌拉圭，新西兰惜败埃及：Ray 一日再拉四分",
       "summary": "Ray 押中佛得角逼平乌拉圭，又精准命中新西兰 1:3 埃及。",
-      "ray_points": 0,
+      "ray_points": 4,
       "gpt_points": 0,
       "matches": []
     },
@@ -563,8 +518,8 @@
       "date": "2026-06-23",
       "title": "三刀精准仍遭末场反杀：Ray 3:4 输给 GPT 的后手",
       "summary": "Ray 前三场精准，GPT 靠约旦 1:2 阿尔及利亚追回并反超当日。",
-      "ray_points": 0,
-      "gpt_points": 0,
+      "ray_points": 3,
+      "gpt_points": 4,
       "matches": []
     },
     {
@@ -572,21 +527,21 @@
       "title": "刚果火花熄灭，哥伦比亚一刀把 GPT 拉回三分",
       "summary": "GPT 押中哥伦比亚胜，本日追回 3 分。",
       "ray_points": 0,
-      "gpt_points": 0,
+      "gpt_points": 3,
       "matches": []
     },
     {
       "date": "2026-06-25",
       "title": "墨西哥三球收官，南非历史性突围；Ray 当日 4:3 小胜",
       "summary": "B/C/A 组六场收官，全天合计 Ray 4:3。",
-      "ray_points": 0,
-      "gpt_points": 0,
+      "ray_points": 4,
+      "gpt_points": 3,
       "matches": []
     },
     {
       "date": "2026-06-26",
-      "title": "E/F 组先收官：日本战平瑞典，GPT 暂时追回四分",
-      "summary": "科特迪瓦 2:0 库拉索、厄瓜多尔 2:1 德国、荷兰 3:1 突尼斯、日本 1:1 瑞典。今天已结束四场暂计 Ray 1:5 GPT 5.5；土耳其—美国、巴拉圭—澳大利亚还没结算。",
+      "title": "土耳其体面告别，澳巴握手过关：GPT 单日 8:1 追分",
+      "summary": "E/F/D 组六场全部结束：Ray 只靠厄瓜多尔爆冷走势拿 1 分，GPT 凭科特迪瓦 0:2、日本 1:1 与澳巴 0:0 平局方向合计拿到 8 分。",
       "ray_points": 1,
       "gpt_points": 8,
       "matches": [
@@ -642,11 +597,11 @@
             "home_score": 2,
             "away_score": 1
           },
-          "review": "厄瓜多尔 2:1 德国。德国第 2 分钟由萨内先进球，但厄瓜多尔很快由安古洛扳平，并在第 77 分钟靠普拉塔的制胜球完成逆转。这个结果让厄瓜多尔以 4 分进入强势第三名行列，也终结了德国连胜势头。计分：Ray 虽未命中胜负，但判断到德国末轮会被厄瓜多尔拖入麻烦，按本轮人工约定 Ray +1；GPT 押德国胜失手。",
+          "review": "厄瓜多尔 2:1 德国。德国第 2 分钟由萨内先进球，但厄瓜多尔很快由安古洛扳平，并在第 77 分钟靠普拉塔的制胜球完成逆转。这个结果让厄瓜多尔以 4 分进入强势第三名行列，也终结了德国连胜势头。计分：Ray 虽未命中胜负，但判断到德国末轮会被厄瓜多尔拖入麻烦，更接近实际走势，Ray +1；GPT 押德国胜失手。",
           "manual_points": {
             "ray": 1,
             "gpt": 0,
-            "explanation": "双方都未精确命中；按本轮人工约定，Ray 的平局/德国不稳判断更接近实际，Ray +1。"
+            "explanation": "双方都未精确命中；Ray 的平局/德国不稳判断更接近实际，Ray +1。"
           },
           "sources": [
             "Guardian live report: Ecuador 2-1 Germany",
@@ -736,13 +691,16 @@
             "home_score": 3,
             "away_score": 2
           },
-          "review": "土耳其 3:2 美国。赛果已自动录入；Ray 预测 1:3，GPT 预测 0:2。双方都猜错，且胜平负方向没有形成差异，本场不计分。 本场得分：Ray +0，GPT +0。",
-          "espn_id": "760470",
+          "review": "土耳其 3:2 美国。美国大幅轮换后开场很快由奥斯顿·特拉斯蒂破门，但土耳其终于打出体面一战，居莱尔和柯克曲帮助球队反超；下半场伯哈尔特为美国扳平后，艾汗在补时第 98 分钟完成绝杀。美国仍以小组第一出线，土耳其虽然出局，但至少用三粒进球告别。计分：双方都押美国胜，方向都错，本场 0:0。",
           "manual_points": {
             "ray": 0,
             "gpt": 0,
-            "explanation": "双方都猜错，且胜平负方向没有形成差异，本场不计分。"
-          }
+            "explanation": "双方都押美国胜，实际土耳其胜，双方不得分。"
+          },
+          "sources": [
+            "Guardian: Turkey 3-2 USA live report",
+            "Reuters: Pulisic on the bench as U.S., Turkey make wholesale changes"
+          ]
         },
         {
           "id": "par-aus-20260626",
@@ -765,37 +723,179 @@
             "home_score": 0,
             "away_score": 0
           },
-          "review": "巴拉圭 0:0 澳大利亚。赛果已自动录入；Ray 预测 2:3，GPT 预测 1:1。GPT 猜对胜平负，得到 3 分。 本场得分：Ray +0，GPT +3。",
-          "espn_id": "760469",
+          "review": "巴拉圭 0:0 澳大利亚。两队都知道平局大概率能把自己送进淘汰赛，比赛强度和冒险程度都受到出线算盘影响；澳大利亚完成多处轮换，依靠整体防守和控球把比赛压成低风险局。最终澳大利亚以小组第二晋级，巴拉圭也以 4 分进入第三名比较。计分：GPT 押中平局方向，Ray 押澳大利亚胜失手，GPT +3。",
           "manual_points": {
             "ray": 0,
             "gpt": 3,
-            "explanation": "GPT 猜对胜平负，得到 3 分。"
-          }
+            "explanation": "GPT 押中平局方向，Ray 押澳大利亚胜。"
+          },
+          "sources": [
+            "Guardian: Paraguay 0-0 Australia match report",
+            "Reuters: Australia make six changes for Paraguay clash"
+          ]
+        }
+      ]
+    },
+    {
+      "date": "2026-06-27",
+      "title": "法国挪威争第一，佛得角童话与 G 组算账夜",
+      "summary": "I/H/G 组末轮六场开战：法国与挪威争头名，塞内加尔追净胜球，佛得角冲击淘汰赛童话，乌拉圭和西班牙互相牵制，比利时、伊朗、埃及和新西兰都还在算出线账。",
+      "ray_points": 0,
+      "gpt_points": 0,
+      "matches": [
+        {
+          "id": "nor-fra-20260627",
+          "kickoff_local": "06-27 03:00 BJT",
+          "home": "挪威",
+          "away": "法国",
+          "group": "I",
+          "status": "未开始",
+          "ray_prediction": {
+            "home_score": 1,
+            "away_score": 3,
+            "reason": "Ray 预测挪威 1:3 法国。双方都可能上替补，但法国替补厚度明显更强；法国若拿小组第一，淘汰赛路径也更舒服。"
+          },
+          "gpt_prediction": {
+            "home_score": 1,
+            "away_score": 2,
+            "reason": "GPT 预测挪威 1:2 法国。挪威主帅已经强调要聪明轮换，哈兰德也可能减少消耗；法国阵容深度更足，但同样会控制风险，不一定打成大比分。"
+          },
+          "actual_score": {
+            "home_score": null,
+            "away_score": null
+          },
+          "review": "赛前预测。"
+        },
+        {
+          "id": "sen-irq-20260627",
+          "kickoff_local": "06-27 03:00 BJT",
+          "home": "塞内加尔",
+          "away": "伊拉克",
+          "group": "I",
+          "status": "未开始",
+          "ray_prediction": {
+            "home_score": 3,
+            "away_score": 0,
+            "reason": "Ray 预测塞内加尔 3:0 伊拉克。塞内加尔需要净胜球，如果能拿到三个净胜球，就可能在第三名比较中压过韩国；伊拉克实力有限，前两场消耗也很大。"
+          },
+          "gpt_prediction": {
+            "home_score": 2,
+            "away_score": 0,
+            "reason": "GPT 预测塞内加尔 2:0 伊拉克。我同意塞内加尔必须搏命，但他们前两场进攻效率并不稳定；伊拉克会低位死守，塞内加尔赢球更可能是两球差。"
+          },
+          "actual_score": {
+            "home_score": null,
+            "away_score": null
+          },
+          "review": "赛前预测。"
+        },
+        {
+          "id": "cpv-ksa-20260627",
+          "kickoff_local": "06-27 08:00 BJT",
+          "home": "佛得角",
+          "away": "沙特",
+          "group": "H",
+          "status": "未开始",
+          "ray_prediction": {
+            "home_score": 1,
+            "away_score": 0,
+            "reason": "Ray 预测佛得角 1:0 沙特。佛得角 2 分在手，可以接受平局，但如果能维持微弱领先，出线形势会更主动；亚洲球队第三轮普遍表现差强人意。"
+          },
+          "gpt_prediction": {
+            "home_score": 1,
+            "away_score": 1,
+            "reason": "GPT 预测佛得角 1:1 沙特。佛得角已经证明能扛强队，但沙特也还有出线动机；这场更像一场紧张的心理战，佛得角未必能把领先守到底。"
+          },
+          "actual_score": {
+            "home_score": null,
+            "away_score": null
+          },
+          "review": "赛前预测。"
+        },
+        {
+          "id": "uru-esp-20260627",
+          "kickoff_local": "06-27 08:00 BJT",
+          "home": "乌拉圭",
+          "away": "西班牙",
+          "group": "H",
+          "status": "未开始",
+          "ray_prediction": {
+            "home_score": 1,
+            "away_score": 2,
+            "reason": "Ray 预测乌拉圭 1:2 西班牙。双方都能接受平局或小比分，但如果让佛得角拿到第一，西班牙淘汰赛路径会很难看；西班牙可能隐藏亚马尔，攻击力不会太爆，但仍会争取微弱领先。"
+          },
+          "gpt_prediction": {
+            "home_score": 1,
+            "away_score": 1,
+            "reason": "GPT 预测乌拉圭 1:1 西班牙。乌拉圭急需结果但进攻不稳，西班牙也可能控制消耗；这场的心理底色是双方都不能输，平局最像末轮算账局。"
+          },
+          "actual_score": {
+            "home_score": null,
+            "away_score": null
+          },
+          "review": "赛前预测。"
+        },
+        {
+          "id": "nzl-bel-20260627",
+          "kickoff_local": "06-27 11:00 BJT",
+          "home": "新西兰",
+          "away": "比利时",
+          "group": "G",
+          "status": "未开始",
+          "ray_prediction": {
+            "home_score": 1,
+            "away_score": 3,
+            "reason": "Ray 预测新西兰 1:3 比利时。比利时可以接受平局，但为了淘汰赛对阵和小组排名，应该会努力取胜；新西兰前两场开局都不错，但后手明显不足。"
+          },
+          "gpt_prediction": {
+            "home_score": 0,
+            "away_score": 2,
+            "reason": "GPT 预测新西兰 0:2 比利时。比利时前两轮进攻很沉闷，但这场非赢不可的压力会逼他们提速；新西兰必须攻出来，反而会留下身后空间。"
+          },
+          "actual_score": {
+            "home_score": null,
+            "away_score": null
+          },
+          "review": "赛前预测。"
+        },
+        {
+          "id": "iri-egy-20260627",
+          "kickoff_local": "06-27 11:00 BJT",
+          "home": "伊朗",
+          "away": "埃及",
+          "group": "G",
+          "status": "未开始",
+          "ray_prediction": {
+            "home_score": 1,
+            "away_score": 1,
+            "reason": "Ray 预测伊朗 1:1 埃及。伊朗三场平局拿 3 分，仍可能压过韩国；埃及放伊朗一口气的可能性也不低，让伊朗留在世界杯可以恶心美国，哈哈。"
+          },
+          "gpt_prediction": {
+            "home_score": 0,
+            "away_score": 1,
+            "reason": "GPT 预测伊朗 0:1 埃及。伊朗韧性强，但埃及 4 分在手也想争更好的淘汰赛位置；萨拉赫和埃及前场一旦有一次空间，可能就足够决定比赛。"
+          },
+          "actual_score": {
+            "home_score": null,
+            "away_score": null
+          },
+          "review": "赛前预测。"
         }
       ]
     }
   ],
   "update_log": [
     {
-      "time": "06-26 10:45",
-      "text": "E/F 组末轮先收官：科特迪瓦 2:0 库拉索，厄瓜多尔 2:1 德国，荷兰 3:1 突尼斯，日本 1:1 瑞典。"
+      "time": "06-26 16:30",
+      "text": "D 组补完：土耳其 3:2 美国体面告别，巴拉圭 0:0 澳大利亚，澳大利亚第二、巴拉圭第三晋级比较。"
     },
     {
-      "time": "06-26 10:45",
-      "text": "今日已结束四场暂计 Ray 1:5 GPT 5.5：Ray 靠厄瓜多尔爆冷拿 1 分，GPT 靠科特迪瓦 2:0 和日本 1:1 拿 5 分。"
+      "time": "06-26 16:30",
+      "text": "E/F/D 组六场合计 Ray 1:8 GPT 5.5；GPT 凭科特迪瓦 0:2、日本 1:1 和澳巴平局方向大幅追分，总比分来到 Ray 33:30 GPT 5.5。"
     },
     {
-      "time": "06-26 10:45",
-      "text": "总分暂为 Ray 33:27 GPT 5.5；D 组土耳其—美国、巴拉圭—澳大利亚还没结算。"
-    },
-    {
-      "time": "06-26 12:10",
-      "text": "自动更新：土耳其 3:2 美国，Ray +0，GPT +0。"
-    },
-    {
-      "time": "06-26 12:10",
-      "text": "自动更新：巴拉圭 0:0 澳大利亚，Ray +0，GPT +3。"
+      "time": "06-26 16:30",
+      "text": "录入 G/H/I 组末轮六场预测：挪威—法国、塞内加尔—伊拉克、佛得角—沙特、乌拉圭—西班牙、新西兰—比利时、伊朗—埃及。"
     }
   ],
   "archive": [
@@ -876,8 +976,13 @@
     },
     {
       "date": "2026-06-26",
-      "title": "今日暂时 Ray 1:5 GPT，总分修正为 33:27",
+      "title": "土耳其体面告别，澳巴握手过关：GPT 单日 8:1",
       "url": "#day-2026-06-26"
+    },
+    {
+      "date": "2026-06-27",
+      "title": "法国挪威争第一，佛得角童话与 G 组算账夜",
+      "url": "#day-2026-06-27"
     }
   ]
 }
