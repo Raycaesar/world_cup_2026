@@ -1,6 +1,13 @@
 #!/usr/bin/env node
 /*
-  Auto-update World Cup results in data.json from ESPN's scoreboard feed.
+  Safe auto-update World Cup results in data.json from ESPN's scoreboard feed.
+
+  Design rules:
+  1. Only update matches that move from unfinished to finished.
+  2. Finished matches with manual_points are frozen by default.
+  3. Historical matchday points are never recomputed unless that matchday contains a newly finished match.
+  4. Totals are computed from matchday day totals, not by replaying every match.
+  5. If a guard detects total collapse or historical point mutation, the script exits before writing.
 
   Usage:
     node scripts/update_scores.js
@@ -8,9 +15,10 @@
 
   Optional env:
     DATA_PATH=data.json
-    SCOREBOARD_FIXTURE=/path/to/espn-scoreboard.json   # local test fixture
+    SCOREBOARD_FIXTURE=/path/to/espn-scoreboard.json
     UPDATE_LOG_LIMIT=10
     NO_UPDATE_LOG=1
+    ALLOW_REWRITE_FINISHED=1   # use only for deliberate repair; default is frozen
 */
 
 const fs = require("node:fs");
@@ -22,6 +30,7 @@ const DATA_PATH = process.env.DATA_PATH || "data.json";
 const DRY_RUN = process.argv.includes("--dry-run");
 const UPDATE_LOG_LIMIT = Number(process.env.UPDATE_LOG_LIMIT || 10);
 const SHOULD_UPDATE_LOG = process.env.NO_UPDATE_LOG !== "1";
+const ALLOW_REWRITE_FINISHED = process.env.ALLOW_REWRITE_FINISHED === "1";
 
 const TEAM_ZH = {
   "Mexico": "墨西哥",
@@ -87,11 +96,9 @@ const TEAM_ZH = {
 
 const NAME_ALIASES = {
   "象牙海岸": "科特迪瓦",
-  "韩国": "韩国",
   "南韩": "韩国",
   "美国队": "美国",
   "刚果民主共和国": "刚果（金）",
-  "刚果（金）": "刚果（金）",
   "佛得角群岛": "佛得角",
   "库拉çao": "库拉索"
 };
@@ -99,6 +106,10 @@ const NAME_ALIASES = {
 function normalizeName(name) {
   const raw = String(name || "").trim();
   return NAME_ALIASES[raw] || TEAM_ZH[raw] || raw;
+}
+
+function isValidOutcome(outcome) {
+  return outcome === "home" || outcome === "away" || outcome === "draw";
 }
 
 function ymdUTC(date) {
@@ -208,8 +219,8 @@ function pickOutcome(home, away) {
 function parsePrediction(pred) {
   if (!pred) return { home_score: null, away_score: null, outcome: "pending" };
   return {
-    home_score: pred.home_score,
-    away_score: pred.away_score,
+    home_score: Number.isFinite(Number(pred.home_score)) ? Number(pred.home_score) : null,
+    away_score: Number.isFinite(Number(pred.away_score)) ? Number(pred.away_score) : null,
     outcome: pickOutcome(pred.home_score, pred.away_score)
   };
 }
@@ -223,69 +234,68 @@ function exactScore(pred, actual) {
   return pred && actual && pred.home_score === actual.home_score && pred.away_score === actual.away_score;
 }
 
-function resultCloseness(predOutcome, actualOutcome) {
-  if (predOutcome === actualOutcome) return 2;
-  if (predOutcome === "draw" && actualOutcome !== "draw") return 1;
-  if (predOutcome !== "draw" && actualOutcome === "draw") return 1;
-  return 0;
+function drawOnlyCloseness(rayOutcome, gptOutcome) {
+  // This rule is intentionally narrow:
+  // only when both are wrong and exactly one side predicted draw does that side get 1 point.
+  // No numeric goal-difference closeness is used.
+  if (!isValidOutcome(rayOutcome) || !isValidOutcome(gptOutcome)) return null;
+  if (rayOutcome === "draw" && gptOutcome !== "draw") return "ray";
+  if (gptOutcome === "draw" && rayOutcome !== "draw") return "gpt";
+  return null;
 }
 
 function calculateMatchPoints(match) {
   const actual = match.actual_score;
-  if (!actual || actual.home_score === null || actual.away_score === null) {
+  if (!actual || actual.home_score === null || actual.away_score === null || actual.home_score === undefined || actual.away_score === undefined) {
     return { ray: 0, gpt: 0, explanation: "比赛尚未结束，暂不计分。" };
   }
 
   const ray = parsePrediction(match.ray_prediction);
   const gpt = parsePrediction(match.gpt_prediction);
   const actualOutcome = pickOutcome(actual.home_score, actual.away_score);
-  const rayCorrect = ray.outcome === actualOutcome;
-  const gptCorrect = gpt.outcome === actualOutcome;
-  const rayExact = exactScore(match.ray_prediction, actual);
-  const gptExact = exactScore(match.gpt_prediction, actual);
+
+  if (!isValidOutcome(ray.outcome) || !isValidOutcome(gpt.outcome) || !isValidOutcome(actualOutcome)) {
+    return { ray: 0, gpt: 0, explanation: "至少一方没有有效预测，本场不计分。" };
+  }
 
   if (samePrediction(match.ray_prediction, match.gpt_prediction)) {
     return { ray: 0, gpt: 0, explanation: "双方预测完全相同，本场不计分。" };
   }
 
-  let rayPts = 0;
-  let gptPts = 0;
-  let explanation = "";
+  const rayCorrect = ray.outcome === actualOutcome;
+  const gptCorrect = gpt.outcome === actualOutcome;
+  const rayExact = exactScore(match.ray_prediction, actual);
+  const gptExact = exactScore(match.gpt_prediction, actual);
 
   if (rayCorrect && !gptCorrect) {
-    rayPts = 3 + (rayExact ? 1 : 0);
-    explanation = rayExact ? "Ray 猜对胜平负且比分完全命中，得到 4 分。" : "Ray 猜对胜平负，得到 3 分。";
-  } else if (!rayCorrect && gptCorrect) {
-    gptPts = 3 + (gptExact ? 1 : 0);
-    explanation = gptExact ? "GPT 猜对胜平负且比分完全命中，得到 4 分。" : "GPT 猜对胜平负，得到 3 分。";
-  } else if (rayCorrect && gptCorrect) {
-    // 双方都猜中胜平负时，胜平负本身不拉开差距；只奖励精确比分的一方 1 分。
-    if (rayExact && !gptExact) {
-      rayPts = 1;
-      explanation = "双方都猜对胜平负，胜平负不计分；Ray 比分完全命中，得到 1 分。";
-    } else if (!rayExact && gptExact) {
-      gptPts = 1;
-      explanation = "双方都猜对胜平负，胜平负不计分；GPT 比分完全命中，得到 1 分。";
-    } else {
-      explanation = "双方都猜对胜平负，但没有形成比分命中差异，本场不计分。";
-    }
-  } else {
-    // 双方都猜错时，只比较“胜/平/负方向”的接近程度；
-    // 不再用具体比分误差打破平局，避免出现“双方都押同一方向失败，但因数字更近而加分”的争议。
-    const rayClose = resultCloseness(ray.outcome, actualOutcome);
-    const gptClose = resultCloseness(gpt.outcome, actualOutcome);
-    if (rayClose > gptClose) {
-      rayPts = 1;
-      explanation = "双方都猜错，但 Ray 的胜平负方向更接近真实赛果，得到 1 分。";
-    } else if (gptClose > rayClose) {
-      gptPts = 1;
-      explanation = "双方都猜错，但 GPT 的胜平负方向更接近真实赛果，得到 1 分。";
-    } else {
-      explanation = "双方都猜错，且胜平负方向没有形成差异，本场不计分。";
-    }
+    const pts = 3 + (rayExact ? 1 : 0);
+    return { ray: pts, gpt: 0, explanation: rayExact ? "Ray 猜对胜平负且比分完全命中，得到 4 分。" : "Ray 猜对胜平负，得到 3 分。" };
   }
 
-  return { ray: rayPts, gpt: gptPts, explanation };
+  if (!rayCorrect && gptCorrect) {
+    const pts = 3 + (gptExact ? 1 : 0);
+    return { ray: 0, gpt: pts, explanation: gptExact ? "GPT 猜对胜平负且比分完全命中，得到 4 分。" : "GPT 猜对胜平负，得到 3 分。" };
+  }
+
+  if (rayCorrect && gptCorrect) {
+    if (rayExact && !gptExact) {
+      return { ray: 1, gpt: 0, explanation: "双方都猜对胜平负，胜平负不拉开差距；Ray 比分完全命中，得到 1 分。" };
+    }
+    if (!rayExact && gptExact) {
+      return { ray: 0, gpt: 1, explanation: "双方都猜对胜平负，胜平负不拉开差距；GPT 比分完全命中，得到 1 分。" };
+    }
+    return { ray: 0, gpt: 0, explanation: "双方都猜对胜平负，但没有形成比分命中差异，本场不计分。" };
+  }
+
+  const closer = drawOnlyCloseness(ray.outcome, gpt.outcome);
+  if (closer === "ray") {
+    return { ray: 1, gpt: 0, explanation: "双方都猜错，但只有 Ray 预测平局，按平局接近度规则 Ray 得到 1 分。" };
+  }
+  if (closer === "gpt") {
+    return { ray: 0, gpt: 1, explanation: "双方都猜错，但只有 GPT 预测平局，按平局接近度规则 GPT 得到 1 分。" };
+  }
+
+  return { ray: 0, gpt: 0, explanation: "双方都猜错，且没有触发平局接近度规则，本场不计分。" };
 }
 
 function predictionText(pred) {
@@ -297,20 +307,40 @@ function matchKey(home, away) {
   return `${normalizeName(home)}__${normalizeName(away)}`;
 }
 
+function reverseEvent(event) {
+  return {
+    ...event,
+    home: event.away,
+    away: event.home,
+    home_score: event.away_score,
+    away_score: event.home_score,
+    reversed: true
+  };
+}
+
+function buildEventIndex(events) {
+  const index = new Map();
+  for (const e of events) {
+    index.set(matchKey(e.home, e.away), e);
+    index.set(matchKey(e.away, e.home), reverseEvent(e));
+  }
+  return index;
+}
+
 function collectMatchRefs(data) {
   const refs = [];
   const seen = new Set();
 
-  function add(match, location) {
+  function add(match, location, dayDate = null) {
     if (!match || !match.home || !match.away) return;
     const refId = `${location}:${match.id || match.home + "-" + match.away}`;
     if (seen.has(refId)) return;
     seen.add(refId);
-    refs.push({ match, location });
+    refs.push({ match, location, dayDate });
   }
 
-  (data.today_matches || []).forEach(m => add(m, "today"));
-  (data.matchdays || []).forEach(day => (day.matches || []).forEach(m => add(m, `day:${day.date}`)));
+  (data.today_matches || []).forEach(m => add(m, "today", null));
+  (data.matchdays || []).forEach(day => (day.matches || []).forEach(m => add(m, `day:${day.date}`, day.date)));
   return refs;
 }
 
@@ -319,18 +349,30 @@ function isFinished(match) {
   return actual.home_score !== null && actual.home_score !== undefined && actual.away_score !== null && actual.away_score !== undefined && String(match.status || "").includes("已结束");
 }
 
+function hasFrozenPoints(match) {
+  return match.manual_points && Number.isFinite(Number(match.manual_points.ray)) && Number.isFinite(Number(match.manual_points.gpt));
+}
+
 function buildReview(match, pts) {
   const actual = match.actual_score || {};
-  return `${match.home} ${actual.home_score}:${actual.away_score} ${match.away}。赛果已自动录入；Ray 预测 ${predictionText(match.ray_prediction)}，GPT 预测 ${predictionText(match.gpt_prediction)}。${pts.explanation} 本场得分：Ray +${pts.ray}，GPT +${pts.gpt}。`;
+  return `${match.home} ${actual.home_score}:${actual.away_score} ${match.away}。Ray 预测 ${predictionText(match.ray_prediction)}，GPT 预测 ${predictionText(match.gpt_prediction)}。${pts.explanation} 本场得分：Ray +${pts.ray}，GPT +${pts.gpt}。`;
 }
 
 function updateOneMatch(match, event) {
   const actual = { home_score: event.home_score, away_score: event.away_score };
   const oldActual = match.actual_score || {};
-  const changedScore = oldActual.home_score !== actual.home_score || oldActual.away_score !== actual.away_score;
-  const needsStatus = String(match.status || "") !== "已结束";
+  const wasFinished = isFinished(match);
+  const scoreAlreadySame = oldActual.home_score === actual.home_score && oldActual.away_score === actual.away_score;
 
-  if (!changedScore && !needsStatus && isFinished(match)) return null;
+  // Freeze already finalized matches. If ESPN later differs, fail safely instead of silently rewriting history.
+  if (wasFinished && hasFrozenPoints(match) && !ALLOW_REWRITE_FINISHED) {
+    if (!scoreAlreadySame) {
+      throw new Error(`Refusing to rewrite frozen match ${match.home}-${match.away}: data has ${oldActual.home_score}:${oldActual.away_score}, ESPN has ${actual.home_score}:${actual.away_score}. Use ALLOW_REWRITE_FINISHED=1 only for a deliberate repair.`);
+    }
+    return null;
+  }
+
+  if (wasFinished && scoreAlreadySame && hasFrozenPoints(match)) return null;
 
   match.status = "已结束";
   match.actual_score = actual;
@@ -354,37 +396,50 @@ function updateOneMatch(match, event) {
   };
 }
 
-function recomputeDayPoints(data) {
-  (data.matchdays || []).forEach(day => {
-    let ray = 0;
-    let gpt = 0;
-    (day.matches || []).forEach(match => {
-      const pts = match.manual_points ? { ray: Number(match.manual_points.ray || 0), gpt: Number(match.manual_points.gpt || 0) } : calculateMatchPoints(match);
-      ray += pts.ray;
-      gpt += pts.gpt;
-    });
-    day.ray_points = ray;
-    day.gpt_points = gpt;
-  });
+function snapshotDayPoints(data) {
+  const map = new Map();
+  for (const day of data.matchdays || []) {
+    map.set(day.date, { ray: Number(day.ray_points || 0), gpt: Number(day.gpt_points || 0) });
+  }
+  return map;
 }
 
-function recomputeTotals(data) {
+function sumMatchPoints(matches) {
   let ray = 0;
   let gpt = 0;
-  const counted = new Set();
-  (data.matchdays || []).forEach(day => (day.matches || []).forEach(match => {
-    const key = match.id || `${day.date}:${matchKey(match.home, match.away)}`;
-    if (counted.has(key)) return;
-    counted.add(key);
-    const pts = match.manual_points ? { ray: Number(match.manual_points.ray || 0), gpt: Number(match.manual_points.gpt || 0) } : calculateMatchPoints(match);
-    ray += pts.ray;
-    gpt += pts.gpt;
-  }));
+  for (const match of matches || []) {
+    if (!hasFrozenPoints(match)) continue;
+    ray += Number(match.manual_points.ray || 0);
+    gpt += Number(match.manual_points.gpt || 0);
+  }
+  return { ray, gpt };
+}
+
+function recomputeTouchedDayPoints(data, touchedDayDates) {
+  for (const day of data.matchdays || []) {
+    if (!touchedDayDates.has(day.date)) continue;
+    if (!Array.isArray(day.matches) || day.matches.length === 0) continue;
+    const pts = sumMatchPoints(day.matches);
+    day.ray_points = pts.ray;
+    day.gpt_points = pts.gpt;
+  }
+}
+
+function recomputeTotalsFromDayPoints(data) {
+  let ray = 0;
+  let gpt = 0;
+  for (const day of data.matchdays || []) {
+    ray += Number(day.ray_points || 0);
+    gpt += Number(day.gpt_points || 0);
+  }
   data.score_summary = data.score_summary || {};
   data.score_summary.ray_total = ray;
   data.score_summary.gpt_total = gpt;
-  const leader = ray === gpt ? "Ray 与 GPT 5.5 暂时战平。" : ray > gpt ? `Ray 暂时 ${ray}:${gpt} 领先 GPT 5.5。` : `GPT 5.5 暂时 ${gpt}:${ray} 领先 Ray。`;
-  data.score_summary.leader_comment = leader;
+  data.score_summary.leader_comment = ray === gpt
+    ? `Ray 与 GPT 5.5 暂时 ${ray}:${gpt} 战平。`
+    : ray > gpt
+      ? `Ray 暂时 ${ray}:${gpt} 领先 GPT 5.5。`
+      : `GPT 5.5 暂时 ${gpt}:${ray} 领先 Ray。`;
   return { ray, gpt };
 }
 
@@ -392,7 +447,7 @@ function appendUpdateLog(data, updates) {
   if (!SHOULD_UPDATE_LOG || !updates.length) return;
   data.update_log = Array.isArray(data.update_log) ? data.update_log : [];
   for (const u of updates) {
-    const text = `自动更新：${u.home} ${u.score} ${u.away}，Ray +${u.ray}，GPT +${u.gpt}。`;
+    const text = `赛果更新：${u.home} ${u.score} ${u.away}，Ray +${u.ray}，GPT +${u.gpt}。`;
     if (!data.update_log.some(item => item.text === text)) {
       data.update_log.push({ time: shortBJT(new Date()).replace(" BJT", ""), text });
     }
@@ -405,50 +460,111 @@ function appendUpdateLog(data, updates) {
 function refreshHeadline(data, updates, totals) {
   if (!updates.length) return;
   const last = updates[updates.length - 1];
-  data.headline = `总分 Ray ${totals.ray}:${totals.gpt} GPT 5.5：${last.home} ${last.score} ${last.away} 已自动更新。`;
-  data.brief = `本场复盘为自动简写版，只记录赛果、预测与计分；详细评论可稍后手动补充。`;
+  data.headline = `总分 Ray ${totals.ray}:${totals.gpt} GPT 5.5：${last.home} ${last.score} ${last.away} 已更新。`;
+  data.brief = `今日已结束比赛已录入，累计总分按历史日积分汇总；详细复盘可在赛后继续手动润色。`;
 }
 
 function ensureMeta(data) {
   data.meta = data.meta || {};
   data.meta.updated_at = formatBJT(new Date());
-  data.meta.version = `auto-score-${new Date().toISOString().replace(/[-:T.Z]/g, "").slice(0, 12)}`;
+  data.meta.version = `auto-score-safe-${new Date().toISOString().replace(/[-:T.Z]/g, "").slice(0, 12)}`;
+}
+
+function validateNoBadPublicPhrases(data) {
+  const text = JSON.stringify(data);
+  const banned = ["自动简写版", "本场采用人工裁定", "人工裁定", "人工约定"];
+  const found = banned.filter(x => text.includes(x));
+  if (found.length) throw new Error(`Refusing to write public data with banned phrase(s): ${found.join(", ")}`);
+}
+
+function validateDayPointMutation(before, afterData, touchedDayDates) {
+  for (const day of afterData.matchdays || []) {
+    const old = before.get(day.date);
+    if (!old) continue;
+    if (touchedDayDates.has(day.date)) continue;
+    const now = { ray: Number(day.ray_points || 0), gpt: Number(day.gpt_points || 0) };
+    if (old.ray !== now.ray || old.gpt !== now.gpt) {
+      throw new Error(`Refusing to mutate historical day ${day.date}: ${old.ray}:${old.gpt} -> ${now.ray}:${now.gpt}`);
+    }
+  }
+}
+
+function validateNoTotalCollapse(oldTotals, newTotals) {
+  // Match points are nonnegative, so an automatic update should never reduce cumulative totals.
+  // If you need a deliberate manual repair, edit data.json directly or run a one-off repair script.
+  if (newTotals.ray < oldTotals.ray || newTotals.gpt < oldTotals.gpt) {
+    throw new Error(`Refusing total decrease: Ray ${oldTotals.ray}->${newTotals.ray}, GPT ${oldTotals.gpt}->${newTotals.gpt}`);
+  }
+}
+
+function totalsFromDayPoints(data) {
+  let ray = 0;
+  let gpt = 0;
+  for (const day of data.matchdays || []) {
+    ray += Number(day.ray_points || 0);
+    gpt += Number(day.gpt_points || 0);
+  }
+  return { ray, gpt };
 }
 
 async function main() {
   const dataFile = path.resolve(DATA_PATH);
-  const data = JSON.parse(fs.readFileSync(dataFile, "utf8"));
-  const scoreboard = await loadScoreboard();
-  const events = (scoreboard.events || []).map(normalizeEvent).filter(e => e.completed && e.home_score !== null && e.away_score !== null);
-  const eventByKey = new Map(events.map(e => [matchKey(e.home, e.away), e]));
-  const updatesById = new Map();
+  const originalText = fs.readFileSync(dataFile, "utf8");
+  const data = JSON.parse(originalText);
+  const beforeDayPoints = snapshotDayPoints(data);
+  const oldTotals = totalsFromDayPoints(data);
 
-  for (const { match } of collectMatchRefs(data)) {
+  const scoreboard = await loadScoreboard();
+  const events = (scoreboard.events || [])
+    .map(normalizeEvent)
+    .filter(e => e.completed && e.home_score !== null && e.away_score !== null);
+  const eventByKey = buildEventIndex(events);
+
+  const updatesById = new Map();
+  const touchedDayDates = new Set();
+  const unmatched = [];
+
+  for (const { match, location, dayDate } of collectMatchRefs(data)) {
+    if (isFinished(match) && hasFrozenPoints(match) && !ALLOW_REWRITE_FINISHED) continue;
     const event = eventByKey.get(matchKey(match.home, match.away));
-    if (!event) continue;
+    if (!event) {
+      if (!isFinished(match)) unmatched.push(`${match.home}-${match.away}`);
+      continue;
+    }
     const update = updateOneMatch(match, event);
-    if (update) updatesById.set(update.id, update);
+    if (update) {
+      updatesById.set(update.id, update);
+      if (dayDate) touchedDayDates.add(dayDate);
+    }
   }
 
   const updates = [...updatesById.values()];
   if (!updates.length) {
     console.log("No completed matches to update.");
+    if (unmatched.length) console.error(`Unmatched unfinished match(es): ${unmatched.join("; ")}`);
     return;
   }
 
-  recomputeDayPoints(data);
-  const totals = recomputeTotals(data);
+  recomputeTouchedDayPoints(data, touchedDayDates);
+  const totals = recomputeTotalsFromDayPoints(data);
   appendUpdateLog(data, updates);
   refreshHeadline(data, updates, totals);
   ensureMeta(data);
 
+  validateDayPointMutation(beforeDayPoints, data, touchedDayDates);
+  validateNoTotalCollapse(oldTotals, totals);
+  validateNoBadPublicPhrases(data);
+
   const out = JSON.stringify(data, null, 2) + "\n";
   if (DRY_RUN) {
     console.log(out);
-    console.error(`Dry run: ${updates.length} match(es) would be updated.`);
+    console.error(`Dry run: ${updates.length} match(es) would be updated: ${updates.map(u => `${u.home} ${u.score} ${u.away}`).join("; ")}`);
   } else {
+    const backupFile = `${dataFile}.bak-${new Date().toISOString().replace(/[-:T.Z]/g, "").slice(0, 12)}`;
+    fs.writeFileSync(backupFile, originalText, "utf8");
     fs.writeFileSync(dataFile, out, "utf8");
     console.log(`Updated ${updates.length} completed match(es): ${updates.map(u => `${u.home} ${u.score} ${u.away}`).join("; ")}`);
+    console.log(`Backup written: ${backupFile}`);
   }
 }
 

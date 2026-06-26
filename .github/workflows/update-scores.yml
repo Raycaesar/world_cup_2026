@@ -1,11 +1,17 @@
-name: Auto update World Cup scores
+name: Safe auto update World Cup scores
 
 on:
   workflow_dispatch:
-
+  # Enable later only after several successful manual runs.
+  # schedule:
+  #   - cron: "*/30 * * * *"
 
 permissions:
   contents: write
+
+concurrency:
+  group: safe-world-cup-score-update
+  cancel-in-progress: false
 
 jobs:
   update-scores:
@@ -14,14 +20,65 @@ jobs:
     steps:
       - name: Checkout repository
         uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
 
       - name: Set up Node.js
         uses: actions/setup-node@v4
         with:
           node-version: "20"
 
-      - name: Update scores
+      - name: Snapshot before update
+        run: |
+          cp data.json data.before.json
+
+      - name: Dry run safe updater
+        env:
+          DATA_PATH: data.json
+          UPDATE_LOG_LIMIT: 10
+        run: |
+          node scripts/update_scores.js --dry-run > /tmp/data.after.json
+          node -e 'JSON.parse(require("fs").readFileSync("/tmp/data.after.json", "utf8")); console.log("dry-run JSON OK")'
+
+      - name: Apply safe updater
+        env:
+          DATA_PATH: data.json
+          UPDATE_LOG_LIMIT: 10
         run: node scripts/update_scores.js
+
+      - name: Validate data.json invariants
+        run: |
+          node <<'NODE'
+          const fs = require('fs');
+          const before = JSON.parse(fs.readFileSync('data.before.json', 'utf8'));
+          const after = JSON.parse(fs.readFileSync('data.json', 'utf8'));
+
+          function totalsFromDays(data) {
+            return (data.matchdays || []).reduce((acc, day) => {
+              acc.ray += Number(day.ray_points || 0);
+              acc.gpt += Number(day.gpt_points || 0);
+              return acc;
+            }, { ray: 0, gpt: 0 });
+          }
+
+          const oldTotals = totalsFromDays(before);
+          const newTotals = totalsFromDays(after);
+
+          if (newTotals.ray < oldTotals.ray || newTotals.gpt < oldTotals.gpt) {
+            throw new Error(`Total decreased: Ray ${oldTotals.ray}->${newTotals.ray}, GPT ${oldTotals.gpt}->${newTotals.gpt}`);
+          }
+
+          if (after.score_summary?.ray_total !== newTotals.ray || after.score_summary?.gpt_total !== newTotals.gpt) {
+            throw new Error(`score_summary does not match matchday totals: summary ${after.score_summary?.ray_total}:${after.score_summary?.gpt_total}, days ${newTotals.ray}:${newTotals.gpt}`);
+          }
+
+          const banned = ['自动简写版', '本场采用人工裁定', '人工裁定', '人工约定'];
+          const text = JSON.stringify(after);
+          const found = banned.filter(x => text.includes(x));
+          if (found.length) throw new Error(`Banned public phrase(s): ${found.join(', ')}`);
+
+          console.log(`Validated totals: Ray ${newTotals.ray}:${newTotals.gpt} GPT 5.5`);
+          NODE
 
       - name: Commit changes if needed
         run: |
@@ -33,5 +90,5 @@ jobs:
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
           git add data.json
-          git commit -m "auto update match scores"
+          git commit -m "safe auto update match scores"
           git push
