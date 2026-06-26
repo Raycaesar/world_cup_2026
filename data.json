@@ -7,18 +7,18 @@
     "tagline": "World Cup Prediction Derby"
   },
   "meta": {
-    "updated_at": "2026-06-26 16:30 BJT",
+    "updated_at": "2026-06-27 05:11 BJT",
     "active_day": "2026-06-27",
     "timezone": "Asia/Beijing",
-    "version": "update-20260627-gh-i-preview"
+    "version": "auto-score-202606262111"
   },
   "score_summary": {
-    "ray_total": 33,
-    "gpt_total": 30,
-    "leader_comment": "Ray 仍以 33:30 领先 GPT 5.5，但第三轮小组赛 GPT 追分很猛：E/F/D 组六场合计 Ray 1:8 GPT。土耳其 3:2 击败美国体面告别，巴拉圭与澳大利亚 0:0 互相过关，GPT 凭澳巴平局再追 3 分。"
+    "ray_total": 1,
+    "gpt_total": 8,
+    "leader_comment": "GPT 5.5 暂时 8:1 领先 Ray。"
   },
-  "headline": "土耳其体面告别，澳巴握手过关：GPT 单日 8:1 追到 33:30",
-  "brief": "E/F/D 组末轮全部收官：科特迪瓦 2:0 库拉索，厄瓜多尔 2:1 德国，荷兰 3:1 突尼斯，日本 1:1 瑞典，土耳其 3:2 美国，巴拉圭 0:0 澳大利亚。Ray 本日只拿 1 分，GPT 靠科特迪瓦比分、日本平局比分和澳巴平局方向拿到 8 分。下一轮进入 G/H/I 组末轮：法国与挪威争头名，塞内加尔为净胜球搏命，佛得角继续童话，比利时、伊朗、埃及都还要算账。",
+  "headline": "总分 Ray 1:8 GPT 5.5：塞内加尔 5:0 伊拉克 已自动更新。",
+  "brief": "本场复盘为自动简写版，只记录赛果、预测与计分；详细评论可稍后手动补充。",
   "scoring_note": {
     "rule": "只有一方猜中胜平负而另一方没猜中时，胜平负方向给 3 分；双方都猜中胜平负时，只看是否有人精确命中比分，精确比分按约定给分；双方都猜错时通常不得分，若该轮系统接近度规则已启用，则只给更接近一方 1 分。",
     "audit": [
@@ -229,7 +229,7 @@
       "home": "挪威",
       "away": "法国",
       "group": "I",
-      "status": "未开始",
+      "status": "已结束",
       "ray_prediction": {
         "home_score": 1,
         "away_score": 3,
@@ -241,10 +241,16 @@
         "reason": "GPT 预测挪威 1:2 法国。挪威主帅已经强调要聪明轮换，哈兰德也可能减少消耗；法国阵容深度更足，但同样会控制风险，不一定打成大比分。"
       },
       "actual_score": {
-        "home_score": null,
-        "away_score": null
+        "home_score": 1,
+        "away_score": 4
       },
-      "review": "赛前预测。"
+      "review": "挪威 1:4 法国。赛果已自动录入；Ray 预测 1:3，GPT 预测 1:2。双方都猜对胜平负，但没有形成比分命中差异，本场不计分。 本场得分：Ray +0，GPT +0。",
+      "espn_id": "760475",
+      "manual_points": {
+        "ray": 0,
+        "gpt": 0,
+        "explanation": "双方都猜对胜平负，但没有形成比分命中差异，本场不计分。"
+      }
     },
     {
       "id": "sen-irq-20260627",
@@ -252,7 +258,7 @@
       "home": "塞内加尔",
       "away": "伊拉克",
       "group": "I",
-      "status": "未开始",
+      "status": "已结束",
       "ray_prediction": {
         "home_score": 3,
         "away_score": 0,
@@ -264,10 +270,16 @@
         "reason": "GPT 预测塞内加尔 2:0 伊拉克。我同意塞内加尔必须搏命，但他们前两场进攻效率并不稳定；伊拉克会低位死守，塞内加尔赢球更可能是两球差。"
       },
       "actual_score": {
-        "home_score": null,
-        "away_score": null
+        "home_score": 5,
+        "away_score": 0
       },
-      "review": "赛前预测。"
+      "review": "塞内加尔 5:0 伊拉克。赛果已自动录入；Ray 预测 3:0，GPT 预测 2:0。双方都猜对胜平负，但没有形成比分命中差异，本场不计分。 本场得分：Ray +0，GPT +0。",
+      "espn_id": "760474",
+      "manual_points": {
+        "ray": 0,
+        "gpt": 0,
+        "explanation": "双方都猜对胜平负，但没有形成比分命中差异，本场不计分。"
+      }
     },
     {
       "id": "cpv-ksa-20260627",
@@ -438,7 +450,7 @@
       "date": "2026-06-13",
       "title": "瑞士翻车，巴西被摩洛哥压住，Ray 先拿 3 分",
       "summary": "巴西 1:1 摩洛哥，Ray 押中巴西拿不下摩洛哥，Ray +3。",
-      "ray_points": 3,
+      "ray_points": 0,
       "gpt_points": 0,
       "matches": []
     },
@@ -454,15 +466,15 @@
       "date": "2026-06-15",
       "title": "德国大胜、荷日打平、科特迪瓦命中、瑞典狂胜",
       "summary": "Ray 通过科特迪瓦 1:0 完全命中拿 4 分；GPT 通过荷日平局拿 3 分。",
-      "ray_points": 4,
-      "gpt_points": 3,
+      "ray_points": 0,
+      "gpt_points": 0,
       "matches": []
     },
     {
       "date": "2026-06-16",
       "title": "四场全部打平：Ray 单日 7 分扩大领先",
       "summary": "Ray 完全命中比利时 1:1 埃及，又押中沙特逼平乌拉圭。",
-      "ray_points": 7,
+      "ray_points": 0,
       "gpt_points": 0,
       "matches": []
     },
@@ -478,7 +490,7 @@
       "date": "2026-06-18",
       "title": "葡萄牙被逼平，Ray 命中哥伦比亚 3:1",
       "summary": "Ray 凭哥伦比亚比分精准命中拿到 1 分。",
-      "ray_points": 1,
+      "ray_points": 0,
       "gpt_points": 0,
       "matches": []
     },
@@ -486,7 +498,7 @@
       "date": "2026-06-19",
       "title": "墨西哥一球定局，Ray 借东道主再取三分",
       "summary": "Ray 在墨韩战押中墨西哥胜，GPT 押平失手，Ray +3。",
-      "ray_points": 3,
+      "ray_points": 0,
       "gpt_points": 0,
       "matches": []
     },
@@ -494,8 +506,8 @@
       "date": "2026-06-20",
       "title": "美国锁门，巴西开刃：C/D 组夜里 Ray 3:2 小胜",
       "summary": "Ray 靠美国取胜方向拿到 3 分，GPT 凭巴西 3:0 和土巴战更接近追回 2 分。",
-      "ray_points": 3,
-      "gpt_points": 2,
+      "ray_points": 0,
+      "gpt_points": 0,
       "matches": []
     },
     {
@@ -503,14 +515,14 @@
       "title": "橙衣五球拆瑞典，德国补时绝杀：GPT 单日 7:0 还魂",
       "summary": "GPT 押中荷兰胜并精准命中德国 2:1，本日 GPT +7。",
       "ray_points": 0,
-      "gpt_points": 7,
+      "gpt_points": 0,
       "matches": []
     },
     {
       "date": "2026-06-22",
       "title": "佛得角再扛乌拉圭，新西兰惜败埃及：Ray 一日再拉四分",
       "summary": "Ray 押中佛得角逼平乌拉圭，又精准命中新西兰 1:3 埃及。",
-      "ray_points": 4,
+      "ray_points": 0,
       "gpt_points": 0,
       "matches": []
     },
@@ -518,8 +530,8 @@
       "date": "2026-06-23",
       "title": "三刀精准仍遭末场反杀：Ray 3:4 输给 GPT 的后手",
       "summary": "Ray 前三场精准，GPT 靠约旦 1:2 阿尔及利亚追回并反超当日。",
-      "ray_points": 3,
-      "gpt_points": 4,
+      "ray_points": 0,
+      "gpt_points": 0,
       "matches": []
     },
     {
@@ -527,15 +539,15 @@
       "title": "刚果火花熄灭，哥伦比亚一刀把 GPT 拉回三分",
       "summary": "GPT 押中哥伦比亚胜，本日追回 3 分。",
       "ray_points": 0,
-      "gpt_points": 3,
+      "gpt_points": 0,
       "matches": []
     },
     {
       "date": "2026-06-25",
       "title": "墨西哥三球收官，南非历史性突围；Ray 当日 4:3 小胜",
       "summary": "B/C/A 组六场收官，全天合计 Ray 4:3。",
-      "ray_points": 4,
-      "gpt_points": 3,
+      "ray_points": 0,
+      "gpt_points": 0,
       "matches": []
     },
     {
@@ -749,7 +761,7 @@
           "home": "挪威",
           "away": "法国",
           "group": "I",
-          "status": "未开始",
+          "status": "已结束",
           "ray_prediction": {
             "home_score": 1,
             "away_score": 3,
@@ -761,10 +773,16 @@
             "reason": "GPT 预测挪威 1:2 法国。挪威主帅已经强调要聪明轮换，哈兰德也可能减少消耗；法国阵容深度更足，但同样会控制风险，不一定打成大比分。"
           },
           "actual_score": {
-            "home_score": null,
-            "away_score": null
+            "home_score": 1,
+            "away_score": 4
           },
-          "review": "赛前预测。"
+          "review": "挪威 1:4 法国。赛果已自动录入；Ray 预测 1:3，GPT 预测 1:2。双方都猜对胜平负，但没有形成比分命中差异，本场不计分。 本场得分：Ray +0，GPT +0。",
+          "espn_id": "760475",
+          "manual_points": {
+            "ray": 0,
+            "gpt": 0,
+            "explanation": "双方都猜对胜平负，但没有形成比分命中差异，本场不计分。"
+          }
         },
         {
           "id": "sen-irq-20260627",
@@ -772,7 +790,7 @@
           "home": "塞内加尔",
           "away": "伊拉克",
           "group": "I",
-          "status": "未开始",
+          "status": "已结束",
           "ray_prediction": {
             "home_score": 3,
             "away_score": 0,
@@ -784,10 +802,16 @@
             "reason": "GPT 预测塞内加尔 2:0 伊拉克。我同意塞内加尔必须搏命，但他们前两场进攻效率并不稳定；伊拉克会低位死守，塞内加尔赢球更可能是两球差。"
           },
           "actual_score": {
-            "home_score": null,
-            "away_score": null
+            "home_score": 5,
+            "away_score": 0
           },
-          "review": "赛前预测。"
+          "review": "塞内加尔 5:0 伊拉克。赛果已自动录入；Ray 预测 3:0，GPT 预测 2:0。双方都猜对胜平负，但没有形成比分命中差异，本场不计分。 本场得分：Ray +0，GPT +0。",
+          "espn_id": "760474",
+          "manual_points": {
+            "ray": 0,
+            "gpt": 0,
+            "explanation": "双方都猜对胜平负，但没有形成比分命中差异，本场不计分。"
+          }
         },
         {
           "id": "cpv-ksa-20260627",
@@ -896,6 +920,14 @@
     {
       "time": "06-26 16:30",
       "text": "录入 G/H/I 组末轮六场预测：挪威—法国、塞内加尔—伊拉克、佛得角—沙特、乌拉圭—西班牙、新西兰—比利时、伊朗—埃及。"
+    },
+    {
+      "time": "06-27 05:11",
+      "text": "自动更新：挪威 1:4 法国，Ray +0，GPT +0。"
+    },
+    {
+      "time": "06-27 05:11",
+      "text": "自动更新：塞内加尔 5:0 伊拉克，Ray +0，GPT +0。"
     }
   ],
   "archive": [
