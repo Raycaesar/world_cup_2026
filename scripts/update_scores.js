@@ -457,11 +457,76 @@ function appendUpdateLog(data, updates) {
   }
 }
 
-function refreshHeadline(data, updates, totals) {
+function matchHasScore(match) {
+  const actual = match?.actual_score || {};
+  return actual.home_score !== null && actual.home_score !== undefined && actual.away_score !== null && actual.away_score !== undefined;
+}
+
+function matchScoreText(match) {
+  const actual = match.actual_score || {};
+  return `${match.home} ${actual.home_score}:${actual.away_score} ${match.away}`;
+}
+
+function compactScores(matches, limit = 6) {
+  const items = matches.slice(0, limit).map(matchScoreText);
+  const more = matches.length > limit ? `；另 ${matches.length - limit} 场` : "";
+  return items.join("；") + more;
+}
+
+function dayByDate(data, date) {
+  return (data.matchdays || []).find(day => day.date === date) || null;
+}
+
+function latestTouchedDay(data, touchedDayDates) {
+  const dates = [...touchedDayDates].sort();
+  for (let i = dates.length - 1; i >= 0; i -= 1) {
+    const day = dayByDate(data, dates[i]);
+    if (day) return day;
+  }
+  const active = data.meta?.active_day ? dayByDate(data, data.meta.active_day) : null;
+  if (active) return active;
+  const days = (data.matchdays || []).filter(day => Array.isArray(day.matches) && day.matches.length);
+  return days.length ? days[days.length - 1] : null;
+}
+
+function refreshMatchdayCopy(day) {
+  if (!day || !Array.isArray(day.matches) || !day.matches.length) return;
+
+  const completed = day.matches.filter(matchHasScore);
+  const pending = day.matches.filter(match => !matchHasScore(match));
+  const ray = Number(day.ray_points || 0);
+  const gpt = Number(day.gpt_points || 0);
+
+  if (!completed.length) {
+    day.title = `${day.date} 赛前预测：${day.matches.length} 场待赛`;
+    day.summary = `今日比赛尚未结束，预测已经录入，等待赛果更新。`;
+    return;
+  }
+
+  const scoreSummary = compactScores(completed);
+  if (pending.length === 0) {
+    day.title = `本日收官：Ray ${ray}:${gpt} GPT 5.5`;
+    day.summary = `${scoreSummary}。本日合计 Ray ${ray}:${gpt} GPT 5.5。`;
+  } else {
+    day.title = `${completed.length}/${day.matches.length} 场已结束：Ray ${ray}:${gpt} GPT 5.5`;
+    day.summary = `已结束 ${completed.length}/${day.matches.length} 场：${scoreSummary}。当前本日 Ray ${ray}:${gpt} GPT 5.5；待赛：${pending.map(m => `${m.home}—${m.away}`).join("、")}。`;
+  }
+}
+
+function refreshHeadline(data, updates, totals, touchedDayDates = new Set()) {
   if (!updates.length) return;
+
+  const day = latestTouchedDay(data, touchedDayDates);
+  if (day) {
+    refreshMatchdayCopy(day);
+    data.headline = `总分 Ray ${totals.ray}:${totals.gpt} GPT 5.5：${day.title}`;
+    data.brief = day.summary || `今日赛果已更新。`;
+    return;
+  }
+
   const last = updates[updates.length - 1];
   data.headline = `总分 Ray ${totals.ray}:${totals.gpt} GPT 5.5：${last.home} ${last.score} ${last.away} 已更新。`;
-  data.brief = `今日已结束比赛已录入，累计总分按历史日积分汇总；详细复盘可在赛后继续手动润色。`;
+  data.brief = `今日赛果已更新，累计总分按历史日积分汇总。`;
 }
 
 function ensureMeta(data) {
@@ -533,6 +598,7 @@ async function main() {
     }
     const update = updateOneMatch(match, event);
     if (update) {
+      update.dayDate = dayDate || null;
       updatesById.set(update.id, update);
       if (dayDate) touchedDayDates.add(dayDate);
     }
@@ -548,7 +614,7 @@ async function main() {
   recomputeTouchedDayPoints(data, touchedDayDates);
   const totals = recomputeTotalsFromDayPoints(data);
   appendUpdateLog(data, updates);
-  refreshHeadline(data, updates, totals);
+  refreshHeadline(data, updates, totals, touchedDayDates);
   ensureMeta(data);
 
   validateDayPointMutation(beforeDayPoints, data, touchedDayDates);
