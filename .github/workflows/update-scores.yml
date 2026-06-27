@@ -2,8 +2,9 @@ name: Safe auto update World Cup scores
 
 on:
   workflow_dispatch:
-  schedule:
-    - cron: "*/30 * * * *"
+  # Enable later only after several successful manual runs.
+  # schedule:
+  #   - cron: "*/30 * * * *"
 
 permissions:
   contents: write
@@ -28,19 +29,16 @@ jobs:
           node-version: "20"
 
       - name: Snapshot before update
-        run: cp data.json data.before.json
+        run: |
+          cp data.json data.before.json
 
-      - name: Syntax check updater
-        run: node --check scripts/update_scores.js
-
-      - name: Dry run safe updater on copy
+      - name: Dry run safe updater
         env:
-          DATA_PATH: data.dry.json
+          DATA_PATH: data.json
           UPDATE_LOG_LIMIT: 10
         run: |
-          cp data.json data.dry.json
-          node scripts/update_scores.js
-          node -e 'JSON.parse(require("fs").readFileSync("data.dry.json", "utf8")); console.log("dry-run JSON OK")'
+          node scripts/update_scores.js --dry-run > /tmp/data.after.json
+          node -e 'JSON.parse(require("fs").readFileSync("/tmp/data.after.json", "utf8")); console.log("dry-run JSON OK")'
 
       - name: Apply safe updater
         env:

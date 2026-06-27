@@ -245,6 +245,9 @@ function drawOnlyCloseness(rayOutcome, gptOutcome) {
 }
 
 function calculateMatchPoints(match) {
+  if (match.scoring_exempt === true || match.no_score === true) {
+    return { ray: 0, gpt: 0, explanation: "本场按约定不计分。" };
+  }
   const actual = match.actual_score;
   if (!actual || actual.home_score === null || actual.away_score === null || actual.home_score === undefined || actual.away_score === undefined) {
     return { ray: 0, gpt: 0, explanation: "比赛尚未结束，暂不计分。" };
@@ -457,76 +460,11 @@ function appendUpdateLog(data, updates) {
   }
 }
 
-function matchHasScore(match) {
-  const actual = match?.actual_score || {};
-  return actual.home_score !== null && actual.home_score !== undefined && actual.away_score !== null && actual.away_score !== undefined;
-}
-
-function matchScoreText(match) {
-  const actual = match.actual_score || {};
-  return `${match.home} ${actual.home_score}:${actual.away_score} ${match.away}`;
-}
-
-function compactScores(matches, limit = 6) {
-  const items = matches.slice(0, limit).map(matchScoreText);
-  const more = matches.length > limit ? `；另 ${matches.length - limit} 场` : "";
-  return items.join("；") + more;
-}
-
-function dayByDate(data, date) {
-  return (data.matchdays || []).find(day => day.date === date) || null;
-}
-
-function latestTouchedDay(data, touchedDayDates) {
-  const dates = [...touchedDayDates].sort();
-  for (let i = dates.length - 1; i >= 0; i -= 1) {
-    const day = dayByDate(data, dates[i]);
-    if (day) return day;
-  }
-  const active = data.meta?.active_day ? dayByDate(data, data.meta.active_day) : null;
-  if (active) return active;
-  const days = (data.matchdays || []).filter(day => Array.isArray(day.matches) && day.matches.length);
-  return days.length ? days[days.length - 1] : null;
-}
-
-function refreshMatchdayCopy(day) {
-  if (!day || !Array.isArray(day.matches) || !day.matches.length) return;
-
-  const completed = day.matches.filter(matchHasScore);
-  const pending = day.matches.filter(match => !matchHasScore(match));
-  const ray = Number(day.ray_points || 0);
-  const gpt = Number(day.gpt_points || 0);
-
-  if (!completed.length) {
-    day.title = `${day.date} 赛前预测：${day.matches.length} 场待赛`;
-    day.summary = `今日比赛尚未结束，预测已经录入，等待赛果更新。`;
-    return;
-  }
-
-  const scoreSummary = compactScores(completed);
-  if (pending.length === 0) {
-    day.title = `本日收官：Ray ${ray}:${gpt} GPT 5.5`;
-    day.summary = `${scoreSummary}。本日合计 Ray ${ray}:${gpt} GPT 5.5。`;
-  } else {
-    day.title = `${completed.length}/${day.matches.length} 场已结束：Ray ${ray}:${gpt} GPT 5.5`;
-    day.summary = `已结束 ${completed.length}/${day.matches.length} 场：${scoreSummary}。当前本日 Ray ${ray}:${gpt} GPT 5.5；待赛：${pending.map(m => `${m.home}—${m.away}`).join("、")}。`;
-  }
-}
-
-function refreshHeadline(data, updates, totals, touchedDayDates = new Set()) {
+function refreshHeadline(data, updates, totals) {
   if (!updates.length) return;
-
-  const day = latestTouchedDay(data, touchedDayDates);
-  if (day) {
-    refreshMatchdayCopy(day);
-    data.headline = `总分 Ray ${totals.ray}:${totals.gpt} GPT 5.5：${day.title}`;
-    data.brief = day.summary || `今日赛果已更新。`;
-    return;
-  }
-
   const last = updates[updates.length - 1];
   data.headline = `总分 Ray ${totals.ray}:${totals.gpt} GPT 5.5：${last.home} ${last.score} ${last.away} 已更新。`;
-  data.brief = `今日赛果已更新，累计总分按历史日积分汇总。`;
+  data.brief = `今日已结束比赛已录入，累计总分按历史日积分汇总；详细复盘可在赛后继续手动润色。`;
 }
 
 function ensureMeta(data) {
@@ -559,6 +497,37 @@ function validateNoTotalCollapse(oldTotals, newTotals) {
   // If you need a deliberate manual repair, edit data.json directly or run a one-off repair script.
   if (newTotals.ray < oldTotals.ray || newTotals.gpt < oldTotals.gpt) {
     throw new Error(`Refusing total decrease: Ray ${oldTotals.ray}->${newTotals.ray}, GPT ${oldTotals.gpt}->${newTotals.gpt}`);
+  }
+}
+
+
+function validateFinishedMatchesHaveManualPoints(data) {
+  const missing = [];
+  for (const day of data.matchdays || []) {
+    for (const match of day.matches || []) {
+      if (isFinished(match) && !hasFrozenPoints(match)) {
+        missing.push(`${day.date} ${match.home}-${match.away}`);
+      }
+    }
+  }
+  if (missing.length) {
+    throw new Error(`Refusing to publish: finished match(es) missing manual_points: ${missing.slice(0, 8).join('; ')}${missing.length > 8 ? ' ...' : ''}. Add manual_points {ray:0,gpt:0} for no-score historical matches.`);
+  }
+}
+
+function validateScoringExemptZero(data) {
+  const bad = [];
+  for (const day of data.matchdays || []) {
+    for (const match of day.matches || []) {
+      if ((match.scoring_exempt === true || match.no_score === true) && hasFrozenPoints(match)) {
+        if (Number(match.manual_points.ray || 0) !== 0 || Number(match.manual_points.gpt || 0) !== 0) {
+          bad.push(`${day.date} ${match.home}-${match.away}`);
+        }
+      }
+    }
+  }
+  if (bad.length) {
+    throw new Error(`Refusing to publish: scoring_exempt match(es) must have 0:0 points: ${bad.join('; ')}`);
   }
 }
 
@@ -598,7 +567,6 @@ async function main() {
     }
     const update = updateOneMatch(match, event);
     if (update) {
-      update.dayDate = dayDate || null;
       updatesById.set(update.id, update);
       if (dayDate) touchedDayDates.add(dayDate);
     }
@@ -614,12 +582,14 @@ async function main() {
   recomputeTouchedDayPoints(data, touchedDayDates);
   const totals = recomputeTotalsFromDayPoints(data);
   appendUpdateLog(data, updates);
-  refreshHeadline(data, updates, totals, touchedDayDates);
+  refreshHeadline(data, updates, totals);
   ensureMeta(data);
 
   validateDayPointMutation(beforeDayPoints, data, touchedDayDates);
   validateNoTotalCollapse(oldTotals, totals);
   validateNoBadPublicPhrases(data);
+  validateFinishedMatchesHaveManualPoints(data);
+  validateScoringExemptZero(data);
 
   const out = JSON.stringify(data, null, 2) + "\n";
   if (DRY_RUN) {
