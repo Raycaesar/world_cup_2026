@@ -7,18 +7,18 @@
     "tagline": "World Cup Prediction Derby"
   },
   "meta": {
-    "updated_at": "2026-06-27 14:30 BJT",
+    "updated_at": "2026-06-27 10:11 BJT",
     "active_day": "2026-06-27",
     "timezone": "Asia/Beijing",
-    "version": "repair-20260627-restore-cumulative-score"
+    "version": "auto-score-safe-202606270211"
   },
   "score_summary": {
-    "ray_total": 33,
-    "gpt_total": 30,
-    "leader_comment": "Ray 仍以 33:30 领先 GPT 5.5；今天 I 组先结束两场，挪威 1:4 法国、塞内加尔 5:0 伊拉克，双方都猜中胜负方向但都未命中比分，暂时 0:0。"
+    "ray_total": 36,
+    "gpt_total": 33,
+    "leader_comment": "Ray 暂时 36:33 领先 GPT 5.5。"
   },
-  "headline": "法国四球锁第一，塞内加尔五球续命：Ray 33:30 领先",
-  "brief": "I 组末轮先结束两场：法国 4:1 击败轮换后的挪威，登贝莱上半场帽子戏法，法国头名出线；塞内加尔 5:0 大胜十人伊拉克，保留第三名晋级希望。两场 Ray 与 GPT 都猜中胜负方向但都未命中比分，今日暂时 0:0；佛得角—沙特、乌拉圭—西班牙、新西兰—比利时、伊朗—埃及待赛。",
+  "headline": "总分 Ray 36:33 GPT 5.5：乌拉圭 0:1 西班牙 已更新。",
+  "brief": "今日已结束比赛已录入，累计总分按历史日积分汇总；详细复盘可在赛后继续手动润色。",
   "scoring_note": {
     "rule": "只有一方猜中胜平负而另一方没猜中时，胜平负方向给 3 分；双方都猜中胜平负时，只看是否有人精确命中比分；双方都猜错时通常不得分。若某一轮赛前明确启用接近度规则，则按当轮记录给更接近一方 1 分。",
     "audit": [
@@ -292,7 +292,7 @@
       "home": "佛得角",
       "away": "沙特",
       "group": "H",
-      "status": "未开始",
+      "status": "已结束",
       "ray_prediction": {
         "home_score": 1,
         "away_score": 0,
@@ -304,10 +304,16 @@
         "reason": "GPT 预测佛得角 1:1 沙特。佛得角已经证明能扛强队，但沙特也还有出线动机；这场更像一场紧张的心理战，佛得角未必能把领先守到底。"
       },
       "actual_score": {
-        "home_score": null,
-        "away_score": null
+        "home_score": 0,
+        "away_score": 0
       },
-      "review": "赛前预测。"
+      "review": "佛得角 0:0 沙特。Ray 预测 1:0，GPT 预测 1:1。GPT 猜对胜平负，得到 3 分。 本场得分：Ray +0，GPT +3。",
+      "espn_id": "760478",
+      "manual_points": {
+        "ray": 0,
+        "gpt": 3,
+        "explanation": "GPT 猜对胜平负，得到 3 分。"
+      }
     },
     {
       "id": "uru-esp-20260627",
@@ -315,7 +321,7 @@
       "home": "乌拉圭",
       "away": "西班牙",
       "group": "H",
-      "status": "未开始",
+      "status": "已结束",
       "ray_prediction": {
         "home_score": 1,
         "away_score": 2,
@@ -327,10 +333,16 @@
         "reason": "GPT 预测乌拉圭 1:1 西班牙。乌拉圭急需结果但进攻不稳，西班牙也可能控制消耗；这场的心理底色是双方都不能输，平局最像末轮算账局。"
       },
       "actual_score": {
-        "home_score": null,
-        "away_score": null
+        "home_score": 0,
+        "away_score": 1
       },
-      "review": "赛前预测。"
+      "review": "乌拉圭 0:1 西班牙。Ray 预测 1:2，GPT 预测 1:1。Ray 猜对胜平负，得到 3 分。 本场得分：Ray +3，GPT +0。",
+      "espn_id": "760479",
+      "manual_points": {
+        "ray": 3,
+        "gpt": 0,
+        "explanation": "Ray 猜对胜平负，得到 3 分。"
+      }
     },
     {
       "id": "nzl-bel-20260627",
@@ -757,8 +769,8 @@
       "date": "2026-06-27",
       "title": "登贝莱帽子戏法，塞内加尔五球续命；今日暂时 0:0",
       "summary": "I 组先结束两场：法国 4:1 挪威，塞内加尔 5:0 伊拉克。Ray 与 GPT 两场都猜中胜负方向但无人命中比分，今日暂时 0:0；H/G 组四场待赛。",
-      "ray_points": 0,
-      "gpt_points": 0,
+      "ray_points": 3,
+      "gpt_points": 3,
       "matches": [
         {
           "id": "nor-fra-20260627",
@@ -829,7 +841,7 @@
           "home": "佛得角",
           "away": "沙特",
           "group": "H",
-          "status": "未开始",
+          "status": "已结束",
           "ray_prediction": {
             "home_score": 1,
             "away_score": 0,
@@ -841,10 +853,16 @@
             "reason": "GPT 预测佛得角 1:1 沙特。佛得角已经证明能扛强队，但沙特也还有出线动机；这场更像一场紧张的心理战，佛得角未必能把领先守到底。"
           },
           "actual_score": {
-            "home_score": null,
-            "away_score": null
+            "home_score": 0,
+            "away_score": 0
           },
-          "review": "赛前预测。"
+          "review": "佛得角 0:0 沙特。Ray 预测 1:0，GPT 预测 1:1。GPT 猜对胜平负，得到 3 分。 本场得分：Ray +0，GPT +3。",
+          "espn_id": "760478",
+          "manual_points": {
+            "ray": 0,
+            "gpt": 3,
+            "explanation": "GPT 猜对胜平负，得到 3 分。"
+          }
         },
         {
           "id": "uru-esp-20260627",
@@ -852,7 +870,7 @@
           "home": "乌拉圭",
           "away": "西班牙",
           "group": "H",
-          "status": "未开始",
+          "status": "已结束",
           "ray_prediction": {
             "home_score": 1,
             "away_score": 2,
@@ -864,10 +882,16 @@
             "reason": "GPT 预测乌拉圭 1:1 西班牙。乌拉圭急需结果但进攻不稳，西班牙也可能控制消耗；这场的心理底色是双方都不能输，平局最像末轮算账局。"
           },
           "actual_score": {
-            "home_score": null,
-            "away_score": null
+            "home_score": 0,
+            "away_score": 1
           },
-          "review": "赛前预测。"
+          "review": "乌拉圭 0:1 西班牙。Ray 预测 1:2，GPT 预测 1:1。Ray 猜对胜平负，得到 3 分。 本场得分：Ray +3，GPT +0。",
+          "espn_id": "760479",
+          "manual_points": {
+            "ray": 3,
+            "gpt": 0,
+            "explanation": "Ray 猜对胜平负，得到 3 分。"
+          }
         },
         {
           "id": "nzl-bel-20260627",
@@ -930,6 +954,14 @@
     {
       "time": "06-27 14:30",
       "text": "H/G 组四场继续待赛：佛得角—沙特、乌拉圭—西班牙、新西兰—比利时、伊朗—埃及。"
+    },
+    {
+      "time": "06-27 10:11",
+      "text": "赛果更新：佛得角 0:0 沙特，Ray +0，GPT +3。"
+    },
+    {
+      "time": "06-27 10:11",
+      "text": "赛果更新：乌拉圭 0:1 西班牙，Ray +3，GPT +0。"
     }
   ],
   "archive": [
