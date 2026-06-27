@@ -31,14 +31,15 @@ jobs:
       - name: Snapshot before update
         run: |
           cp data.json data.before.json
-
       - name: Dry run safe updater
         env:
-          DATA_PATH: data.json
+          DATA_PATH: /tmp/data.dry.json
           UPDATE_LOG_LIMIT: 10
         run: |
-          node scripts/update_scores.js --dry-run > /tmp/data.after.json
-          node -e 'JSON.parse(require("fs").readFileSync("/tmp/data.after.json", "utf8")); console.log("dry-run JSON OK")'
+          cp data.json /tmp/data.dry.json
+          node scripts/update_scores.js
+          node -e 'JSON.parse(require("fs").readFileSync("/tmp/data.dry.json", "utf8")); console.log("dry-run JSON OK")'
+
 
       - name: Apply safe updater
         env:
