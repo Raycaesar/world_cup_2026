@@ -7,17 +7,17 @@
     "tagline": "World Cup Prediction Derby"
   },
   "meta": {
-    "updated_at": "2026-06-27 10:11 BJT",
+    "updated_at": "2026-06-27 13:01 BJT",
     "active_day": "2026-06-27",
     "timezone": "Asia/Beijing",
-    "version": "auto-score-safe-202606270211"
+    "version": "auto-score-safe-202606270501"
   },
   "score_summary": {
     "ray_total": 36,
     "gpt_total": 33,
     "leader_comment": "Ray 暂时 36:33 领先 GPT 5.5。"
   },
-  "headline": "总分 Ray 36:33 GPT 5.5：乌拉圭 0:1 西班牙 已更新。",
+  "headline": "总分 Ray 36:33 GPT 5.5：新西兰 1:5 比利时 已更新。",
   "brief": "今日已结束比赛已录入，累计总分按历史日积分汇总；详细复盘可在赛后继续手动润色。",
   "scoring_note": {
     "rule": "只有一方猜中胜平负而另一方没猜中时，胜平负方向给 3 分；双方都猜中胜平负时，只看是否有人精确命中比分；双方都猜错时通常不得分。若某一轮赛前明确启用接近度规则，则按当轮记录给更接近一方 1 分。",
@@ -350,7 +350,7 @@
       "home": "新西兰",
       "away": "比利时",
       "group": "G",
-      "status": "未开始",
+      "status": "已结束",
       "ray_prediction": {
         "home_score": 1,
         "away_score": 3,
@@ -362,10 +362,16 @@
         "reason": "GPT 预测新西兰 0:2 比利时。比利时前两轮进攻很沉闷，但这场非赢不可的压力会逼他们提速；新西兰必须攻出来，反而会留下身后空间。"
       },
       "actual_score": {
-        "home_score": null,
-        "away_score": null
+        "home_score": 1,
+        "away_score": 5
       },
-      "review": "赛前预测。"
+      "review": "新西兰 1:5 比利时。Ray 预测 1:3，GPT 预测 0:2。双方都猜对胜平负，但没有形成比分命中差异，本场不计分。 本场得分：Ray +0，GPT +0。",
+      "espn_id": "760477",
+      "manual_points": {
+        "ray": 0,
+        "gpt": 0,
+        "explanation": "双方都猜对胜平负，但没有形成比分命中差异，本场不计分。"
+      }
     },
     {
       "id": "iri-egy-20260627",
@@ -899,7 +905,7 @@
           "home": "新西兰",
           "away": "比利时",
           "group": "G",
-          "status": "未开始",
+          "status": "已结束",
           "ray_prediction": {
             "home_score": 1,
             "away_score": 3,
@@ -911,10 +917,16 @@
             "reason": "GPT 预测新西兰 0:2 比利时。比利时前两轮进攻很沉闷，但这场非赢不可的压力会逼他们提速；新西兰必须攻出来，反而会留下身后空间。"
           },
           "actual_score": {
-            "home_score": null,
-            "away_score": null
+            "home_score": 1,
+            "away_score": 5
           },
-          "review": "赛前预测。"
+          "review": "新西兰 1:5 比利时。Ray 预测 1:3，GPT 预测 0:2。双方都猜对胜平负，但没有形成比分命中差异，本场不计分。 本场得分：Ray +0，GPT +0。",
+          "espn_id": "760477",
+          "manual_points": {
+            "ray": 0,
+            "gpt": 0,
+            "explanation": "双方都猜对胜平负，但没有形成比分命中差异，本场不计分。"
+          }
         },
         {
           "id": "iri-egy-20260627",
@@ -962,6 +974,10 @@
     {
       "time": "06-27 10:11",
       "text": "赛果更新：乌拉圭 0:1 西班牙，Ray +3，GPT +0。"
+    },
+    {
+      "time": "06-27 13:01",
+      "text": "赛果更新：新西兰 1:5 比利时，Ray +0，GPT +0。"
     }
   ],
   "archive": [
