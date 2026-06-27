@@ -7,18 +7,18 @@
     "tagline": "World Cup Prediction Derby"
   },
   "meta": {
-    "updated_at": "2026-06-28 00:30 BJT",
+    "updated_at": "2026-06-28 07:10 BJT",
     "active_day": "2026-06-28",
     "timezone": "Asia/Beijing",
-    "version": "full-restored-manual-points-locked-20260628"
+    "version": "auto-score-safe-202606272310"
   },
   "score_summary": {
     "ray_total": 40,
-    "gpt_total": 33,
-    "leader_comment": "Ray 以 40:33 领先 GPT 5.5；历史战报逐场计分已冻结，早期未正式对抗的比赛不计分。"
+    "gpt_total": 38,
+    "leader_comment": "Ray 暂时 40:38 领先 GPT 5.5。"
   },
-  "headline": "佛得角三平出线，伊朗读秒越位：Ray 40:33 稳住领先",
-  "brief": "G/H/I 组六场全部结束：法国 4:1 挪威、塞内加尔 5:0 伊拉克，两场双方都判断到强队取胜但无人命中比分；佛得角 0:0 沙特让 GPT 押中平局追回 3 分；西班牙 1:0 淘汰乌拉圭、比利时 5:1 打穿新西兰，最后伊朗 1:1 埃及被读秒越位球挡在胜利之外。Ray 凭西班牙小胜方向与伊朗 1:1 精确命中，本日 7:3 小胜。",
+  "headline": "总分 Ray 40:38 GPT 5.5：克罗地亚 2:1 加纳 已更新。",
+  "brief": "今日已结束比赛已录入，累计总分按历史日积分汇总；详细复盘可在赛后继续手动润色。",
   "scoring_note": {
     "rule": "只有一方猜中胜平负而另一方没猜中时，胜平负方向给 3 分；双方都猜中胜平负时，只看是否有人精确命中比分；双方都猜错时，只有“一方猜平、一方猜胜/负”才触发平局接近度规则，猜平者 +1；未正式对抗、无有效预测或双方同样预测平局的比赛不得分。",
     "audit": [
@@ -230,7 +230,7 @@
       "home": "巴拿马",
       "away": "英格兰",
       "group": "L",
-      "status": "未开始",
+      "status": "已结束",
       "ray_prediction": {
         "home_score": 0,
         "away_score": 3,
@@ -242,10 +242,16 @@
         "reason": "GPT 预测巴拿马 0:2 英格兰。英格兰实力明显占优，但可能轮换和控节奏，不一定把比分打得太开。"
       },
       "actual_score": {
-        "home_score": null,
-        "away_score": null
+        "home_score": 0,
+        "away_score": 2
       },
-      "review": "赛前预测。"
+      "review": "巴拿马 0:2 英格兰。Ray 预测 0:3，GPT 预测 0:2。双方都猜对胜平负，胜平负不拉开差距；GPT 比分完全命中，得到 1 分。 本场得分：Ray +0，GPT +1。",
+      "espn_id": "760485",
+      "manual_points": {
+        "ray": 0,
+        "gpt": 1,
+        "explanation": "双方都猜对胜平负，胜平负不拉开差距；GPT 比分完全命中，得到 1 分。"
+      }
     },
     {
       "id": "cro-gha-20260628",
@@ -253,7 +259,7 @@
       "home": "克罗地亚",
       "away": "加纳",
       "group": "L",
-      "status": "未开始",
+      "status": "已结束",
       "ray_prediction": {
         "home_score": 1,
         "away_score": 1,
@@ -265,10 +271,16 @@
         "reason": "GPT 预测克罗地亚 2:1 加纳。克罗地亚老将经验和中场控制仍有优势，加纳有速度但可能在末段被拖垮。"
       },
       "actual_score": {
-        "home_score": null,
-        "away_score": null
+        "home_score": 2,
+        "away_score": 1
       },
-      "review": "赛前预测。"
+      "review": "克罗地亚 2:1 加纳。Ray 预测 1:1，GPT 预测 2:1。GPT 猜对胜平负且比分完全命中，得到 4 分。 本场得分：Ray +0，GPT +4。",
+      "espn_id": "760480",
+      "manual_points": {
+        "ray": 0,
+        "gpt": 4,
+        "explanation": "GPT 猜对胜平负且比分完全命中，得到 4 分。"
+      }
     },
     {
       "id": "col-por-20260628",
@@ -2408,7 +2420,7 @@
       "title": "小组赛最后一天：英格兰争头名，阿根廷收官练兵",
       "summary": "L/K/J 组六场收官：英格兰、葡萄牙、哥伦比亚和阿根廷都有排名与淘汰赛路径要算；克罗地亚、加纳、阿尔及利亚、奥地利和刚果（金）则围绕第二名或第三名资格展开最后争夺。",
       "ray_points": 0,
-      "gpt_points": 0,
+      "gpt_points": 5,
       "matches": [
         {
           "id": "pan-eng-20260628",
@@ -2416,7 +2428,7 @@
           "home": "巴拿马",
           "away": "英格兰",
           "group": "L",
-          "status": "未开始",
+          "status": "已结束",
           "ray_prediction": {
             "home_score": 0,
             "away_score": 3,
@@ -2428,10 +2440,16 @@
             "reason": "GPT 预测巴拿马 0:2 英格兰。英格兰实力明显占优，但可能轮换和控节奏，不一定把比分打得太开。"
           },
           "actual_score": {
-            "home_score": null,
-            "away_score": null
+            "home_score": 0,
+            "away_score": 2
           },
-          "review": "赛前预测。"
+          "review": "巴拿马 0:2 英格兰。Ray 预测 0:3，GPT 预测 0:2。双方都猜对胜平负，胜平负不拉开差距；GPT 比分完全命中，得到 1 分。 本场得分：Ray +0，GPT +1。",
+          "espn_id": "760485",
+          "manual_points": {
+            "ray": 0,
+            "gpt": 1,
+            "explanation": "双方都猜对胜平负，胜平负不拉开差距；GPT 比分完全命中，得到 1 分。"
+          }
         },
         {
           "id": "cro-gha-20260628",
@@ -2439,7 +2457,7 @@
           "home": "克罗地亚",
           "away": "加纳",
           "group": "L",
-          "status": "未开始",
+          "status": "已结束",
           "ray_prediction": {
             "home_score": 1,
             "away_score": 1,
@@ -2451,10 +2469,16 @@
             "reason": "GPT 预测克罗地亚 2:1 加纳。克罗地亚老将经验和中场控制仍有优势，加纳有速度但可能在末段被拖垮。"
           },
           "actual_score": {
-            "home_score": null,
-            "away_score": null
+            "home_score": 2,
+            "away_score": 1
           },
-          "review": "赛前预测。"
+          "review": "克罗地亚 2:1 加纳。Ray 预测 1:1，GPT 预测 2:1。GPT 猜对胜平负且比分完全命中，得到 4 分。 本场得分：Ray +0，GPT +4。",
+          "espn_id": "760480",
+          "manual_points": {
+            "ray": 0,
+            "gpt": 4,
+            "explanation": "GPT 猜对胜平负且比分完全命中，得到 4 分。"
+          }
         },
         {
           "id": "col-por-20260628",
@@ -2579,6 +2603,14 @@
     {
       "time": "06-27 14:30",
       "text": "H/G 组四场继续待赛：佛得角—沙特、乌拉圭—西班牙、新西兰—比利时、伊朗—埃及。"
+    },
+    {
+      "time": "06-28 07:10",
+      "text": "赛果更新：巴拿马 0:2 英格兰，Ray +0，GPT +1。"
+    },
+    {
+      "time": "06-28 07:10",
+      "text": "赛果更新：克罗地亚 2:1 加纳，Ray +0，GPT +4。"
     }
   ],
   "archive": [
