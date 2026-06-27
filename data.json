@@ -7,17 +7,17 @@
     "tagline": "World Cup Prediction Derby"
   },
   "meta": {
-    "updated_at": "2026-06-27 13:01 BJT",
+    "updated_at": "2026-06-27 13:11 BJT",
     "active_day": "2026-06-27",
     "timezone": "Asia/Beijing",
-    "version": "auto-score-safe-202606270501"
+    "version": "auto-score-safe-202606270511"
   },
   "score_summary": {
-    "ray_total": 36,
+    "ray_total": 40,
     "gpt_total": 33,
-    "leader_comment": "Ray 暂时 36:33 领先 GPT 5.5。"
+    "leader_comment": "Ray 暂时 40:33 领先 GPT 5.5。"
   },
-  "headline": "总分 Ray 36:33 GPT 5.5：新西兰 1:5 比利时 已更新。",
+  "headline": "总分 Ray 40:33 GPT 5.5：伊朗 1:1 埃及 已更新。",
   "brief": "今日已结束比赛已录入，累计总分按历史日积分汇总；详细复盘可在赛后继续手动润色。",
   "scoring_note": {
     "rule": "只有一方猜中胜平负而另一方没猜中时，胜平负方向给 3 分；双方都猜中胜平负时，只看是否有人精确命中比分；双方都猜错时通常不得分。若某一轮赛前明确启用接近度规则，则按当轮记录给更接近一方 1 分。",
@@ -379,7 +379,7 @@
       "home": "伊朗",
       "away": "埃及",
       "group": "G",
-      "status": "未开始",
+      "status": "已结束",
       "ray_prediction": {
         "home_score": 1,
         "away_score": 1,
@@ -391,10 +391,16 @@
         "reason": "GPT 预测伊朗 0:1 埃及。伊朗韧性强，但埃及 4 分在手也想争更好的淘汰赛位置；萨拉赫和埃及前场一旦有一次空间，可能就足够决定比赛。"
       },
       "actual_score": {
-        "home_score": null,
-        "away_score": null
+        "home_score": 1,
+        "away_score": 1
       },
-      "review": "赛前预测。"
+      "review": "伊朗 1:1 埃及。Ray 预测 1:1，GPT 预测 0:1。Ray 猜对胜平负且比分完全命中，得到 4 分。 本场得分：Ray +4，GPT +0。",
+      "espn_id": "760476",
+      "manual_points": {
+        "ray": 4,
+        "gpt": 0,
+        "explanation": "Ray 猜对胜平负且比分完全命中，得到 4 分。"
+      }
     }
   ],
   "matchdays": [
@@ -775,7 +781,7 @@
       "date": "2026-06-27",
       "title": "登贝莱帽子戏法，塞内加尔五球续命；今日暂时 0:0",
       "summary": "I 组先结束两场：法国 4:1 挪威，塞内加尔 5:0 伊拉克。Ray 与 GPT 两场都猜中胜负方向但无人命中比分，今日暂时 0:0；H/G 组四场待赛。",
-      "ray_points": 3,
+      "ray_points": 7,
       "gpt_points": 3,
       "matches": [
         {
@@ -934,7 +940,7 @@
           "home": "伊朗",
           "away": "埃及",
           "group": "G",
-          "status": "未开始",
+          "status": "已结束",
           "ray_prediction": {
             "home_score": 1,
             "away_score": 1,
@@ -946,10 +952,16 @@
             "reason": "GPT 预测伊朗 0:1 埃及。伊朗韧性强，但埃及 4 分在手也想争更好的淘汰赛位置；萨拉赫和埃及前场一旦有一次空间，可能就足够决定比赛。"
           },
           "actual_score": {
-            "home_score": null,
-            "away_score": null
+            "home_score": 1,
+            "away_score": 1
           },
-          "review": "赛前预测。"
+          "review": "伊朗 1:1 埃及。Ray 预测 1:1，GPT 预测 0:1。Ray 猜对胜平负且比分完全命中，得到 4 分。 本场得分：Ray +4，GPT +0。",
+          "espn_id": "760476",
+          "manual_points": {
+            "ray": 4,
+            "gpt": 0,
+            "explanation": "Ray 猜对胜平负且比分完全命中，得到 4 分。"
+          }
         }
       ]
     }
@@ -978,6 +990,10 @@
     {
       "time": "06-27 13:01",
       "text": "赛果更新：新西兰 1:5 比利时，Ray +0，GPT +0。"
+    },
+    {
+      "time": "06-27 13:11",
+      "text": "赛果更新：伊朗 1:1 埃及，Ray +4，GPT +0。"
     }
   ],
   "archive": [
