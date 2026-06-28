@@ -732,3 +732,62 @@ code { border: 1px solid var(--line); border-radius: 8px; padding: 2px 6px; colo
   .scorer-row { grid-template-columns: 40px 1fr; }
   .scorer-goals { grid-column: 1 / -1; width: 100%; }
 }
+
+
+/* Knockout layout v3: requested section order and paired columns */
+.knockout-layout {
+  align-items: stretch;
+}
+.equal-panel {
+  height: 100%;
+}
+.awards-rules-panel,
+.scorers-panel {
+  display: flex;
+  flex-direction: column;
+}
+.panel-divider {
+  height: 1px;
+  margin: 18px 0;
+  background: linear-gradient(90deg, transparent, rgba(248,201,71,.42), transparent);
+}
+.compact-head {
+  margin-top: 2px;
+}
+.compact-award-grid {
+  grid-template-columns: 1fr;
+}
+.compact-award-grid .award-card {
+  padding: 14px;
+}
+.compact-award-grid .award-name {
+  margin-bottom: 8px;
+  font-size: 15px;
+}
+.compact-award-grid .duel {
+  gap: 10px;
+}
+.compact-award-grid .duel strong {
+  font-size: 18px;
+}
+.compact-rules {
+  margin-bottom: 0;
+}
+.compact-rules li {
+  margin: 6px 0;
+}
+.scorers-panel .scorer-list {
+  flex: 1 1 auto;
+}
+.scorer-source {
+  margin: 14px 0 0;
+}
+.scoreboard-final {
+  margin-bottom: 14px;
+}
+@media (max-width: 960px) {
+  .compact-award-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+}
+@media (max-width: 640px) {
+  .compact-award-grid { grid-template-columns: 1fr; }
+}

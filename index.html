@@ -83,37 +83,10 @@
   </header>
 
   <main class="layout knockout-layout">
-    <section class="panel headline-panel wide">
+    <section class="panel headline-panel wide" id="briefing">
       <div class="section-kicker">Knockout brief</div>
       <h2 id="headline">淘汰赛准备中。</h2>
       <p id="brief">页面会读取 data.json 中的淘汰赛预测。</p>
-    </section>
-
-    <section class="panel" id="scoreboard">
-      <div class="section-head">
-        <div>
-          <div class="section-kicker">Scoreboard</div>
-          <h2>总积分</h2>
-        </div>
-        <span class="badge hot">Ray leads</span>
-      </div>
-      <div class="leaderboard">
-        <div class="leader-row ray-row"><span>Ray</span><strong id="rayBoard">0</strong></div>
-        <div class="leader-row gpt-row"><span>GPT 5.5</span><strong id="gptBoard">0</strong></div>
-      </div>
-      <p class="microcopy" id="leaderComment">小组赛归档后进入淘汰赛。</p>
-    </section>
-
-    <section class="panel" id="scorers">
-      <div class="section-head">
-        <div>
-          <div class="section-kicker">Golden boot watch</div>
-          <h2>射手榜</h2>
-        </div>
-        <span class="badge">Top scorers</span>
-      </div>
-      <div class="scorer-list" id="scorerList"></div>
-      <p class="microcopy" id="scorerSource">小组赛结束后射手榜。</p>
     </section>
 
     <section class="panel wide" id="next">
@@ -127,17 +100,6 @@
       <div class="knockout-match-list" id="matchList"></div>
     </section>
 
-    <section class="panel wide" id="reviews">
-      <div class="section-head">
-        <div>
-          <div class="section-kicker">Post-match review</div>
-          <h2>已结束比赛复盘</h2>
-        </div>
-        <span class="badge">Knockout only</span>
-      </div>
-      <div class="review-list knockout-review-list" id="knockoutReviewList"></div>
-    </section>
-
     <section class="panel wide" id="bracket">
       <div class="section-head">
         <div>
@@ -149,7 +111,18 @@
       <div class="bracket-grid" id="bracketGrid"></div>
     </section>
 
-    <section class="panel wide" id="awards">
+    <section class="panel wide" id="reviews">
+      <div class="section-head">
+        <div>
+          <div class="section-kicker">Post-match review</div>
+          <h2>已结束比赛复盘</h2>
+        </div>
+        <span class="badge">Knockout only</span>
+      </div>
+      <div class="review-list knockout-review-list" id="knockoutReviewList"></div>
+    </section>
+
+    <section class="panel equal-panel awards-rules-panel" id="awards">
       <div class="section-head">
         <div>
           <div class="section-kicker">Pre-tournament awards</div>
@@ -157,20 +130,47 @@
         </div>
         <span class="badge">Long bets</span>
       </div>
-      <div class="award-grid" id="awardGrid"></div>
-    </section>
+      <div class="award-grid compact-award-grid" id="awardGrid"></div>
 
-    <section class="panel wide" id="rules">
-      <div class="section-head">
+      <div class="panel-divider" aria-hidden="true"></div>
+
+      <div class="section-head compact-head" id="rules">
         <div>
           <div class="section-kicker">Rules</div>
           <h2>淘汰赛计分规则</h2>
         </div>
       </div>
-      <ol class="rules-list" id="rulesList"></ol>
+      <ol class="rules-list compact-rules" id="rulesList"></ol>
     </section>
 
-    <section class="panel" id="updates">
+    <section class="panel equal-panel scorers-panel" id="scorers">
+      <div class="section-head">
+        <div>
+          <div class="section-kicker">Golden boot watch</div>
+          <h2>射手榜</h2>
+        </div>
+        <span class="badge">Top scorers</span>
+      </div>
+      <div class="scorer-list" id="scorerList"></div>
+      <p class="microcopy scorer-source" id="scorerSource">小组赛结束后射手榜。</p>
+    </section>
+
+    <section class="panel equal-panel" id="scoreboard">
+      <div class="section-head">
+        <div>
+          <div class="section-kicker">Scoreboard</div>
+          <h2>总积分</h2>
+        </div>
+        <span class="badge hot">Ray leads</span>
+      </div>
+      <div class="leaderboard scoreboard-final">
+        <div class="leader-row ray-row"><span>Ray</span><strong id="rayBoard">0</strong></div>
+        <div class="leader-row gpt-row"><span>GPT 5.5</span><strong id="gptBoard">0</strong></div>
+      </div>
+      <p class="microcopy" id="leaderComment">小组赛归档后进入淘汰赛。</p>
+    </section>
+
+    <section class="panel equal-panel" id="updates">
       <div class="section-head">
         <div>
           <div class="section-kicker">Update log</div>
