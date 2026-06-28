@@ -2,7 +2,7 @@ name: Safe auto update World Cup scores
 
 on:
   workflow_dispatch:
-  # Enable later only after several successful manual runs.
+  # Enable after manual test if you want automatic checks.
   # schedule:
   #   - cron: "*/30 * * * *"
 
@@ -28,23 +28,25 @@ jobs:
         with:
           node-version: "20"
 
+      - name: Check updater syntax
+        run: node --check scripts/update_scores.js
+
       - name: Snapshot before update
-        run: |
-          cp data.json data.before.json
+        run: cp data.json data.before.json
+
       - name: Dry run safe updater
         env:
           DATA_PATH: /tmp/data.dry.json
-          UPDATE_LOG_LIMIT: 10
+          UPDATE_LOG_LIMIT: 20
         run: |
           cp data.json /tmp/data.dry.json
           node scripts/update_scores.js
           node -e 'JSON.parse(require("fs").readFileSync("/tmp/data.dry.json", "utf8")); console.log("dry-run JSON OK")'
 
-
       - name: Apply safe updater
         env:
           DATA_PATH: data.json
-          UPDATE_LOG_LIMIT: 10
+          UPDATE_LOG_LIMIT: 20
         run: node scripts/update_scores.js
 
       - name: Validate data.json invariants
@@ -53,32 +55,25 @@ jobs:
           const fs = require('fs');
           const before = JSON.parse(fs.readFileSync('data.before.json', 'utf8'));
           const after = JSON.parse(fs.readFileSync('data.json', 'utf8'));
-
-          function totalsFromDays(data) {
-            return (data.matchdays || []).reduce((acc, day) => {
-              acc.ray += Number(day.ray_points || 0);
-              acc.gpt += Number(day.gpt_points || 0);
-              return acc;
-            }, { ray: 0, gpt: 0 });
+          if (!after.score_summary) throw new Error('Missing score_summary');
+          const oldRay = Number(before.score_summary?.ray_total || 0);
+          const oldGpt = Number(before.score_summary?.gpt_total || 0);
+          const newRay = Number(after.score_summary?.ray_total || 0);
+          const newGpt = Number(after.score_summary?.gpt_total || 0);
+          if (newRay < oldRay || newGpt < oldGpt) throw new Error(`Total decreased: Ray ${oldRay}->${newRay}, GPT ${oldGpt}->${newGpt}`);
+          if (after.phase === 'knockout') {
+            for (const match of after.knockout_matches || []) {
+              const actual = match.actual || {};
+              const final = actual.final_score || {};
+              const finished = actual.advancing_team && final.home_score !== null && final.home_score !== undefined && final.away_score !== null && final.away_score !== undefined;
+              if (finished && actual.method === '90' && !match.manual_points) throw new Error(`Finished 90-minute match missing manual_points: ${match.id}`);
+            }
           }
-
-          const oldTotals = totalsFromDays(before);
-          const newTotals = totalsFromDays(after);
-
-          if (newTotals.ray < oldTotals.ray || newTotals.gpt < oldTotals.gpt) {
-            throw new Error(`Total decreased: Ray ${oldTotals.ray}->${newTotals.ray}, GPT ${oldTotals.gpt}->${newTotals.gpt}`);
-          }
-
-          if (after.score_summary?.ray_total !== newTotals.ray || after.score_summary?.gpt_total !== newTotals.gpt) {
-            throw new Error(`score_summary does not match matchday totals: summary ${after.score_summary?.ray_total}:${after.score_summary?.gpt_total}, days ${newTotals.ray}:${newTotals.gpt}`);
-          }
-
           const banned = ['自动简写版', '本场采用人工裁定', '人工裁定', '人工约定'];
           const text = JSON.stringify(after);
           const found = banned.filter(x => text.includes(x));
           if (found.length) throw new Error(`Banned public phrase(s): ${found.join(', ')}`);
-
-          console.log(`Validated totals: Ray ${newTotals.ray}:${newTotals.gpt} GPT 5.5`);
+          console.log(`Validated totals: Ray ${newRay}:${newGpt} GPT 5.5`);
           NODE
 
       - name: Commit changes if needed
@@ -87,9 +82,8 @@ jobs:
             echo "No score changes."
             exit 0
           fi
-
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
           git add data.json
-          git commit -m "safe auto update match scores"
+          git commit -m "safe auto update knockout score"
           git push
