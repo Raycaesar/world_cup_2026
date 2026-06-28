@@ -7,17 +7,17 @@
     "tagline": "World Cup Prediction Derby"
   },
   "meta": {
-    "updated_at": "2026-06-28 07:10 BJT",
+    "updated_at": "2026-06-28 09:30 BJT",
     "active_day": "2026-06-28",
     "timezone": "Asia/Beijing",
-    "version": "auto-score-safe-202606272310"
+    "version": "auto-score-safe-202606280130"
   },
   "score_summary": {
     "ray_total": 40,
     "gpt_total": 38,
     "leader_comment": "Ray 暂时 40:38 领先 GPT 5.5。"
   },
-  "headline": "总分 Ray 40:38 GPT 5.5：克罗地亚 2:1 加纳 已更新。",
+  "headline": "总分 Ray 40:38 GPT 5.5：哥伦比亚 0:0 葡萄牙 已更新。",
   "brief": "今日已结束比赛已录入，累计总分按历史日积分汇总；详细复盘可在赛后继续手动润色。",
   "scoring_note": {
     "rule": "只有一方猜中胜平负而另一方没猜中时，胜平负方向给 3 分；双方都猜中胜平负时，只看是否有人精确命中比分；双方都猜错时，只有“一方猜平、一方猜胜/负”才触发平局接近度规则，猜平者 +1；未正式对抗、无有效预测或双方同样预测平局的比赛不得分。",
@@ -288,7 +288,7 @@
       "home": "哥伦比亚",
       "away": "葡萄牙",
       "group": "K",
-      "status": "未开始",
+      "status": "已结束",
       "ray_prediction": {
         "home_score": 2,
         "away_score": 2,
@@ -300,10 +300,16 @@
         "reason": "GPT 预测哥伦比亚 1:1 葡萄牙。我也看平局，但认为末轮更像互相试探和保护主力，比分可能比 2:2 更低。"
       },
       "actual_score": {
-        "home_score": null,
-        "away_score": null
+        "home_score": 0,
+        "away_score": 0
       },
-      "review": "赛前预测。"
+      "review": "哥伦比亚 0:0 葡萄牙。Ray 预测 2:2，GPT 预测 1:1。双方都猜对胜平负，但没有形成比分命中差异，本场不计分。 本场得分：Ray +0，GPT +0。",
+      "espn_id": "760481",
+      "manual_points": {
+        "ray": 0,
+        "gpt": 0,
+        "explanation": "双方都猜对胜平负，但没有形成比分命中差异，本场不计分。"
+      }
     },
     {
       "id": "cod-uzb-20260628",
@@ -2486,7 +2492,7 @@
           "home": "哥伦比亚",
           "away": "葡萄牙",
           "group": "K",
-          "status": "未开始",
+          "status": "已结束",
           "ray_prediction": {
             "home_score": 2,
             "away_score": 2,
@@ -2498,10 +2504,16 @@
             "reason": "GPT 预测哥伦比亚 1:1 葡萄牙。我也看平局，但认为末轮更像互相试探和保护主力，比分可能比 2:2 更低。"
           },
           "actual_score": {
-            "home_score": null,
-            "away_score": null
+            "home_score": 0,
+            "away_score": 0
           },
-          "review": "赛前预测。"
+          "review": "哥伦比亚 0:0 葡萄牙。Ray 预测 2:2，GPT 预测 1:1。双方都猜对胜平负，但没有形成比分命中差异，本场不计分。 本场得分：Ray +0，GPT +0。",
+          "espn_id": "760481",
+          "manual_points": {
+            "ray": 0,
+            "gpt": 0,
+            "explanation": "双方都猜对胜平负，但没有形成比分命中差异，本场不计分。"
+          }
         },
         {
           "id": "cod-uzb-20260628",
@@ -2611,6 +2623,10 @@
     {
       "time": "06-28 07:10",
       "text": "赛果更新：克罗地亚 2:1 加纳，Ray +0，GPT +4。"
+    },
+    {
+      "time": "06-28 09:30",
+      "text": "赛果更新：哥伦比亚 0:0 葡萄牙，Ray +0，GPT +0。"
     }
   ],
   "archive": [
