@@ -8,7 +8,7 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Black+Ops+One&family=Bebas+Neue&family=Rajdhani:wght@500;600;700&family=Noto+Sans+SC:wght@400;500;700;900&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="style.css?v=knockout-20260628-v2" />
+  <link rel="stylesheet" href="style.css?v=knockout-20260628-v4" />
 </head>
 <body>
   <div class="stadium-light light-left" aria-hidden="true"></div>
@@ -241,13 +241,35 @@
       if (match.manual_points) card.appendChild(create("p", "points-line", `本场得分：Ray +${match.manual_points.ray || 0}，GPT +${match.manual_points.gpt || 0}`));
       return card;
     }
+    function tickerItemsFromMatches(data) {
+      const seen = new Set();
+      const items = [];
+      const add = (source) => {
+        if (!source || !source.home || !source.away) return;
+        const actual = source.actual || {};
+        if (actual.advancing_team) return;
+        const key = `${source.home}__${source.away}`;
+        if (seen.has(key)) return;
+        seen.add(key);
+        const isLive = /进行|live/i.test(String(source.status || ""));
+        items.push({
+          type: isLive ? "live" : "next",
+          label: isLive ? "LIVE" : "NEXT",
+          text: `${source.home} vs ${source.away}`,
+          detail: `${source.kickoff_local || "时间待定"} · ${source.round || source.status || "淘汰赛"}`
+        });
+      };
+      (data.knockout_matches || []).forEach(add);
+      (data.bracket || []).forEach(add);
+      return items.slice(0, 4);
+    }
     function renderLiveTicker(data) {
       const box = document.getElementById("liveTicker");
       if (!box) return;
       box.innerHTML = "";
-      const items = data.live_ticker || [];
+      const items = tickerItemsFromMatches(data);
       if (!items.length) {
-        const item = create("span", "live-ticker-item muted", "暂无实时信息");
+        const item = create("span", "live-ticker-item muted", "暂无正在进行或即将开始的淘汰赛");
         box.appendChild(item);
         return;
       }
