@@ -237,6 +237,10 @@
     {
       "time": "2026-06-28 19:00 BJT",
       "text": "调整淘汰赛主页布局：下一场、32强对阵、淘汰赛复盘置顶；赛前大奖与规则、射手榜、总积分与更新记录改为两组双栏。"
+    },
+    {
+      "time": "06-28 18:45",
+      "text": "页面调整：LIVE STICKER 改为只显示正在进行和即将开始的比赛；射手榜修正梅西 6 球。"
     }
   ],
   "live_ticker": [
@@ -244,19 +248,7 @@
       "type": "next",
       "label": "NEXT",
       "text": "南非 vs 加拿大",
-      "detail": "06-29 03:00 BJT · 32强首战"
-    },
-    {
-      "type": "live",
-      "label": "LIVE",
-      "text": "淘汰赛页面实时刷新",
-      "detail": "赛果写入后自动进入复盘区"
-    },
-    {
-      "type": "final",
-      "label": "TOTAL",
-      "text": "Ray 49 : 44 GPT 5.5",
-      "detail": "淘汰赛起点"
+      "detail": "06-29 03:00 BJT · 32强"
     }
   ],
   "top_scorers": [
@@ -264,9 +256,10 @@
       "rank": 1,
       "player": "Lionel Messi",
       "team": "阿根廷",
-      "goals": 5,
+      "goals": 6,
       "assists": 0,
-      "minutes": 188
+      "minutes": 218,
+      "note": "对约旦替补登场任意球破门后升至 6 球。"
     },
     {
       "rank": 2,
@@ -325,7 +318,7 @@
       "minutes": 275
     }
   ],
-  "top_scorers_source": "射手榜据 SB Nation 2026-06-28 更新：金靴排序先比进球，再比助攻与出场时间。",
+  "top_scorers_source": "射手榜随 data.json 自动刷新；当前已按梅西对约旦进球更新至 6 球。",
   "tournament_picks": [
     {
       "name": "冠军",
