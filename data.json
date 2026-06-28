@@ -7,10 +7,10 @@
     "tagline": "World Cup Knockout Prediction Derby"
   },
   "meta": {
-    "updated_at": "2026-06-28 19:35 BJT",
+    "updated_at": "2026-06-29 05:20 BJT",
     "active_day": "2026-06-29",
     "timezone": "Asia/Beijing",
-    "version": "knockout-home-ui-v2-20260628"
+    "version": "knockout-auto-202606282120"
   },
   "phase": "knockout",
   "archive": {
@@ -18,12 +18,12 @@
     "href": "archive.html"
   },
   "score_summary": {
-    "ray_total": 49,
-    "gpt_total": 44,
-    "leader_comment": "小组赛比赛计分 46:38；32强名单结算后，Ray 以 49:44 领先进入淘汰赛。"
+    "ray_total": 50,
+    "gpt_total": 45,
+    "leader_comment": "Ray 以 50:45 领先 GPT 5.5。"
   },
-  "headline": "淘汰赛开局：加拿大迎战南非，Ray 49:44 带着五分优势上路",
-  "brief": "小组赛与 32 强名单结算已经存档。淘汰赛采用新规则：先看晋级队；双方都猜中晋级队时，再比较 90 分钟、加时或点球路径，以及 90 分钟比分。第一场是南非 vs 加拿大。",
+  "headline": "淘汰赛更新：南非 0:1 加拿大",
+  "brief": "最新淘汰赛已结算：南非 0:1 加拿大，Ray +1，GPT +1。",
   "knockout_rules": [
     "只有一方猜中晋级队时，猜中者得 3 分；猜错晋级队者不得获得路径分或比分分。",
     "双方都猜中晋级队时，不重复给胜负分，改看晋级方式：90 分钟、加时、点球。",
@@ -36,24 +36,24 @@
   "knockout_matches": [
     {
       "id": "rsa-can-20260629",
-      "espn_id": "53452545",
+      "espn_id": "760486",
       "round": "32强",
       "kickoff_local": "06-29 03:00 BJT",
       "home": "南非",
       "away": "加拿大",
       "venue": "洛杉矶 SoFi Stadium",
-      "status": "未开始",
+      "status": "已结束",
       "actual": {
-        "method": null,
+        "method": "90",
         "regulation_score": {
-          "home_score": null,
-          "away_score": null
+          "home_score": 0,
+          "away_score": 1
         },
         "final_score": {
-          "home_score": null,
-          "away_score": null
+          "home_score": 0,
+          "away_score": 1
         },
-        "advancing_team": null
+        "advancing_team": "加拿大"
       },
       "ray_prediction": {
         "advancing_team": "加拿大",
@@ -75,8 +75,12 @@
         "label": "加拿大 2:1 南非，90 分钟晋级",
         "reason": "GPT 也看好加拿大晋级，但南非淘汰赛首秀士气很高，且从小组赛后两场看防守韧性和转换质量都在提升，更像会咬住比分。"
       },
-      "manual_points": null,
-      "review": "赛前预测。"
+      "manual_points": {
+        "ray": 1,
+        "gpt": 1,
+        "explanation": "双方都猜中晋级队；按晋级方式与90分钟比分计分：Ray +1，GPT +1。"
+      },
+      "review": "南非 0:1 加拿大，加拿大通过90分钟晋级。双方都猜中晋级队；按晋级方式与90分钟比分计分：Ray +1，GPT +1。"
     }
   ],
   "bracket": [
@@ -241,6 +245,10 @@
     {
       "time": "06-28 18:45",
       "text": "页面调整：LIVE STICKER 改为只显示正在进行和即将开始的比赛；射手榜修正梅西 6 球。"
+    },
+    {
+      "time": "06-29 05:20",
+      "text": "自动更新：南非 0:1 加拿大，Ray +1，GPT +1。"
     }
   ],
   "live_ticker": [
