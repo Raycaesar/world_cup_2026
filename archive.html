@@ -1,0 +1,611 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Ray大战GPT 5.5｜小组赛归档</title>
+  <meta name="description" content="Ray 与 GPT 5.5 的世界杯小组赛竞猜归档。" />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Black+Ops+One&family=Bebas+Neue&family=Rajdhani:wght@500;600;700&family=Noto+Sans+SC:wght@400;500;700;900&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css?v=beijing-fix-20260615-0030" />
+</head>
+<body>
+  <div class="stadium-light light-left" aria-hidden="true"></div>
+  <div class="stadium-light light-right" aria-hidden="true"></div>
+  <div class="pitch-overlay" aria-hidden="true"></div>
+
+  <header class="hero" id="top">
+    <nav class="topbar">
+      <a class="brand" href="#top" aria-label="返回顶部">
+        <span class="brand-mark">⚽</span>
+        <span class="brand-copy">Ray <em>vs</em> GPT 5.5</span>
+      </a>
+      <div class="topbar-actions">
+        <a href="index.html" class="nav-link">淘汰赛主页</a>
+        <a href="#calendar" class="nav-link">赛程</a>
+        <a href="#today" class="nav-link">今日</a>
+        <a href="#rules" class="nav-link">规则</a>
+        <span class="live-pill"><span class="pulse"></span><span id="liveStatus">LIVE</span></span>
+      </div>
+    </nav>
+
+    <section class="hero-grid">
+      <div class="hero-copy">
+        <div class="hero-emblems" aria-label="世界杯标志区">
+          <div class="trophy-mark" title="大力神杯">
+            <span class="trophy-cup">🏆</span>
+            <span class="trophy-text">FIFA WORLD CUP</span>
+          </div>
+          <div class="host-logo" title="美加墨世界杯">
+            <span class="wc26">26</span>
+            <span class="host-text">CAN · MEX · USA</span>
+          </div>
+        </div>
+        <p class="eyebrow" id="tagline">World Cup Prediction Room</p>
+        <h1 id="pageTitle">Ray大战GPT 5.5</h1>
+        <p class="subtitle" id="pageSubtitle">在懂球帝的领域，人类是否还能捍卫最后的尊严。</p>
+        <div class="hero-actions">
+          <a href="#calendar" class="button primary">查看日程复盘</a>
+          <a href="#today" class="button ghost">今日预测</a>
+        </div>
+      </div>
+
+      <aside class="score-tower" aria-label="总积分">
+        <div class="score-card ray">
+          <span class="label">Ray</span>
+          <strong id="rayTotal">0</strong>
+          <small>pts</small>
+        </div>
+        <div class="versus">VS</div>
+        <div class="score-card gpt">
+          <span class="label">GPT 5.5</span>
+          <strong id="gptTotal">0</strong>
+          <small>pts</small>
+        </div>
+      </aside>
+    </section>
+
+    <div class="meta-strip">
+      <div><span class="meta-label">当前比赛日</span><strong id="activeDay">—</strong></div>
+      <div><span class="meta-label">最后更新</span><strong id="updatedAt">—</strong></div>
+      <div><span class="meta-label">自动刷新</span><strong id="refreshInfo">—</strong></div>
+    </div>
+
+    <section class="live-ticker" aria-label="实时比分条">
+      <div class="live-ticker-inner">
+        <span class="live-ticker-label"><span class="pulse"></span> LIVE SCORES</span>
+        <div class="live-ticker-track" id="liveTickerTrack">正在读取实时比分……</div>
+      </div>
+    </section>
+
+  </header>
+
+  <main class="layout">
+    <section class="panel headline-panel">
+      <div class="section-kicker">Live brief</div>
+      <h2 id="headline">等待今日预测。</h2>
+      <p id="brief">把预测写入 data.json 后，页面会自动渲染。</p>
+    </section>
+
+    <section class="panel wide calendar-panel" id="calendar">
+      <div class="section-head">
+        <div>
+          <div class="section-kicker">Match calendar</div>
+          <h2>可点击日程与每日复盘</h2>
+        </div>
+        <span class="badge">点击日期切换</span>
+      </div>
+      <div class="day-tabs" id="dayTabs"></div>
+      <div class="day-detail" id="dayDetail"></div>
+    </section>
+
+    <section class="panel" id="picks">
+      <div class="section-head">
+        <div>
+          <div class="section-kicker">Tournament picks</div>
+          <h2>赛前大奖预测</h2>
+        </div>
+        <span class="badge">长期榜单</span>
+      </div>
+      <div class="award-grid" id="awardGrid"></div>
+    </section>
+
+    <section class="panel" id="scoreboard">
+      <div class="section-head">
+        <div>
+          <div class="section-kicker">Scoreboard</div>
+          <h2>积分榜</h2>
+        </div>
+        <span class="badge hot">Ray leads</span>
+      </div>
+      <div class="leaderboard">
+        <div class="leader-row ray-row"><span>Ray</span><strong id="rayBoard">0</strong></div>
+        <div class="leader-row gpt-row"><span>GPT 5.5</span><strong id="gptBoard">0</strong></div>
+      </div>
+      <p class="microcopy" id="leaderComment">比赛尚未产生计分。</p>
+    </section>
+
+    <section class="panel wide" id="today">
+      <div class="section-head">
+        <div>
+          <div class="section-kicker">Today room</div>
+          <h2>今日/下一轮重点比赛与竞猜</h2>
+        </div>
+        <span class="badge" id="matchCount">0 matches</span>
+      </div>
+      <div class="match-list" id="matchList"></div>
+    </section>
+
+    <section class="panel wide" id="group-stage">
+      <div class="section-head">
+        <div>
+          <div class="section-kicker">Group stage</div>
+          <h2>小组出线预测（原始押注）</h2>
+        </div>
+        <span class="badge">不随赛果改口</span>
+      </div>
+      <div class="group-grid" id="groupGrid"></div>
+    </section>
+
+    <section class="panel wide" id="review">
+      <div class="section-head">
+        <div>
+          <div class="section-kicker">Post-match review</div>
+          <h2>已结束比赛复盘</h2>
+        </div>
+        <span class="badge">点击展开</span>
+      </div>
+      <div id="reviewList" class="review-list"></div>
+    </section>
+
+    <section class="panel" id="rules">
+      <div class="section-head">
+        <div>
+          <div class="section-kicker">Rules</div>
+          <h2>计分规则</h2>
+        </div>
+      </div>
+      <ol class="rules-list">
+        <li>如果两人的预测完全相同，则该场双方都不得分。</li>
+        <li>一方猜对胜平负、另一方猜错：猜对方得 3 分；若比分也完全命中，则共 4 分。</li>
+        <li>如果双方都猜对胜平负，胜平负本身不计分；只有比分完全命中的一方得 1 分。</li>
+        <li>如果双方都猜错，但有一方更接近，则这一方得 1 分，另一方不得分。</li>
+        <li>小组赛晋级名单：任何晋级球队若一方猜中但另一方未猜中，猜中方得 3 分。</li>
+        <li>亚军、金靴、金童、金球奖猜中方得 5 分；冠军猜中方得 10 分。</li>
+      </ol>
+      
+    </section>
+
+    <section class="panel" id="updates">
+      <div class="section-head">
+        <div>
+          <div class="section-kicker">Update log</div>
+          <h2>更新记录</h2>
+        </div>
+      </div>
+      <div id="updateLog" class="timeline"></div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <p>Ray 大战 GPT 5.5 · 小组赛归档页 · <a href="index.html">返回淘汰赛主页</a>。</p>
+  </footer>
+
+  <template id="emptyTemplate"><p class="empty">暂无内容。</p></template>
+
+  <script>
+    const FALLBACK_DATA = {
+      site: { title: "Ray大战GPT 5.5", subtitle: "在懂球帝的领域，人类是否还能捍卫最后的尊严。", status: "LIVE", refresh_seconds: 30, tagline: "World Cup Prediction Derby" },
+      meta: { updated_at: "—", active_day: "—", timezone: "Asia/Beijing" },
+      headline: "等待今日预测。",
+      brief: "请检查 data.json 是否存在。",
+      tournament_picks: [],
+      group_qualifiers: [],
+      today_matches: [],
+      matchdays: [],
+      update_log: [],
+      score_summary: { ray_total: 0, gpt_total: 0 }
+    };
+
+    let refreshTimer = null;
+    let currentData = FALLBACK_DATA;
+    let selectedCalendarDate = null;
+    const reviewOpenState = new Map();
+
+    function text(value, fallback = "—") {
+      return value === undefined || value === null || value === "" ? fallback : String(value);
+    }
+
+    function create(tag, className, content) {
+      const el = document.createElement(tag);
+      if (className) el.className = className;
+      if (content !== undefined) el.textContent = content;
+      return el;
+    }
+
+    function pickOutcome(home, away) {
+      if (home === null || away === null || home === undefined || away === undefined) return "pending";
+      if (home > away) return "home";
+      if (home < away) return "away";
+      return "draw";
+    }
+
+    function parsePrediction(pred) {
+      if (!pred) return { home_score: null, away_score: null, reason: "", outcome: "pending" };
+      return {
+        home_score: pred.home_score,
+        away_score: pred.away_score,
+        reason: pred.reason || "",
+        outcome: pickOutcome(pred.home_score, pred.away_score)
+      };
+    }
+
+    function samePrediction(a, b) {
+      if (!a || !b) return false;
+      return a.home_score === b.home_score && a.away_score === b.away_score;
+    }
+
+    function exactScore(pred, actual) {
+      return pred && actual && pred.home_score === actual.home_score && pred.away_score === actual.away_score;
+    }
+
+    function resultCloseness(predOutcome, actualOutcome) {
+      if (predOutcome === actualOutcome) return 2;
+      if (predOutcome === "draw" && actualOutcome !== "draw") return 1;
+      if (predOutcome !== "draw" && actualOutcome === "draw") return 1;
+      return 0;
+    }
+
+    function scoreError(pred, actual) {
+      if (!pred || !actual || pred.home_score === null || pred.away_score === null) return Infinity;
+      return Math.abs(pred.home_score - actual.home_score) + Math.abs(pred.away_score - actual.away_score);
+    }
+
+    function calculateMatchPoints(match) {
+      if (match.manual_points) {
+        return {
+          ray: Number(match.manual_points.ray || 0),
+          gpt: Number(match.manual_points.gpt || 0),
+          explanation: match.manual_points.explanation || "本场使用已冻结计分。"
+        };
+      }
+      return { ray: 0, gpt: 0, explanation: "本场未写入冻结计分，归档页不做前端自动判分。" };
+    }
+
+    function predictionScore(pred) {
+      const p = parsePrediction(pred);
+      return p.home_score === null || p.away_score === null ? "—" : `${p.home_score} : ${p.away_score}`;
+    }
+
+    function renderAwards(data) {
+      const box = document.getElementById("awardGrid");
+      box.innerHTML = "";
+      const picks = data.tournament_picks || [];
+      if (!picks.length) return box.appendChild(create("p", "empty", "暂未填写大奖预测。"));
+      picks.forEach(item => {
+        const card = create("article", "award-card");
+        card.appendChild(create("span", "award-name", item.name));
+        const duel = create("div", "duel");
+        duel.appendChild(create("strong", "ray-pick", text(item.ray)));
+        duel.appendChild(create("span", "vs-mini", "vs"));
+        duel.appendChild(create("strong", "gpt-pick", text(item.gpt)));
+        card.appendChild(duel);
+        if (item.note) card.appendChild(create("p", "card-note", item.note));
+        box.appendChild(card);
+      });
+    }
+
+    function renderGroups(data) {
+      const box = document.getElementById("groupGrid");
+      box.innerHTML = "";
+      const groups = data.group_qualifiers || [];
+      if (!groups.length) return box.appendChild(create("p", "empty", "小组出线预测尚未填写。"));
+      groups.forEach(group => {
+        const card = create("article", "group-card");
+        card.id = `group-${group.group}`;
+        card.appendChild(create("h3", "group-title", `Group ${group.group}`));
+        [["Ray", group.ray, "ray-chip"], ["GPT", group.gpt, "gpt-chip"]].forEach(([name, list, cls]) => {
+          const row = create("div", "group-pick");
+          row.appendChild(create("span", "group-name", name));
+          const chips = create("div", "chips");
+          (list || []).forEach(team => chips.appendChild(create("span", `team-chip ${cls}`, team)));
+          row.appendChild(chips);
+          card.appendChild(row);
+        });
+        if (group.note) card.appendChild(create("p", "card-note", group.note));
+        box.appendChild(card);
+      });
+    }
+
+    function renderMatchCard(match, compact = false) {
+      const points = calculateMatchPoints(match);
+      const actual = match.actual_score || {};
+      const finished = actual.home_score !== null && actual.home_score !== undefined && actual.away_score !== null && actual.away_score !== undefined;
+      const card = create("article", compact ? "match-card compact" : "match-card");
+      const top = create("div", "match-top");
+      top.appendChild(create("span", "time", text(match.kickoff_local)));
+      top.appendChild(create("span", `status ${finished ? "finished" : "pending"}`, finished ? "已结束" : text(match.status, "未开赛")));
+      card.appendChild(top);
+
+      const teams = create("div", "teams");
+      const home = create("div", "team");
+      home.appendChild(create("span", "team-name", text(match.home)));
+      home.appendChild(create("strong", "score", finished ? text(actual.home_score) : "—"));
+      const away = create("div", "team away");
+      away.appendChild(create("strong", "score", finished ? text(actual.away_score) : "—"));
+      away.appendChild(create("span", "team-name", text(match.away)));
+      teams.appendChild(home);
+      teams.appendChild(create("div", "center-dot", "·"));
+      teams.appendChild(away);
+      card.appendChild(teams);
+
+      const predGrid = create("div", "prediction-grid");
+      [["Ray", match.ray_prediction], ["GPT 5.5", match.gpt_prediction]].forEach(([name, pred]) => {
+        const box = create("div", "prediction-card");
+        box.appendChild(create("span", "predictor", name));
+        box.appendChild(create("strong", "pred-score", predictionScore(pred)));
+        box.appendChild(create("p", "", (pred && pred.reason) || "理由待填写。"));
+        predGrid.appendChild(box);
+      });
+      card.appendChild(predGrid);
+
+      if (match.review || finished) {
+        const review = create("div", "inline-review");
+        review.appendChild(create("p", "", match.review || "复盘待填写。"));
+        review.appendChild(create("p", "points-line", `本场得分：Ray +${points.ray}，GPT +${points.gpt}`));
+        review.appendChild(create("p", "microcopy", points.explanation));
+        card.appendChild(review);
+      }
+      return card;
+    }
+
+    function hasFinalScore(match) {
+      const actual = match && match.actual_score ? match.actual_score : {};
+      return actual.home_score !== null && actual.home_score !== undefined && actual.away_score !== null && actual.away_score !== undefined;
+    }
+
+    function rememberReviewState(reviewRoot) {
+      if (!reviewRoot) return;
+      reviewRoot.querySelectorAll("details.review-day[data-date]").forEach(details => {
+        reviewOpenState.set(details.dataset.date, details.open);
+      });
+    }
+
+    function renderMatches(data) {
+      const list = document.getElementById("matchList");
+      const review = document.getElementById("reviewList");
+      rememberReviewState(review);
+      list.innerHTML = "";
+      review.innerHTML = "";
+      const matches = data.today_matches || [];
+      document.getElementById("matchCount").textContent = `${matches.length} matches`;
+      if (!matches.length) list.appendChild(create("p", "empty", "今日比赛尚未填写。"));
+      matches.forEach(match => list.appendChild(renderMatchCard(match)));
+
+      const finishedDays = (data.matchdays || []).map(day => ({
+        ...day,
+        matches: (day.matches || []).filter(m => hasFinalScore(m))
+      })).filter(day => day.matches.length);
+      if (!finishedDays.length) return review.appendChild(create("p", "empty", "暂无已完成比赛。"));
+      finishedDays.slice().reverse().forEach((day, index) => {
+        const details = create("details", "review-day");
+        details.dataset.date = day.date;
+        if (reviewOpenState.has(day.date)) {
+          details.open = reviewOpenState.get(day.date);
+        } else if (index === 0) {
+          details.open = true;
+        }
+        details.addEventListener("toggle", () => reviewOpenState.set(day.date, details.open));
+        const summary = create("summary", "review-day-summary");
+        summary.innerHTML = `<span>${day.date}</span><strong>${day.title || "比赛日"}</strong><em>${day.ray_points || 0}:${day.gpt_points || 0}</em>`;
+        details.appendChild(summary);
+        const inner = create("div", "review-day-body");
+        day.matches.slice().reverse().forEach(match => {
+          const points = calculateMatchPoints(match);
+          const actual = match.actual_score || {};
+          const item = create("article", "review-card");
+          item.appendChild(create("h3", "", `${text(match.home)} vs ${text(match.away)}`));
+          item.appendChild(create("p", "review-result", actual.home_score !== null && actual.home_score !== undefined ? `赛果：${actual.home_score} : ${actual.away_score}` : "赛果：待填写"));
+          item.appendChild(create("p", "", match.review || "复盘待填写。"));
+          item.appendChild(create("p", "points-line", `本场得分：Ray +${points.ray}，GPT +${points.gpt}`));
+          item.appendChild(create("p", "microcopy", points.explanation));
+          inner.appendChild(item);
+        });
+        details.appendChild(inner);
+        review.appendChild(details);
+      });
+    }
+
+
+
+    function resolveCalendarDate(data, days) {
+      if (!days.length) return null;
+      if (selectedCalendarDate && days.some(d => d.date === selectedCalendarDate)) return selectedCalendarDate;
+
+      if (location.hash && location.hash.startsWith("#day-")) {
+        const hashDate = location.hash.replace("#day-", "");
+        if (days.some(d => d.date === hashDate)) return hashDate;
+      }
+
+      const active = String((data.meta && data.meta.active_day) || "");
+      const activeDay = days.find(d => active.includes(d.date));
+      if (activeDay) return activeDay.date;
+
+      return days[days.length - 1].date;
+    }
+
+    function renderCalendar(data) {
+      const tabs = document.getElementById("dayTabs");
+      tabs.innerHTML = "";
+      const days = data.matchdays || [];
+      if (!days.length) return tabs.appendChild(create("p", "empty", "暂无日程。"));
+      days.forEach(day => {
+        const btn = create("button", "day-tab", "");
+        btn.type = "button";
+        btn.dataset.date = day.date;
+        btn.innerHTML = `<span>${day.date.slice(5)}</span><strong>${day.ray_points || 0}:${day.gpt_points || 0}</strong><em>${day.title || "比赛日"}</em>`;
+        btn.addEventListener("click", () => selectDay(day.date));
+        tabs.appendChild(btn);
+      });
+      selectDay(resolveCalendarDate(data, days));
+    }
+
+    function selectDay(date) {
+      const data = currentData;
+      const days = data.matchdays || [];
+      const detail = document.getElementById("dayDetail");
+      const day = days.find(d => d.date === date) || days[days.length - 1];
+      if (!day) return;
+      selectedCalendarDate = day.date;
+      document.querySelectorAll(".day-tab").forEach(btn => btn.classList.toggle("active", btn.dataset.date === day.date));
+      detail.innerHTML = "";
+      const head = create("div", "day-detail-head");
+      const titleWrap = create("div", "");
+      titleWrap.appendChild(create("span", "section-kicker", day.date));
+      titleWrap.appendChild(create("h3", "", day.title || "比赛日"));
+      titleWrap.appendChild(create("p", "microcopy", day.summary || ""));
+      head.appendChild(titleWrap);
+      const dayScore = create("div", "day-score");
+      dayScore.innerHTML = `<span>当日分差</span><strong>${day.ray_points || 0} : ${day.gpt_points || 0}</strong>`;
+      head.appendChild(dayScore);
+      detail.appendChild(head);
+
+      const matches = (day.matches && day.matches.length) ? day.matches : (day.date === (data.meta && data.meta.active_day) ? data.today_matches || [] : []);
+      const grid = create("div", "day-match-grid");
+      if (!matches.length) grid.appendChild(create("p", "empty", "本日比赛稍后录入。"));
+      matches.forEach(match => grid.appendChild(renderMatchCard(match, true)));
+      detail.appendChild(grid);
+      if (location.hash && location.hash.startsWith("#day-")) history.replaceState(null, "", `#day-${day.date}`);
+    }
+
+    function renderUpdateLog(data) {
+      const box = document.getElementById("updateLog");
+      box.innerHTML = "";
+      const logs = data.update_log || [];
+      if (!logs.length) return box.appendChild(create("p", "empty", "暂无更新记录。"));
+      logs.forEach(log => {
+        const item = create("div", "timeline-item");
+        item.appendChild(create("span", "timeline-time", text(log.time)));
+        item.appendChild(create("p", "", text(log.text)));
+        box.appendChild(item);
+      });
+    }
+
+    function computeTotals(data) {
+      if (data.score_summary && Number.isFinite(Number(data.score_summary.ray_total)) && Number.isFinite(Number(data.score_summary.gpt_total))) {
+        return { ray: Number(data.score_summary.ray_total), gpt: Number(data.score_summary.gpt_total), comment: data.score_summary.leader_comment || "" };
+      }
+      let ray = 0;
+      let gpt = 0;
+      (data.matchdays || []).forEach(day => (day.matches || []).forEach(match => {
+        const pts = calculateMatchPoints(match);
+        ray += pts.ray;
+        gpt += pts.gpt;
+      }));
+      (data.today_matches || []).forEach(match => {
+        const pts = calculateMatchPoints(match);
+        ray += pts.ray;
+        gpt += pts.gpt;
+      });
+      return { ray, gpt, comment: "" };
+    }
+
+    function render(data) {
+      currentData = data;
+      const site = data.site || FALLBACK_DATA.site;
+      const meta = data.meta || FALLBACK_DATA.meta;
+      document.title = site.title || "Ray 大战 GPT 5.5";
+      document.getElementById("pageTitle").textContent = site.title || "Ray 大战 GPT 5.5";
+      document.getElementById("pageSubtitle").textContent = site.subtitle || "";
+      document.getElementById("tagline").textContent = site.tagline || "World Cup Prediction Room";
+      document.getElementById("liveStatus").textContent = site.status || "LIVE";
+      document.getElementById("activeDay").textContent = `${meta.active_day || "—"} · ${meta.timezone || ""}`;
+      document.getElementById("updatedAt").textContent = meta.updated_at || "—";
+      const refresh = Number(site.refresh_seconds || 30);
+      document.getElementById("refreshInfo").textContent = `${refresh}s`;
+      document.getElementById("headline").textContent = data.headline || "等待今日预测。";
+      document.getElementById("brief").textContent = data.brief || "";
+
+      renderCalendar(data);
+      renderAwards(data);
+      renderGroups(data);
+      renderMatches(data);
+      renderUpdateLog(data);
+
+      const totals = computeTotals(data);
+      document.getElementById("rayTotal").textContent = totals.ray;
+      document.getElementById("gptTotal").textContent = totals.gpt;
+      document.getElementById("rayBoard").textContent = totals.ray;
+      document.getElementById("gptBoard").textContent = totals.gpt;
+      const leader = totals.ray === totals.gpt ? "目前双方战平。" : totals.ray > totals.gpt ? `Ray 暂时领先 ${totals.ray - totals.gpt} 分。` : `GPT 5.5 暂时领先 ${totals.gpt - totals.ray} 分。`;
+      document.getElementById("leaderComment").textContent = totals.comment || leader;
+
+      if (refreshTimer) clearInterval(refreshTimer);
+      refreshTimer = setInterval(loadData, refresh * 1000);
+
+      if (location.hash && location.hash.startsWith("#day-")) {
+        const hashDate = location.hash.replace("#day-", "");
+        if ((data.matchdays || []).some(d => d.date === hashDate)) selectDay(hashDate);
+      }
+    }
+
+    async function loadData() {
+      try {
+        const res = await fetch("group-stage-archive.json?t=" + Date.now(), { cache: "no-store" });
+        if (!res.ok) throw new Error("Failed to load data.json");
+        render(await res.json());
+      } catch (err) {
+        console.warn(err);
+        render(FALLBACK_DATA);
+      }
+    }
+
+
+
+    function escapeHtml(value) {
+      return String(value ?? "").replace(/[&<>"]/g, ch => ({ "&": "&amp;", "<": "&lt;", ">": "&gt;", "\"": "&quot;" }[ch]));
+    }
+
+    function renderLiveTicker(payload) {
+      const box = document.getElementById("liveTickerTrack");
+      if (!box) return;
+      const matches = payload && Array.isArray(payload.matches) ? payload.matches : [];
+      if (!matches.length) {
+        box.innerHTML = '<span class="live-ticker-item muted">暂无实时比分，稍后自动刷新。</span>';
+        return;
+      }
+      box.innerHTML = matches.map(match => {
+        const tag = match.tag || match.status || "INFO";
+        const tagClass = tag === "LIVE" ? "live" : tag === "NEXT" ? "next" : "final";
+        const score = match.home_score !== null && match.away_score !== null
+          ? `${match.home} ${match.home_score}:${match.away_score} ${match.away}`
+          : `${match.home} vs ${match.away}`;
+        const meta = match.tag === "NEXT" ? match.kickoff_bjt : (match.status_text || match.minute || "");
+        return `<span class="live-ticker-item"><b class="${tagClass}">${escapeHtml(tag)}</b><strong>${escapeHtml(score)}</strong>${meta ? `<em>${escapeHtml(meta)}</em>` : ""}</span>`;
+      }).join("");
+    }
+
+    async function loadLiveTicker() {
+      try {
+        const res = await fetch("/api/live?t=" + Date.now(), { cache: "no-store" });
+        if (!res.ok) throw new Error("Failed to load /api/live");
+        renderLiveTicker(await res.json());
+      } catch (err) {
+        console.warn(err);
+        const box = document.getElementById("liveTickerTrack");
+        if (box) box.innerHTML = '<span class="live-ticker-item muted">实时比分暂时不可用，不影响竞猜数据。</span>';
+      }
+    }
+
+
+    window.addEventListener("hashchange", () => {
+      if (location.hash.startsWith("#day-")) selectDay(location.hash.replace("#day-", ""));
+    });
+
+    loadData();
+    loadLiveTicker();
+    setInterval(loadLiveTicker, 30000);
+  </script>
+</body>
+</html>

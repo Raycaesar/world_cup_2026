@@ -638,3 +638,64 @@ code { border: 1px solid var(--line); border-radius: 8px; padding: 2px 6px; colo
   }
   .live-ticker-track { width: 100%; }
 }
+
+
+/* Knockout phase additions */
+.archive-nav {
+  border-color: rgba(255,255,255,.22);
+  background: rgba(255,255,255,.06);
+}
+.knockout-layout .headline-panel {
+  background: linear-gradient(135deg, rgba(18, 35, 70, .88), rgba(21, 88, 59, .72));
+}
+.knockout-match-list {
+  display: grid;
+  gap: 1rem;
+}
+.knockout-card {
+  border: 1px solid rgba(255,255,255,.14);
+  border-radius: 22px;
+  padding: 1rem;
+  background: linear-gradient(180deg, rgba(255,255,255,.08), rgba(255,255,255,.035));
+  box-shadow: 0 18px 50px rgba(0,0,0,.18);
+}
+.knockout-prediction-grid .pred-score {
+  font-size: clamp(1rem, 1.5vw, 1.35rem);
+  line-height: 1.25;
+}
+.bracket-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
+  gap: .85rem;
+}
+.bracket-card {
+  border: 1px solid rgba(255,255,255,.12);
+  border-radius: 18px;
+  padding: .9rem;
+  background: rgba(4, 18, 32, .45);
+}
+.bracket-round {
+  display: block;
+  font-family: "Rajdhani", "Noto Sans SC", sans-serif;
+  letter-spacing: .06em;
+  text-transform: uppercase;
+  color: rgba(255,255,255,.62);
+  font-size: .78rem;
+  margin-bottom: .55rem;
+}
+.bracket-row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: .5rem;
+  color: #fff;
+}
+.bracket-row strong {
+  font-size: 1rem;
+}
+.footer a { color: inherit; }
+@media (max-width: 680px) {
+  .topbar-actions { gap: .45rem; }
+  .archive-nav { width: 100%; text-align: center; }
+  .bracket-grid { grid-template-columns: 1fr; }
+}
