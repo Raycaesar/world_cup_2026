@@ -699,3 +699,36 @@ code { border: 1px solid var(--line); border-radius: 8px; padding: 2px 6px; colo
   .archive-nav { width: 100%; text-align: center; }
   .bracket-grid { grid-template-columns: 1fr; }
 }
+
+/* Knockout UI v2: scorers, awards, post-match reviews */
+.scorer-list { display: grid; gap: 10px; }
+.scorer-row {
+  display: grid;
+  grid-template-columns: 48px 1fr auto;
+  gap: 12px;
+  align-items: center;
+  border: 1px solid var(--line);
+  border-radius: 18px;
+  padding: 12px 14px;
+  background: rgba(255,255,255,0.055);
+}
+.scorer-rank { color: var(--gold); font-family: var(--display); font-size: 14px; }
+.scorer-main strong { display: block; font-size: 18px; line-height: 1.15; }
+.scorer-main small { display: block; margin-top: 3px; color: var(--muted); font-weight: 800; }
+.scorer-goals {
+  display: grid;
+  place-items: center;
+  min-width: 44px;
+  height: 44px;
+  border-radius: 14px;
+  font-family: var(--display);
+  font-size: 26px;
+  color: #06110d;
+  background: var(--gold);
+}
+.knockout-review-list .review-card { border: 1px solid rgba(255,255,255,.12); background: rgba(255,255,255,.055); }
+.knockout-review-card h3 { margin: 8px 0; font-size: clamp(22px, 2vw, 32px); letter-spacing: -0.04em; }
+@media (max-width: 560px) {
+  .scorer-row { grid-template-columns: 40px 1fr; }
+  .scorer-goals { grid-column: 1 / -1; width: 100%; }
+}

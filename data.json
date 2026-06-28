@@ -2,15 +2,15 @@
   "site": {
     "title": "Ray大战GPT 5.5｜淘汰赛篇",
     "subtitle": "小组赛归档，32强开战：从这里开始没有平局，只有晋级。",
-    "status": "KNOCKOUT LIVE",
+    "status": "LIVE",
     "refresh_seconds": 30,
     "tagline": "World Cup Knockout Prediction Derby"
   },
   "meta": {
-    "updated_at": "2026-06-28 18:45 BJT",
+    "updated_at": "2026-06-28 19:35 BJT",
     "active_day": "2026-06-29",
     "timezone": "Asia/Beijing",
-    "version": "knockout-home-20260628"
+    "version": "knockout-home-ui-v2-20260628"
   },
   "phase": "knockout",
   "archive": {
@@ -232,6 +232,125 @@
     {
       "time": "06-28 18:45",
       "text": "录入 32 强第一场预测：Ray 加拿大 2:0 南非，GPT 加拿大 2:1 南非，均为 90 分钟晋级。"
+    }
+  ],
+  "live_ticker": [
+    {
+      "type": "next",
+      "label": "NEXT",
+      "text": "南非 vs 加拿大",
+      "detail": "06-29 03:00 BJT · 32强首战"
+    },
+    {
+      "type": "live",
+      "label": "LIVE",
+      "text": "淘汰赛页面实时刷新",
+      "detail": "赛果写入后自动进入复盘区"
+    },
+    {
+      "type": "final",
+      "label": "TOTAL",
+      "text": "Ray 49 : 44 GPT 5.5",
+      "detail": "淘汰赛起点"
+    }
+  ],
+  "top_scorers": [
+    {
+      "rank": 1,
+      "player": "Lionel Messi",
+      "team": "阿根廷",
+      "goals": 5,
+      "assists": 0,
+      "minutes": 188
+    },
+    {
+      "rank": 2,
+      "player": "Kylian Mbappé",
+      "team": "法国",
+      "goals": 4,
+      "assists": 2,
+      "minutes": 290
+    },
+    {
+      "rank": 3,
+      "player": "Ousmane Dembélé",
+      "team": "法国",
+      "goals": 4,
+      "assists": 1,
+      "minutes": 226
+    },
+    {
+      "rank": 4,
+      "player": "Vinicius Jr.",
+      "team": "巴西",
+      "goals": 4,
+      "assists": 1,
+      "minutes": 294
+    },
+    {
+      "rank": 5,
+      "player": "Erling Haaland",
+      "team": "挪威",
+      "goals": 4,
+      "assists": 0,
+      "minutes": 208
+    },
+    {
+      "rank": 6,
+      "player": "Deniz Undav",
+      "team": "德国",
+      "goals": 3,
+      "assists": 2,
+      "minutes": 107
+    },
+    {
+      "rank": 7,
+      "player": "Johan Manzambi",
+      "team": "瑞士",
+      "goals": 3,
+      "assists": 1,
+      "minutes": 147
+    },
+    {
+      "rank": 8,
+      "player": "Ismaila Sarr",
+      "team": "塞内加尔",
+      "goals": 3,
+      "assists": 1,
+      "minutes": 275
+    }
+  ],
+  "top_scorers_source": "射手榜据 SB Nation 2026-06-28 更新：金靴排序先比进球，再比助攻与出场时间。",
+  "tournament_picks": [
+    {
+      "name": "冠军",
+      "ray": "阿根廷",
+      "gpt": "法国",
+      "note": "Ray 押阿根廷的杯赛控制力；GPT 押法国阵容厚度。"
+    },
+    {
+      "name": "亚军",
+      "ray": "英格兰",
+      "gpt": "西班牙",
+      "note": "Ray 认为英格兰纸面很强但可能决赛输给阿根廷；GPT 看好西班牙整体性。"
+    },
+    {
+      "name": "金球",
+      "ray": "凯恩",
+      "gpt": "姆巴佩",
+      "note": "Ray 押英格兰进决赛后凯恩拿奖；GPT 押姆巴佩带法国走远。"
+    },
+    {
+      "name": "金靴",
+      "ray": "劳塔罗",
+      "gpt": "姆巴佩",
+      "note": "Ray 选择阿根廷锋线终结点；GPT 选择法国头号攻击手。"
+    },
+    {
+      "name": "金童",
+      "ray": "尼克·帕斯",
+      "gpt": "亚马尔",
+      "note": "Ray 押冷门价值；GPT 原押西班牙天才，但承认伤病是风险。"
     }
   ]
 }
