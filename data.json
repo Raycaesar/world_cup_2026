@@ -7,17 +7,17 @@
     "tagline": "World Cup Prediction Derby"
   },
   "meta": {
-    "updated_at": "2026-06-28 09:30 BJT",
+    "updated_at": "2026-06-28 09:40 BJT",
     "active_day": "2026-06-28",
     "timezone": "Asia/Beijing",
-    "version": "auto-score-safe-202606280130"
+    "version": "auto-score-safe-202606280140"
   },
   "score_summary": {
-    "ray_total": 40,
+    "ray_total": 43,
     "gpt_total": 38,
-    "leader_comment": "Ray 暂时 40:38 领先 GPT 5.5。"
+    "leader_comment": "Ray 暂时 43:38 领先 GPT 5.5。"
   },
-  "headline": "总分 Ray 40:38 GPT 5.5：哥伦比亚 0:0 葡萄牙 已更新。",
+  "headline": "总分 Ray 43:38 GPT 5.5：刚果（金） 3:1 乌兹别克斯坦 已更新。",
   "brief": "今日已结束比赛已录入，累计总分按历史日积分汇总；详细复盘可在赛后继续手动润色。",
   "scoring_note": {
     "rule": "只有一方猜中胜平负而另一方没猜中时，胜平负方向给 3 分；双方都猜中胜平负时，只看是否有人精确命中比分；双方都猜错时，只有“一方猜平、一方猜胜/负”才触发平局接近度规则，猜平者 +1；未正式对抗、无有效预测或双方同样预测平局的比赛不得分。",
@@ -317,7 +317,7 @@
       "home": "刚果（金）",
       "away": "乌兹别克斯坦",
       "group": "K",
-      "status": "未开始",
+      "status": "已结束",
       "ray_prediction": {
         "home_score": 1,
         "away_score": 0,
@@ -329,10 +329,16 @@
         "reason": "GPT 预测刚果（金）1:1 乌兹别克斯坦。刚果（金）更硬，但进攻效率一直不稳定；乌兹别克斯坦出局压力下也可能放手一搏。"
       },
       "actual_score": {
-        "home_score": null,
-        "away_score": null
+        "home_score": 3,
+        "away_score": 1
       },
-      "review": "赛前预测。"
+      "review": "刚果（金） 3:1 乌兹别克斯坦。Ray 预测 1:0，GPT 预测 1:1。Ray 猜对胜平负，得到 3 分。 本场得分：Ray +3，GPT +0。",
+      "espn_id": "760482",
+      "manual_points": {
+        "ray": 3,
+        "gpt": 0,
+        "explanation": "Ray 猜对胜平负，得到 3 分。"
+      }
     },
     {
       "id": "dza-aut-20260628",
@@ -2425,7 +2431,7 @@
       "date": "2026-06-28",
       "title": "小组赛最后一天：英格兰争头名，阿根廷收官练兵",
       "summary": "L/K/J 组六场收官：英格兰、葡萄牙、哥伦比亚和阿根廷都有排名与淘汰赛路径要算；克罗地亚、加纳、阿尔及利亚、奥地利和刚果（金）则围绕第二名或第三名资格展开最后争夺。",
-      "ray_points": 0,
+      "ray_points": 3,
       "gpt_points": 5,
       "matches": [
         {
@@ -2521,7 +2527,7 @@
           "home": "刚果（金）",
           "away": "乌兹别克斯坦",
           "group": "K",
-          "status": "未开始",
+          "status": "已结束",
           "ray_prediction": {
             "home_score": 1,
             "away_score": 0,
@@ -2533,10 +2539,16 @@
             "reason": "GPT 预测刚果（金）1:1 乌兹别克斯坦。刚果（金）更硬，但进攻效率一直不稳定；乌兹别克斯坦出局压力下也可能放手一搏。"
           },
           "actual_score": {
-            "home_score": null,
-            "away_score": null
+            "home_score": 3,
+            "away_score": 1
           },
-          "review": "赛前预测。"
+          "review": "刚果（金） 3:1 乌兹别克斯坦。Ray 预测 1:0，GPT 预测 1:1。Ray 猜对胜平负，得到 3 分。 本场得分：Ray +3，GPT +0。",
+          "espn_id": "760482",
+          "manual_points": {
+            "ray": 3,
+            "gpt": 0,
+            "explanation": "Ray 猜对胜平负，得到 3 分。"
+          }
         },
         {
           "id": "dza-aut-20260628",
@@ -2589,10 +2601,6 @@
   ],
   "update_log": [
     {
-      "time": "06-28 00:30",
-      "text": "恢复 6 月 11 日以来完整历史战报，不再只保留最近三天；保留 G/H/I 组 7:3 复盘、小组赛最后一天预测和 GPT 32 强名单修正。"
-    },
-    {
       "time": "06-27 15:03",
       "text": "G/H/I 组六场收官：Ray 7:3 GPT 5.5，总比分来到 Ray 40:33 GPT 5.5。"
     },
@@ -2627,6 +2635,10 @@
     {
       "time": "06-28 09:30",
       "text": "赛果更新：哥伦比亚 0:0 葡萄牙，Ray +0，GPT +0。"
+    },
+    {
+      "time": "06-28 09:40",
+      "text": "赛果更新：刚果（金） 3:1 乌兹别克斯坦，Ray +3，GPT +0。"
     }
   ],
   "archive": [
