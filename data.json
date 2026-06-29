@@ -7,10 +7,10 @@
     "tagline": "World Cup Knockout Prediction Derby"
   },
   "meta": {
-    "updated_at": "2026-06-29 05:20 BJT",
+    "updated_at": "2026-06-29 11:10 BJT",
     "active_day": "2026-06-29",
     "timezone": "Asia/Beijing",
-    "version": "knockout-auto-202606282120"
+    "version": "knockout-prediction-release-plan-20260629"
   },
   "phase": "knockout",
   "archive": {
@@ -20,10 +20,10 @@
   "score_summary": {
     "ray_total": 50,
     "gpt_total": 45,
-    "leader_comment": "Ray 以 50:45 领先 GPT 5.5。"
+    "leader_comment": "南非 0:1 加拿大后双方各得 1 分；Ray 以 50:45 领先 GPT 5.5。"
   },
-  "headline": "淘汰赛更新：南非 0:1 加拿大",
-  "brief": "最新淘汰赛已结算：南非 0:1 加拿大，Ray +1，GPT +1。",
+  "headline": "淘汰赛开局：加拿大补时绝杀，双方各拿 1 分",
+  "brief": "32强首战南非 0:1 加拿大。双方都看好加拿大晋级，也都押在90分钟内解决，但比分没有命中，因此本场 Ray +1，GPT +1；总分来到 Ray 50:45 GPT 5.5。接下来三场预测将按北京时间每日18:00自动发布。",
   "knockout_rules": [
     "只有一方猜中晋级队时，猜中者得 3 分；猜错晋级队者不得获得路径分或比分分。",
     "双方都猜中晋级队时，不重复给胜负分，改看晋级方式：90 分钟、加时、点球。",
@@ -36,7 +36,7 @@
   "knockout_matches": [
     {
       "id": "rsa-can-20260629",
-      "espn_id": "760486",
+      "espn_id": "53452545",
       "round": "32强",
       "kickoff_local": "06-29 03:00 BJT",
       "home": "南非",
@@ -78,9 +78,9 @@
       "manual_points": {
         "ray": 1,
         "gpt": 1,
-        "explanation": "双方都猜中晋级队；按晋级方式与90分钟比分计分：Ray +1，GPT +1。"
+        "explanation": "双方都猜中加拿大晋级；双方都猜中90分钟分出胜负，但均未命中90分钟比分，Ray +1，GPT +1。"
       },
-      "review": "南非 0:1 加拿大，加拿大通过90分钟晋级。双方都猜中晋级队；按晋级方式与90分钟比分计分：Ray +1，GPT +1。"
+      "review": "南非 0:1 加拿大。加拿大直到补时阶段才完成绝杀，实际走势比双方预测都更胶着；双方都判断加拿大晋级且90分钟内解决，但比分都没有命中，本场 Ray +1，GPT +1。"
     }
   ],
   "bracket": [
@@ -90,8 +90,10 @@
       "kickoff_local": "06-29 03:00 BJT",
       "home": "南非",
       "away": "加拿大",
-      "status": "未开始",
-      "note": "胜者对阵荷兰/摩洛哥胜者"
+      "status": "已结束",
+      "note": "加拿大 1:0 南非晋级，将对阵荷兰/摩洛哥胜者",
+      "score": "0:1",
+      "winner": "加拿大"
     },
     {
       "id": "53452557",
@@ -247,8 +249,12 @@
       "text": "页面调整：LIVE STICKER 改为只显示正在进行和即将开始的比赛；射手榜修正梅西 6 球。"
     },
     {
-      "time": "06-29 05:20",
-      "text": "自动更新：南非 0:1 加拿大，Ray +1，GPT +1。"
+      "time": "06-29 11:10",
+      "text": "南非 0:1 加拿大已结算：双方都猜中加拿大晋级和90分钟路径，各得 1 分；总分 Ray 50:45 GPT 5.5。"
+    },
+    {
+      "time": "06-29 11:10",
+      "text": "加入预测发布计划：32强剩余15场预测隐藏在发布池中，每天北京时间18:00自动发布次日比赛。"
     }
   ],
   "live_ticker": [
@@ -357,6 +363,489 @@
       "ray": "尼克·帕斯",
       "gpt": "亚马尔",
       "note": "Ray 押冷门价值；GPT 原押西班牙天才，但承认伤病是风险。"
+    }
+  ],
+  "prediction_release_note": "预测池已录入，但页面只会显示已发布的比赛预测；每天北京时间18:00自动发布次日比赛。",
+  "prediction_release_plan": [
+    {
+      "match_id": "bra-jpn-20260630",
+      "espn_id": "53452557",
+      "release_at_utc": "2026-06-29T10:00:00Z",
+      "release_time_bjt": "2026-06-29 18:00 BJT",
+      "round": "32强",
+      "kickoff_local": "06-30 01:00 BJT",
+      "home": "巴西",
+      "away": "日本",
+      "status": "未开始",
+      "ray_prediction": {
+        "advancing_team": "日本",
+        "method": "extra_time",
+        "regulation_score": {
+          "home_score": 2,
+          "away_score": 2
+        },
+        "label": "巴西 2:2 日本，日本加时晋级",
+        "reason": "Ray 的预设预测：认为日本能把比赛拖入加时，靠纪律性和反击完成爆冷。"
+      },
+      "gpt_prediction": {
+        "advancing_team": "巴西",
+        "method": "90",
+        "regulation_score": {
+          "home_score": 2,
+          "away_score": 1
+        },
+        "label": "巴西 2:1 日本，90分钟晋级",
+        "reason": "GPT 5.5 的预设预测：巴西个人能力和边路爆点更强，但日本足以制造压力。"
+      },
+      "published": false
+    },
+    {
+      "match_id": "ger-par-20260630",
+      "espn_id": "53452541",
+      "release_at_utc": "2026-06-29T10:00:00Z",
+      "release_time_bjt": "2026-06-29 18:00 BJT",
+      "round": "32强",
+      "kickoff_local": "06-30 04:30 BJT",
+      "home": "德国",
+      "away": "巴拉圭",
+      "status": "未开始",
+      "ray_prediction": {
+        "advancing_team": "德国",
+        "method": "90",
+        "regulation_score": {
+          "home_score": 3,
+          "away_score": 1
+        },
+        "label": "德国 3:1 巴拉圭，90分钟晋级",
+        "reason": "Ray 的预设预测：看好德国进入淘汰赛后提升压迫和终结效率。"
+      },
+      "gpt_prediction": {
+        "advancing_team": "德国",
+        "method": "90",
+        "regulation_score": {
+          "home_score": 2,
+          "away_score": 0
+        },
+        "label": "德国 2:0 巴拉圭，90分钟晋级",
+        "reason": "GPT 5.5 的预设预测：德国整体实力明显占优，但巴拉圭会压低节奏。"
+      },
+      "published": false
+    },
+    {
+      "match_id": "ned-mar-20260630",
+      "espn_id": "53452547",
+      "release_at_utc": "2026-06-29T10:00:00Z",
+      "release_time_bjt": "2026-06-29 18:00 BJT",
+      "round": "32强",
+      "kickoff_local": "06-30 09:00 BJT",
+      "home": "荷兰",
+      "away": "摩洛哥",
+      "status": "未开始",
+      "ray_prediction": {
+        "advancing_team": "荷兰",
+        "method": "extra_time",
+        "regulation_score": {
+          "home_score": 1,
+          "away_score": 1
+        },
+        "label": "荷兰 1:1 摩洛哥，荷兰加时晋级",
+        "reason": "Ray 的预设预测：认为摩洛哥能把荷兰拖入苦战，但荷兰加时经验更稳。"
+      },
+      "gpt_prediction": {
+        "advancing_team": "荷兰",
+        "method": "90",
+        "regulation_score": {
+          "home_score": 2,
+          "away_score": 1
+        },
+        "label": "荷兰 2:1 摩洛哥，90分钟晋级",
+        "reason": "GPT 5.5 的预设预测：荷兰推进质量略高，摩洛哥会有进球但难以拖到加时。"
+      },
+      "published": false
+    },
+    {
+      "match_id": "civ-nor-20260701",
+      "espn_id": "53452561",
+      "release_at_utc": "2026-06-30T10:00:00Z",
+      "release_time_bjt": "2026-06-30 18:00 BJT",
+      "round": "32强",
+      "kickoff_local": "07-01 01:00 BJT",
+      "home": "科特迪瓦",
+      "away": "挪威",
+      "status": "未开始",
+      "ray_prediction": {
+        "advancing_team": "挪威",
+        "method": "90",
+        "regulation_score": {
+          "home_score": 1,
+          "away_score": 2
+        },
+        "label": "科特迪瓦 1:2 挪威，90分钟晋级",
+        "reason": "Ray 的预设预测：看好挪威锋线效率。"
+      },
+      "gpt_prediction": {
+        "advancing_team": "挪威",
+        "method": "90",
+        "regulation_score": {
+          "home_score": 1,
+          "away_score": 3
+        },
+        "label": "科特迪瓦 1:3 挪威，90分钟晋级",
+        "reason": "GPT 5.5 的预设预测：挪威进攻端上限更高，可能后段拉开比分。"
+      },
+      "published": false
+    },
+    {
+      "match_id": "fra-swe-20260701",
+      "espn_id": "53452543",
+      "release_at_utc": "2026-06-30T10:00:00Z",
+      "release_time_bjt": "2026-06-30 18:00 BJT",
+      "round": "32强",
+      "kickoff_local": "07-01 05:00 BJT",
+      "home": "法国",
+      "away": "瑞典",
+      "status": "未开始",
+      "ray_prediction": {
+        "advancing_team": "法国",
+        "method": "90",
+        "regulation_score": {
+          "home_score": 2,
+          "away_score": 0
+        },
+        "label": "法国 2:0 瑞典，90分钟晋级",
+        "reason": "Ray 的预设预测：法国阵容厚度和淘汰赛控制力明显占优。"
+      },
+      "gpt_prediction": {
+        "advancing_team": "法国",
+        "method": "90",
+        "regulation_score": {
+          "home_score": 3,
+          "away_score": 1
+        },
+        "label": "法国 3:1 瑞典，90分钟晋级",
+        "reason": "GPT 5.5 的预设预测：法国能赢，但瑞典定位球和身体对抗可能制造进球。"
+      },
+      "published": false
+    },
+    {
+      "match_id": "mex-ecu-20260701",
+      "espn_id": "53452563",
+      "release_at_utc": "2026-06-30T10:00:00Z",
+      "release_time_bjt": "2026-06-30 18:00 BJT",
+      "round": "32强",
+      "kickoff_local": "07-01 09:00 BJT",
+      "home": "墨西哥",
+      "away": "厄瓜多尔",
+      "status": "未开始",
+      "ray_prediction": {
+        "advancing_team": "墨西哥",
+        "method": "penalties",
+        "regulation_score": {
+          "home_score": 2,
+          "away_score": 2
+        },
+        "label": "墨西哥 2:2 厄瓜多尔，墨西哥点球晋级",
+        "reason": "Ray 的预设预测：认为双方风格相克，比赛会拖入点球。"
+      },
+      "gpt_prediction": {
+        "advancing_team": "墨西哥",
+        "method": "90",
+        "regulation_score": {
+          "home_score": 2,
+          "away_score": 1
+        },
+        "label": "墨西哥 2:1 厄瓜多尔，90分钟晋级",
+        "reason": "GPT 5.5 的预设预测：墨西哥主场氛围和前场效率略占优势。"
+      },
+      "published": false
+    },
+    {
+      "match_id": "eng-cod-20260702",
+      "espn_id": "53452565",
+      "release_at_utc": "2026-07-01T10:00:00Z",
+      "release_time_bjt": "2026-07-01 18:00 BJT",
+      "round": "32强",
+      "kickoff_local": "07-02 00:00 BJT",
+      "home": "英格兰",
+      "away": "刚果（金）",
+      "status": "未开始",
+      "ray_prediction": {
+        "advancing_team": "英格兰",
+        "method": "90",
+        "regulation_score": {
+          "home_score": 4,
+          "away_score": 1
+        },
+        "label": "英格兰 4:1 刚果（金），90分钟晋级",
+        "reason": "Ray 的预设预测：看好英格兰强势碾压。"
+      },
+      "gpt_prediction": {
+        "advancing_team": "英格兰",
+        "method": "90",
+        "regulation_score": {
+          "home_score": 3,
+          "away_score": 0
+        },
+        "label": "英格兰 3:0 刚果（金），90分钟晋级",
+        "reason": "GPT 5.5 的预设预测：英格兰会稳健晋级，控球和定位球优势明显。"
+      },
+      "published": false
+    },
+    {
+      "match_id": "bel-sen-20260702",
+      "espn_id": "53452555",
+      "release_at_utc": "2026-07-01T10:00:00Z",
+      "release_time_bjt": "2026-07-01 18:00 BJT",
+      "round": "32强",
+      "kickoff_local": "07-02 04:00 BJT",
+      "home": "比利时",
+      "away": "塞内加尔",
+      "status": "未开始",
+      "ray_prediction": {
+        "advancing_team": "塞内加尔",
+        "method": "extra_time",
+        "regulation_score": {
+          "home_score": 1,
+          "away_score": 1
+        },
+        "label": "比利时 1:1 塞内加尔，塞内加尔加时晋级",
+        "reason": "Ray 的预设预测：押塞内加尔身体对抗和加时冲击力爆冷。"
+      },
+      "gpt_prediction": {
+        "advancing_team": "比利时",
+        "method": "90",
+        "regulation_score": {
+          "home_score": 2,
+          "away_score": 1
+        },
+        "label": "比利时 2:1 塞内加尔，90分钟晋级",
+        "reason": "GPT 5.5 的预设预测：比利时经验和进攻质量略胜，但会被塞内加尔压迫考验。"
+      },
+      "published": false
+    },
+    {
+      "match_id": "usa-bih-20260702",
+      "espn_id": "53452553",
+      "release_at_utc": "2026-07-01T10:00:00Z",
+      "release_time_bjt": "2026-07-01 18:00 BJT",
+      "round": "32强",
+      "kickoff_local": "07-02 08:00 BJT",
+      "home": "美国",
+      "away": "波黑",
+      "status": "未开始",
+      "ray_prediction": {
+        "advancing_team": "美国",
+        "method": "90",
+        "regulation_score": {
+          "home_score": 3,
+          "away_score": 0
+        },
+        "label": "美国 3:0 波黑，90分钟晋级",
+        "reason": "Ray 的预设预测：看好美国主场节奏和强度压制。"
+      },
+      "gpt_prediction": {
+        "advancing_team": "美国",
+        "method": "90",
+        "regulation_score": {
+          "home_score": 2,
+          "away_score": 0
+        },
+        "label": "美国 2:0 波黑，90分钟晋级",
+        "reason": "GPT 5.5 的预设预测：美国整体速度更快，但淘汰赛会更谨慎。"
+      },
+      "published": false
+    },
+    {
+      "match_id": "esp-aut-20260703",
+      "espn_id": "53452551",
+      "release_at_utc": "2026-07-02T10:00:00Z",
+      "release_time_bjt": "2026-07-02 18:00 BJT",
+      "round": "32强",
+      "kickoff_local": "07-03 03:00 BJT",
+      "home": "西班牙",
+      "away": "奥地利",
+      "status": "未开始",
+      "ray_prediction": {
+        "advancing_team": "西班牙",
+        "method": "90",
+        "regulation_score": {
+          "home_score": 2,
+          "away_score": 1
+        },
+        "label": "西班牙 2:1 奥地利，90分钟晋级",
+        "reason": "Ray 的预设预测：看好西班牙控球优势，但奥地利能制造麻烦。"
+      },
+      "gpt_prediction": {
+        "advancing_team": "西班牙",
+        "method": "90",
+        "regulation_score": {
+          "home_score": 2,
+          "away_score": 0
+        },
+        "label": "西班牙 2:0 奥地利，90分钟晋级",
+        "reason": "GPT 5.5 的预设预测：西班牙能通过控球限制奥地利反击。"
+      },
+      "published": false
+    },
+    {
+      "match_id": "por-cro-20260703",
+      "espn_id": "53452549",
+      "release_at_utc": "2026-07-02T10:00:00Z",
+      "release_time_bjt": "2026-07-02 18:00 BJT",
+      "round": "32强",
+      "kickoff_local": "07-03 07:00 BJT",
+      "home": "葡萄牙",
+      "away": "克罗地亚",
+      "status": "未开始",
+      "ray_prediction": {
+        "advancing_team": "克罗地亚",
+        "method": "penalties",
+        "regulation_score": {
+          "home_score": 2,
+          "away_score": 2
+        },
+        "label": "葡萄牙 2:2 克罗地亚，克罗地亚点球晋级",
+        "reason": "Ray 的预设预测：押克罗地亚淘汰赛韧性和点球经验。"
+      },
+      "gpt_prediction": {
+        "advancing_team": "葡萄牙",
+        "method": "90",
+        "regulation_score": {
+          "home_score": 2,
+          "away_score": 1
+        },
+        "label": "葡萄牙 2:1 克罗地亚，90分钟晋级",
+        "reason": "GPT 5.5 的预设预测：葡萄牙前场火力更足，能在90分钟内解决。"
+      },
+      "published": false
+    },
+    {
+      "match_id": "sui-alg-20260703",
+      "espn_id": "53452505",
+      "release_at_utc": "2026-07-02T10:00:00Z",
+      "release_time_bjt": "2026-07-02 18:00 BJT",
+      "round": "32强",
+      "kickoff_local": "07-03 11:00 BJT",
+      "home": "瑞士",
+      "away": "阿尔及利亚",
+      "status": "未开始",
+      "ray_prediction": {
+        "advancing_team": "瑞士",
+        "method": "90",
+        "regulation_score": {
+          "home_score": 2,
+          "away_score": 0
+        },
+        "label": "瑞士 2:0 阿尔及利亚，90分钟晋级",
+        "reason": "Ray 的预设预测：看好瑞士组织纪律和防守稳定性。"
+      },
+      "gpt_prediction": {
+        "advancing_team": "瑞士",
+        "method": "90",
+        "regulation_score": {
+          "home_score": 1,
+          "away_score": 0
+        },
+        "label": "瑞士 1:0 阿尔及利亚，90分钟晋级",
+        "reason": "GPT 5.5 的预设预测：瑞士更稳，但阿尔及利亚会把比赛压得很紧。"
+      },
+      "published": false
+    },
+    {
+      "match_id": "aus-egy-20260704",
+      "espn_id": "53452503",
+      "release_at_utc": "2026-07-03T10:00:00Z",
+      "release_time_bjt": "2026-07-03 18:00 BJT",
+      "round": "32强",
+      "kickoff_local": "07-04 02:00 BJT",
+      "home": "澳大利亚",
+      "away": "埃及",
+      "status": "未开始",
+      "ray_prediction": {
+        "advancing_team": "澳大利亚",
+        "method": "penalties",
+        "regulation_score": {
+          "home_score": 1,
+          "away_score": 1
+        },
+        "label": "澳大利亚 1:1 埃及，澳大利亚点球晋级",
+        "reason": "Ray 的预设预测：认为双方都会谨慎，澳大利亚点球胜出。"
+      },
+      "gpt_prediction": {
+        "advancing_team": "埃及",
+        "method": "90",
+        "regulation_score": {
+          "home_score": 1,
+          "away_score": 2
+        },
+        "label": "澳大利亚 1:2 埃及，90分钟晋级",
+        "reason": "GPT 5.5 的预设预测：埃及前场个人能力更可能决定比赛。"
+      },
+      "published": false
+    },
+    {
+      "match_id": "arg-cpv-20260704",
+      "espn_id": "53452569",
+      "release_at_utc": "2026-07-03T10:00:00Z",
+      "release_time_bjt": "2026-07-03 18:00 BJT",
+      "round": "32强",
+      "kickoff_local": "07-04 06:00 BJT",
+      "home": "阿根廷",
+      "away": "佛得角",
+      "status": "未开始",
+      "ray_prediction": {
+        "advancing_team": "阿根廷",
+        "method": "90",
+        "regulation_score": {
+          "home_score": 3,
+          "away_score": 0
+        },
+        "label": "阿根廷 3:0 佛得角，90分钟晋级",
+        "reason": "Ray 的预设预测：看好阿根廷在淘汰赛展现控制力。"
+      },
+      "gpt_prediction": {
+        "advancing_team": "阿根廷",
+        "method": "90",
+        "regulation_score": {
+          "home_score": 4,
+          "away_score": 0
+        },
+        "label": "阿根廷 4:0 佛得角，90分钟晋级",
+        "reason": "GPT 5.5 的预设预测：阿根廷实力差距明显，若早进球可能拉开比分。"
+      },
+      "published": false
+    },
+    {
+      "match_id": "col-gha-20260704",
+      "espn_id": "53452507",
+      "release_at_utc": "2026-07-03T10:00:00Z",
+      "release_time_bjt": "2026-07-03 18:00 BJT",
+      "round": "32强",
+      "kickoff_local": "07-04 09:30 BJT",
+      "home": "哥伦比亚",
+      "away": "加纳",
+      "status": "未开始",
+      "ray_prediction": {
+        "advancing_team": "哥伦比亚",
+        "method": "90",
+        "regulation_score": {
+          "home_score": 3,
+          "away_score": 1
+        },
+        "label": "哥伦比亚 3:1 加纳，90分钟晋级",
+        "reason": "Ray 的预设预测：看好哥伦比亚进攻端质量和节奏变化。"
+      },
+      "gpt_prediction": {
+        "advancing_team": "哥伦比亚",
+        "method": "90",
+        "regulation_score": {
+          "home_score": 2,
+          "away_score": 1
+        },
+        "label": "哥伦比亚 2:1 加纳，90分钟晋级",
+        "reason": "GPT 5.5 的预设预测：哥伦比亚更均衡，但加纳会保持冲击力。"
+      },
+      "published": false
     }
   ]
 }

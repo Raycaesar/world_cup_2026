@@ -386,10 +386,10 @@
       document.getElementById("rayBoard").textContent = totals.ray_total || 0;
       document.getElementById("gptBoard").textContent = totals.gpt_total || 0;
       document.getElementById("leaderComment").textContent = totals.leader_comment || "";
-      const matches = data.knockout_matches || [];
+      const matches = (data.knockout_matches || []).filter(m => !(m.actual && m.actual.advancing_team));
       document.getElementById("matchCount").textContent = `${matches.length} match${matches.length === 1 ? "" : "es"}`;
       const list = document.getElementById("matchList"); list.innerHTML = "";
-      if (!matches.length) list.appendChild(create("p", "empty", "下一场预测待填写。"));
+      if (!matches.length) list.appendChild(create("p", "empty", data.prediction_release_note || "下一场预测待填写。"));
       matches.forEach(match => list.appendChild(renderKnockoutMatch(match)));
       renderLiveTicker(data);
       renderTopScorers(data);
