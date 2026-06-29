@@ -2,9 +2,9 @@ name: Publish knockout predictions
 
 on:
   workflow_dispatch:
-  schedule:
+  #schedule:
     # 18:00 Beijing time = 10:00 UTC
-    - cron: "0 10 * * *"
+   # - cron: "0 10 * * *"
 
 permissions:
   contents: write
