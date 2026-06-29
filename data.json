@@ -7,10 +7,10 @@
     "tagline": "World Cup Knockout Prediction Derby"
   },
   "meta": {
-    "updated_at": "2026-06-30 03:31 BJT",
+    "updated_at": "2026-06-30 07:40 BJT",
     "active_day": "2026-06-29",
     "timezone": "Asia/Beijing",
-    "version": "knockout-scorefix-202606291931"
+    "version": "knockout-auto-202606292340"
   },
   "phase": "knockout",
   "archive": {
@@ -20,10 +20,10 @@
   "score_summary": {
     "ray_total": 50,
     "gpt_total": 50,
-    "leader_comment": "Ray 与 GPT 5.5 战成 50:50。"
+    "leader_comment": "Ray 与 GPT 5.5 战平。"
   },
-  "headline": "淘汰赛更新：巴西 2:1 日本",
-  "brief": "最新淘汰赛已结算：巴西 2:1 日本，Ray +0，GPT +5；当前总分 Ray 50:50 GPT 5.5。",
+  "headline": "淘汰赛更新：德国 1:1 巴拉圭",
+  "brief": "最新淘汰赛已结算：德国 1:1 巴拉圭，Ray +0，GPT +0。",
   "knockout_rules": [
     "只有一方猜中晋级队时，猜中者先得 3 分；若同时猜中晋级方式，再得 1 分；若90分钟比分完全命中，再得 1 分，单场最高 5 分。",
     "双方都猜中晋级队时，不重复给胜负分，只比较晋级方式与90分钟比分：方式正确 +1，90分钟比分完全命中再 +1。",
@@ -134,22 +134,22 @@
     },
     {
       "id": "ger-par-20260630",
-      "espn_id": "53452541",
+      "espn_id": "760489",
       "round": "32强",
       "kickoff_local": "06-30 04:30 BJT",
       "home": "德国",
       "away": "巴拉圭",
       "venue": "",
-      "status": "未开始",
+      "status": "已结束",
       "actual": {
-        "method": null,
+        "method": "penalties",
         "regulation_score": {
           "home_score": null,
           "away_score": null
         },
         "final_score": {
-          "home_score": null,
-          "away_score": null
+          "home_score": 1,
+          "away_score": 1
         },
         "advancing_team": null
       },
@@ -174,7 +174,7 @@
         "reason": "GPT 5.5 的预设预测：德国整体实力明显占优，但巴拉圭会压低节奏。"
       },
       "manual_points": null,
-      "review": "赛前预测。",
+      "review": "德国 1:1 巴拉圭。比赛已结束，但需要手动补充90分钟比分与晋级方式后再计分。",
       "predictions_published_at": "2026-06-29 18:00 BJT"
     },
     {
@@ -405,6 +405,10 @@
     {
       "time": "2026-06-30 03:31",
       "text": "修正计分：巴西 2:1 日本，GPT 命中晋级队、90分钟方式与准确比分，本场 GPT +5；总分改为 Ray 50:50 GPT 5.5。"
+    },
+    {
+      "time": "06-30 07:40",
+      "text": "自动更新：德国 1:1 巴拉圭，Ray +0，GPT +0。"
     }
   ],
   "live_ticker": [
