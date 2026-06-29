@@ -7,10 +7,10 @@
     "tagline": "World Cup Knockout Prediction Derby"
   },
   "meta": {
-    "updated_at": "2026-06-29 11:10 BJT",
+    "updated_at": "2026-06-29 11:35 BJT",
     "active_day": "2026-06-29",
     "timezone": "Asia/Beijing",
-    "version": "knockout-prediction-release-plan-20260629"
+    "version": "knockout-prediction-release-review-fold-20260629"
   },
   "phase": "knockout",
   "archive": {
@@ -91,7 +91,7 @@
       "home": "南非",
       "away": "加拿大",
       "status": "已结束",
-      "note": "加拿大 1:0 南非晋级，将对阵荷兰/摩洛哥胜者",
+      "note": "加拿大晋级，将对阵荷兰/摩洛哥胜者",
       "score": "0:1",
       "winner": "加拿大"
     },
@@ -255,14 +255,30 @@
     {
       "time": "06-29 11:10",
       "text": "加入预测发布计划：32强剩余15场预测隐藏在发布池中，每天北京时间18:00自动发布次日比赛。"
+    },
+    {
+      "time": "06-29 11:35",
+      "text": "页面调整：LIVE STICKER 改为自动跳过已结束比赛；淘汰赛复盘改为按比赛日折叠显示。"
     }
   ],
   "live_ticker": [
     {
       "type": "next",
       "label": "NEXT",
-      "text": "南非 vs 加拿大",
-      "detail": "06-29 03:00 BJT · 32强"
+      "text": "巴西 vs 日本",
+      "detail": "06-30 01:00 BJT · 32强"
+    },
+    {
+      "type": "next",
+      "label": "NEXT",
+      "text": "德国 vs 巴拉圭",
+      "detail": "06-30 04:30 BJT · 32强"
+    },
+    {
+      "type": "next",
+      "label": "NEXT",
+      "text": "荷兰 vs 摩洛哥",
+      "detail": "06-30 09:00 BJT · 32强"
     }
   ],
   "top_scorers": [

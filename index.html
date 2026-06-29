@@ -241,27 +241,40 @@
       if (match.manual_points) card.appendChild(create("p", "points-line", `本场得分：Ray +${match.manual_points.ray || 0}，GPT +${match.manual_points.gpt || 0}`));
       return card;
     }
+    function parseBjDateTime(value) {
+      const m = String(value || "").match(/(\d{2})-(\d{2})\s+(\d{2}):(\d{2})/);
+      if (!m) return Number.POSITIVE_INFINITY;
+      return Date.UTC(2026, Number(m[1]) - 1, Number(m[2]), Number(m[3]) - 8, Number(m[4]));
+    }
+    function matchKey(source) {
+      return `${source && source.home ? source.home : ""}__${source && source.away ? source.away : ""}`;
+    }
+    function isFinishedMatch(source) {
+      if (!source) return false;
+      if (source.actual && source.actual.advancing_team) return true;
+      return /已结束|完场|complete|final/i.test(String(source.status || ""));
+    }
     function tickerItemsFromMatches(data) {
+      const finishedKeys = new Set((data.knockout_matches || []).filter(isFinishedMatch).map(matchKey));
       const seen = new Set();
       const items = [];
       const add = (source) => {
         if (!source || !source.home || !source.away) return;
-        const actual = source.actual || {};
-        if (actual.advancing_team) return;
-        const key = `${source.home}__${source.away}`;
-        if (seen.has(key)) return;
+        const key = matchKey(source);
+        if (seen.has(key) || finishedKeys.has(key) || isFinishedMatch(source)) return;
         seen.add(key);
         const isLive = /进行|live/i.test(String(source.status || ""));
         items.push({
           type: isLive ? "live" : "next",
           label: isLive ? "LIVE" : "NEXT",
           text: `${source.home} vs ${source.away}`,
-          detail: `${source.kickoff_local || "时间待定"} · ${source.round || source.status || "淘汰赛"}`
+          detail: `${source.kickoff_local || "时间待定"} · ${source.round || source.status || "淘汰赛"}`,
+          sortKey: parseBjDateTime(source.kickoff_local)
         });
       };
       (data.knockout_matches || []).forEach(add);
       (data.bracket || []).forEach(add);
-      return items.slice(0, 4);
+      return items.sort((a, b) => a.sortKey - b.sortKey).slice(0, 4);
     }
     function renderLiveTicker(data) {
       const box = document.getElementById("liveTicker");
@@ -318,20 +331,47 @@
         box.appendChild(card);
       });
     }
+    function reviewDayLabel(match) {
+      const m = String(match.kickoff_local || "").match(/(\d{2})-(\d{2})/);
+      return m ? `${m[1]}-${m[2]}` : "日期待定";
+    }
     function renderPostMatchReviews(data) {
       const box = document.getElementById("knockoutReviewList");
       if (!box) return;
       box.innerHTML = "";
       const finished = (data.knockout_matches || []).filter(m => m.actual && m.actual.advancing_team);
       if (!finished.length) return box.appendChild(create("p", "empty", "淘汰赛尚无已结束比赛。第一场结束后，这里会从头开始记录复盘，不包含小组赛内容。"));
-      finished.slice().reverse().forEach(match => {
-        const card = create("article", "review-card knockout-review-card");
-        card.appendChild(create("span", "time", `${text(match.round)} · ${text(match.kickoff_local)}`));
-        card.appendChild(create("h3", "", `${text(match.home)} ${scoreLabel(match.actual && match.actual.final_score)} ${text(match.away)}`));
-        card.appendChild(create("p", "review-result", actualLine(match)));
-        card.appendChild(create("p", "", match.review || "复盘待补充。"));
-        if (match.manual_points) card.appendChild(create("p", "points-line", `本场得分：Ray +${match.manual_points.ray || 0}，GPT +${match.manual_points.gpt || 0}`));
-        box.appendChild(card);
+      const groups = new Map();
+      finished.slice().sort((a, b) => parseBjDateTime(a.kickoff_local) - parseBjDateTime(b.kickoff_local)).forEach(match => {
+        const day = reviewDayLabel(match);
+        if (!groups.has(day)) groups.set(day, []);
+        groups.get(day).push(match);
+      });
+      const days = Array.from(groups.keys()).sort((a, b) => b.localeCompare(a));
+      days.forEach((day, index) => {
+        const matches = groups.get(day);
+        const rayDay = matches.reduce((sum, m) => sum + Number((m.manual_points && m.manual_points.ray) || 0), 0);
+        const gptDay = matches.reduce((sum, m) => sum + Number((m.manual_points && m.manual_points.gpt) || 0), 0);
+        const details = document.createElement("details");
+        details.className = "review-day knockout-review-day";
+        if (index === 0) details.open = true;
+        const summary = create("summary", "review-day-summary");
+        summary.appendChild(create("span", "", day));
+        summary.appendChild(create("strong", "", `${matches.length} 场已结束`));
+        summary.appendChild(create("em", "", `Ray +${rayDay} : GPT +${gptDay}`));
+        details.appendChild(summary);
+        const body = create("div", "review-day-body knockout-review-day-body");
+        matches.slice().reverse().forEach(match => {
+          const card = create("article", "review-card knockout-review-card");
+          card.appendChild(create("span", "time", `${text(match.round)} · ${text(match.kickoff_local)}`));
+          card.appendChild(create("h3", "", `${text(match.home)} ${scoreLabel(match.actual && match.actual.final_score)} ${text(match.away)}`));
+          card.appendChild(create("p", "review-result", actualLine(match)));
+          card.appendChild(create("p", "", match.review || "复盘待补充。"));
+          if (match.manual_points) card.appendChild(create("p", "points-line", `本场得分：Ray +${match.manual_points.ray || 0}，GPT +${match.manual_points.gpt || 0}`));
+          body.appendChild(card);
+        });
+        details.appendChild(body);
+        box.appendChild(details);
       });
     }
     function renderBracket(data) {
