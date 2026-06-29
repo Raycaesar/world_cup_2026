@@ -71,29 +71,34 @@ function scoreComplete(score) { return score && score.home_score !== null && sco
 function actualFinished(match) { return match.actual && match.actual.advancing_team && scoreComplete(match.actual.final_score); }
 function winner(home, away, homeTeam, awayTeam) { if (home > away) return homeTeam; if (away > home) return awayTeam; return null; }
 function methodLabel(method) { return method === "90" ? "90分钟" : method === "extra_time" || method === "extra" ? "加时" : method === "penalties" ? "点球" : "未定"; }
+function predictionDetailPoints(pred, actual) {
+  const predMethod = pred.method === "extra" ? "extra_time" : pred.method;
+  const actualMethod = actual.method === "extra" ? "extra_time" : actual.method;
+  if (predMethod !== actualMethod) return 0;
+  let pts = 1;
+  const ps = pred.regulation_score || {};
+  const as = actual.regulation_score || {};
+  if (ps.home_score === as.home_score && ps.away_score === as.away_score) pts += 1;
+  return pts;
+}
 function calculateKnockoutPoints(match) {
   const actual = match.actual || {};
   if (!actual.advancing_team || !actual.method || !scoreComplete(actual.regulation_score)) return null;
   const r = match.ray_prediction || {}, g = match.gpt_prediction || {};
   const rayWin = r.advancing_team === actual.advancing_team;
   const gptWin = g.advancing_team === actual.advancing_team;
-  if (rayWin && !gptWin) return { ray: 3, gpt: 0, explanation: "Ray 猜中晋级队，GPT 未猜中，Ray +3。" };
-  if (!rayWin && gptWin) return { ray: 0, gpt: 3, explanation: "GPT 猜中晋级队，Ray 未猜中，GPT +3。" };
-  if (!rayWin && !gptWin) return { ray: 0, gpt: 0, explanation: "双方都未猜中晋级队，本场不计分。" };
-  let ray = 0, gpt = 0;
-  const actualMethod = actual.method === "extra" ? "extra_time" : actual.method;
-  for (const [key, pred] of [["ray", r], ["gpt", g]]) {
-    const predMethod = pred.method === "extra" ? "extra_time" : pred.method;
-    let pts = 0;
-    if (predMethod === actualMethod) {
-      pts += 1;
-      const ps = pred.regulation_score || {};
-      const as = actual.regulation_score || {};
-      if (ps.home_score === as.home_score && ps.away_score === as.away_score) pts += 1;
-    }
-    if (key === "ray") ray += pts; else gpt += pts;
+  const rayDetail = rayWin ? predictionDetailPoints(r, actual) : 0;
+  const gptDetail = gptWin ? predictionDetailPoints(g, actual) : 0;
+  if (rayWin && !gptWin) {
+    const ray = 3 + rayDetail;
+    return { ray, gpt: 0, explanation: `Ray 猜中晋级队，GPT 未猜中；晋级队 +3，路径与比分加分 +${rayDetail}，Ray +${ray}。` };
   }
-  return { ray, gpt, explanation: `双方都猜中晋级队；按晋级方式与90分钟比分计分：Ray +${ray}，GPT +${gpt}。` };
+  if (!rayWin && gptWin) {
+    const gpt = 3 + gptDetail;
+    return { ray: 0, gpt, explanation: `GPT 猜中晋级队，Ray 未猜中；晋级队 +3，路径与比分加分 +${gptDetail}，GPT +${gpt}。` };
+  }
+  if (!rayWin && !gptWin) return { ray: 0, gpt: 0, explanation: "双方都未猜中晋级队，本场不计分。" };
+  return { ray: rayDetail, gpt: gptDetail, explanation: `双方都猜中晋级队；不重复给胜负分，只按晋级方式与90分钟比分计分：Ray +${rayDetail}，GPT +${gptDetail}。` };
 }
 function updateOneMatch(match, event) {
   if (actualFinished(match)) return null;

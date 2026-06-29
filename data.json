@@ -1,16 +1,16 @@
 {
   "site": {
     "title": "Ray大战GPT 5.5｜淘汰赛篇",
-    "subtitle": "现在开始没有平局，只有晋级。人类是否还能守卫懂球的优势，我们拭目以待。",
+    "subtitle": "小组赛归档，32强开战：从这里开始没有平局，只有晋级。",
     "status": "LIVE",
     "refresh_seconds": 30,
     "tagline": "World Cup Knockout Prediction Derby"
   },
   "meta": {
-    "updated_at": "2026-06-29 18:18 BJT",
+    "updated_at": "2026-06-30 03:31 BJT",
     "active_day": "2026-06-29",
     "timezone": "Asia/Beijing",
-    "version": "prediction-release-202606291018"
+    "version": "knockout-scorefix-202606291931"
   },
   "phase": "knockout",
   "archive": {
@@ -19,18 +19,19 @@
   },
   "score_summary": {
     "ray_total": 50,
-    "gpt_total": 45,
-    "leader_comment": "南非 0:1 加拿大后双方各得 1 分；Ray 以 50:45 领先 GPT 5.5。"
+    "gpt_total": 50,
+    "leader_comment": "Ray 与 GPT 5.5 战成 50:50。"
   },
-  "headline": "淘汰赛预测发布：巴西 vs 日本、德国 vs 巴拉圭、荷兰 vs 摩洛哥",
-  "brief": "北京时间 2026-06-29 18:18 BJT 已发布 3 场淘汰赛预测：巴西 vs 日本；德国 vs 巴拉圭；荷兰 vs 摩洛哥。",
+  "headline": "淘汰赛更新：巴西 2:1 日本",
+  "brief": "最新淘汰赛已结算：巴西 2:1 日本，Ray +0，GPT +5；当前总分 Ray 50:50 GPT 5.5。",
   "knockout_rules": [
-    "只有一方猜中晋级队时，猜中者得 3 分；猜错晋级队者不得获得路径分或比分分。",
-    "双方都猜中晋级队时，不重复给胜负分，改看晋级方式：90 分钟、加时、点球。",
-    "实际 90 分钟内分胜负时，预测 90 分钟晋级者得 1 分；若 90 分钟比分完全命中，再得 1 分。",
-    "实际加时晋级时，只有预测加时晋级者得 1 分；若其 90 分钟平局比分完全命中，再得 1 分。",
-    "实际点球晋级时，只有预测点球晋级者得 1 分；若其 90 分钟平局比分完全命中，再得 1 分。",
-    "如果预测了加时但实际点球，或者预测了点球但实际加时，即使 90 分钟平局比分相同，也不得路径分或比分分。",
+    "只有一方猜中晋级队时，猜中者先得 3 分；若同时猜中晋级方式，再得 1 分；若90分钟比分完全命中，再得 1 分，单场最高 5 分。",
+    "双方都猜中晋级队时，不重复给胜负分，只比较晋级方式与90分钟比分：方式正确 +1，90分钟比分完全命中再 +1。",
+    "双方都未猜中晋级队时均不得分；晋级队预测错误者不得获得任何路径分或比分分。",
+    "实际90分钟内分胜负时，预测90分钟晋级者才可获得方式分；若90分钟比分完全命中，再得比分分。",
+    "实际加时晋级时，只有预测加时晋级者才可获得方式分；若其90分钟平局比分完全命中，再得比分分。",
+    "实际点球晋级时，只有预测点球晋级者才可获得方式分；若其90分钟平局比分完全命中，再得比分分。",
+    "如果预测了加时但实际点球，或者预测了点球但实际加时，即使90分钟平局比分相同，也不得路径分或比分分。",
     "赛前大奖结算：亚军、金靴、金童、金球奖猜中方各得 5 分；冠军猜中方得 10 分。"
   ],
   "knockout_matches": [
@@ -90,18 +91,18 @@
       "home": "巴西",
       "away": "日本",
       "venue": "",
-      "status": "未开始",
+      "status": "已结束",
       "actual": {
-        "method": null,
+        "method": "90",
         "regulation_score": {
-          "home_score": null,
-          "away_score": null
+          "home_score": 2,
+          "away_score": 1
         },
         "final_score": {
-          "home_score": null,
-          "away_score": null
+          "home_score": 2,
+          "away_score": 1
         },
-        "advancing_team": null
+        "advancing_team": "巴西"
       },
       "ray_prediction": {
         "advancing_team": "日本",
@@ -123,9 +124,13 @@
         "label": "巴西 2:1 日本，90分钟晋级",
         "reason": "GPT 5.5 的预设预测：巴西个人能力和边路爆点更强，但日本足以制造压力。"
       },
-      "manual_points": null,
-      "review": "赛前预测。",
-      "predictions_published_at": "2026-06-29 18:18 BJT"
+      "manual_points": {
+        "ray": 0,
+        "gpt": 5,
+        "explanation": "GPT 猜中巴西晋级，Ray 未猜中；GPT 同时命中90分钟晋级方式和90分钟准确比分，晋级队 +3、方式 +1、比分 +1，本场 GPT +5。"
+      },
+      "review": "巴西 2:1 日本，巴西通过90分钟晋级。Ray 预测日本加时爆冷未中；GPT 命中巴西晋级、90分钟晋级方式与准确比分，本场 Ray +0，GPT +5。",
+      "predictions_published_at": "2026-06-29 18:00 BJT"
     },
     {
       "id": "ger-par-20260630",
@@ -170,7 +175,7 @@
       },
       "manual_points": null,
       "review": "赛前预测。",
-      "predictions_published_at": "2026-06-29 18:18 BJT"
+      "predictions_published_at": "2026-06-29 18:00 BJT"
     },
     {
       "id": "ned-mar-20260630",
@@ -215,7 +220,7 @@
       },
       "manual_points": null,
       "review": "赛前预测。",
-      "predictions_published_at": "2026-06-29 18:18 BJT"
+      "predictions_published_at": "2026-06-29 18:00 BJT"
     }
   ],
   "bracket": [
@@ -226,7 +231,7 @@
       "home": "南非",
       "away": "加拿大",
       "status": "已结束",
-      "note": "加拿大晋级，将对阵荷兰/摩洛哥胜者",
+      "note": "加拿大 1:0 南非晋级，将对阵荷兰/摩洛哥胜者",
       "score": "0:1",
       "winner": "加拿大"
     },
@@ -236,8 +241,10 @@
       "kickoff_local": "06-30 01:00 BJT",
       "home": "巴西",
       "away": "日本",
-      "status": "未开始",
-      "note": "胜者进入 16 强"
+      "status": "已结束",
+      "note": "巴西晋级，将对阵科特迪瓦/挪威胜者",
+      "score": "2:1",
+      "winner": "巴西"
     },
     {
       "id": "53452541",
@@ -392,32 +399,20 @@
       "text": "加入预测发布计划：32强剩余15场预测隐藏在发布池中，每天北京时间18:00自动发布次日比赛。"
     },
     {
-      "time": "06-29 11:35",
-      "text": "页面调整：LIVE STICKER 改为自动跳过已结束比赛；淘汰赛复盘改为按比赛日折叠显示。"
+      "time": "06-29 18:00",
+      "text": "发布次日淘汰赛预测：巴西 vs 日本、德国 vs 巴拉圭、荷兰 vs 摩洛哥。"
     },
     {
-      "time": "06-29 18:18",
-      "text": "发布次日淘汰赛预测：巴西 vs 日本、德国 vs 巴拉圭、荷兰 vs 摩洛哥。"
+      "time": "2026-06-30 03:31",
+      "text": "修正计分：巴西 2:1 日本，GPT 命中晋级队、90分钟方式与准确比分，本场 GPT +5；总分改为 Ray 50:50 GPT 5.5。"
     }
   ],
   "live_ticker": [
     {
       "type": "next",
       "label": "NEXT",
-      "text": "巴西 vs 日本",
-      "detail": "06-30 01:00 BJT · 32强"
-    },
-    {
-      "type": "next",
-      "label": "NEXT",
-      "text": "德国 vs 巴拉圭",
-      "detail": "06-30 04:30 BJT · 32强"
-    },
-    {
-      "type": "next",
-      "label": "NEXT",
-      "text": "荷兰 vs 摩洛哥",
-      "detail": "06-30 09:00 BJT · 32强"
+      "text": "南非 vs 加拿大",
+      "detail": "06-29 03:00 BJT · 32强"
     }
   ],
   "top_scorers": [
@@ -553,7 +548,7 @@
         "reason": "GPT 5.5 的预设预测：巴西个人能力和边路爆点更强，但日本足以制造压力。"
       },
       "published": true,
-      "published_at_bjt": "2026-06-29 18:18 BJT"
+      "published_at_bjt": "2026-06-29 18:00 BJT"
     },
     {
       "match_id": "ger-par-20260630",
@@ -586,7 +581,7 @@
         "reason": "GPT 5.5 的预设预测：德国整体实力明显占优，但巴拉圭会压低节奏。"
       },
       "published": true,
-      "published_at_bjt": "2026-06-29 18:18 BJT"
+      "published_at_bjt": "2026-06-29 18:00 BJT"
     },
     {
       "match_id": "ned-mar-20260630",
@@ -619,7 +614,7 @@
         "reason": "GPT 5.5 的预设预测：荷兰推进质量略高，摩洛哥会有进球但难以拖到加时。"
       },
       "published": true,
-      "published_at_bjt": "2026-06-29 18:18 BJT"
+      "published_at_bjt": "2026-06-29 18:00 BJT"
     },
     {
       "match_id": "civ-nor-20260701",
