@@ -7,10 +7,10 @@
     "tagline": "World Cup Knockout Prediction Derby"
   },
   "meta": {
-    "updated_at": "2026-06-30 12:00 BJT",
-    "active_day": "2026-06-29",
+    "updated_at": "2026-06-30 12:20 BJT",
+    "active_day": "2026-06-30",
     "timezone": "Asia/Beijing",
-    "version": "knockout-auto-202606300400"
+    "version": "knockout-penalty-update-20260630"
   },
   "phase": "knockout",
   "archive": {
@@ -20,10 +20,10 @@
   "score_summary": {
     "ray_total": 50,
     "gpt_total": 50,
-    "leader_comment": "Ray 与 GPT 5.5 战平。"
+    "leader_comment": "Ray 与 GPT 5.5 战成 50:50；巴拉圭和摩洛哥都通过点球爆冷晋级，这两场双方都没得分。"
   },
-  "headline": "淘汰赛更新：荷兰 1:1 摩洛哥",
-  "brief": "最新淘汰赛已结算：德国 1:1 巴拉圭，Ray +0，GPT +0；荷兰 1:1 摩洛哥，Ray +0，GPT +0。",
+  "headline": "巴拉圭、摩洛哥双双点球晋级，Ray 与 GPT 5.5 仍是 50:50",
+  "brief": "德国 1:1 巴拉圭，点球 3:4，巴拉圭淘汰德国晋级；荷兰 1:1 摩洛哥，点球 2:3，摩洛哥淘汰荷兰晋级。两场双方都猜错晋级队，Ray +0，GPT +0，总分不变。",
   "knockout_rules": [
     "只有一方猜中晋级队时，猜中者先得 3 分；若同时猜中晋级方式，再得 1 分；若90分钟比分完全命中，再得 1 分，单场最高 5 分。",
     "双方都猜中晋级队时，不重复给胜负分，只比较晋级方式与90分钟比分：方式正确 +1，90分钟比分完全命中再 +1。",
@@ -134,7 +134,7 @@
     },
     {
       "id": "ger-par-20260630",
-      "espn_id": "760489",
+      "espn_id": "53452541",
       "round": "32强",
       "kickoff_local": "06-30 04:30 BJT",
       "home": "德国",
@@ -144,14 +144,23 @@
       "actual": {
         "method": "penalties",
         "regulation_score": {
-          "home_score": null,
-          "away_score": null
+          "home_score": 1,
+          "away_score": 1
+        },
+        "extra_time_score": {
+          "home_score": 1,
+          "away_score": 1
         },
         "final_score": {
           "home_score": 1,
           "away_score": 1
         },
-        "advancing_team": null
+        "penalties_score": {
+          "home_score": 3,
+          "away_score": 4
+        },
+        "advancing_team": "巴拉圭",
+        "next_match": "对阵法国/瑞典胜者"
       },
       "ray_prediction": {
         "advancing_team": "德国",
@@ -173,13 +182,17 @@
         "label": "德国 2:0 巴拉圭，90分钟晋级",
         "reason": "GPT 5.5 的预设预测：德国整体实力明显占优，但巴拉圭会压低节奏。"
       },
-      "manual_points": null,
-      "review": "德国 1:1 巴拉圭。比赛已结束，但需要手动补充90分钟比分与晋级方式后再计分。",
+      "manual_points": {
+        "ray": 0,
+        "gpt": 0,
+        "explanation": "双方都预测德国晋级，但巴拉圭点球胜出，本场 Ray +0，GPT +0。"
+      },
+      "review": "德国与巴拉圭 90 分钟和 120 分钟均战成 1:1。点球大战中巴拉圭 4:3 胜出，淘汰德国晋级 16 强，下一轮将对阵法国/瑞典胜者；Ray 和 GPT 5.5 赛前都看好德国晋级，因此本场不改变总分。",
       "predictions_published_at": "2026-06-29 18:00 BJT"
     },
     {
       "id": "ned-mar-20260630",
-      "espn_id": "760488",
+      "espn_id": "53452547",
       "round": "32强",
       "kickoff_local": "06-30 09:00 BJT",
       "home": "荷兰",
@@ -189,14 +202,23 @@
       "actual": {
         "method": "penalties",
         "regulation_score": {
-          "home_score": null,
-          "away_score": null
+          "home_score": 1,
+          "away_score": 1
+        },
+        "extra_time_score": {
+          "home_score": 1,
+          "away_score": 1
         },
         "final_score": {
           "home_score": 1,
           "away_score": 1
         },
-        "advancing_team": null
+        "penalties_score": {
+          "home_score": 2,
+          "away_score": 3
+        },
+        "advancing_team": "摩洛哥",
+        "next_match": "对阵加拿大"
       },
       "ray_prediction": {
         "advancing_team": "荷兰",
@@ -218,8 +240,12 @@
         "label": "荷兰 2:1 摩洛哥，90分钟晋级",
         "reason": "GPT 5.5 的预设预测：荷兰推进质量略高，摩洛哥会有进球但难以拖到加时。"
       },
-      "manual_points": null,
-      "review": "荷兰 1:1 摩洛哥。比赛已结束，但需要手动补充90分钟比分与晋级方式后再计分。",
+      "manual_points": {
+        "ray": 0,
+        "gpt": 0,
+        "explanation": "双方都预测荷兰晋级，但摩洛哥点球胜出，本场 Ray +0，GPT +0。"
+      },
+      "review": "荷兰与摩洛哥 90 分钟和 120 分钟均战成 1:1。点球大战中摩洛哥 3:2 胜出，淘汰荷兰晋级 16 强，下一轮将对阵加拿大；Ray 和 GPT 5.5 赛前都看好荷兰晋级，因此本场不改变总分。",
       "predictions_published_at": "2026-06-29 18:00 BJT"
     }
   ],
@@ -231,7 +257,7 @@
       "home": "南非",
       "away": "加拿大",
       "status": "已结束",
-      "note": "加拿大 1:0 南非晋级，将对阵荷兰/摩洛哥胜者",
+      "note": "加拿大 1:0 南非晋级，将对阵摩洛哥",
       "score": "0:1",
       "winner": "加拿大"
     },
@@ -252,8 +278,19 @@
       "kickoff_local": "06-30 04:30 BJT",
       "home": "德国",
       "away": "巴拉圭",
-      "status": "未开始",
-      "note": "胜者对阵法国/瑞典胜者"
+      "status": "已结束",
+      "note": "巴拉圭点球 4:3 淘汰德国，将对阵法国/瑞典胜者",
+      "score": "1:1，点球 3:4",
+      "winner": "巴拉圭",
+      "method": "penalties",
+      "penalties_score": {
+        "home_score": 3,
+        "away_score": 4
+      },
+      "score_obj": {
+        "home_score": 1,
+        "away_score": 1
+      }
     },
     {
       "id": "53452547",
@@ -261,8 +298,19 @@
       "kickoff_local": "06-30 09:00 BJT",
       "home": "荷兰",
       "away": "摩洛哥",
-      "status": "未开始",
-      "note": "胜者对阵南非/加拿大胜者"
+      "status": "已结束",
+      "note": "摩洛哥点球 3:2 淘汰荷兰，将对阵加拿大",
+      "winner": "摩洛哥",
+      "method": "penalties",
+      "score": "1:1，点球 2:3",
+      "score_obj": {
+        "home_score": 1,
+        "away_score": 1
+      },
+      "penalties_score": {
+        "home_score": 2,
+        "away_score": 3
+      }
     },
     {
       "id": "53452561",
@@ -375,92 +423,74 @@
   ],
   "update_log": [
     {
-      "time": "06-30 09:00",
-      "text": "自动更新：德国 1:1 巴拉圭，Ray +0，GPT +0。"
+      "time": "06-28 18:45",
+      "text": "小组赛与 32 强名单已归档；淘汰赛主页启用，当前总分 Ray 49:44 GPT 5.5。"
     },
     {
-      "time": "06-30 09:10",
-      "text": "自动更新：德国 1:1 巴拉圭，Ray +0，GPT +0。"
+      "time": "06-28 18:45",
+      "text": "录入 32 强第一场预测：Ray 加拿大 2:0 南非，GPT 加拿大 2:1 南非，均为 90 分钟晋级。"
     },
     {
-      "time": "06-30 09:20",
-      "text": "自动更新：德国 1:1 巴拉圭，Ray +0，GPT +0。"
+      "time": "2026-06-28 19:00 BJT",
+      "text": "调整淘汰赛主页布局：下一场、32强对阵、淘汰赛复盘置顶；赛前大奖与规则、射手榜、总积分与更新记录改为两组双栏。"
     },
     {
-      "time": "06-30 09:30",
-      "text": "自动更新：德国 1:1 巴拉圭，Ray +0，GPT +0。"
+      "time": "06-28 18:45",
+      "text": "页面更新：LIVE STICKER 更突出淘汰赛动态；射手榜同步梅西 6 球。"
     },
     {
-      "time": "06-30 09:40",
-      "text": "自动更新：德国 1:1 巴拉圭，Ray +0，GPT +0。"
+      "time": "06-29 11:10",
+      "text": "南非 0:1 加拿大已结算：双方都猜中加拿大晋级和90分钟路径，各得 1 分；总分 Ray 50:45 GPT 5.5。"
     },
     {
-      "time": "06-30 09:50",
-      "text": "自动更新：德国 1:1 巴拉圭，Ray +0，GPT +0。"
+      "time": "06-29 11:10",
+      "text": "加入预测发布计划：32强剩余15场预测隐藏在发布池中，每天北京时间18:00自动发布次日比赛。"
     },
     {
-      "time": "06-30 10:00",
-      "text": "自动更新：德国 1:1 巴拉圭，Ray +0，GPT +0。"
+      "time": "06-29 18:00",
+      "text": "发布次日淘汰赛预测：巴西 vs 日本、德国 vs 巴拉圭、荷兰 vs 摩洛哥。"
     },
     {
-      "time": "06-30 10:10",
-      "text": "自动更新：德国 1:1 巴拉圭，Ray +0，GPT +0。"
+      "time": "2026-06-30 03:31",
+      "text": "巴西 2:1 日本晋级，GPT 命中晋级队、90分钟方式与准确比分，本场 GPT +5；总分来到 Ray 50:50 GPT 5.5。"
     },
     {
-      "time": "06-30 10:20",
-      "text": "自动更新：德国 1:1 巴拉圭，Ray +0，GPT +0。"
+      "time": "06-30 12:20",
+      "text": "巴拉圭 120 分钟 1:1 战平德国，点球 4:3 胜出晋级；双方都预测德国晋级，本场 Ray +0，GPT +0。"
     },
     {
-      "time": "06-30 10:30",
-      "text": "自动更新：德国 1:1 巴拉圭，Ray +0，GPT +0。"
+      "time": "06-30 12:20",
+      "text": "摩洛哥 120 分钟 1:1 战平荷兰，点球 3:2 胜出晋级；双方都预测荷兰晋级，本场 Ray +0，GPT +0。"
     },
     {
-      "time": "06-30 10:40",
-      "text": "自动更新：德国 1:1 巴拉圭，Ray +0，GPT +0。"
-    },
-    {
-      "time": "06-30 10:50",
-      "text": "自动更新：德国 1:1 巴拉圭，Ray +0，GPT +0。"
-    },
-    {
-      "time": "06-30 11:00",
-      "text": "自动更新：德国 1:1 巴拉圭，Ray +0，GPT +0。"
-    },
-    {
-      "time": "06-30 11:10",
-      "text": "自动更新：德国 1:1 巴拉圭，Ray +0，GPT +0。"
-    },
-    {
-      "time": "06-30 11:20",
-      "text": "自动更新：德国 1:1 巴拉圭，Ray +0，GPT +0。"
-    },
-    {
-      "time": "06-30 11:30",
-      "text": "自动更新：德国 1:1 巴拉圭，Ray +0，GPT +0。"
-    },
-    {
-      "time": "06-30 11:40",
-      "text": "自动更新：德国 1:1 巴拉圭，Ray +0，GPT +0。"
-    },
-    {
-      "time": "06-30 11:50",
-      "text": "自动更新：德国 1:1 巴拉圭，Ray +0，GPT +0。"
-    },
-    {
-      "time": "06-30 12:00",
-      "text": "自动更新：德国 1:1 巴拉圭，Ray +0，GPT +0。"
-    },
-    {
-      "time": "06-30 12:00",
-      "text": "自动更新：荷兰 1:1 摩洛哥，Ray +0，GPT +0。"
+      "time": "06-30 12:20",
+      "text": "两场点球大战都没有改变比分牌，总分仍是 Ray 50:50 GPT 5.5。"
     }
   ],
   "live_ticker": [
     {
+      "type": "final",
+      "label": "FINAL",
+      "text": "德国 1:1 巴拉圭，点球 3:4，巴拉圭晋级",
+      "detail": "06-30 04:30 BJT · 32强"
+    },
+    {
+      "type": "final",
+      "label": "FINAL",
+      "text": "荷兰 1:1 摩洛哥，点球 2:3，摩洛哥晋级",
+      "detail": "06-30 09:00 BJT · 32强"
+    },
+    {
       "type": "next",
       "label": "NEXT",
-      "text": "南非 vs 加拿大",
-      "detail": "06-29 03:00 BJT · 32强"
+      "text": "科特迪瓦 vs 挪威",
+      "detail": "07-01 01:00 BJT · 32强"
+    },
+    {
+      "type": "next",
+      "label": "NEXT",
+      "text": "法国 vs 瑞典",
+      "detail": "07-01 05:00 BJT · 32强"
     }
   ],
   "top_scorers": [
