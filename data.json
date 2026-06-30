@@ -7,10 +7,10 @@
     "tagline": "World Cup Knockout Prediction Derby"
   },
   "meta": {
-    "updated_at": "2026-06-30 10:10 BJT",
+    "updated_at": "2026-06-30 10:20 BJT",
     "active_day": "2026-06-29",
     "timezone": "Asia/Beijing",
-    "version": "knockout-auto-202606300210"
+    "version": "knockout-auto-202606300220"
   },
   "phase": "knockout",
   "archive": {
@@ -376,10 +376,6 @@
   "update_log": [
     {
       "time": "06-29 11:10",
-      "text": "南非 0:1 加拿大已结算：双方都猜中加拿大晋级和90分钟路径，各得 1 分；总分 Ray 50:45 GPT 5.5。"
-    },
-    {
-      "time": "06-29 11:10",
       "text": "加入预测发布计划：32强剩余15场预测隐藏在发布池中，每天北京时间18:00自动发布次日比赛。"
     },
     {
@@ -452,6 +448,10 @@
     },
     {
       "time": "06-30 10:10",
+      "text": "自动更新：德国 1:1 巴拉圭，Ray +0，GPT +0。"
+    },
+    {
+      "time": "06-30 10:20",
       "text": "自动更新：德国 1:1 巴拉圭，Ray +0，GPT +0。"
     }
   ],
