@@ -814,3 +814,44 @@ code { border: 1px solid var(--line); border-radius: 8px; padding: 2px 6px; colo
 @media (max-width: 720px) {
   .knockout-review-day-body { grid-template-columns: 1fr; }
 }
+
+/* Knockout score robustness: ET / penalties / live ticker */
+.status.live {
+  color: #06110d;
+  background: linear-gradient(135deg, var(--grass), #d8ffb0);
+}
+.score-stack {
+  display: inline-flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 2px;
+}
+.score-stack .main-score {
+  font: inherit;
+  line-height: .92;
+}
+.score-stack .penalty-score {
+  font-family: var(--body);
+  font-size: 13px;
+  font-weight: 950;
+  letter-spacing: .04em;
+  color: var(--cyan);
+  border: 1px solid rgba(116,231,255,.36);
+  border-radius: 999px;
+  padding: 2px 8px;
+  background: rgba(116,231,255,.10);
+}
+.ticker-score-text {
+  color: var(--text);
+  font-weight: 950;
+}
+.live-ticker-item b.final { color: #06110d; background: #bdf7cf; }
+.live-ticker-item b.live { animation: liveGlow 1.2s ease-in-out infinite alternate; }
+@keyframes liveGlow {
+  from { box-shadow: 0 0 0 rgba(155, 255, 97, 0); }
+  to { box-shadow: 0 0 18px rgba(155, 255, 97, .55); }
+}
+@media (max-width: 640px) {
+  .score-stack .penalty-score { font-size: 11px; padding: 2px 6px; }
+  .live-ticker-item { align-items: flex-start; flex-direction: column; border-radius: 18px; white-space: normal; }
+}

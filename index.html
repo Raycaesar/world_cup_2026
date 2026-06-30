@@ -203,31 +203,125 @@
     let refreshTimer = null;
     function text(value, fallback = "—") { return value === undefined || value === null || value === "" ? fallback : String(value); }
     function create(tag, className, content) { const el = document.createElement(tag); if (className) el.className = className; if (content !== undefined) el.textContent = content; return el; }
-    function methodLabel(method) { return method === "90" ? "90分钟" : method === "extra" || method === "extra_time" ? "加时" : method === "penalties" ? "点球" : "未定"; }
+    function normalizeMethod(method) {
+      if (method === "extra") return "extra_time";
+      if (method === "pens" || method === "shootout") return "penalties";
+      return method || null;
+    }
+    function methodLabel(method) {
+      const m = normalizeMethod(method);
+      return m === "90" ? "90分钟" : m === "extra_time" ? "加时" : m === "penalties" ? "点球" : "未定";
+    }
+    function scoreComplete(score) {
+      return !!score && score.home_score !== null && score.home_score !== undefined && score.away_score !== null && score.away_score !== undefined;
+    }
     function scoreLabel(score) {
-      if (!score || score.home_score === null || score.home_score === undefined || score.away_score === null || score.away_score === undefined) return "—";
+      if (!scoreComplete(score)) return "—";
       return `${score.home_score} : ${score.away_score}`;
+    }
+    function compactScoreLabel(score) {
+      if (!scoreComplete(score)) return "—";
+      return `${score.home_score}:${score.away_score}`;
+    }
+
+    function firstScore(...scores) {
+      return scores.find(scoreComplete) || null;
+    }
+    function scoreSide(score, side) {
+      if (!scoreComplete(score)) return "—";
+      return side === "home" ? String(score.home_score) : String(score.away_score);
+    }
+    function penaltySide(score, side) {
+      if (!scoreComplete(score)) return null;
+      return side === "home" ? String(score.home_score) : String(score.away_score);
+    }
+    function displayScoreObject(source) {
+      const actual = source && source.actual ? source.actual : {};
+      return actual.live_score || actual.final_score || source.score_obj || source.score || null;
+    }
+    function scoreTextFromString(raw) {
+      const value = String(raw || "").trim();
+      if (!value) return "";
+      return value.replace(/-/g, ":").replace(/\s+/g, " ");
+    }
+    function matchScoreText(source) {
+      if (!source) return "";
+      const actual = source.actual || {};
+      const method = normalizeMethod(actual.method || source.method);
+      const main = firstScore(actual.live_score, actual.final_score, source.score_obj);
+      let base = "";
+      if (scoreComplete(main)) base = `${source.home} ${compactScoreLabel(main)} ${source.away}`;
+      else if (typeof source.score === "string" && source.score.trim()) base = `${source.home} ${scoreTextFromString(source.score)} ${source.away}`;
+      else base = `${source.home} vs ${source.away}`;
+      const pens = actual.penalties_score || source.penalties_score || source.shootout_score;
+      if (scoreComplete(pens)) base += `，点球 ${compactScoreLabel(pens)}`;
+      if (method === "extra_time") base += "，加时";
+      if (method === "penalties" && !scoreComplete(pens)) base += "，点球大战";
+      if (actual.advancing_team || source.winner) base += `，${actual.advancing_team || source.winner}晋级`;
+      return base;
+    }
+    function scoreBreakdown(actual) {
+      actual = actual || {};
+      const method = normalizeMethod(actual.method);
+      if (!actual.advancing_team) return "赛前";
+      const parts = [`${actual.advancing_team}晋级`, methodLabel(method)];
+      if (scoreComplete(actual.regulation_score)) parts.push(`90分钟 ${scoreLabel(actual.regulation_score)}`);
+      if ((method === "extra_time" || method === "penalties") && scoreComplete(actual.extra_time_score || actual.final_score)) {
+        parts.push(`120分钟 ${scoreLabel(actual.extra_time_score || actual.final_score)}`);
+      } else if (method === "90" && scoreComplete(actual.final_score)) {
+        parts.push(`比分 ${scoreLabel(actual.final_score)}`);
+      }
+      if (method === "penalties" && scoreComplete(actual.penalties_score)) parts.push(`点球 ${scoreLabel(actual.penalties_score)}`);
+      if (actual.next_match) parts.push(/^对阵|^将对阵/.test(String(actual.next_match)) ? `下一轮${actual.next_match}` : `下一轮 ${actual.next_match}`);
+      return parts.join("｜");
     }
     function predictionLine(pred) {
       if (!pred) return "预测待填写";
-      return pred.label || `${text(pred.advancing_team)}晋级｜${methodLabel(pred.method)}｜90分钟 ${scoreLabel(pred.regulation_score)}`;
+      if (pred.label) return pred.label;
+      const main = `${text(pred.advancing_team)}晋级｜${methodLabel(pred.method)}`;
+      const reg = scoreComplete(pred.regulation_score) ? `｜90分钟 ${scoreLabel(pred.regulation_score)}` : "";
+      const pens = scoreComplete(pred.penalties_score) ? `｜点球 ${scoreLabel(pred.penalties_score)}` : "";
+      return main + reg + pens;
     }
     function actualLine(match) {
-      const actual = match.actual || {};
-      if (!actual.advancing_team) return "赛前";
-      return `${actual.advancing_team}晋级｜${methodLabel(actual.method)}｜90分钟 ${scoreLabel(actual.regulation_score)}｜最终 ${scoreLabel(actual.final_score)}`;
+      return scoreBreakdown(match && match.actual);
+    }
+    function scoreNode(match, side) {
+      const actual = (match && match.actual) || {};
+      const box = create("strong", "score score-stack");
+      const main = create("span", "main-score", scoreSide(firstScore(actual.live_score, actual.final_score), side));
+      box.appendChild(main);
+      if (scoreComplete(actual.penalties_score)) {
+        box.appendChild(create("span", "penalty-score", `点 ${penaltySide(actual.penalties_score, side)}`));
+      } else if ((normalizeMethod(actual.method) === "extra_time" || normalizeMethod(actual.method) === "penalties") && scoreComplete(actual.regulation_score)) {
+        box.appendChild(create("span", "penalty-score", `90' ${scoreSide(actual.regulation_score, side)}`));
+      }
+      return box;
+    }
+    function statusClass(match) {
+      if (match && match.actual && match.actual.advancing_team) return "finished";
+      if (/进行|直播|live|加时|点球/i.test(String(match && match.status || ""))) return "live";
+      return "pending";
     }
     function renderKnockoutMatch(match) {
       const card = create("article", "knockout-card");
       const top = create("div", "match-top");
       top.appendChild(create("span", "time", `${text(match.round)} · ${text(match.kickoff_local)}`));
-      top.appendChild(create("span", `status ${match.actual && match.actual.advancing_team ? "finished" : "pending"}`, text(match.status, "未开始")));
+      top.appendChild(create("span", `status ${statusClass(match)}`, text(match.status, "未开始")));
       card.appendChild(top);
       const teams = create("div", "teams");
-      const home = create("div", "team"); home.appendChild(create("span", "team-name", text(match.home))); home.appendChild(create("strong", "score", scoreLabel(match.actual && match.actual.final_score).split(" : ")[0] || "—"));
-      const away = create("div", "team away"); away.appendChild(create("strong", "score", scoreLabel(match.actual && match.actual.final_score).split(" : ")[1] || "—")); away.appendChild(create("span", "team-name", text(match.away)));
-      teams.appendChild(home); teams.appendChild(create("div", "center-dot", "·")); teams.appendChild(away); card.appendChild(teams);
-      const meta = create("p", "microcopy", `${text(match.venue)} · ${actualLine(match)}`); card.appendChild(meta);
+      const home = create("div", "team");
+      home.appendChild(create("span", "team-name", text(match.home)));
+      home.appendChild(scoreNode(match, "home"));
+      const away = create("div", "team away");
+      away.appendChild(scoreNode(match, "away"));
+      away.appendChild(create("span", "team-name", text(match.away)));
+      teams.appendChild(home);
+      teams.appendChild(create("div", "center-dot", "·"));
+      teams.appendChild(away);
+      card.appendChild(teams);
+      const meta = create("p", "microcopy", `${text(match.venue)} · ${actualLine(match)}`);
+      card.appendChild(meta);
       const grid = create("div", "prediction-grid knockout-prediction-grid");
       [["Ray", match.ray_prediction, "ray-pick"], ["GPT 5.5", match.gpt_prediction, "gpt-pick"]].forEach(([name, pred, cls]) => {
         const box = create("div", "prediction-card");
@@ -247,34 +341,49 @@
       return Date.UTC(2026, Number(m[1]) - 1, Number(m[2]), Number(m[3]) - 8, Number(m[4]));
     }
     function matchKey(source) {
-      return `${source && source.home ? source.home : ""}__${source && source.away ? source.away : ""}`;
+      const rawId = source && source.id !== undefined && source.id !== null ? String(source.id) : "";
+      const espn = source && (source.espn_id || (/^\d+$/.test(rawId) ? rawId : ""));
+      return espn ? String(espn) : `${source && source.home ? source.home : ""}__${source && source.away ? source.away : ""}`;
     }
     function isFinishedMatch(source) {
       if (!source) return false;
       if (source.actual && source.actual.advancing_team) return true;
       return /已结束|完场|complete|final/i.test(String(source.status || ""));
     }
+    function isLiveMatch(source) {
+      if (!source || isFinishedMatch(source)) return false;
+      return /进行|直播|live|加时|点球|pen/i.test(String(source.status || ""));
+    }
     function tickerItemsFromMatches(data) {
-      const finishedKeys = new Set((data.knockout_matches || []).filter(isFinishedMatch).map(matchKey));
       const seen = new Set();
       const items = [];
       const add = (source) => {
         if (!source || !source.home || !source.away) return;
         const key = matchKey(source);
-        if (seen.has(key) || finishedKeys.has(key) || isFinishedMatch(source)) return;
+        if (seen.has(key)) return;
         seen.add(key);
-        const isLive = /进行|live/i.test(String(source.status || ""));
+        const finished = isFinishedMatch(source);
+        const live = isLiveMatch(source);
+        const type = live ? "live" : finished ? "final" : "next";
+        const label = live ? "LIVE" : finished ? "FINAL" : "NEXT";
+        const detailParts = [];
+        if (source.kickoff_local) detailParts.push(source.kickoff_local);
+        if (source.round || source.status) detailParts.push(source.round || source.status);
+        if (finished && (source.actual?.next_match || source.note)) detailParts.push(source.actual?.next_match || source.note);
         items.push({
-          type: isLive ? "live" : "next",
-          label: isLive ? "LIVE" : "NEXT",
-          text: `${source.home} vs ${source.away}`,
-          detail: `${source.kickoff_local || "时间待定"} · ${source.round || source.status || "淘汰赛"}`,
-          sortKey: parseBjDateTime(source.kickoff_local)
+          type, label,
+          text: matchScoreText(source),
+          detail: detailParts.join(" · "),
+          sortKey: parseBjDateTime(source.kickoff_local),
+          rank: live ? 0 : finished ? 1 : 2,
+          finished
         });
       };
       (data.knockout_matches || []).forEach(add);
       (data.bracket || []).forEach(add);
-      return items.sort((a, b) => a.sortKey - b.sortKey).slice(0, 4);
+      return items
+        .sort((a, b) => a.rank - b.rank || (a.finished ? b.sortKey - a.sortKey : a.sortKey - b.sortKey))
+        .slice(0, 6);
     }
     function renderLiveTicker(data) {
       const box = document.getElementById("liveTicker");
@@ -289,7 +398,7 @@
       items.forEach(x => {
         const item = create("span", "live-ticker-item");
         item.appendChild(create("b", x.type || "next", String(x.label || "NEXT").toUpperCase()));
-        item.appendChild(document.createTextNode(text(x.text)));
+        item.appendChild(create("span", "ticker-score-text", text(x.text)));
         if (x.detail) item.appendChild(create("em", "", x.detail));
         box.appendChild(item);
       });
@@ -335,6 +444,15 @@
       const m = String(match.kickoff_local || "").match(/(\d{2})-(\d{2})/);
       return m ? `${m[1]}-${m[2]}` : "日期待定";
     }
+    function resultTitle(match) {
+      const actual = (match && match.actual) || {};
+      const method = normalizeMethod(actual.method);
+      if (!scoreComplete(actual.final_score)) return `${text(match.home)} vs ${text(match.away)}`;
+      let title = `${text(match.home)} ${compactScoreLabel(actual.final_score)} ${text(match.away)}`;
+      if (method === "penalties" && scoreComplete(actual.penalties_score)) title += `（点球 ${compactScoreLabel(actual.penalties_score)}）`;
+      else if (method === "extra_time") title += "（加时）";
+      return title;
+    }
     function renderPostMatchReviews(data) {
       const box = document.getElementById("knockoutReviewList");
       if (!box) return;
@@ -364,7 +482,7 @@
         matches.slice().reverse().forEach(match => {
           const card = create("article", "review-card knockout-review-card");
           card.appendChild(create("span", "time", `${text(match.round)} · ${text(match.kickoff_local)}`));
-          card.appendChild(create("h3", "", `${text(match.home)} ${scoreLabel(match.actual && match.actual.final_score)} ${text(match.away)}`));
+          card.appendChild(create("h3", "", resultTitle(match)));
           card.appendChild(create("p", "review-result", actualLine(match)));
           card.appendChild(create("p", "", match.review || "复盘待补充。"));
           if (match.manual_points) card.appendChild(create("p", "points-line", `本场得分：Ray +${match.manual_points.ray || 0}，GPT +${match.manual_points.gpt || 0}`));

@@ -578,10 +578,13 @@
       box.innerHTML = matches.map(match => {
         const tag = match.tag || match.status || "INFO";
         const tagClass = tag === "LIVE" ? "live" : tag === "NEXT" ? "next" : "final";
-        const score = match.home_score !== null && match.away_score !== null
+        let score = match.score_text || (match.home_score !== null && match.away_score !== null
           ? `${match.home} ${match.home_score}:${match.away_score} ${match.away}`
-          : `${match.home} vs ${match.away}`;
-        const meta = match.tag === "NEXT" ? match.kickoff_bjt : (match.status_text || match.minute || "");
+          : `${match.home} vs ${match.away}`);
+        if (match.shootout_text) score += `，${match.shootout_text}`;
+        if (match.winner) score += `，${match.winner}晋级`;
+        const method = match.method === "extra_time" ? "加时" : match.method === "penalties" ? "点球" : "";
+        const meta = match.tag === "NEXT" ? match.kickoff_bjt : [method, match.status_text || match.minute || ""].filter(Boolean).join(" · ");
         return `<span class="live-ticker-item"><b class="${tagClass}">${escapeHtml(tag)}</b><strong>${escapeHtml(score)}</strong>${meta ? `<em>${escapeHtml(meta)}</em>` : ""}</span>`;
       }).join("");
     }
