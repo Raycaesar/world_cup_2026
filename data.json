@@ -7,10 +7,10 @@
     "tagline": "World Cup Knockout Prediction Derby"
   },
   "meta": {
-    "updated_at": "2026-06-30 09:50 BJT",
+    "updated_at": "2026-06-30 10:00 BJT",
     "active_day": "2026-06-29",
     "timezone": "Asia/Beijing",
-    "version": "knockout-auto-202606300150"
+    "version": "knockout-auto-202606300200"
   },
   "phase": "knockout",
   "archive": {
@@ -375,10 +375,6 @@
   ],
   "update_log": [
     {
-      "time": "2026-06-28 19:00 BJT",
-      "text": "调整淘汰赛主页布局：下一场、32强对阵、淘汰赛复盘置顶；赛前大奖与规则、射手榜、总积分与更新记录改为两组双栏。"
-    },
-    {
       "time": "06-28 18:45",
       "text": "页面调整：LIVE STICKER 改为只显示正在进行和即将开始的比赛；射手榜修正梅西 6 球。"
     },
@@ -452,6 +448,10 @@
     },
     {
       "time": "06-30 09:50",
+      "text": "自动更新：德国 1:1 巴拉圭，Ray +0，GPT +0。"
+    },
+    {
+      "time": "06-30 10:00",
       "text": "自动更新：德国 1:1 巴拉圭，Ray +0，GPT +0。"
     }
   ],
