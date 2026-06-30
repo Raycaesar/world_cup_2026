@@ -7,10 +7,10 @@
     "tagline": "World Cup Knockout Prediction Derby"
   },
   "meta": {
-    "updated_at": "2026-06-30 10:20 BJT",
+    "updated_at": "2026-06-30 10:30 BJT",
     "active_day": "2026-06-29",
     "timezone": "Asia/Beijing",
-    "version": "knockout-auto-202606300220"
+    "version": "knockout-auto-202606300230"
   },
   "phase": "knockout",
   "archive": {
@@ -375,10 +375,6 @@
   ],
   "update_log": [
     {
-      "time": "06-29 11:10",
-      "text": "加入预测发布计划：32强剩余15场预测隐藏在发布池中，每天北京时间18:00自动发布次日比赛。"
-    },
-    {
       "time": "06-29 18:00",
       "text": "发布次日淘汰赛预测：巴西 vs 日本、德国 vs 巴拉圭、荷兰 vs 摩洛哥。"
     },
@@ -452,6 +448,10 @@
     },
     {
       "time": "06-30 10:20",
+      "text": "自动更新：德国 1:1 巴拉圭，Ray +0，GPT +0。"
+    },
+    {
+      "time": "06-30 10:30",
       "text": "自动更新：德国 1:1 巴拉圭，Ray +0，GPT +0。"
     }
   ],
