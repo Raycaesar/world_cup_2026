@@ -7,10 +7,10 @@
     "tagline": "World Cup Knockout Prediction Derby"
   },
   "meta": {
-    "updated_at": "2026-06-30 11:00 BJT",
+    "updated_at": "2026-06-30 11:10 BJT",
     "active_day": "2026-06-29",
     "timezone": "Asia/Beijing",
-    "version": "knockout-auto-202606300300"
+    "version": "knockout-auto-202606300310"
   },
   "phase": "knockout",
   "archive": {
@@ -375,10 +375,6 @@
   ],
   "update_log": [
     {
-      "time": "06-30 07:50",
-      "text": "自动更新：德国 1:1 巴拉圭，Ray +0，GPT +0。"
-    },
-    {
       "time": "06-30 08:00",
       "text": "自动更新：德国 1:1 巴拉圭，Ray +0，GPT +0。"
     },
@@ -452,6 +448,10 @@
     },
     {
       "time": "06-30 11:00",
+      "text": "自动更新：德国 1:1 巴拉圭，Ray +0，GPT +0。"
+    },
+    {
+      "time": "06-30 11:10",
       "text": "自动更新：德国 1:1 巴拉圭，Ray +0，GPT +0。"
     }
   ],
