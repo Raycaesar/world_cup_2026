@@ -355,36 +355,41 @@
       return /进行|直播|live|加时|点球|pen/i.test(String(source.status || ""));
     }
     function tickerItemsFromMatches(data) {
-      const seen = new Set();
-      const items = [];
-      const add = (source) => {
-        if (!source || !source.home || !source.away) return;
-        const key = matchKey(source);
-        if (seen.has(key)) return;
-        seen.add(key);
-        const finished = isFinishedMatch(source);
-        const live = isLiveMatch(source);
-        const type = live ? "live" : finished ? "final" : "next";
-        const label = live ? "LIVE" : finished ? "FINAL" : "NEXT";
-        const detailParts = [];
-        if (source.kickoff_local) detailParts.push(source.kickoff_local);
-        if (source.round || source.status) detailParts.push(source.round || source.status);
-        if (finished && (source.actual?.next_match || source.note)) detailParts.push(source.actual?.next_match || source.note);
-        items.push({
-          type, label,
-          text: matchScoreText(source),
-          detail: detailParts.join(" · "),
-          sortKey: parseBjDateTime(source.kickoff_local),
-          rank: live ? 0 : finished ? 1 : 2,
-          finished
-        });
-      };
-      (data.knockout_matches || []).forEach(add);
-      (data.bracket || []).forEach(add);
-      return items
-        .sort((a, b) => a.rank - b.rank || (a.finished ? b.sortKey - a.sortKey : a.sortKey - b.sortKey))
-        .slice(0, 6);
-    }
+  const seen = new Set();
+  const items = [];
+  const add = (source) => {
+    if (!source || !source.home || !source.away) return;
+    if (isFinishedMatch(source)) return;
+
+    const live = isLiveMatch(source);
+    const key = matchKey(source);
+    if (seen.has(key)) return;
+    seen.add(key);
+
+    const type = live ? "live" : "next";
+    const label = live ? "LIVE" : "NEXT";
+    const detailParts = [];
+
+    if (source.kickoff_local) detailParts.push(source.kickoff_local);
+    if (source.round || source.status) detailParts.push(source.round || source.status);
+
+    items.push({
+      type,
+      label,
+      text: matchScoreText(source),
+      detail: detailParts.join(" · "),
+      sortKey: parseBjDateTime(source.kickoff_local),
+      rank: live ? 0 : 1
+    });
+  };
+
+  (data.knockout_matches || []).forEach(add);
+  (data.bracket || []).forEach(add);
+
+  return items
+    .sort((a, b) => a.rank - b.rank || a.sortKey - b.sortKey)
+    .slice(0, 6);
+}
     function renderLiveTicker(data) {
       const box = document.getElementById("liveTicker");
       if (!box) return;

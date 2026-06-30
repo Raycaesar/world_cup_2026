@@ -109,22 +109,18 @@ function normalizeEvent(event) {
 
 function pickTickerMatches(matches) {
   const now = Date.now();
+
   const live = matches
     .filter(m => m.state === "in")
     .sort((a, b) => a.kickoff_ts - b.kickoff_ts)
     .slice(0, 3);
 
-  const recentFinal = matches
-    .filter(m => m.state === "post")
-    .sort((a, b) => b.kickoff_ts - a.kickoff_ts)
-    .slice(0, 2);
-
   const next = matches
     .filter(m => m.state === "pre" && m.kickoff_ts >= now - 20 * 60 * 1000)
     .sort((a, b) => a.kickoff_ts - b.kickoff_ts)
-    .slice(0, 3);
+    .slice(0, 5);
 
-  return [...live, ...recentFinal, ...next].slice(0, 6);
+  return [...live, ...next].slice(0, 6);
 }
 
 export async function onRequestGet() {
