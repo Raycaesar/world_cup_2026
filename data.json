@@ -7,10 +7,10 @@
     "tagline": "World Cup Knockout Prediction Derby"
   },
   "meta": {
-    "updated_at": "2026-07-01 03:00 BJT",
+    "updated_at": "2026-07-01 07:00 BJT",
     "active_day": "2026-06-30",
     "timezone": "Asia/Beijing",
-    "version": "knockout-auto-202606301900"
+    "version": "knockout-auto-202606302300"
   },
   "phase": "knockout",
   "archive": {
@@ -18,12 +18,12 @@
     "href": "archive.html"
   },
   "score_summary": {
-    "ray_total": 52,
-    "gpt_total": 51,
-    "leader_comment": "Ray 以 52:51 领先 GPT 5.5。"
+    "ray_total": 53,
+    "gpt_total": 52,
+    "leader_comment": "Ray 以 53:52 领先 GPT 5.5。"
   },
-  "headline": "淘汰赛更新：科特迪瓦 1:2 挪威",
-  "brief": "最新淘汰赛已结算：科特迪瓦 1:2 挪威，Ray +2，GPT +1。",
+  "headline": "淘汰赛更新：法国 3:0 瑞典",
+  "brief": "最新淘汰赛已结算：法国 3:0 瑞典，Ray +1，GPT +1。",
   "knockout_rules": [
     "只有一方猜中晋级队时，猜中者先得 3 分；若同时猜中晋级方式，再得 1 分；若90分钟比分完全命中，再得 1 分，单场最高 5 分。",
     "双方都猜中晋级队时，不重复给胜负分，只比较晋级方式与90分钟比分：方式正确 +1，90分钟比分完全命中再 +1。",
@@ -300,24 +300,25 @@
     },
     {
       "id": "fra-swe-20260701",
-      "espn_id": "53452543",
+      "espn_id": "760492",
       "round": "32强",
       "kickoff_local": "07-01 05:00 BJT",
       "home": "法国",
       "away": "瑞典",
       "venue": "",
-      "status": "未开始",
+      "status": "已结束",
       "actual": {
-        "method": null,
+        "method": "90",
         "regulation_score": {
-          "home_score": null,
-          "away_score": null
+          "home_score": 3,
+          "away_score": 0
         },
         "final_score": {
-          "home_score": null,
-          "away_score": null
+          "home_score": 3,
+          "away_score": 0
         },
-        "advancing_team": null
+        "advancing_team": "法国",
+        "next_match": "对阵德国/巴拉圭胜者"
       },
       "ray_prediction": {
         "advancing_team": "法国",
@@ -339,8 +340,12 @@
         "label": "法国 3:1 瑞典，90分钟晋级",
         "reason": "GPT 5.5 的预设预测：法国能赢，但瑞典定位球和身体对抗可能制造进球。"
       },
-      "manual_points": null,
-      "review": "赛前预测。",
+      "manual_points": {
+        "ray": 1,
+        "gpt": 1,
+        "explanation": "双方都猜中晋级队；不重复给胜负分，只按晋级方式与90分钟比分计分：Ray +1，GPT +1。"
+      },
+      "review": "法国 3:0 瑞典，法国晋级。下一轮将对阵德国/巴拉圭胜者。双方都猜中晋级队；不重复给胜负分，只按晋级方式与90分钟比分计分：Ray +1，GPT +1。",
       "predictions_published_at": "2026-06-30 18:01 BJT"
     },
     {
@@ -474,8 +479,15 @@
       "kickoff_local": "07-01 05:00 BJT",
       "home": "法国",
       "away": "瑞典",
-      "status": "未开始",
-      "note": "胜者对阵德国/巴拉圭胜者"
+      "status": "已结束",
+      "note": "法国通过90分钟晋级，对阵德国/巴拉圭胜者",
+      "winner": "法国",
+      "method": "90",
+      "score_obj": {
+        "home_score": 3,
+        "away_score": 0
+      },
+      "score": "3:0"
     },
     {
       "id": "53452563",
@@ -620,6 +632,10 @@
     {
       "time": "07-01 03:00",
       "text": "淘汰赛更新：科特迪瓦 1:2 挪威，Ray +2，GPT +1。"
+    },
+    {
+      "time": "07-01 07:00",
+      "text": "淘汰赛更新：法国 3:0 瑞典，Ray +1，GPT +1。"
     }
   ],
   "live_ticker": [
