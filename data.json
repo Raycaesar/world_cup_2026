@@ -7,10 +7,10 @@
     "tagline": "World Cup Knockout Prediction Derby"
   },
   "meta": {
-    "updated_at": "2026-06-30 12:20 BJT",
+    "updated_at": "2026-06-30 18:01 BJT",
     "active_day": "2026-06-30",
     "timezone": "Asia/Beijing",
-    "version": "knockout-penalty-update-20260630"
+    "version": "prediction-release-202606301001"
   },
   "phase": "knockout",
   "archive": {
@@ -22,8 +22,8 @@
     "gpt_total": 50,
     "leader_comment": "Ray 与 GPT 5.5 战成 50:50；巴拉圭和摩洛哥都通过点球爆冷晋级，这两场双方都没得分。"
   },
-  "headline": "巴拉圭、摩洛哥双双点球晋级，Ray 与 GPT 5.5 仍是 50:50",
-  "brief": "德国 1:1 巴拉圭，点球 3:4，巴拉圭淘汰德国晋级；荷兰 1:1 摩洛哥，点球 2:3，摩洛哥淘汰荷兰晋级。两场双方都猜错晋级队，Ray +0，GPT +0，总分不变。",
+  "headline": "淘汰赛预测发布：科特迪瓦 vs 挪威、法国 vs 瑞典、墨西哥 vs 厄瓜多尔",
+  "brief": "北京时间 2026-06-30 18:01 BJT 已发布 3 场淘汰赛预测：科特迪瓦 vs 挪威；法国 vs 瑞典；墨西哥 vs 厄瓜多尔。",
   "knockout_rules": [
     "只有一方猜中晋级队时，猜中者先得 3 分；若同时猜中晋级方式，再得 1 分；若90分钟比分完全命中，再得 1 分，单场最高 5 分。",
     "双方都猜中晋级队时，不重复给胜负分，只比较晋级方式与90分钟比分：方式正确 +1，90分钟比分完全命中再 +1。",
@@ -247,6 +247,141 @@
       },
       "review": "荷兰与摩洛哥 90 分钟和 120 分钟均战成 1:1。点球大战中摩洛哥 3:2 胜出，淘汰荷兰晋级 16 强，下一轮将对阵加拿大；Ray 和 GPT 5.5 赛前都看好荷兰晋级，因此本场不改变总分。",
       "predictions_published_at": "2026-06-29 18:00 BJT"
+    },
+    {
+      "id": "civ-nor-20260701",
+      "espn_id": "53452561",
+      "round": "32强",
+      "kickoff_local": "07-01 01:00 BJT",
+      "home": "科特迪瓦",
+      "away": "挪威",
+      "venue": "",
+      "status": "未开始",
+      "actual": {
+        "method": null,
+        "regulation_score": {
+          "home_score": null,
+          "away_score": null
+        },
+        "final_score": {
+          "home_score": null,
+          "away_score": null
+        },
+        "advancing_team": null
+      },
+      "ray_prediction": {
+        "advancing_team": "挪威",
+        "method": "90",
+        "regulation_score": {
+          "home_score": 1,
+          "away_score": 2
+        },
+        "label": "科特迪瓦 1:2 挪威，90分钟晋级",
+        "reason": "Ray 的预设预测：看好挪威锋线效率。"
+      },
+      "gpt_prediction": {
+        "advancing_team": "挪威",
+        "method": "90",
+        "regulation_score": {
+          "home_score": 1,
+          "away_score": 3
+        },
+        "label": "科特迪瓦 1:3 挪威，90分钟晋级",
+        "reason": "GPT 5.5 的预设预测：挪威进攻端上限更高，可能后段拉开比分。"
+      },
+      "manual_points": null,
+      "review": "赛前预测。",
+      "predictions_published_at": "2026-06-30 18:01 BJT"
+    },
+    {
+      "id": "fra-swe-20260701",
+      "espn_id": "53452543",
+      "round": "32强",
+      "kickoff_local": "07-01 05:00 BJT",
+      "home": "法国",
+      "away": "瑞典",
+      "venue": "",
+      "status": "未开始",
+      "actual": {
+        "method": null,
+        "regulation_score": {
+          "home_score": null,
+          "away_score": null
+        },
+        "final_score": {
+          "home_score": null,
+          "away_score": null
+        },
+        "advancing_team": null
+      },
+      "ray_prediction": {
+        "advancing_team": "法国",
+        "method": "90",
+        "regulation_score": {
+          "home_score": 2,
+          "away_score": 0
+        },
+        "label": "法国 2:0 瑞典，90分钟晋级",
+        "reason": "Ray 的预设预测：法国阵容厚度和淘汰赛控制力明显占优。"
+      },
+      "gpt_prediction": {
+        "advancing_team": "法国",
+        "method": "90",
+        "regulation_score": {
+          "home_score": 3,
+          "away_score": 1
+        },
+        "label": "法国 3:1 瑞典，90分钟晋级",
+        "reason": "GPT 5.5 的预设预测：法国能赢，但瑞典定位球和身体对抗可能制造进球。"
+      },
+      "manual_points": null,
+      "review": "赛前预测。",
+      "predictions_published_at": "2026-06-30 18:01 BJT"
+    },
+    {
+      "id": "mex-ecu-20260701",
+      "espn_id": "53452563",
+      "round": "32强",
+      "kickoff_local": "07-01 09:00 BJT",
+      "home": "墨西哥",
+      "away": "厄瓜多尔",
+      "venue": "",
+      "status": "未开始",
+      "actual": {
+        "method": null,
+        "regulation_score": {
+          "home_score": null,
+          "away_score": null
+        },
+        "final_score": {
+          "home_score": null,
+          "away_score": null
+        },
+        "advancing_team": null
+      },
+      "ray_prediction": {
+        "advancing_team": "墨西哥",
+        "method": "penalties",
+        "regulation_score": {
+          "home_score": 2,
+          "away_score": 2
+        },
+        "label": "墨西哥 2:2 厄瓜多尔，墨西哥点球晋级",
+        "reason": "Ray 的预设预测：认为双方风格相克，比赛会拖入点球。"
+      },
+      "gpt_prediction": {
+        "advancing_team": "墨西哥",
+        "method": "90",
+        "regulation_score": {
+          "home_score": 2,
+          "away_score": 1
+        },
+        "label": "墨西哥 2:1 厄瓜多尔，90分钟晋级",
+        "reason": "GPT 5.5 的预设预测：墨西哥主场氛围和前场效率略占优势。"
+      },
+      "manual_points": null,
+      "review": "赛前预测。",
+      "predictions_published_at": "2026-06-30 18:01 BJT"
     }
   ],
   "bracket": [
@@ -465,6 +600,10 @@
     {
       "time": "06-30 12:20",
       "text": "两场点球大战都没有改变比分牌，总分仍是 Ray 50:50 GPT 5.5。"
+    },
+    {
+      "time": "06-30 18:01",
+      "text": "发布次日淘汰赛预测：科特迪瓦 vs 挪威、法国 vs 瑞典、墨西哥 vs 厄瓜多尔。"
     }
   ],
   "live_ticker": [
@@ -724,7 +863,8 @@
         "label": "科特迪瓦 1:3 挪威，90分钟晋级",
         "reason": "GPT 5.5 的预设预测：挪威进攻端上限更高，可能后段拉开比分。"
       },
-      "published": false
+      "published": true,
+      "published_at_bjt": "2026-06-30 18:01 BJT"
     },
     {
       "match_id": "fra-swe-20260701",
@@ -756,7 +896,8 @@
         "label": "法国 3:1 瑞典，90分钟晋级",
         "reason": "GPT 5.5 的预设预测：法国能赢，但瑞典定位球和身体对抗可能制造进球。"
       },
-      "published": false
+      "published": true,
+      "published_at_bjt": "2026-06-30 18:01 BJT"
     },
     {
       "match_id": "mex-ecu-20260701",
@@ -788,7 +929,8 @@
         "label": "墨西哥 2:1 厄瓜多尔，90分钟晋级",
         "reason": "GPT 5.5 的预设预测：墨西哥主场氛围和前场效率略占优势。"
       },
-      "published": false
+      "published": true,
+      "published_at_bjt": "2026-06-30 18:01 BJT"
     },
     {
       "match_id": "eng-cod-20260702",
