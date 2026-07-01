@@ -7,10 +7,10 @@
     "tagline": "World Cup Knockout Prediction Derby"
   },
   "meta": {
-    "updated_at": "2026-07-01 12:10 BJT",
+    "updated_at": "2026-07-01 18:01 BJT",
     "active_day": "2026-06-30",
     "timezone": "Asia/Beijing",
-    "version": "knockout-auto-202607010410"
+    "version": "prediction-release-202607011001"
   },
   "phase": "knockout",
   "archive": {
@@ -22,8 +22,8 @@
     "gpt_total": 53,
     "leader_comment": "Ray 与 GPT 5.5 战成 53:53。"
   },
-  "headline": "淘汰赛更新：墨西哥 2:0 厄瓜多尔",
-  "brief": "最新淘汰赛已结算：墨西哥 2:0 厄瓜多尔，Ray +0，GPT +1。",
+  "headline": "淘汰赛预测发布：英格兰 vs 刚果（金）、比利时 vs 塞内加尔、美国 vs 波黑",
+  "brief": "北京时间 2026-07-01 18:01 BJT 已发布 3 场淘汰赛预测：英格兰 vs 刚果（金）；比利时 vs 塞内加尔；美国 vs 波黑。",
   "knockout_rules": [
     "只有一方猜中晋级队时，猜中者先得 3 分；若同时猜中晋级方式，再得 1 分；若90分钟比分完全命中，再得 1 分，单场最高 5 分。",
     "双方都猜中晋级队时，不重复给胜负分，只比较晋级方式与90分钟比分：方式正确 +1，90分钟比分完全命中再 +1。",
@@ -397,6 +397,141 @@
       },
       "review": "墨西哥 2:0 厄瓜多尔，墨西哥晋级。双方都猜中晋级队；不重复给胜负分，只按晋级方式与90分钟比分计分：Ray +0，GPT +1。",
       "predictions_published_at": "2026-06-30 18:01 BJT"
+    },
+    {
+      "id": "eng-cod-20260702",
+      "espn_id": "53452565",
+      "round": "32强",
+      "kickoff_local": "07-02 00:00 BJT",
+      "home": "英格兰",
+      "away": "刚果（金）",
+      "venue": "",
+      "status": "未开始",
+      "actual": {
+        "method": null,
+        "regulation_score": {
+          "home_score": null,
+          "away_score": null
+        },
+        "final_score": {
+          "home_score": null,
+          "away_score": null
+        },
+        "advancing_team": null
+      },
+      "ray_prediction": {
+        "advancing_team": "英格兰",
+        "method": "90",
+        "regulation_score": {
+          "home_score": 4,
+          "away_score": 1
+        },
+        "label": "英格兰 4:1 刚果（金），90分钟晋级",
+        "reason": "Ray 的预设预测：看好英格兰强势碾压。"
+      },
+      "gpt_prediction": {
+        "advancing_team": "英格兰",
+        "method": "90",
+        "regulation_score": {
+          "home_score": 3,
+          "away_score": 0
+        },
+        "label": "英格兰 3:0 刚果（金），90分钟晋级",
+        "reason": "GPT 5.5 的预设预测：英格兰会稳健晋级，控球和定位球优势明显。"
+      },
+      "manual_points": null,
+      "review": "赛前预测。",
+      "predictions_published_at": "2026-07-01 18:01 BJT"
+    },
+    {
+      "id": "bel-sen-20260702",
+      "espn_id": "53452555",
+      "round": "32强",
+      "kickoff_local": "07-02 04:00 BJT",
+      "home": "比利时",
+      "away": "塞内加尔",
+      "venue": "",
+      "status": "未开始",
+      "actual": {
+        "method": null,
+        "regulation_score": {
+          "home_score": null,
+          "away_score": null
+        },
+        "final_score": {
+          "home_score": null,
+          "away_score": null
+        },
+        "advancing_team": null
+      },
+      "ray_prediction": {
+        "advancing_team": "塞内加尔",
+        "method": "extra_time",
+        "regulation_score": {
+          "home_score": 1,
+          "away_score": 1
+        },
+        "label": "比利时 1:1 塞内加尔，塞内加尔加时晋级",
+        "reason": "Ray 的预设预测：押塞内加尔身体对抗和加时冲击力爆冷。"
+      },
+      "gpt_prediction": {
+        "advancing_team": "比利时",
+        "method": "90",
+        "regulation_score": {
+          "home_score": 2,
+          "away_score": 1
+        },
+        "label": "比利时 2:1 塞内加尔，90分钟晋级",
+        "reason": "GPT 5.5 的预设预测：比利时经验和进攻质量略胜，但会被塞内加尔压迫考验。"
+      },
+      "manual_points": null,
+      "review": "赛前预测。",
+      "predictions_published_at": "2026-07-01 18:01 BJT"
+    },
+    {
+      "id": "usa-bih-20260702",
+      "espn_id": "53452553",
+      "round": "32强",
+      "kickoff_local": "07-02 08:00 BJT",
+      "home": "美国",
+      "away": "波黑",
+      "venue": "",
+      "status": "未开始",
+      "actual": {
+        "method": null,
+        "regulation_score": {
+          "home_score": null,
+          "away_score": null
+        },
+        "final_score": {
+          "home_score": null,
+          "away_score": null
+        },
+        "advancing_team": null
+      },
+      "ray_prediction": {
+        "advancing_team": "美国",
+        "method": "90",
+        "regulation_score": {
+          "home_score": 3,
+          "away_score": 0
+        },
+        "label": "美国 3:0 波黑，90分钟晋级",
+        "reason": "Ray 的预设预测：看好美国主场节奏和强度压制。"
+      },
+      "gpt_prediction": {
+        "advancing_team": "美国",
+        "method": "90",
+        "regulation_score": {
+          "home_score": 2,
+          "away_score": 0
+        },
+        "label": "美国 2:0 波黑，90分钟晋级",
+        "reason": "GPT 5.5 的预设预测：美国整体速度更快，但淘汰赛会更谨慎。"
+      },
+      "manual_points": null,
+      "review": "赛前预测。",
+      "predictions_published_at": "2026-07-01 18:01 BJT"
     }
   ],
   "bracket": [
@@ -652,6 +787,10 @@
     {
       "time": "07-01 12:10",
       "text": "淘汰赛更新：墨西哥 2:0 厄瓜多尔，Ray +0，GPT +1。"
+    },
+    {
+      "time": "07-01 18:01",
+      "text": "发布次日淘汰赛预测：英格兰 vs 刚果（金）、比利时 vs 塞内加尔、美国 vs 波黑。"
     }
   ],
   "live_ticker": [
@@ -1010,7 +1149,8 @@
         "label": "英格兰 3:0 刚果（金），90分钟晋级",
         "reason": "GPT 5.5 的预设预测：英格兰会稳健晋级，控球和定位球优势明显。"
       },
-      "published": false
+      "published": true,
+      "published_at_bjt": "2026-07-01 18:01 BJT"
     },
     {
       "match_id": "bel-sen-20260702",
@@ -1042,7 +1182,8 @@
         "label": "比利时 2:1 塞内加尔，90分钟晋级",
         "reason": "GPT 5.5 的预设预测：比利时经验和进攻质量略胜，但会被塞内加尔压迫考验。"
       },
-      "published": false
+      "published": true,
+      "published_at_bjt": "2026-07-01 18:01 BJT"
     },
     {
       "match_id": "usa-bih-20260702",
@@ -1074,7 +1215,8 @@
         "label": "美国 2:0 波黑，90分钟晋级",
         "reason": "GPT 5.5 的预设预测：美国整体速度更快，但淘汰赛会更谨慎。"
       },
-      "published": false
+      "published": true,
+      "published_at_bjt": "2026-07-01 18:01 BJT"
     },
     {
       "match_id": "esp-aut-20260703",
