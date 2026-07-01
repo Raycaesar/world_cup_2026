@@ -7,10 +7,10 @@
     "tagline": "World Cup Knockout Prediction Derby"
   },
   "meta": {
-    "updated_at": "2026-07-01 07:00 BJT",
+    "updated_at": "2026-07-01 12:10 BJT",
     "active_day": "2026-06-30",
     "timezone": "Asia/Beijing",
-    "version": "knockout-auto-202606302300"
+    "version": "knockout-auto-202607010410"
   },
   "phase": "knockout",
   "archive": {
@@ -19,11 +19,11 @@
   },
   "score_summary": {
     "ray_total": 53,
-    "gpt_total": 52,
-    "leader_comment": "Ray 以 53:52 领先 GPT 5.5。"
+    "gpt_total": 53,
+    "leader_comment": "Ray 与 GPT 5.5 战成 53:53。"
   },
-  "headline": "淘汰赛更新：法国 3:0 瑞典",
-  "brief": "最新淘汰赛已结算：法国 3:0 瑞典，Ray +1，GPT +1。",
+  "headline": "淘汰赛更新：墨西哥 2:0 厄瓜多尔",
+  "brief": "最新淘汰赛已结算：墨西哥 2:0 厄瓜多尔，Ray +0，GPT +1。",
   "knockout_rules": [
     "只有一方猜中晋级队时，猜中者先得 3 分；若同时猜中晋级方式，再得 1 分；若90分钟比分完全命中，再得 1 分，单场最高 5 分。",
     "双方都猜中晋级队时，不重复给胜负分，只比较晋级方式与90分钟比分：方式正确 +1，90分钟比分完全命中再 +1。",
@@ -350,24 +350,25 @@
     },
     {
       "id": "mex-ecu-20260701",
-      "espn_id": "53452563",
+      "espn_id": "760491",
       "round": "32强",
       "kickoff_local": "07-01 09:00 BJT",
       "home": "墨西哥",
       "away": "厄瓜多尔",
       "venue": "",
-      "status": "未开始",
+      "status": "已结束",
       "actual": {
-        "method": null,
+        "method": "90",
         "regulation_score": {
-          "home_score": null,
-          "away_score": null
+          "home_score": 2,
+          "away_score": 0
         },
         "final_score": {
-          "home_score": null,
-          "away_score": null
+          "home_score": 2,
+          "away_score": 0
         },
-        "advancing_team": null
+        "advancing_team": "墨西哥",
+        "next_match": ""
       },
       "ray_prediction": {
         "advancing_team": "墨西哥",
@@ -389,8 +390,12 @@
         "label": "墨西哥 2:1 厄瓜多尔，90分钟晋级",
         "reason": "GPT 5.5 的预设预测：墨西哥主场氛围和前场效率略占优势。"
       },
-      "manual_points": null,
-      "review": "赛前预测。",
+      "manual_points": {
+        "ray": 0,
+        "gpt": 1,
+        "explanation": "双方都猜中晋级队；不重复给胜负分，只按晋级方式与90分钟比分计分：Ray +0，GPT +1。"
+      },
+      "review": "墨西哥 2:0 厄瓜多尔，墨西哥晋级。双方都猜中晋级队；不重复给胜负分，只按晋级方式与90分钟比分计分：Ray +0，GPT +1。",
       "predictions_published_at": "2026-06-30 18:01 BJT"
     }
   ],
@@ -495,8 +500,15 @@
       "kickoff_local": "07-01 09:00 BJT",
       "home": "墨西哥",
       "away": "厄瓜多尔",
-      "status": "未开始",
-      "note": "胜者进入 16 强"
+      "status": "已结束",
+      "note": "墨西哥通过90分钟晋级",
+      "winner": "墨西哥",
+      "method": "90",
+      "score_obj": {
+        "home_score": 2,
+        "away_score": 0
+      },
+      "score": "2:0"
     },
     {
       "id": "53452565",
@@ -636,6 +648,10 @@
     {
       "time": "07-01 07:00",
       "text": "淘汰赛更新：法国 3:0 瑞典，Ray +1，GPT +1。"
+    },
+    {
+      "time": "07-01 12:10",
+      "text": "淘汰赛更新：墨西哥 2:0 厄瓜多尔，Ray +0，GPT +1。"
     }
   ],
   "live_ticker": [
