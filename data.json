@@ -7,10 +7,10 @@
     "tagline": "World Cup Knockout Prediction Derby"
   },
   "meta": {
-    "updated_at": "2026-07-01 18:01 BJT",
+    "updated_at": "2026-07-02 02:10 BJT",
     "active_day": "2026-06-30",
     "timezone": "Asia/Beijing",
-    "version": "prediction-release-202607011001"
+    "version": "knockout-auto-202607011810"
   },
   "phase": "knockout",
   "archive": {
@@ -18,12 +18,12 @@
     "href": "archive.html"
   },
   "score_summary": {
-    "ray_total": 53,
-    "gpt_total": 53,
-    "leader_comment": "Ray 与 GPT 5.5 战成 53:53。"
+    "ray_total": 54,
+    "gpt_total": 54,
+    "leader_comment": "Ray 与 GPT 5.5 战成 54:54。"
   },
-  "headline": "淘汰赛预测发布：英格兰 vs 刚果（金）、比利时 vs 塞内加尔、美国 vs 波黑",
-  "brief": "北京时间 2026-07-01 18:01 BJT 已发布 3 场淘汰赛预测：英格兰 vs 刚果（金）；比利时 vs 塞内加尔；美国 vs 波黑。",
+  "headline": "淘汰赛更新：英格兰 2:1 刚果（金）",
+  "brief": "最新淘汰赛已结算：英格兰 2:1 刚果（金），Ray +1，GPT +1。",
   "knockout_rules": [
     "只有一方猜中晋级队时，猜中者先得 3 分；若同时猜中晋级方式，再得 1 分；若90分钟比分完全命中，再得 1 分，单场最高 5 分。",
     "双方都猜中晋级队时，不重复给胜负分，只比较晋级方式与90分钟比分：方式正确 +1，90分钟比分完全命中再 +1。",
@@ -400,24 +400,25 @@
     },
     {
       "id": "eng-cod-20260702",
-      "espn_id": "53452565",
+      "espn_id": "760495",
       "round": "32强",
       "kickoff_local": "07-02 00:00 BJT",
       "home": "英格兰",
       "away": "刚果（金）",
       "venue": "",
-      "status": "未开始",
+      "status": "已结束",
       "actual": {
-        "method": null,
+        "method": "90",
         "regulation_score": {
-          "home_score": null,
-          "away_score": null
+          "home_score": 2,
+          "away_score": 1
         },
         "final_score": {
-          "home_score": null,
-          "away_score": null
+          "home_score": 2,
+          "away_score": 1
         },
-        "advancing_team": null
+        "advancing_team": "英格兰",
+        "next_match": "对阵墨西哥/厄瓜多尔胜者"
       },
       "ray_prediction": {
         "advancing_team": "英格兰",
@@ -439,8 +440,12 @@
         "label": "英格兰 3:0 刚果（金），90分钟晋级",
         "reason": "GPT 5.5 的预设预测：英格兰会稳健晋级，控球和定位球优势明显。"
       },
-      "manual_points": null,
-      "review": "赛前预测。",
+      "manual_points": {
+        "ray": 1,
+        "gpt": 1,
+        "explanation": "双方都猜中晋级队；不重复给胜负分，只按晋级方式与90分钟比分计分：Ray +1，GPT +1。"
+      },
+      "review": "英格兰 2:1 刚果（金），英格兰晋级。下一轮将对阵墨西哥/厄瓜多尔胜者。双方都猜中晋级队；不重复给胜负分，只按晋级方式与90分钟比分计分：Ray +1，GPT +1。",
       "predictions_published_at": "2026-07-01 18:01 BJT"
     },
     {
@@ -651,8 +656,15 @@
       "kickoff_local": "07-02 00:00 BJT",
       "home": "英格兰",
       "away": "刚果（金）",
-      "status": "未开始",
-      "note": "胜者对阵墨西哥/厄瓜多尔胜者"
+      "status": "已结束",
+      "note": "英格兰通过90分钟晋级，对阵墨西哥/厄瓜多尔胜者",
+      "winner": "英格兰",
+      "method": "90",
+      "score_obj": {
+        "home_score": 2,
+        "away_score": 1
+      },
+      "score": "2:1"
     },
     {
       "id": "53452555",
@@ -791,6 +803,10 @@
     {
       "time": "07-01 18:01",
       "text": "发布次日淘汰赛预测：英格兰 vs 刚果（金）、比利时 vs 塞内加尔、美国 vs 波黑。"
+    },
+    {
+      "time": "07-02 02:10",
+      "text": "淘汰赛更新：英格兰 2:1 刚果（金），Ray +1，GPT +1。"
     }
   ],
   "live_ticker": [
