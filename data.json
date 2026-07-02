@@ -7,10 +7,10 @@
     "tagline": "World Cup Knockout Prediction Derby"
   },
   "meta": {
-    "updated_at": "2026-07-03 06:30 BJT",
+    "updated_at": "2026-07-03 06:40 BJT",
     "active_day": "2026-06-30",
     "timezone": "Asia/Beijing",
-    "version": "knockout-auto-202607022230"
+    "version": "knockout-auto-202607022240"
   },
   "phase": "knockout",
   "archive": {
@@ -927,10 +927,6 @@
   "update_log": [
     {
       "time": "06-30 12:20",
-      "text": "摩洛哥 120 分钟 1:1 战平荷兰，点球 3:2 胜出晋级；双方都预测荷兰晋级，本场 Ray +0，GPT +0。"
-    },
-    {
-      "time": "06-30 12:20",
       "text": "两场点球大战都没有改变比分牌，总分仍是 Ray 50:50 GPT 5.5。"
     },
     {
@@ -1003,6 +999,10 @@
     },
     {
       "time": "07-03 06:30",
+      "text": "射手榜待核对：西班牙 vs 奥地利 已有进球，但 ESPN scoring plays 暂未解析出进球者。"
+    },
+    {
+      "time": "07-03 06:40",
       "text": "射手榜待核对：西班牙 vs 奥地利 已有进球，但 ESPN scoring plays 暂未解析出进球者。"
     }
   ],
