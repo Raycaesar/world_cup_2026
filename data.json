@@ -7,10 +7,10 @@
     "tagline": "World Cup Knockout Prediction Derby"
   },
   "meta": {
-    "updated_at": "2026-07-03 05:10 BJT",
+    "updated_at": "2026-07-03 05:21 BJT",
     "active_day": "2026-06-30",
     "timezone": "Asia/Beijing",
-    "version": "knockout-auto-202607022110"
+    "version": "knockout-auto-202607022121"
   },
   "phase": "knockout",
   "archive": {
@@ -926,10 +926,6 @@
   ],
   "update_log": [
     {
-      "time": "2026-06-28 19:00 BJT",
-      "text": "调整淘汰赛主页布局：下一场、32强对阵、淘汰赛复盘置顶；赛前大奖与规则、射手榜、总积分与更新记录改为两组双栏。"
-    },
-    {
       "time": "06-28 18:45",
       "text": "页面更新：LIVE STICKER 更突出淘汰赛动态；射手榜同步梅西 6 球。"
     },
@@ -1003,6 +999,10 @@
     },
     {
       "time": "07-03 05:10",
+      "text": "射手榜待核对：西班牙 vs 奥地利 已有进球，但 ESPN scoring plays 暂未解析出进球者。"
+    },
+    {
+      "time": "07-03 05:21",
       "text": "射手榜待核对：西班牙 vs 奥地利 已有进球，但 ESPN scoring plays 暂未解析出进球者。"
     }
   ],
