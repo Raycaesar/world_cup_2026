@@ -39,6 +39,9 @@ function teamName(competitor) {
   return TEAM_ZH[raw] || raw;
 }
 function numberOrNull(value) { const n = Number(value); return Number.isFinite(n) ? n : null; }
+function scoreComplete(score) { return score && score.home_score !== null && score.home_score !== undefined && score.away_score !== null && score.away_score !== undefined; }
+function makeScore(home, away) { return { home_score: home, away_score: away }; }
+function scoreLabel(score) { return scoreComplete(score) ? `${score.home_score}:${score.away_score}` : ""; }
 function readShootoutScore(competitor) {
   const candidates = [competitor?.shootoutScore, competitor?.shootout_score, competitor?.curatedRank?.shootoutScore, competitor?.curatedRank?.shootout_score];
   for (const value of candidates) {
@@ -47,22 +50,37 @@ function readShootoutScore(competitor) {
   }
   return null;
 }
-function scoreComplete(score) { return score && score.home_score !== null && score.home_score !== undefined && score.away_score !== null && score.away_score !== undefined; }
-function scoreLabel(score) { return scoreComplete(score) ? `${score.home_score}:${score.away_score}` : ""; }
+function lineValues(competitor) {
+  return (competitor?.linescores || []).map(x => numberOrNull(x?.value ?? x?.displayValue)).filter(x => x !== null);
+}
+function sumFirst(values, n) {
+  if (!values || values.length < n) return null;
+  return values.slice(0, n).reduce((s, x) => s + x, 0);
+}
+function readRegulationScore(home, away) {
+  const hs = sumFirst(lineValues(home), 2);
+  const as = sumFirst(lineValues(away), 2);
+  return hs === null || as === null ? null : makeScore(hs, as);
+}
 function statusText(competition, event) {
-  return [competition.status?.displayClock, competition.status?.type?.detail, competition.status?.type?.shortDetail, event.status?.type?.detail, event.status?.type?.shortDetail].filter(Boolean).join(" ");
+  return [competition.status?.displayClock, competition.status?.type?.detail, competition.status?.type?.shortDetail, competition.status?.type?.name, event.status?.type?.detail, event.status?.type?.shortDetail, event.status?.type?.name].filter(Boolean).join(" ");
 }
 function inferMethod(competition, event, home, away) {
   const status = statusText(competition, event).toLowerCase();
   const hp = readShootoutScore(home), ap = readShootoutScore(away);
   if (status.includes("pen") || hp !== null || ap !== null) return "penalties";
   if (status.includes("aet") || status.includes("extra")) return "extra_time";
+  const hv = lineValues(home), av = lineValues(away);
+  if (hv.length > 2 || av.length > 2) return "extra_time";
   return "90";
 }
 function winnerFrom(homeScore, awayScore, homeTeam, awayTeam) {
   if (homeScore > awayScore) return homeTeam;
   if (awayScore > homeScore) return awayTeam;
   return "";
+}
+function methodLabel(method) {
+  return method === "90" ? "90分钟" : method === "extra_time" ? "加时" : method === "penalties" ? "点球" : "";
 }
 function normalizeEvent(event) {
   const competition = event.competitions?.[0] || {};
@@ -75,6 +93,7 @@ function normalizeEvent(event) {
   const isLive = state === "in";
   const homeTeam = teamName(home), awayTeam = teamName(away);
   const final_score = { home_score: isPre ? null : numberOrNull(home.score), away_score: isPre ? null : numberOrNull(away.score) };
+  const regulation_score = readRegulationScore(home, away);
   const penalties_score = { home_score: readShootoutScore(home), away_score: readShootoutScore(away) };
   const method = inferMethod(competition, event, home, away);
   let winner = "";
@@ -82,18 +101,24 @@ function normalizeEvent(event) {
   if (!winner && scoreComplete(final_score)) winner = winnerFrom(final_score.home_score, final_score.away_score, homeTeam, awayTeam);
   const markedWinner = competitors.find(c => c.winner === true);
   if (!winner && markedWinner) winner = teamName(markedWinner);
-  const score_text = scoreComplete(final_score) ? `${homeTeam} ${scoreLabel(final_score)} ${awayTeam}` : `${homeTeam} vs ${awayTeam}`;
+
+  let score_text = scoreComplete(final_score) ? `${homeTeam} ${scoreLabel(final_score)} ${awayTeam}` : `${homeTeam} vs ${awayTeam}`;
   const shootout_text = scoreComplete(penalties_score) ? `点球 ${scoreLabel(penalties_score)}` : "";
+  if (method === "extra_time") score_text += "，加时";
+  if (method === "penalties") score_text += shootout_text ? `，${shootout_text}` : "，点球大战";
 
   return {
     id: event.id,
     tag: isLive ? "LIVE" : isPre ? "NEXT" : "FT",
     state,
     method,
+    method_label: methodLabel(method),
     home: homeTeam,
     away: awayTeam,
     home_score: final_score.home_score,
     away_score: final_score.away_score,
+    regulation_home_score: regulation_score?.home_score ?? null,
+    regulation_away_score: regulation_score?.away_score ?? null,
     penalties_home_score: penalties_score.home_score,
     penalties_away_score: penalties_score.away_score,
     score_text,
@@ -109,18 +134,19 @@ function normalizeEvent(event) {
 
 function pickTickerMatches(matches) {
   const now = Date.now();
-
   const live = matches
     .filter(m => m.state === "in")
     .sort((a, b) => a.kickoff_ts - b.kickoff_ts)
     .slice(0, 3);
-
   const next = matches
     .filter(m => m.state === "pre" && m.kickoff_ts >= now - 20 * 60 * 1000)
     .sort((a, b) => a.kickoff_ts - b.kickoff_ts)
     .slice(0, 5);
-
-  return [...live, ...next].slice(0, 6);
+  const justFinal = matches
+    .filter(m => m.state === "post" && m.kickoff_ts >= now - 8 * 60 * 60 * 1000)
+    .sort((a, b) => b.kickoff_ts - a.kickoff_ts)
+    .slice(0, 2);
+  return [...live, ...justFinal, ...next].slice(0, 6);
 }
 
 export async function onRequestGet() {

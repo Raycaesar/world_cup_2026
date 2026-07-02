@@ -2,7 +2,8 @@ name: Safe auto update World Cup scores
 
 on:
   workflow_dispatch:
-  # Enable after manual test if you want automatic checks.
+  # Cloudflare Cron Worker is the primary scheduler.
+  # Keep GitHub's own schedule disabled to avoid double-triggering.
   # schedule:
   #   - cron: "*/30 * * * *"
 
@@ -55,6 +56,7 @@ jobs:
           const fs = require('fs');
           const before = JSON.parse(fs.readFileSync('data.before.json', 'utf8'));
           const after = JSON.parse(fs.readFileSync('data.json', 'utf8'));
+          const complete = score => score && score.home_score !== null && score.home_score !== undefined && score.away_score !== null && score.away_score !== undefined;
           if (!after.score_summary) throw new Error('Missing score_summary');
           const oldRay = Number(before.score_summary?.ray_total || 0);
           const oldGpt = Number(before.score_summary?.gpt_total || 0);
@@ -64,9 +66,12 @@ jobs:
           if (after.phase === 'knockout') {
             for (const match of after.knockout_matches || []) {
               const actual = match.actual || {};
-              const final = actual.final_score || {};
-              const finished = actual.advancing_team && final.home_score !== null && final.home_score !== undefined && final.away_score !== null && final.away_score !== undefined;
-              if (finished && actual.method === '90' && !match.manual_points) throw new Error(`Finished 90-minute match missing manual_points: ${match.id}`);
+              const finished = actual.advancing_team && complete(actual.final_score);
+              if (!finished) continue;
+              if (!match.manual_points) throw new Error(`Finished match missing manual_points/provisional points: ${match.id}`);
+              if ((actual.method === 'extra_time' || actual.method === 'penalties') && !complete(actual.regulation_score) && !match.manual_points.provisional) {
+                throw new Error(`Extra-time/penalty match missing regulation_score without provisional flag: ${match.id}`);
+              }
             }
           }
           const banned = ['自动简写版', '本场采用人工裁定', '人工裁定', '人工约定'];
@@ -79,11 +84,12 @@ jobs:
       - name: Commit changes if needed
         run: |
           if git diff --quiet data.json; then
-            echo "No score changes."
+            echo "No score or scorer changes."
             exit 0
           fi
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
           git add data.json
           git commit -m "safe auto update knockout score"
+          git pull --rebase origin main
           git push
