@@ -7,10 +7,10 @@
     "tagline": "World Cup Knockout Prediction Derby"
   },
   "meta": {
-    "updated_at": "2026-07-03 05:21 BJT",
+    "updated_at": "2026-07-03 05:40 BJT",
     "active_day": "2026-06-30",
     "timezone": "Asia/Beijing",
-    "version": "knockout-auto-202607022121"
+    "version": "knockout-auto-202607022140"
   },
   "phase": "knockout",
   "archive": {
@@ -926,10 +926,6 @@
   ],
   "update_log": [
     {
-      "time": "06-28 18:45",
-      "text": "页面更新：LIVE STICKER 更突出淘汰赛动态；射手榜同步梅西 6 球。"
-    },
-    {
       "time": "06-29 11:10",
       "text": "南非 0:1 加拿大已结算：双方都猜中加拿大晋级和90分钟路径，各得 1 分；总分 Ray 50:45 GPT 5.5。"
     },
@@ -1003,6 +999,10 @@
     },
     {
       "time": "07-03 05:21",
+      "text": "射手榜待核对：西班牙 vs 奥地利 已有进球，但 ESPN scoring plays 暂未解析出进球者。"
+    },
+    {
+      "time": "07-03 05:40",
       "text": "射手榜待核对：西班牙 vs 奥地利 已有进球，但 ESPN scoring plays 暂未解析出进球者。"
     }
   ],
