@@ -7,10 +7,10 @@
     "tagline": "World Cup Knockout Prediction Derby"
   },
   "meta": {
-    "updated_at": "2026-07-03 06:40 BJT",
+    "updated_at": "2026-07-03 06:50 BJT",
     "active_day": "2026-06-30",
     "timezone": "Asia/Beijing",
-    "version": "knockout-auto-202607022240"
+    "version": "knockout-auto-202607022250"
   },
   "phase": "knockout",
   "archive": {
@@ -926,10 +926,6 @@
   ],
   "update_log": [
     {
-      "time": "06-30 12:20",
-      "text": "两场点球大战都没有改变比分牌，总分仍是 Ray 50:50 GPT 5.5。"
-    },
-    {
       "time": "06-30 18:01",
       "text": "发布次日淘汰赛预测：科特迪瓦 vs 挪威、法国 vs 瑞典、墨西哥 vs 厄瓜多尔。"
     },
@@ -1003,6 +999,10 @@
     },
     {
       "time": "07-03 06:40",
+      "text": "射手榜待核对：西班牙 vs 奥地利 已有进球，但 ESPN scoring plays 暂未解析出进球者。"
+    },
+    {
+      "time": "07-03 06:50",
       "text": "射手榜待核对：西班牙 vs 奥地利 已有进球，但 ESPN scoring plays 暂未解析出进球者。"
     }
   ],
