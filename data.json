@@ -7,10 +7,10 @@
     "tagline": "World Cup Knockout Prediction Derby"
   },
   "meta": {
-    "updated_at": "2026-07-03 06:10 BJT",
+    "updated_at": "2026-07-03 06:20 BJT",
     "active_day": "2026-06-30",
     "timezone": "Asia/Beijing",
-    "version": "knockout-auto-202607022210"
+    "version": "knockout-auto-202607022220"
   },
   "phase": "knockout",
   "archive": {
@@ -926,10 +926,6 @@
   ],
   "update_log": [
     {
-      "time": "2026-06-30 03:31",
-      "text": "巴西 2:1 日本晋级，GPT 命中晋级队、90分钟方式与准确比分，本场 GPT +5；总分来到 Ray 50:50 GPT 5.5。"
-    },
-    {
       "time": "06-30 12:20",
       "text": "巴拉圭 120 分钟 1:1 战平德国，点球 4:3 胜出晋级；双方都预测德国晋级，本场 Ray +0，GPT +0。"
     },
@@ -1003,6 +999,10 @@
     },
     {
       "time": "07-03 06:10",
+      "text": "射手榜待核对：西班牙 vs 奥地利 已有进球，但 ESPN scoring plays 暂未解析出进球者。"
+    },
+    {
+      "time": "07-03 06:20",
       "text": "射手榜待核对：西班牙 vs 奥地利 已有进球，但 ESPN scoring plays 暂未解析出进球者。"
     }
   ],
