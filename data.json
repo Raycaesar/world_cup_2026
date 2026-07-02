@@ -7,10 +7,10 @@
     "tagline": "World Cup Knockout Prediction Derby"
   },
   "meta": {
-    "updated_at": "2026-07-02 18:13 BJT",
+    "updated_at": "2026-07-03 05:10 BJT",
     "active_day": "2026-06-30",
     "timezone": "Asia/Beijing",
-    "version": "prediction-release-202607021013"
+    "version": "knockout-auto-202607022110"
   },
   "phase": "knockout",
   "archive": {
@@ -18,12 +18,12 @@
     "href": "archive.html"
   },
   "score_summary": {
-    "ray_total": 55,
-    "gpt_total": 59,
-    "leader_comment": "GPT 5.5 以 59:55 领先 Ray。"
+    "ray_total": 56,
+    "gpt_total": 60,
+    "leader_comment": "GPT 5.5 以 60:56 领先 Ray。"
   },
-  "headline": "淘汰赛预测发布：西班牙 vs 奥地利、葡萄牙 vs 克罗地亚、瑞士 vs 阿尔及利亚",
-  "brief": "北京时间 2026-07-02 18:13 BJT 已发布 3 场淘汰赛预测：西班牙 vs 奥地利；葡萄牙 vs 克罗地亚；瑞士 vs 阿尔及利亚。",
+  "headline": "淘汰赛更新：西班牙 3:0 奥地利",
+  "brief": "最新淘汰赛已结算：西班牙 3:0 奥地利，Ray +1，GPT +1。",
   "knockout_rules": [
     "只有一方猜中晋级队时，猜中者先得 3 分；若同时猜中晋级方式，再得 1 分；若90分钟比分完全命中，再得 1 分，单场最高 5 分。",
     "双方都猜中晋级队时，不重复给胜负分，只比较晋级方式与90分钟比分：方式正确 +1，90分钟比分完全命中再 +1。",
@@ -554,24 +554,27 @@
     },
     {
       "id": "esp-aut-20260703",
-      "espn_id": "53452551",
+      "espn_id": "760497",
       "round": "32强",
       "kickoff_local": "07-03 03:00 BJT",
       "home": "西班牙",
       "away": "奥地利",
       "venue": "",
-      "status": "未开始",
+      "status": "已结束",
       "actual": {
-        "method": null,
+        "method": "90",
         "regulation_score": {
-          "home_score": null,
-          "away_score": null
+          "home_score": 3,
+          "away_score": 0
         },
         "final_score": {
-          "home_score": null,
-          "away_score": null
+          "home_score": 3,
+          "away_score": 0
         },
-        "advancing_team": null
+        "advancing_team": "西班牙",
+        "scorer_update_pending": true,
+        "next_match": "对阵葡萄牙/克罗地亚胜者",
+        "scorer_update_status": "needs_manual_goal_scorers"
       },
       "ray_prediction": {
         "advancing_team": "西班牙",
@@ -593,8 +596,12 @@
         "label": "西班牙 2:0 奥地利，90分钟晋级",
         "reason": "GPT 5.5 的预设预测：西班牙能通过控球限制奥地利反击。"
       },
-      "manual_points": null,
-      "review": "赛前预测。",
+      "manual_points": {
+        "ray": 1,
+        "gpt": 1,
+        "explanation": "双方都猜中晋级队；不重复给胜负分，只按晋级方式与90分钟比分计分：Ray +1，GPT +1。"
+      },
+      "review": "西班牙 3:0 奥地利，西班牙晋级。下一轮将对阵葡萄牙/克罗地亚胜者。双方都猜中晋级队；不重复给胜负分，只按晋级方式与90分钟比分计分：Ray +1，GPT +1。",
       "predictions_published_at": "2026-07-02 18:13 BJT"
     },
     {
@@ -857,8 +864,19 @@
       "kickoff_local": "07-03 03:00 BJT",
       "home": "西班牙",
       "away": "奥地利",
-      "status": "未开始",
-      "note": "胜者对阵葡萄牙/克罗地亚胜者"
+      "status": "已结束",
+      "note": "西班牙通过90分钟晋级，对阵葡萄牙/克罗地亚胜者",
+      "winner": "西班牙",
+      "method": "90",
+      "score_obj": {
+        "home_score": 3,
+        "away_score": 0
+      },
+      "score": "3:0",
+      "regulation_score": {
+        "home_score": 3,
+        "away_score": 0
+      }
     },
     {
       "id": "53452549",
@@ -907,14 +925,6 @@
     }
   ],
   "update_log": [
-    {
-      "time": "06-28 18:45",
-      "text": "小组赛与 32 强名单已归档；淘汰赛主页启用，当前总分 Ray 49:44 GPT 5.5。"
-    },
-    {
-      "time": "06-28 18:45",
-      "text": "录入 32 强第一场预测：Ray 加拿大 2:0 南非，GPT 加拿大 2:1 南非，均为 90 分钟晋级。"
-    },
     {
       "time": "2026-06-28 19:00 BJT",
       "text": "调整淘汰赛主页布局：下一场、32强对阵、淘汰赛复盘置顶；赛前大奖与规则、射手榜、总积分与更新记录改为两组双栏。"
@@ -986,6 +996,14 @@
     {
       "time": "07-02 18:13",
       "text": "发布次日淘汰赛预测：西班牙 vs 奥地利、葡萄牙 vs 克罗地亚、瑞士 vs 阿尔及利亚。"
+    },
+    {
+      "time": "07-03 05:10",
+      "text": "淘汰赛更新：西班牙 3:0 奥地利，Ray +1，GPT +1。"
+    },
+    {
+      "time": "07-03 05:10",
+      "text": "射手榜待核对：西班牙 vs 奥地利 已有进球，但 ESPN scoring plays 暂未解析出进球者。"
     }
   ],
   "live_ticker": [
