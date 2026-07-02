@@ -286,8 +286,26 @@ function enrichEventFromSummary(event, summary) {
   return event;
 }
 
-function actualFinished(match) { return !!(match.actual && match.actual.advancing_team && scoreComplete(match.actual.final_score)); }
-function fullyPointSettled(match) { return actualFinished(match) && !!match.manual_points && !match.manual_points.provisional; }
+function actualFinished(match) {
+  return !!(match.actual && match.actual.advancing_team && scoreComplete(match.actual.final_score));
+}
+
+function needsRegulationScore(method) {
+  return method === "extra_time" || method === "penalties";
+}
+
+function needsRegulationRepair(match) {
+  const actual = match.actual || {};
+  return actualFinished(match) && needsRegulationScore(actual.method) && !scoreComplete(actual.regulation_score);
+}
+
+function fullyPointSettled(match) {
+  return actualFinished(match)
+    && !!match.manual_points
+    && !match.manual_points.provisional
+    && !needsRegulationRepair(match);
+}
+
 function methodLabel(method) { return method === "90" ? "90分钟" : method === "extra_time" || method === "extra" ? "加时" : method === "penalties" ? "点球" : "未定"; }
 function scoreLabel(score) { return scoreComplete(score) ? `${score.home_score}:${score.away_score}` : "—"; }
 function predictionDetailPoints(pred, actual) {
@@ -357,7 +375,7 @@ function updateBracket(data, match) {
   const next = match.actual.next_match || (b.note && b.note.includes("对阵") ? b.note.replace(/^胜者/, match.actual.advancing_team) : "");
   b.note = next ? `${match.actual.advancing_team}通过${methodLabel(match.actual.method)}晋级，${next}` : `${match.actual.advancing_team}通过${methodLabel(match.actual.method)}晋级`;
 }
-function needsRegulationScore(method) { return method === "extra_time" || method === "penalties"; }
+
 function setActualRegulation(match, event) {
   const method = match.actual.method;
   const existing = match.actual.regulation_score;
@@ -387,9 +405,10 @@ function updateOneMatch(data, match, event) {
   if (!scoreComplete(event.final_score)) return null;
 
   const oldManual = match.manual_points || null;
-  const oldRay = Number(oldManual?.ray || 0);
-  const oldGpt = Number(oldManual?.gpt || 0);
-  const wasActualFinished = actualFinished(match);
+const oldRay = Number(oldManual?.ray || 0);
+const oldGpt = Number(oldManual?.gpt || 0);
+const wasActualFinished = actualFinished(match);
+const oldActualText = JSON.stringify(match.actual || {});
 
   match.status = "已结束";
   match.espn_id = event.espn_id || match.espn_id;
@@ -436,8 +455,10 @@ function updateOneMatch(data, match, event) {
   const deltaRay = newRay - oldRay;
   const deltaGpt = newGpt - oldGpt;
   const pointsChanged = deltaRay !== 0 || deltaGpt !== 0 || !!oldManual?.provisional !== !!match.manual_points?.provisional;
-  const changed = !wasActualFinished || pointsChanged || !sameScore(event.regulation_score, oldManual?.regulation_score);
-  if (!changed && deltaRay === 0 && deltaGpt === 0) return null;
+ 
+const actualChanged = JSON.stringify(match.actual || {}) !== oldActualText;
+const changed = !wasActualFinished || pointsChanged || actualChanged;
+ if (!changed && deltaRay === 0 && deltaGpt === 0) return null;
   return { id: match.id, changed: true, home: match.home, away: match.away, score: publicScore(match), ray: deltaRay, gpt: deltaGpt, needsManual: missingRegulation };
 }
 
