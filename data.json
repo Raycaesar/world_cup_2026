@@ -7,10 +7,10 @@
     "tagline": "World Cup Knockout Prediction Derby"
   },
   "meta": {
-    "updated_at": "2026-07-03 07:20 BJT",
+    "updated_at": "2026-07-03 07:30 BJT",
     "active_day": "2026-06-30",
     "timezone": "Asia/Beijing",
-    "version": "knockout-auto-202607022320"
+    "version": "knockout-auto-202607022330"
   },
   "phase": "knockout",
   "archive": {
@@ -926,10 +926,6 @@
   ],
   "update_log": [
     {
-      "time": "07-01 12:10",
-      "text": "淘汰赛更新：墨西哥 2:0 厄瓜多尔，Ray +0，GPT +1。"
-    },
-    {
       "time": "07-01 18:01",
       "text": "发布次日淘汰赛预测：英格兰 vs 刚果（金）、比利时 vs 塞内加尔、美国 vs 波黑。"
     },
@@ -1003,6 +999,10 @@
     },
     {
       "time": "07-03 07:20",
+      "text": "射手榜待核对：西班牙 vs 奥地利 已有进球，但 ESPN scoring plays 暂未解析出进球者。"
+    },
+    {
+      "time": "07-03 07:30",
       "text": "射手榜待核对：西班牙 vs 奥地利 已有进球，但 ESPN scoring plays 暂未解析出进球者。"
     }
   ],
