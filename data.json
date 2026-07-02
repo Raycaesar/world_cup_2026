@@ -460,8 +460,8 @@
       "actual": {
         "method": "extra_time",
         "regulation_score": {
-          "home_score": null,
-          "away_score": null
+          "home_score": 2,
+          "away_score": 2
         },
         "final_score": {
           "home_score": 3,
@@ -472,7 +472,7 @@
           "home_score": 3,
           "away_score": 2
         },
-        "next_match": ""
+        "next_match": "对阵美国"
       },
       "ray_prediction": {
         "advancing_team": "塞内加尔",
@@ -497,9 +497,9 @@
       "manual_points": {
         "ray": 0,
         "gpt": 3,
-        "explanation": "GPT 猜中晋级队，Ray 未猜中；晋级队 +3，路径与比分加分 +0，GPT +3。"
+        "explanation": "GPT 猜中比利时晋级，Ray 未猜中；实际为加时晋级，GPT 未命中90分钟方式和比分，本场 GPT +3。"
       },
-      "review": "比利时 3:2 塞内加尔，比利时晋级。GPT 猜中晋级队，Ray 未猜中；晋级队 +3，路径与比分加分 +0，GPT +3。",
+      "review": "比利时 90 分钟 2:2 塞内加尔，加时后 3:2 晋级。Ray 预测塞内加尔加时晋级未中；GPT 猜中比利时晋级，但未命中90分钟方式和比分，本场 Ray +0，GPT +3。",
       "predictions_published_at": "2026-07-01 18:01 BJT"
     },
     {
@@ -687,14 +687,18 @@
       "home": "比利时",
       "away": "塞内加尔",
       "status": "已结束",
-      "note": "比利时通过加时晋级",
+      "note": "比利时加时 3:2 淘汰塞内加尔，将对阵美国",
       "winner": "比利时",
       "method": "extra_time",
       "score_obj": {
         "home_score": 3,
         "away_score": 2
       },
-      "score": "3:2"
+      "score": "3:2（加时）",
+      "regulation_score": {
+        "home_score": 2,
+        "away_score": 2
+      }
     },
     {
       "id": "53452553",
