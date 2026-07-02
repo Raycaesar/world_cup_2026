@@ -1,0 +1,183 @@
+[1mdiff --git a/data.json b/data.json[m
+[1mindex 3c4d60f..a435690 100644[m
+[1m--- a/data.json[m
+[1m+++ b/data.json[m
+[36m@@ -7,10 +7,10 @@[m
+     "tagline": "World Cup Knockout Prediction Derby"[m
+   },[m
+   "meta": {[m
+[31m-    "updated_at": "2026-07-02 02:10 BJT",[m
+[32m+[m[32m    "updated_at": "2026-07-02 15:22 BJT",[m
+     "active_day": "2026-06-30",[m
+     "timezone": "Asia/Beijing",[m
+[31m-    "version": "knockout-auto-202607011810"[m
+[32m+[m[32m    "version": "knockout-auto-202607020722"[m
+   },[m
+   "phase": "knockout",[m
+   "archive": {[m
+[36m@@ -18,12 +18,12 @@[m
+     "href": "archive.html"[m
+   },[m
+   "score_summary": {[m
+[31m-    "ray_total": 54,[m
+[31m-    "gpt_total": 54,[m
+[31m-    "leader_comment": "Ray 与 GPT 5.5 战成 54:54。"[m
+[32m+[m[32m    "ray_total": 55,[m
+[32m+[m[32m    "gpt_total": 59,[m
+[32m+[m[32m    "leader_comment": "GPT 5.5 以 59:55 领先 Ray。"[m
+   },[m
+[31m-  "headline": "淘汰赛更新：英格兰 2:1 刚果（金）",[m
+[31m-  "brief": "最新淘汰赛已结算：英格兰 2:1 刚果（金），Ray +1，GPT +1。",[m
+[32m+[m[32m  "headline": "淘汰赛更新：美国 2:0 波黑",[m
+[32m+[m[32m  "brief": "最新淘汰赛已结算：比利时 3:2 塞内加尔，Ray +0，GPT +3；美国 2:0 波黑，Ray +1，GPT +2。",[m
+   "knockout_rules": [[m
+     "只有一方猜中晋级队时，猜中者先得 3 分；若同时猜中晋级方式，再得 1 分；若90分钟比分完全命中，再得 1 分，单场最高 5 分。",[m
+     "双方都猜中晋级队时，不重复给胜负分，只比较晋级方式与90分钟比分：方式正确 +1，90分钟比分完全命中再 +1。",[m
+[36m@@ -450,24 +450,29 @@[m
+     },[m
+     {[m
+       "id": "bel-sen-20260702",[m
+[31m-      "espn_id": "53452555",[m
+[32m+[m[32m      "espn_id": "760493",[m
+       "round": "32强",[m
+       "kickoff_local": "07-02 04:00 BJT",[m
+       "home": "比利时",[m
+       "away": "塞内加尔",[m
+       "venue": "",[m
+[31m-      "status": "未开始",[m
+[32m+[m[32m      "status": "已结束",[m
+       "actual": {[m
+[31m-        "method": null,[m
+[32m+[m[32m        "method": "extra_time",[m
+         "regulation_score": {[m
+           "home_score": null,[m
+           "away_score": null[m
+         },[m
+         "final_score": {[m
+[31m-          "home_score": null,[m
+[31m-          "away_score": null[m
+[32m+[m[32m          "home_score": 3,[m
+[32m+[m[32m          "away_score": 2[m
+[32m+[m[32m        },[m
+[32m+[m[32m        "advancing_team": "比利时",[m
+[32m+[m[32m        "extra_time_score": {[m
+[32m+[m[32m          "home_score": 3,[m
+[32m+[m[32m          "away_score": 2[m
+         },[m
+[31m-        "advancing_team": null[m
+[32m+[m[32m        "next_match": ""[m
+       },[m
+       "ray_prediction": {[m
+         "advancing_team": "塞内加尔",[m
+[36m@@ -489,30 +494,35 @@[m
+         "label": "比利时 2:1 塞内加尔，90分钟晋级",[m
+         "reason": "GPT 5.5 的预设预测：比利时经验和进攻质量略胜，但会被塞内加尔压迫考验。"[m
+       },[m
+[31m-      "manual_points": null,[m
+[31m-      "review": "赛前预测。",[m
+[32m+[m[32m      "manual_points": {[m
+[32m+[m[32m        "ray": 0,[m
+[32m+[m[32m        "gpt": 3,[m
+[32m+[m[32m        "explanation": "GPT 猜中晋级队，Ray 未猜中；晋级队 +3，路径与比分加分 +0，GPT +3。"[m
+[32m+[m[32m      },[m
+[32m+[m[32m      "review": "比利时 3:2 塞内加尔，比利时晋级。GPT 猜中晋级队，Ray 未猜中；晋级队 +3，路径与比分加分 +0，GPT +3。",[m
+       "predictions_published_at": "2026-07-01 18:01 BJT"[m
+     },[m
+     {[m
+       "id": "usa-bih-20260702",[m
+[31m-      "espn_id": "53452553",[m
+[32m+[m[32m      "espn_id": "760494",[m
+       "round": "32强",[m
+       "kickoff_local": "07-02 08:00 BJT",[m
+       "home": "美国",[m
+       "away": "波黑",[m
+       "venue": "",[m
+[31m-      "status": "未开始",[m
+[32m+[m[32m      "status": "已结束",[m
+       "actual": {[m
+[31m-        "method": null,[m
+[32m+[m[32m        "method": "90",[m
+         "regulation_score": {[m
+[31m-          "home_score": null,[m
+[31m-          "away_score": null[m
+[32m+[m[32m          "home_score": 2,[m
+[32m+[m[32m          "away_score": 0[m
+         },[m
+         "final_score": {[m
+[31m-          "home_score": null,[m
+[31m-          "away_score": null[m
+[32m+[m[32m          "home_score": 2,[m
+[32m+[m[32m          "away_score": 0[m
+         },[m
+[31m-        "advancing_team": null[m
+[32m+[m[32m        "advancing_team": "美国",[m
+[32m+[m[32m        "next_match": "对阵比利时/塞内加尔胜者"[m
+       },[m
+       "ray_prediction": {[m
+         "advancing_team": "美国",[m
+[36m@@ -534,8 +544,12 @@[m
+         "label": "美国 2:0 波黑，90分钟晋级",[m
+         "reason": "GPT 5.5 的预设预测：美国整体速度更快，但淘汰赛会更谨慎。"[m
+       },[m
+[31m-      "manual_points": null,[m
+[31m-      "review": "赛前预测。",[m
+[32m+[m[32m      "manual_points": {[m
+[32m+[m[32m        "ray": 1,[m
+[32m+[m[32m        "gpt": 2,[m
+[32m+[m[32m        "explanation": "双方都猜中晋级队；不重复给胜负分，只按晋级方式与90分钟比分计分：Ray +1，GPT +2。"[m
+[32m+[m[32m      },[m
+[32m+[m[32m      "review": "美国 2:0 波黑，美国晋级。下一轮将对阵比利时/塞内加尔胜者。双方都猜中晋级队；不重复给胜负分，只按晋级方式与90分钟比分计分：Ray +1，GPT +2。",[m
+       "predictions_published_at": "2026-07-01 18:01 BJT"[m
+     }[m
+   ],[m
+[36m@@ -672,8 +686,15 @@[m
+       "kickoff_local": "07-02 04:00 BJT",[m
+       "home": "比利时",[m
+       "away": "塞内加尔",[m
+[31m-      "status": "未开始",[m
+[31m-      "note": "胜者进入 16 强"[m
+[32m+[m[32m      "status": "已结束",[m
+[32m+[m[32m      "note": "比利时通过加时晋级",[m
+[32m+[m[32m      "winner": "比利时",[m
+[32m+[m[32m      "method": "extra_time",[m
+[32m+[m[32m      "score_obj": {[m
+[32m+[m[32m        "home_score": 3,[m
+[32m+[m[32m        "away_score": 2[m
+[32m+[m[32m      },[m
+[32m+[m[32m      "score": "3:2"[m
+     },[m
+     {[m
+       "id": "53452553",[m
+[36m@@ -681,8 +702,15 @@[m
+       "kickoff_local": "07-02 08:00 BJT",[m
+       "home": "美国",[m
+       "away": "波黑",[m
+[31m-      "status": "未开始",[m
+[31m-      "note": "胜者对阵比利时/塞内加尔胜者"[m
+[32m+[m[32m      "status": "已结束",[m
+[32m+[m[32m      "note": "美国通过90分钟晋级，对阵比利时/塞内加尔胜者",[m
+[32m+[m[32m      "winner": "美国",[m
+[32m+[m[32m      "method": "90",[m
+[32m+[m[32m      "score_obj": {[m
+[32m+[m[32m        "home_score": 2,[m
+[32m+[m[32m        "away_score": 0[m
+[32m+[m[32m      },[m
+[32m+[m[32m      "score": "2:0"[m
+     },[m
+     {[m
+       "id": "53452551",[m
+[36m@@ -807,6 +835,14 @@[m
+     {[m
+       "time": "07-02 02:10",[m
+       "text": "淘汰赛更新：英格兰 2:1 刚果（金），Ray +1，GPT +1。"[m
+[32m+[m[32m    },[m
+[32m+[m[32m    {[m
+[32m+[m[32m      "time": "07-02 15:22",[m
+[32m+[m[32m      "text": "淘汰赛更新：比利时 3:2 塞内加尔，Ray +0，GPT +3。"[m
+[32m+[m[32m    },[m
+[32m+[m[32m    {[m
+[32m+[m[32m      "time": "07-02 15:22",[m
+[32m+[m[32m      "text": "淘汰赛更新：美国 2:0 波黑，Ray +1，GPT +2。"[m
+     }[m
+   ],[m
+   "live_ticker": [[m
