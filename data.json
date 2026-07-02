@@ -7,10 +7,10 @@
     "tagline": "World Cup Knockout Prediction Derby"
   },
   "meta": {
-    "updated_at": "2026-07-02 15:22 BJT",
+    "updated_at": "2026-07-02 18:13 BJT",
     "active_day": "2026-06-30",
     "timezone": "Asia/Beijing",
-    "version": "knockout-auto-202607020722"
+    "version": "prediction-release-202607021013"
   },
   "phase": "knockout",
   "archive": {
@@ -22,8 +22,8 @@
     "gpt_total": 59,
     "leader_comment": "GPT 5.5 以 59:55 领先 Ray。"
   },
-  "headline": "淘汰赛更新：美国 2:0 波黑",
-  "brief": "最新淘汰赛已结算：比利时 3:2 塞内加尔，Ray +0，GPT +3；美国 2:0 波黑，Ray +1，GPT +2。",
+  "headline": "淘汰赛预测发布：西班牙 vs 奥地利、葡萄牙 vs 克罗地亚、瑞士 vs 阿尔及利亚",
+  "brief": "北京时间 2026-07-02 18:13 BJT 已发布 3 场淘汰赛预测：西班牙 vs 奥地利；葡萄牙 vs 克罗地亚；瑞士 vs 阿尔及利亚。",
   "knockout_rules": [
     "只有一方猜中晋级队时，猜中者先得 3 分；若同时猜中晋级方式，再得 1 分；若90分钟比分完全命中，再得 1 分，单场最高 5 分。",
     "双方都猜中晋级队时，不重复给胜负分，只比较晋级方式与90分钟比分：方式正确 +1，90分钟比分完全命中再 +1。",
@@ -551,6 +551,141 @@
       },
       "review": "美国 2:0 波黑，美国晋级。下一轮将对阵比利时/塞内加尔胜者。双方都猜中晋级队；不重复给胜负分，只按晋级方式与90分钟比分计分：Ray +1，GPT +2。",
       "predictions_published_at": "2026-07-01 18:01 BJT"
+    },
+    {
+      "id": "esp-aut-20260703",
+      "espn_id": "53452551",
+      "round": "32强",
+      "kickoff_local": "07-03 03:00 BJT",
+      "home": "西班牙",
+      "away": "奥地利",
+      "venue": "",
+      "status": "未开始",
+      "actual": {
+        "method": null,
+        "regulation_score": {
+          "home_score": null,
+          "away_score": null
+        },
+        "final_score": {
+          "home_score": null,
+          "away_score": null
+        },
+        "advancing_team": null
+      },
+      "ray_prediction": {
+        "advancing_team": "西班牙",
+        "method": "90",
+        "regulation_score": {
+          "home_score": 2,
+          "away_score": 1
+        },
+        "label": "西班牙 2:1 奥地利，90分钟晋级",
+        "reason": "Ray 的预设预测：看好西班牙控球优势，但奥地利能制造麻烦。"
+      },
+      "gpt_prediction": {
+        "advancing_team": "西班牙",
+        "method": "90",
+        "regulation_score": {
+          "home_score": 2,
+          "away_score": 0
+        },
+        "label": "西班牙 2:0 奥地利，90分钟晋级",
+        "reason": "GPT 5.5 的预设预测：西班牙能通过控球限制奥地利反击。"
+      },
+      "manual_points": null,
+      "review": "赛前预测。",
+      "predictions_published_at": "2026-07-02 18:13 BJT"
+    },
+    {
+      "id": "por-cro-20260703",
+      "espn_id": "53452549",
+      "round": "32强",
+      "kickoff_local": "07-03 07:00 BJT",
+      "home": "葡萄牙",
+      "away": "克罗地亚",
+      "venue": "",
+      "status": "未开始",
+      "actual": {
+        "method": null,
+        "regulation_score": {
+          "home_score": null,
+          "away_score": null
+        },
+        "final_score": {
+          "home_score": null,
+          "away_score": null
+        },
+        "advancing_team": null
+      },
+      "ray_prediction": {
+        "advancing_team": "克罗地亚",
+        "method": "penalties",
+        "regulation_score": {
+          "home_score": 2,
+          "away_score": 2
+        },
+        "label": "葡萄牙 2:2 克罗地亚，克罗地亚点球晋级",
+        "reason": "Ray 的预设预测：押克罗地亚淘汰赛韧性和点球经验。"
+      },
+      "gpt_prediction": {
+        "advancing_team": "葡萄牙",
+        "method": "90",
+        "regulation_score": {
+          "home_score": 2,
+          "away_score": 1
+        },
+        "label": "葡萄牙 2:1 克罗地亚，90分钟晋级",
+        "reason": "GPT 5.5 的预设预测：葡萄牙前场火力更足，能在90分钟内解决。"
+      },
+      "manual_points": null,
+      "review": "赛前预测。",
+      "predictions_published_at": "2026-07-02 18:13 BJT"
+    },
+    {
+      "id": "sui-alg-20260703",
+      "espn_id": "53452505",
+      "round": "32强",
+      "kickoff_local": "07-03 11:00 BJT",
+      "home": "瑞士",
+      "away": "阿尔及利亚",
+      "venue": "",
+      "status": "未开始",
+      "actual": {
+        "method": null,
+        "regulation_score": {
+          "home_score": null,
+          "away_score": null
+        },
+        "final_score": {
+          "home_score": null,
+          "away_score": null
+        },
+        "advancing_team": null
+      },
+      "ray_prediction": {
+        "advancing_team": "瑞士",
+        "method": "90",
+        "regulation_score": {
+          "home_score": 2,
+          "away_score": 0
+        },
+        "label": "瑞士 2:0 阿尔及利亚，90分钟晋级",
+        "reason": "Ray 的预设预测：看好瑞士组织纪律和防守稳定性。"
+      },
+      "gpt_prediction": {
+        "advancing_team": "瑞士",
+        "method": "90",
+        "regulation_score": {
+          "home_score": 1,
+          "away_score": 0
+        },
+        "label": "瑞士 1:0 阿尔及利亚，90分钟晋级",
+        "reason": "GPT 5.5 的预设预测：瑞士更稳，但阿尔及利亚会把比赛压得很紧。"
+      },
+      "manual_points": null,
+      "review": "赛前预测。",
+      "predictions_published_at": "2026-07-02 18:13 BJT"
     }
   ],
   "bracket": [
@@ -847,6 +982,10 @@
     {
       "time": "07-02 15:22",
       "text": "淘汰赛更新：美国 2:0 波黑，Ray +1，GPT +2。"
+    },
+    {
+      "time": "07-02 18:13",
+      "text": "发布次日淘汰赛预测：西班牙 vs 奥地利、葡萄牙 vs 克罗地亚、瑞士 vs 阿尔及利亚。"
     }
   ],
   "live_ticker": [
@@ -1304,7 +1443,8 @@
         "label": "西班牙 2:0 奥地利，90分钟晋级",
         "reason": "GPT 5.5 的预设预测：西班牙能通过控球限制奥地利反击。"
       },
-      "published": false
+      "published": true,
+      "published_at_bjt": "2026-07-02 18:13 BJT"
     },
     {
       "match_id": "por-cro-20260703",
@@ -1336,7 +1476,8 @@
         "label": "葡萄牙 2:1 克罗地亚，90分钟晋级",
         "reason": "GPT 5.5 的预设预测：葡萄牙前场火力更足，能在90分钟内解决。"
       },
-      "published": false
+      "published": true,
+      "published_at_bjt": "2026-07-02 18:13 BJT"
     },
     {
       "match_id": "sui-alg-20260703",
@@ -1368,7 +1509,8 @@
         "label": "瑞士 1:0 阿尔及利亚，90分钟晋级",
         "reason": "GPT 5.5 的预设预测：瑞士更稳，但阿尔及利亚会把比赛压得很紧。"
       },
-      "published": false
+      "published": true,
+      "published_at_bjt": "2026-07-02 18:13 BJT"
     },
     {
       "match_id": "aus-egy-20260704",
