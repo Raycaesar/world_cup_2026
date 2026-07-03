@@ -7,10 +7,10 @@
     "tagline": "World Cup Knockout Prediction Derby"
   },
   "meta": {
-    "updated_at": "2026-07-03 09:11 BJT",
+    "updated_at": "2026-07-03 09:20 BJT",
     "active_day": "2026-06-30",
     "timezone": "Asia/Beijing",
-    "version": "knockout-auto-202607030111"
+    "version": "knockout-auto-202607030120"
   },
   "phase": "knockout",
   "archive": {
@@ -19,11 +19,11 @@
   },
   "score_summary": {
     "ray_total": 56,
-    "gpt_total": 60,
-    "leader_comment": "GPT 5.5 以 60:56 领先 Ray。"
+    "gpt_total": 65,
+    "leader_comment": "GPT 5.5 以 65:56 领先 Ray。"
   },
-  "headline": "淘汰赛更新：西班牙 3:0 奥地利",
-  "brief": "最新淘汰赛已结算：西班牙 3:0 奥地利，Ray +1，GPT +1。",
+  "headline": "淘汰赛更新：葡萄牙 2:1 克罗地亚",
+  "brief": "最新淘汰赛已结算：葡萄牙 2:1 克罗地亚，Ray +0，GPT +5。",
   "knockout_rules": [
     "只有一方猜中晋级队时，猜中者先得 3 分；若同时猜中晋级方式，再得 1 分；若90分钟比分完全命中，再得 1 分，单场最高 5 分。",
     "双方都猜中晋级队时，不重复给胜负分，只比较晋级方式与90分钟比分：方式正确 +1，90分钟比分完全命中再 +1。",
@@ -606,24 +606,27 @@
     },
     {
       "id": "por-cro-20260703",
-      "espn_id": "53452549",
+      "espn_id": "760496",
       "round": "32强",
       "kickoff_local": "07-03 07:00 BJT",
       "home": "葡萄牙",
       "away": "克罗地亚",
       "venue": "",
-      "status": "未开始",
+      "status": "已结束",
       "actual": {
-        "method": null,
+        "method": "90",
         "regulation_score": {
-          "home_score": null,
-          "away_score": null
+          "home_score": 2,
+          "away_score": 1
         },
         "final_score": {
-          "home_score": null,
-          "away_score": null
+          "home_score": 2,
+          "away_score": 1
         },
-        "advancing_team": null
+        "advancing_team": "葡萄牙",
+        "scorer_update_pending": true,
+        "next_match": "对阵西班牙/奥地利胜者",
+        "scorer_update_status": "needs_manual_goal_scorers"
       },
       "ray_prediction": {
         "advancing_team": "克罗地亚",
@@ -645,8 +648,12 @@
         "label": "葡萄牙 2:1 克罗地亚，90分钟晋级",
         "reason": "GPT 5.5 的预设预测：葡萄牙前场火力更足，能在90分钟内解决。"
       },
-      "manual_points": null,
-      "review": "赛前预测。",
+      "manual_points": {
+        "ray": 0,
+        "gpt": 5,
+        "explanation": "GPT 猜中晋级队，Ray 未猜中；晋级队 +3，路径与比分加分 +2，GPT +5。"
+      },
+      "review": "葡萄牙 2:1 克罗地亚，葡萄牙晋级。下一轮将对阵西班牙/奥地利胜者。GPT 猜中晋级队，Ray 未猜中；晋级队 +3，路径与比分加分 +2，GPT +5。",
       "predictions_published_at": "2026-07-02 18:13 BJT"
     },
     {
@@ -884,8 +891,19 @@
       "kickoff_local": "07-03 07:00 BJT",
       "home": "葡萄牙",
       "away": "克罗地亚",
-      "status": "未开始",
-      "note": "胜者对阵西班牙/奥地利胜者"
+      "status": "已结束",
+      "note": "葡萄牙通过90分钟晋级，对阵西班牙/奥地利胜者",
+      "winner": "葡萄牙",
+      "method": "90",
+      "score_obj": {
+        "home_score": 2,
+        "away_score": 1
+      },
+      "score": "2:1",
+      "regulation_score": {
+        "home_score": 2,
+        "away_score": 1
+      }
     },
     {
       "id": "53452505",
@@ -925,18 +943,6 @@
     }
   ],
   "update_log": [
-    {
-      "time": "07-03 06:00",
-      "text": "射手榜待核对：西班牙 vs 奥地利 已有进球，但 ESPN scoring plays 暂未解析出进球者。"
-    },
-    {
-      "time": "07-03 06:10",
-      "text": "射手榜待核对：西班牙 vs 奥地利 已有进球，但 ESPN scoring plays 暂未解析出进球者。"
-    },
-    {
-      "time": "07-03 06:20",
-      "text": "射手榜待核对：西班牙 vs 奥地利 已有进球，但 ESPN scoring plays 暂未解析出进球者。"
-    },
     {
       "time": "07-03 06:30",
       "text": "射手榜待核对：西班牙 vs 奥地利 已有进球，但 ESPN scoring plays 暂未解析出进球者。"
@@ -1004,6 +1010,18 @@
     {
       "time": "07-03 09:11",
       "text": "射手榜待核对：西班牙 vs 奥地利 已有进球，但 ESPN scoring plays 暂未解析出进球者。"
+    },
+    {
+      "time": "07-03 09:20",
+      "text": "淘汰赛更新：葡萄牙 2:1 克罗地亚，Ray +0，GPT +5。"
+    },
+    {
+      "time": "07-03 09:20",
+      "text": "射手榜待核对：西班牙 vs 奥地利 已有进球，但 ESPN scoring plays 暂未解析出进球者。"
+    },
+    {
+      "time": "07-03 09:20",
+      "text": "射手榜待核对：葡萄牙 vs 克罗地亚 已有进球，但 ESPN scoring plays 暂未解析出进球者。"
     }
   ],
   "live_ticker": [
