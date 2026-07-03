@@ -7,10 +7,10 @@
     "tagline": "World Cup Knockout Prediction Derby"
   },
   "meta": {
-    "updated_at": "2026-07-03 19:50 BJT",
+    "updated_at": "2026-07-03 20:00 BJT",
     "active_day": "2026-06-30",
     "timezone": "Asia/Beijing",
-    "version": "knockout-auto-202607031150"
+    "version": "knockout-auto-202607031200"
   },
   "phase": "knockout",
   "archive": {
@@ -1097,18 +1097,6 @@
   ],
   "update_log": [
     {
-      "time": "07-03 18:50",
-      "text": "射手榜待核对：葡萄牙 vs 克罗地亚 已有进球，但 ESPN scoring plays 暂未解析出进球者。"
-    },
-    {
-      "time": "07-03 18:50",
-      "text": "射手榜待核对：瑞士 vs 阿尔及利亚 已有进球，但 ESPN scoring plays 暂未解析出进球者。"
-    },
-    {
-      "time": "07-03 19:00",
-      "text": "射手榜待核对：西班牙 vs 奥地利 已有进球，但 ESPN scoring plays 暂未解析出进球者。"
-    },
-    {
       "time": "07-03 19:00",
       "text": "射手榜待核对：葡萄牙 vs 克罗地亚 已有进球，但 ESPN scoring plays 暂未解析出进球者。"
     },
@@ -1174,6 +1162,18 @@
     },
     {
       "time": "07-03 19:50",
+      "text": "射手榜待核对：瑞士 vs 阿尔及利亚 已有进球，但 ESPN scoring plays 暂未解析出进球者。"
+    },
+    {
+      "time": "07-03 20:00",
+      "text": "射手榜待核对：西班牙 vs 奥地利 已有进球，但 ESPN scoring plays 暂未解析出进球者。"
+    },
+    {
+      "time": "07-03 20:00",
+      "text": "射手榜待核对：葡萄牙 vs 克罗地亚 已有进球，但 ESPN scoring plays 暂未解析出进球者。"
+    },
+    {
+      "time": "07-03 20:00",
       "text": "射手榜待核对：瑞士 vs 阿尔及利亚 已有进球，但 ESPN scoring plays 暂未解析出进球者。"
     }
   ],
