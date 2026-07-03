@@ -7,10 +7,10 @@
     "tagline": "World Cup Knockout Prediction Derby"
   },
   "meta": {
-    "updated_at": "2026-07-03 17:50 BJT",
+    "updated_at": "2026-07-03 18:00 BJT",
     "active_day": "2026-06-30",
     "timezone": "Asia/Beijing",
-    "version": "knockout-auto-202607030950"
+    "version": "prediction-release-202607031000"
   },
   "phase": "knockout",
   "archive": {
@@ -22,8 +22,8 @@
     "gpt_total": 66,
     "leader_comment": "GPT 5.5 以 66:58 领先 Ray。"
   },
-  "headline": "淘汰赛更新：瑞士 2:0 阿尔及利亚",
-  "brief": "最新淘汰赛已结算：瑞士 2:0 阿尔及利亚，Ray +2，GPT +1。",
+  "headline": "淘汰赛预测发布：澳大利亚 vs 埃及、阿根廷 vs 佛得角、哥伦比亚 vs 加纳",
+  "brief": "北京时间 2026-07-03 18:00 BJT 已发布 3 场淘汰赛预测：澳大利亚 vs 埃及；阿根廷 vs 佛得角；哥伦比亚 vs 加纳。",
   "knockout_rules": [
     "只有一方猜中晋级队时，猜中者先得 3 分；若同时猜中晋级方式，再得 1 分；若90分钟比分完全命中，再得 1 分，单场最高 5 分。",
     "双方都猜中晋级队时，不重复给胜负分，只比较晋级方式与90分钟比分：方式正确 +1，90分钟比分完全命中再 +1。",
@@ -707,6 +707,141 @@
       },
       "review": "瑞士 2:0 阿尔及利亚，瑞士晋级。双方都猜中晋级队；不重复给胜负分，只按晋级方式与90分钟比分计分：Ray +2，GPT +1。",
       "predictions_published_at": "2026-07-02 18:13 BJT"
+    },
+    {
+      "id": "aus-egy-20260704",
+      "espn_id": "53452503",
+      "round": "32强",
+      "kickoff_local": "07-04 02:00 BJT",
+      "home": "澳大利亚",
+      "away": "埃及",
+      "venue": "",
+      "status": "未开始",
+      "actual": {
+        "method": null,
+        "regulation_score": {
+          "home_score": null,
+          "away_score": null
+        },
+        "final_score": {
+          "home_score": null,
+          "away_score": null
+        },
+        "advancing_team": null
+      },
+      "ray_prediction": {
+        "advancing_team": "澳大利亚",
+        "method": "penalties",
+        "regulation_score": {
+          "home_score": 1,
+          "away_score": 1
+        },
+        "label": "澳大利亚 1:1 埃及，澳大利亚点球晋级",
+        "reason": "Ray 的预设预测：认为双方都会谨慎，澳大利亚点球胜出。"
+      },
+      "gpt_prediction": {
+        "advancing_team": "埃及",
+        "method": "90",
+        "regulation_score": {
+          "home_score": 1,
+          "away_score": 2
+        },
+        "label": "澳大利亚 1:2 埃及，90分钟晋级",
+        "reason": "GPT 5.5 的预设预测：埃及前场个人能力更可能决定比赛。"
+      },
+      "manual_points": null,
+      "review": "赛前预测。",
+      "predictions_published_at": "2026-07-03 18:00 BJT"
+    },
+    {
+      "id": "arg-cpv-20260704",
+      "espn_id": "53452569",
+      "round": "32强",
+      "kickoff_local": "07-04 06:00 BJT",
+      "home": "阿根廷",
+      "away": "佛得角",
+      "venue": "",
+      "status": "未开始",
+      "actual": {
+        "method": null,
+        "regulation_score": {
+          "home_score": null,
+          "away_score": null
+        },
+        "final_score": {
+          "home_score": null,
+          "away_score": null
+        },
+        "advancing_team": null
+      },
+      "ray_prediction": {
+        "advancing_team": "阿根廷",
+        "method": "90",
+        "regulation_score": {
+          "home_score": 3,
+          "away_score": 0
+        },
+        "label": "阿根廷 3:0 佛得角，90分钟晋级",
+        "reason": "Ray 的预设预测：看好阿根廷在淘汰赛展现控制力。"
+      },
+      "gpt_prediction": {
+        "advancing_team": "阿根廷",
+        "method": "90",
+        "regulation_score": {
+          "home_score": 4,
+          "away_score": 0
+        },
+        "label": "阿根廷 4:0 佛得角，90分钟晋级",
+        "reason": "GPT 5.5 的预设预测：阿根廷实力差距明显，若早进球可能拉开比分。"
+      },
+      "manual_points": null,
+      "review": "赛前预测。",
+      "predictions_published_at": "2026-07-03 18:00 BJT"
+    },
+    {
+      "id": "col-gha-20260704",
+      "espn_id": "53452507",
+      "round": "32强",
+      "kickoff_local": "07-04 09:30 BJT",
+      "home": "哥伦比亚",
+      "away": "加纳",
+      "venue": "",
+      "status": "未开始",
+      "actual": {
+        "method": null,
+        "regulation_score": {
+          "home_score": null,
+          "away_score": null
+        },
+        "final_score": {
+          "home_score": null,
+          "away_score": null
+        },
+        "advancing_team": null
+      },
+      "ray_prediction": {
+        "advancing_team": "哥伦比亚",
+        "method": "90",
+        "regulation_score": {
+          "home_score": 3,
+          "away_score": 1
+        },
+        "label": "哥伦比亚 3:1 加纳，90分钟晋级",
+        "reason": "Ray 的预设预测：看好哥伦比亚进攻端质量和节奏变化。"
+      },
+      "gpt_prediction": {
+        "advancing_team": "哥伦比亚",
+        "method": "90",
+        "regulation_score": {
+          "home_score": 2,
+          "away_score": 1
+        },
+        "label": "哥伦比亚 2:1 加纳，90分钟晋级",
+        "reason": "GPT 5.5 的预设预测：哥伦比亚更均衡，但加纳会保持冲击力。"
+      },
+      "manual_points": null,
+      "review": "赛前预测。",
+      "predictions_published_at": "2026-07-03 18:00 BJT"
     }
   ],
   "bracket": [
@@ -1040,6 +1175,10 @@
     {
       "time": "07-03 17:50",
       "text": "射手榜待核对：瑞士 vs 阿尔及利亚 已有进球，但 ESPN scoring plays 暂未解析出进球者。"
+    },
+    {
+      "time": "07-03 18:00",
+      "text": "发布次日淘汰赛预测：澳大利亚 vs 埃及、阿根廷 vs 佛得角、哥伦比亚 vs 加纳。"
     }
   ],
   "live_ticker": [
@@ -1596,7 +1735,8 @@
         "label": "澳大利亚 1:2 埃及，90分钟晋级",
         "reason": "GPT 5.5 的预设预测：埃及前场个人能力更可能决定比赛。"
       },
-      "published": false
+      "published": true,
+      "published_at_bjt": "2026-07-03 18:00 BJT"
     },
     {
       "match_id": "arg-cpv-20260704",
@@ -1628,7 +1768,8 @@
         "label": "阿根廷 4:0 佛得角，90分钟晋级",
         "reason": "GPT 5.5 的预设预测：阿根廷实力差距明显，若早进球可能拉开比分。"
       },
-      "published": false
+      "published": true,
+      "published_at_bjt": "2026-07-03 18:00 BJT"
     },
     {
       "match_id": "col-gha-20260704",
@@ -1660,7 +1801,8 @@
         "label": "哥伦比亚 2:1 加纳，90分钟晋级",
         "reason": "GPT 5.5 的预设预测：哥伦比亚更均衡，但加纳会保持冲击力。"
       },
-      "published": false
+      "published": true,
+      "published_at_bjt": "2026-07-03 18:00 BJT"
     }
   ]
 }
