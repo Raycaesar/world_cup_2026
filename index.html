@@ -8,7 +8,7 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Black+Ops+One&family=Bebas+Neue&family=Rajdhani:wght@500;600;700&family=Noto+Sans+SC:wght@400;500;700;900&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="style.css?v=knockout-20260628-v4" />
+  <link rel="stylesheet" href="style.css?v=knockout-20260704-r16" />
 </head>
 <body>
   <div class="stadium-light light-left" aria-hidden="true"></div>
@@ -40,13 +40,13 @@
             <span class="trophy-text">KNOCKOUT STAGE</span>
           </div>
           <div class="host-logo" title="美加墨世界杯">
-            <span class="wc26">32</span>
+            <span class="wc26">16</span>
             <span class="host-text">WIN OR GO HOME</span>
           </div>
         </div>
         <p class="eyebrow" id="tagline">World Cup Knockout Prediction Derby</p>
         <h1 id="pageTitle">Ray大战GPT 5.5｜淘汰赛篇</h1>
-        <p class="subtitle" id="pageSubtitle">小组赛归档，32强开战：从这里开始没有平局，只有晋级。</p>
+        <p class="subtitle" id="pageSubtitle">16强开战：预测池已录入，比分与战报继续自动更新。</p>
         <div class="hero-actions">
           <a href="#next" class="button primary">查看下一场预测</a>
           <a href="archive.html" class="button ghost">小组赛归档</a>
@@ -103,12 +103,12 @@
     <section class="panel wide" id="bracket">
       <div class="section-head">
         <div>
-          <div class="section-kicker">Round of 32</div>
-          <h2>32强对阵图</h2>
+          <div class="section-kicker">Knockout bracket</div>
+          <h2>淘汰赛对阵</h2>
         </div>
         <span class="badge">Bracket</span>
       </div>
-      <div class="bracket-grid" id="bracketGrid"></div>
+      <div class="bracket-sections" id="bracketGrid"></div>
     </section>
 
     <section class="panel wide" id="reviews">
@@ -152,7 +152,7 @@
         <span class="badge">Top scorers</span>
       </div>
       <div class="scorer-list" id="scorerList"></div>
-      <p class="microcopy scorer-source" id="scorerSource">小组赛结束后射手榜。</p>
+      <p class="microcopy scorer-source" id="scorerSource">射手榜待更新。</p>
     </section>
 
     <section class="panel equal-panel" id="scoreboard">
@@ -161,7 +161,7 @@
           <div class="section-kicker">Scoreboard</div>
           <h2>总积分</h2>
         </div>
-        <span class="badge hot">Ray leads</span>
+        <span class="badge hot" id="leaderBadge">Score</span>
       </div>
       <div class="leaderboard scoreboard-final">
         <div class="leader-row ray-row"><span>Ray</span><strong id="rayBoard">0</strong></div>
@@ -187,7 +187,7 @@
 
   <script>
     const FALLBACK_DATA = {
-      site: { title: "Ray大战GPT 5.5｜淘汰赛篇", subtitle: "小组赛归档，32强开战。", status: "KNOCKOUT", refresh_seconds: 30, tagline: "World Cup Knockout Prediction Derby" },
+      site: { title: "Ray大战GPT 5.5｜淘汰赛篇", subtitle: "16强开战。", status: "KNOCKOUT", refresh_seconds: 30, tagline: "World Cup Knockout Prediction Derby" },
       meta: { updated_at: "—", active_day: "—", timezone: "Asia/Beijing" },
       headline: "淘汰赛准备中。",
       brief: "请检查 data.json 是否存在。",
@@ -200,25 +200,40 @@
       tournament_picks: [],
       update_log: []
     };
+
     let refreshTimer = null;
-    function text(value, fallback = "—") { return value === undefined || value === null || value === "" ? fallback : String(value); }
-    function create(tag, className, content) { const el = document.createElement(tag); if (className) el.className = className; if (content !== undefined) el.textContent = content; return el; }
+
+    function text(value, fallback = "—") {
+      return value === undefined || value === null || value === "" ? fallback : String(value);
+    }
+
+    function create(tag, className, content) {
+      const el = document.createElement(tag);
+      if (className) el.className = className;
+      if (content !== undefined) el.textContent = content;
+      return el;
+    }
+
     function normalizeMethod(method) {
       if (method === "extra") return "extra_time";
       if (method === "pens" || method === "shootout") return "penalties";
       return method || null;
     }
+
     function methodLabel(method) {
       const m = normalizeMethod(method);
       return m === "90" ? "90分钟" : m === "extra_time" ? "加时" : m === "penalties" ? "点球" : "未定";
     }
+
     function scoreComplete(score) {
       return !!score && score.home_score !== null && score.home_score !== undefined && score.away_score !== null && score.away_score !== undefined;
     }
+
     function scoreLabel(score) {
       if (!scoreComplete(score)) return "—";
       return `${score.home_score} : ${score.away_score}`;
     }
+
     function compactScoreLabel(score) {
       if (!scoreComplete(score)) return "—";
       return `${score.home_score}:${score.away_score}`;
@@ -227,23 +242,23 @@
     function firstScore(...scores) {
       return scores.find(scoreComplete) || null;
     }
+
     function scoreSide(score, side) {
       if (!scoreComplete(score)) return "—";
       return side === "home" ? String(score.home_score) : String(score.away_score);
     }
+
     function penaltySide(score, side) {
       if (!scoreComplete(score)) return null;
       return side === "home" ? String(score.home_score) : String(score.away_score);
     }
-    function displayScoreObject(source) {
-      const actual = source && source.actual ? source.actual : {};
-      return actual.live_score || actual.final_score || source.score_obj || source.score || null;
-    }
+
     function scoreTextFromString(raw) {
       const value = String(raw || "").trim();
       if (!value) return "";
       return value.replace(/-/g, ":").replace(/\s+/g, " ");
     }
+
     function matchScoreText(source) {
       if (!source) return "";
       const actual = source.actual || {};
@@ -260,6 +275,7 @@
       if (actual.advancing_team || source.winner) base += `，${actual.advancing_team || source.winner}晋级`;
       return base;
     }
+
     function scoreBreakdown(actual) {
       actual = actual || {};
       const method = normalizeMethod(actual.method);
@@ -275,6 +291,7 @@
       if (actual.next_match) parts.push(/^对阵|^将对阵/.test(String(actual.next_match)) ? `下一轮${actual.next_match}` : `下一轮 ${actual.next_match}`);
       return parts.join("｜");
     }
+
     function predictionLine(pred) {
       if (!pred) return "预测待填写";
       if (pred.label) return pred.label;
@@ -283,9 +300,11 @@
       const pens = scoreComplete(pred.penalties_score) ? `｜点球 ${scoreLabel(pred.penalties_score)}` : "";
       return main + reg + pens;
     }
+
     function actualLine(match) {
       return scoreBreakdown(match && match.actual);
     }
+
     function scoreNode(match, side) {
       const actual = (match && match.actual) || {};
       const box = create("strong", "score score-stack");
@@ -298,17 +317,44 @@
       }
       return box;
     }
+
     function statusClass(match) {
       if (match && match.actual && match.actual.advancing_team) return "finished";
       if (/进行|直播|live|加时|点球/i.test(String(match && match.status || ""))) return "live";
       return "pending";
     }
+
+    function parseBjDateTime(value) {
+      const m = String(value || "").match(/(\d{2})-(\d{2})\s+(\d{2}):(\d{2})/);
+      if (!m) return Number.POSITIVE_INFINITY;
+      return Date.UTC(2026, Number(m[1]) - 1, Number(m[2]), Number(m[3]) - 8, Number(m[4]));
+    }
+
+    function parseReleaseTime(match) {
+      if (!match) return null;
+      if (match.release_at_utc) return new Date(match.release_at_utc).getTime();
+      const raw = match.release_time_bjt || match.published_at_bjt || "";
+      const m = String(raw).match(/(\d{4})-(\d{2})-(\d{2})\s+(\d{2}):(\d{2})/);
+      if (!m) return null;
+      return Date.UTC(Number(m[1]), Number(m[2]) - 1, Number(m[3]), Number(m[4]) - 8, Number(m[5]));
+    }
+
+    function predictionReleased(match) {
+      if (!match) return false;
+      if (match.published || match.predictions_published_at || match.published_at_bjt) return true;
+      const t = parseReleaseTime(match);
+      return t === null || Date.now() >= t;
+    }
+
     function renderKnockoutMatch(match) {
       const card = create("article", "knockout-card");
       const top = create("div", "match-top");
       top.appendChild(create("span", "time", `${text(match.round)} · ${text(match.kickoff_local)}`));
-      top.appendChild(create("span", `status ${statusClass(match)}`, text(match.status, "未开始")));
+      const statusBits = [text(match.status, "未开始")];
+      if (!predictionReleased(match) && match.release_time_bjt) statusBits.push(`预测 ${match.release_time_bjt} 发布`);
+      top.appendChild(create("span", `status ${statusClass(match)}`, statusBits.join(" · ")));
       card.appendChild(top);
+
       const teams = create("div", "teams");
       const home = create("div", "team");
       home.appendChild(create("span", "team-name", text(match.home)));
@@ -320,84 +366,80 @@
       teams.appendChild(create("div", "center-dot", "·"));
       teams.appendChild(away);
       card.appendChild(teams);
-      const meta = create("p", "microcopy", `${text(match.venue)} · ${actualLine(match)}`);
+
+      const meta = create("p", "microcopy", `${text(match.venue, "")}${match.venue ? " · " : ""}${actualLine(match)}`);
       card.appendChild(meta);
-      const grid = create("div", "prediction-grid knockout-prediction-grid");
-      [["Ray", match.ray_prediction, "ray-pick"], ["GPT 5.5", match.gpt_prediction, "gpt-pick"]].forEach(([name, pred, cls]) => {
-        const box = create("div", "prediction-card");
-        box.appendChild(create("span", "predictor", name));
-        box.appendChild(create("strong", `pred-score ${cls}`, predictionLine(pred)));
-        box.appendChild(create("p", "", pred && pred.reason ? pred.reason : "理由待填写。"));
-        grid.appendChild(box);
-      });
-      card.appendChild(grid);
-      if (match.review) card.appendChild(create("p", "inline-review", match.review));
+
+      if (predictionReleased(match)) {
+        const grid = create("div", "prediction-grid knockout-prediction-grid");
+        [["Ray", match.ray_prediction, "ray-pick"], ["GPT 5.5", match.gpt_prediction, "gpt-pick"]].forEach(([name, pred, cls]) => {
+          const box = create("div", "prediction-card");
+          box.appendChild(create("span", "predictor", name));
+          box.appendChild(create("strong", `pred-score ${cls}`, predictionLine(pred)));
+          box.appendChild(create("p", "", pred && pred.reason ? pred.reason : "理由待填写。"));
+          grid.appendChild(box);
+        });
+        card.appendChild(grid);
+      } else {
+        card.appendChild(create("p", "inline-review", `预测池已录入，将在 ${text(match.release_time_bjt, "约定时间")} 显示。`));
+      }
+
+      if (match.review && match.review !== "预测待发布。") card.appendChild(create("p", "inline-review", match.review));
       if (match.manual_points) card.appendChild(create("p", "points-line", `本场得分：Ray +${match.manual_points.ray || 0}，GPT +${match.manual_points.gpt || 0}`));
       return card;
     }
-    function parseBjDateTime(value) {
-      const m = String(value || "").match(/(\d{2})-(\d{2})\s+(\d{2}):(\d{2})/);
-      if (!m) return Number.POSITIVE_INFINITY;
-      return Date.UTC(2026, Number(m[1]) - 1, Number(m[2]), Number(m[3]) - 8, Number(m[4]));
-    }
+
     function matchKey(source) {
       const rawId = source && source.id !== undefined && source.id !== null ? String(source.id) : "";
       const espn = source && (source.espn_id || (/^\d+$/.test(rawId) ? rawId : ""));
       return espn ? String(espn) : `${source && source.home ? source.home : ""}__${source && source.away ? source.away : ""}`;
     }
+
     function isFinishedMatch(source) {
       if (!source) return false;
       if (source.actual && source.actual.advancing_team) return true;
       return /已结束|完场|complete|final/i.test(String(source.status || ""));
     }
+
     function isLiveMatch(source) {
       if (!source || isFinishedMatch(source)) return false;
       return /进行|直播|live|加时|点球|pen/i.test(String(source.status || ""));
     }
+
     function tickerItemsFromMatches(data) {
-  const seen = new Set();
-  const items = [];
-  const add = (source) => {
-    if (!source || !source.home || !source.away) return;
-    if (isFinishedMatch(source)) return;
+      const seen = new Set();
+      const items = [];
+      const add = (source) => {
+        if (!source || !source.home || !source.away) return;
+        if (isFinishedMatch(source)) return;
+        const live = isLiveMatch(source);
+        const key = matchKey(source);
+        if (seen.has(key)) return;
+        seen.add(key);
+        const detailParts = [];
+        if (source.kickoff_local) detailParts.push(source.kickoff_local);
+        if (source.round || source.status) detailParts.push(source.round || source.status);
+        items.push({
+          type: live ? "live" : "next",
+          label: live ? "LIVE" : "NEXT",
+          text: matchScoreText(source),
+          detail: detailParts.join(" · "),
+          sortKey: parseBjDateTime(source.kickoff_local),
+          rank: live ? 0 : 1
+        });
+      };
+      (data.knockout_matches || []).forEach(add);
+      (data.bracket || []).forEach(add);
+      return items.sort((a, b) => a.rank - b.rank || a.sortKey - b.sortKey).slice(0, 6);
+    }
 
-    const live = isLiveMatch(source);
-    const key = matchKey(source);
-    if (seen.has(key)) return;
-    seen.add(key);
-
-    const type = live ? "live" : "next";
-    const label = live ? "LIVE" : "NEXT";
-    const detailParts = [];
-
-    if (source.kickoff_local) detailParts.push(source.kickoff_local);
-    if (source.round || source.status) detailParts.push(source.round || source.status);
-
-    items.push({
-      type,
-      label,
-      text: matchScoreText(source),
-      detail: detailParts.join(" · "),
-      sortKey: parseBjDateTime(source.kickoff_local),
-      rank: live ? 0 : 1
-    });
-  };
-
-  (data.knockout_matches || []).forEach(add);
-  (data.bracket || []).forEach(add);
-
-  return items
-    .sort((a, b) => a.rank - b.rank || a.sortKey - b.sortKey)
-    .slice(0, 6);
-}
     function renderLiveTicker(data) {
       const box = document.getElementById("liveTicker");
       if (!box) return;
       box.innerHTML = "";
       const items = tickerItemsFromMatches(data);
       if (!items.length) {
-        const item = create("span", "live-ticker-item muted", "暂无正在进行或即将开始的淘汰赛");
-        box.appendChild(item);
+        box.appendChild(create("span", "live-ticker-item muted", "暂无正在进行或即将开始的淘汰赛"));
         return;
       }
       items.forEach(x => {
@@ -408,6 +450,7 @@
         box.appendChild(item);
       });
     }
+
     function renderTopScorers(data) {
       const box = document.getElementById("scorerList");
       if (!box) return;
@@ -419,14 +462,14 @@
         row.appendChild(create("span", "scorer-rank", `#${s.rank || i + 1}`));
         const main = create("div", "scorer-main");
         main.appendChild(create("strong", "", text(s.player)));
-        main.appendChild(create("small", "", `${text(s.team)} · ${text(s.assists, 0)}助攻 · ${text(s.minutes, "—")}分钟`));
+        main.appendChild(create("small", "", `${text(s.team)} · ${text(s.assists, 0)}助攻 · ${text(s.minutes, "—")}分钟${s.note ? " · " + s.note : ""}`));
         row.appendChild(main);
         row.appendChild(create("b", "scorer-goals", text(s.goals, 0)));
         box.appendChild(row);
       });
-      const source = data.top_scorers_source || "小组赛结束后射手榜。";
-      document.getElementById("scorerSource").textContent = source;
+      document.getElementById("scorerSource").textContent = data.top_scorers_source || "射手榜待更新。";
     }
+
     function renderAwards(data) {
       const box = document.getElementById("awardGrid");
       if (!box) return;
@@ -445,10 +488,12 @@
         box.appendChild(card);
       });
     }
+
     function reviewDayLabel(match) {
       const m = String(match.kickoff_local || "").match(/(\d{2})-(\d{2})/);
       return m ? `${m[1]}-${m[2]}` : "日期待定";
     }
+
     function resultTitle(match) {
       const actual = (match && match.actual) || {};
       const method = normalizeMethod(actual.method);
@@ -458,12 +503,13 @@
       else if (method === "extra_time") title += "（加时）";
       return title;
     }
+
     function renderPostMatchReviews(data) {
       const box = document.getElementById("knockoutReviewList");
       if (!box) return;
       box.innerHTML = "";
       const finished = (data.knockout_matches || []).filter(m => m.actual && m.actual.advancing_team);
-      if (!finished.length) return box.appendChild(create("p", "empty", "淘汰赛尚无已结束比赛。第一场结束后，这里会从头开始记录复盘，不包含小组赛内容。"));
+      if (!finished.length) return box.appendChild(create("p", "empty", "淘汰赛尚无已结束比赛。"));
       const groups = new Map();
       finished.slice().sort((a, b) => parseBjDateTime(a.kickoff_local) - parseBjDateTime(b.kickoff_local)).forEach(match => {
         const day = reviewDayLabel(match);
@@ -497,29 +543,70 @@
         box.appendChild(details);
       });
     }
+
+    function roundRank(round) {
+      const value = String(round || "");
+      if (value.includes("16")) return 1;
+      if (value.includes("32")) return 2;
+      if (value.includes("8") || value.includes("1/4")) return 0;
+      return 9;
+    }
+
+    function renderBracketCard(item) {
+      const card = create("article", `bracket-card ${item.winner ? "has-winner" : ""}`);
+      card.appendChild(create("span", "bracket-round", `${item.round || "淘汰赛"} · ${item.kickoff_local || "时间待定"}`));
+      const row = create("div", "bracket-row");
+      const home = create("strong", item.winner === item.home ? "winner" : "", text(item.home));
+      const away = create("strong", item.winner === item.away ? "winner" : "", text(item.away));
+      row.appendChild(home);
+      row.appendChild(create("span", "vs-mini", item.score ? item.score : "vs"));
+      row.appendChild(away);
+      card.appendChild(row);
+      card.appendChild(create("p", "microcopy", item.note || item.status || ""));
+      return card;
+    }
+
     function renderBracket(data) {
-      const box = document.getElementById("bracketGrid"); box.innerHTML = "";
-      const list = data.bracket || [];
+      const box = document.getElementById("bracketGrid");
+      if (!box) return;
+      box.innerHTML = "";
+      const list = (data.bracket || []).slice();
       if (!list.length) return box.appendChild(create("p", "empty", "对阵图待填写。"));
+
+      const groups = new Map();
       list.forEach(item => {
-        const card = create("article", "bracket-card");
-        card.appendChild(create("span", "bracket-round", `${item.round || "淘汰赛"} · ${item.kickoff_local || "时间待定"}`));
-        const row = create("div", "bracket-row");
-        row.appendChild(create("strong", "", text(item.home)));
-        row.appendChild(create("span", "vs-mini", "vs"));
-        row.appendChild(create("strong", "", text(item.away)));
-        card.appendChild(row);
-        card.appendChild(create("p", "microcopy", item.note || item.status || ""));
-        box.appendChild(card);
+        const round = item.round || "淘汰赛";
+        if (!groups.has(round)) groups.set(round, []);
+        groups.get(round).push(item);
+      });
+
+      Array.from(groups.keys()).sort((a, b) => roundRank(a) - roundRank(b)).forEach((round, index) => {
+        const details = document.createElement("details");
+        details.className = "bracket-round-section";
+        details.open = index === 0;
+        const matches = groups.get(round).slice().sort((a, b) => parseBjDateTime(a.kickoff_local) - parseBjDateTime(b.kickoff_local));
+        const summary = create("summary", "review-day-summary");
+        summary.appendChild(create("span", "", round.includes("16") ? "16强对阵图" : `${round}对阵图`));
+        summary.appendChild(create("strong", "", `${matches.length} 场`));
+        summary.appendChild(create("em", "", round.includes("32") ? "已完赛，附比分并高亮胜者" : "待赛，预测陆续发布"));
+        details.appendChild(summary);
+        const grid = create("div", "bracket-grid");
+        matches.forEach(item => grid.appendChild(renderBracketCard(item)));
+        details.appendChild(grid);
+        box.appendChild(details);
       });
     }
+
     function renderRules(data) {
-      const list = document.getElementById("rulesList"); list.innerHTML = "";
+      const list = document.getElementById("rulesList");
+      list.innerHTML = "";
       (data.knockout_rules || []).forEach(rule => list.appendChild(create("li", "", rule)));
       if (!list.children.length) list.appendChild(create("li", "", "淘汰赛规则待填写。"));
     }
+
     function renderUpdateLog(data) {
-      const box = document.getElementById("updateLog"); box.innerHTML = "";
+      const box = document.getElementById("updateLog");
+      box.innerHTML = "";
       const log = data.update_log || [];
       if (!log.length) return box.appendChild(create("p", "empty", "暂无更新。"));
       log.slice().reverse().forEach(item => {
@@ -529,6 +616,7 @@
         box.appendChild(row);
       });
     }
+
     function render(data) {
       const site = data.site || FALLBACK_DATA.site;
       const meta = data.meta || FALLBACK_DATA.meta;
@@ -549,11 +637,19 @@
       document.getElementById("rayBoard").textContent = totals.ray_total || 0;
       document.getElementById("gptBoard").textContent = totals.gpt_total || 0;
       document.getElementById("leaderComment").textContent = totals.leader_comment || "";
-      const matches = (data.knockout_matches || []).filter(m => !(m.actual && m.actual.advancing_team));
+      document.getElementById("leaderBadge").textContent = Number(totals.ray_total || 0) >= Number(totals.gpt_total || 0) ? "Ray" : "GPT leads";
+
+      const matches = (data.knockout_matches || [])
+        .filter(m => !(m.actual && m.actual.advancing_team))
+        .filter(predictionReleased)
+        .sort((a, b) => parseBjDateTime(a.kickoff_local) - parseBjDateTime(b.kickoff_local));
+
       document.getElementById("matchCount").textContent = `${matches.length} match${matches.length === 1 ? "" : "es"}`;
-      const list = document.getElementById("matchList"); list.innerHTML = "";
+      const list = document.getElementById("matchList");
+      list.innerHTML = "";
       if (!matches.length) list.appendChild(create("p", "empty", data.prediction_release_note || "下一场预测待填写。"));
       matches.forEach(match => list.appendChild(renderKnockoutMatch(match)));
+
       renderLiveTicker(data);
       renderTopScorers(data);
       renderAwards(data);
@@ -561,9 +657,11 @@
       renderBracket(data);
       renderRules(data);
       renderUpdateLog(data);
+
       if (refreshTimer) clearTimeout(refreshTimer);
       refreshTimer = setTimeout(loadData, Math.max(refresh, 10) * 1000);
     }
+
     async function loadData() {
       try {
         const res = await fetch("data.json?t=" + Date.now(), { cache: "no-store" });
@@ -574,6 +672,7 @@
         render(FALLBACK_DATA);
       }
     }
+
     loadData();
   </script>
 </body>
