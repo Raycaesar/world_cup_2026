@@ -7,10 +7,10 @@
     "tagline": "World Cup Knockout Prediction Derby"
   },
   "meta": {
-    "updated_at": "2026-07-05 05:40 BJT",
+    "updated_at": "2026-07-05 05:50 BJT",
     "active_day": "2026-07-05",
     "timezone": "Asia/Beijing",
-    "version": "knockout-auto-202607042140"
+    "version": "knockout-auto-202607042150"
   },
   "phase": "knockout",
   "archive": {
@@ -1337,10 +1337,6 @@
   "update_log": [
     {
       "time": "07-04 13:20",
-      "text": "录入16强预测池：加拿大/摩洛哥、巴拉圭/法国、巴西/挪威、墨西哥/英格兰、葡萄牙/西班牙、美国/比利时、阿根廷/埃及、瑞士/哥伦比亚。"
-    },
-    {
-      "time": "07-04 13:20",
       "text": "射手榜更新：梅西 7 球居首，姆巴佩 6 球紧追，哈兰德与凯恩 5 球。"
     },
     {
@@ -1413,6 +1409,10 @@
     },
     {
       "time": "07-05 05:40",
+      "text": "射手榜待核对：加拿大 vs 摩洛哥 已有进球，但 ESPN scoring plays 暂未解析出进球者。"
+    },
+    {
+      "time": "07-05 05:50",
       "text": "射手榜待核对：加拿大 vs 摩洛哥 已有进球，但 ESPN scoring plays 暂未解析出进球者。"
     }
   ],
