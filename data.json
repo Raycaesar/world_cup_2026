@@ -7,10 +7,10 @@
     "tagline": "World Cup Knockout Prediction Derby"
   },
   "meta": {
-    "updated_at": "2026-07-05 04:40 BJT",
+    "updated_at": "2026-07-05 04:50 BJT",
     "active_day": "2026-07-05",
     "timezone": "Asia/Beijing",
-    "version": "knockout-auto-202607042040"
+    "version": "knockout-auto-202607042050"
   },
   "phase": "knockout",
   "archive": {
@@ -1393,6 +1393,10 @@
     },
     {
       "time": "07-05 04:40",
+      "text": "射手榜待核对：加拿大 vs 摩洛哥 已有进球，但 ESPN scoring plays 暂未解析出进球者。"
+    },
+    {
+      "time": "07-05 04:50",
       "text": "射手榜待核对：加拿大 vs 摩洛哥 已有进球，但 ESPN scoring plays 暂未解析出进球者。"
     }
   ],
