@@ -104,17 +104,48 @@ function main() {
     if (Number.isNaN(releaseAt.getTime())) throw new Error(`Invalid release_at_utc for ${entry.match_id}: ${entry.release_at_utc}`);
     if (releaseAt.getTime() > RELEASE_NOW.getTime()) continue;
 
-    const match = makeMatch(entry, RELEASE_NOW);
-    const existing = existingById.get(match.id);
-    if (existing) {
-      Object.assign(existing, match, { actual: existing.actual || match.actual, manual_points: existing.manual_points ?? match.manual_points });
-    } else {
-      data.knockout_matches.push(match);
-      existingById.set(match.id, match);
-    }
-    entry.published = true;
-    entry.published_at_bjt = formatBJT(RELEASE_NOW);
-    released.push(match);
+    const existing = existingById.get(entry.match_id);
+const match = makeMatch(entry, RELEASE_NOW);
+
+const existingRay = existing && existing.ray_prediction;
+const existingGpt = existing && existing.gpt_prediction;
+
+match.ray_prediction = normalizePrediction(entry.ray_prediction || existingRay);
+match.gpt_prediction = normalizePrediction(entry.gpt_prediction || existingGpt);
+
+if (!match.ray_prediction || !match.gpt_prediction) {
+  throw new Error(`Missing predictions for ${entry.match_id}; refusing to publish blank prediction cards.`);
+}
+
+if (existing) {
+  existing.espn_id = entry.espn_id || existing.espn_id || match.espn_id;
+  existing.round = entry.round || existing.round || match.round;
+  existing.kickoff_local = entry.kickoff_local || existing.kickoff_local || match.kickoff_local;
+  existing.home = entry.home || existing.home || match.home;
+  existing.away = entry.away || existing.away || match.away;
+  existing.venue = entry.venue || existing.venue || "";
+  existing.status = existing.status || entry.status || "未开始";
+  existing.actual = existing.actual || match.actual;
+  existing.ray_prediction = match.ray_prediction;
+  existing.gpt_prediction = match.gpt_prediction;
+  existing.manual_points = existing.manual_points ?? null;
+  existing.review = existing.review && existing.review !== "预测待发布。" ? existing.review : "赛前预测。";
+  existing.predictions_published_at = formatBJT(RELEASE_NOW);
+  existing.published = true;
+  existing.published_at_bjt = formatBJT(RELEASE_NOW);
+  released.push(existing);
+} else {
+  match.published = true;
+  match.published_at_bjt = formatBJT(RELEASE_NOW);
+  data.knockout_matches.push(match);
+  existingById.set(match.id, match);
+  released.push(match);
+}
+
+entry.ray_prediction = entry.ray_prediction || match.ray_prediction;
+entry.gpt_prediction = entry.gpt_prediction || match.gpt_prediction;
+entry.published = true;
+entry.published_at_bjt = formatBJT(RELEASE_NOW);
   }
 
   if (!released.length) {
