@@ -7,10 +7,10 @@
     "tagline": "World Cup Knockout Prediction Derby"
   },
   "meta": {
-    "updated_at": "2026-07-04 18:00 BJT",
+    "updated_at": "2026-07-05 03:20 BJT",
     "active_day": "2026-07-05",
     "timezone": "Asia/Beijing",
-    "version": "prediction-release-202607041000"
+    "version": "knockout-auto-202607041920"
   },
   "phase": "knockout",
   "archive": {
@@ -19,11 +19,11 @@
   },
   "score_summary": {
     "ray_total": 59,
-    "gpt_total": 70,
-    "leader_comment": "GPT 5.5 以 70:59 领先 Ray。16强预测池已录入，后续比分、计分与战报继续自动更新。"
+    "gpt_total": 73,
+    "leader_comment": "GPT 5.5 以 73:59 领先 Ray。"
   },
-  "headline": "淘汰赛预测发布：加拿大 vs 摩洛哥、巴拉圭 vs 法国",
-  "brief": "北京时间 2026-07-04 18:00 BJT 已发布 2 场淘汰赛预测：加拿大 vs 摩洛哥；巴拉圭 vs 法国。",
+  "headline": "淘汰赛更新：加拿大 0:3 摩洛哥",
+  "brief": "最新淘汰赛已结算：加拿大 0:3 摩洛哥，Ray +0，GPT +3。",
   "knockout_rules": [
     "只有一方猜中晋级队时，猜中者先得 3 分；若同时猜中晋级方式，再得 1 分；若90分钟比分完全命中，再得 1 分，单场最高 5 分。",
     "双方都猜中晋级队时，不重复给胜负分，只比较晋级方式与90分钟比分：方式正确 +1，90分钟比分完全命中再 +1。",
@@ -531,27 +531,30 @@
     },
     {
       "id": "can-mar-20260705",
-      "espn_id": "53452511",
+      "espn_id": "760502",
       "round": "16强",
       "kickoff_local": "07-05 01:00 BJT",
       "home": "加拿大",
       "away": "摩洛哥",
       "venue": "",
-      "status": "未开始",
+      "status": "已结束",
       "release_at_utc": "2026-07-04T10:00:00Z",
       "release_time_bjt": "2026-07-04 18:00 BJT",
       "published": true,
       "actual": {
-        "method": null,
+        "method": "90",
         "regulation_score": {
-          "home_score": null,
-          "away_score": null
+          "home_score": 0,
+          "away_score": 3
         },
         "final_score": {
-          "home_score": null,
-          "away_score": null
+          "home_score": 0,
+          "away_score": 3
         },
-        "advancing_team": null
+        "advancing_team": "摩洛哥",
+        "scorer_update_pending": true,
+        "next_match": "对阵巴拉圭/法国胜者",
+        "scorer_update_status": "needs_manual_goal_scorers"
       },
       "ray_prediction": {
         "advancing_team": "加拿大",
@@ -573,8 +576,12 @@
         "label": "加拿大 1:1 摩洛哥，摩洛哥点球晋级",
         "reason": "GPT 认为摩洛哥连续淘汰荷兰后信心更强，防守组织和点球心理优势会继续发挥。"
       },
-      "manual_points": null,
-      "review": "赛前预测。",
+      "manual_points": {
+        "ray": 0,
+        "gpt": 3,
+        "explanation": "GPT 猜中晋级队，Ray 未猜中；晋级队 +3，路径与比分加分 +0，GPT +3。"
+      },
+      "review": "加拿大 0:3 摩洛哥，摩洛哥晋级。下一轮将对阵巴拉圭/法国胜者。GPT 猜中晋级队，Ray 未猜中；晋级队 +3，路径与比分加分 +0，GPT +3。",
       "predictions_published_at": "2026-07-04 18:00 BJT",
       "published_at_bjt": "2026-07-04 18:00 BJT"
     },
@@ -917,8 +924,19 @@
       "kickoff_local": "07-05 01:00 BJT",
       "home": "加拿大",
       "away": "摩洛哥",
-      "status": "未开始",
-      "note": "胜者对阵巴拉圭/法国胜者"
+      "status": "已结束",
+      "note": "摩洛哥通过90分钟晋级，对阵巴拉圭/法国胜者",
+      "winner": "摩洛哥",
+      "method": "90",
+      "score_obj": {
+        "home_score": 0,
+        "away_score": 3
+      },
+      "score": "0:3",
+      "regulation_score": {
+        "home_score": 0,
+        "away_score": 3
+      }
     },
     {
       "id": "53452509",
@@ -1336,6 +1354,14 @@
     {
       "time": "07-04 18:00",
       "text": "发布次日淘汰赛预测：加拿大 vs 摩洛哥、巴拉圭 vs 法国。"
+    },
+    {
+      "time": "07-05 03:20",
+      "text": "淘汰赛更新：加拿大 0:3 摩洛哥，Ray +0，GPT +3。"
+    },
+    {
+      "time": "07-05 03:20",
+      "text": "射手榜待核对：加拿大 vs 摩洛哥 已有进球，但 ESPN scoring plays 暂未解析出进球者。"
     }
   ],
   "live_ticker": [
