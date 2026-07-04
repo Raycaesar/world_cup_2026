@@ -7,10 +7,10 @@
     "tagline": "World Cup Knockout Prediction Derby"
   },
   "meta": {
-    "updated_at": "2026-07-04 08:50 BJT",
+    "updated_at": "2026-07-04 09:00 BJT",
     "active_day": "2026-06-30",
     "timezone": "Asia/Beijing",
-    "version": "knockout-auto-202607040050"
+    "version": "knockout-auto-202607040100"
   },
   "phase": "knockout",
   "archive": {
@@ -22,8 +22,8 @@
     "gpt_total": 69,
     "leader_comment": "GPT 5.5 以 69:58 领先 Ray。"
   },
-  "headline": "淘汰赛更新：澳大利亚 1:1，点球 2:4 埃及",
-  "brief": "最新淘汰赛已结算：澳大利亚 1:1，点球 2:4 埃及，Ray +0，GPT +3。",
+  "headline": "淘汰赛更新：阿根廷 3:2（加时） 佛得角",
+  "brief": "最新淘汰赛已结算：阿根廷 3:2（加时） 佛得角，Ray +0，GPT +0。",
   "knockout_rules": [
     "只有一方猜中晋级队时，猜中者先得 3 分；若同时猜中晋级方式，再得 1 分；若90分钟比分完全命中，再得 1 分，单场最高 5 分。",
     "双方都猜中晋级队时，不重复给胜负分，只比较晋级方式与90分钟比分：方式正确 +1，90分钟比分完全命中再 +1。",
@@ -770,24 +770,31 @@
     },
     {
       "id": "arg-cpv-20260704",
-      "espn_id": "53452569",
+      "espn_id": "760500",
       "round": "32强",
       "kickoff_local": "07-04 06:00 BJT",
       "home": "阿根廷",
       "away": "佛得角",
       "venue": "",
-      "status": "未开始",
+      "status": "已结束",
       "actual": {
-        "method": null,
+        "method": "extra_time",
         "regulation_score": {
-          "home_score": null,
-          "away_score": null
+          "home_score": 1,
+          "away_score": 1
         },
         "final_score": {
-          "home_score": null,
-          "away_score": null
+          "home_score": 3,
+          "away_score": 2
         },
-        "advancing_team": null
+        "advancing_team": "阿根廷",
+        "extra_time_score": {
+          "home_score": 3,
+          "away_score": 2
+        },
+        "scorer_update_pending": true,
+        "next_match": "对阵澳大利亚/埃及胜者",
+        "scorer_update_status": "needs_manual_goal_scorers"
       },
       "ray_prediction": {
         "advancing_team": "阿根廷",
@@ -809,8 +816,12 @@
         "label": "阿根廷 4:0 佛得角，90分钟晋级",
         "reason": "GPT 5.5 的预设预测：阿根廷实力差距明显，若早进球可能拉开比分。"
       },
-      "manual_points": null,
-      "review": "赛前预测。",
+      "manual_points": {
+        "ray": 0,
+        "gpt": 0,
+        "explanation": "双方都猜中晋级队；不重复给胜负分，只按晋级方式与90分钟比分计分：Ray +0，GPT +0。"
+      },
+      "review": "阿根廷 3:2 佛得角，加时，90分钟 1:1，阿根廷晋级。下一轮将对阵澳大利亚/埃及胜者。双方都猜中晋级队；不重复给胜负分，只按晋级方式与90分钟比分计分：Ray +0，GPT +0。",
       "predictions_published_at": "2026-07-03 18:00 BJT"
     },
     {
@@ -1112,8 +1123,19 @@
       "kickoff_local": "07-04 06:00 BJT",
       "home": "阿根廷",
       "away": "佛得角",
-      "status": "未开始",
-      "note": "胜者对阵澳大利亚/埃及胜者"
+      "status": "已结束",
+      "note": "阿根廷通过加时晋级，对阵澳大利亚/埃及胜者",
+      "winner": "阿根廷",
+      "method": "extra_time",
+      "score_obj": {
+        "home_score": 3,
+        "away_score": 2
+      },
+      "score": "3:2（加时）",
+      "regulation_score": {
+        "home_score": 1,
+        "away_score": 1
+      }
     },
     {
       "id": "53452507",
@@ -1127,30 +1149,6 @@
   ],
   "update_log": [
     {
-      "time": "07-04 08:10",
-      "text": "射手榜待核对：西班牙 vs 奥地利 已有进球，但 ESPN scoring plays 暂未解析出进球者。"
-    },
-    {
-      "time": "07-04 08:10",
-      "text": "射手榜待核对：葡萄牙 vs 克罗地亚 已有进球，但 ESPN scoring plays 暂未解析出进球者。"
-    },
-    {
-      "time": "07-04 08:10",
-      "text": "射手榜待核对：瑞士 vs 阿尔及利亚 已有进球，但 ESPN scoring plays 暂未解析出进球者。"
-    },
-    {
-      "time": "07-04 08:10",
-      "text": "射手榜待核对：澳大利亚 vs 埃及 已有进球，但 ESPN scoring plays 暂未解析出进球者。"
-    },
-    {
-      "time": "07-04 08:20",
-      "text": "射手榜待核对：西班牙 vs 奥地利 已有进球，但 ESPN scoring plays 暂未解析出进球者。"
-    },
-    {
-      "time": "07-04 08:20",
-      "text": "射手榜待核对：葡萄牙 vs 克罗地亚 已有进球，但 ESPN scoring plays 暂未解析出进球者。"
-    },
-    {
       "time": "07-04 08:20",
       "text": "射手榜待核对：瑞士 vs 阿尔及利亚 已有进球，但 ESPN scoring plays 暂未解析出进球者。"
     },
@@ -1205,6 +1203,30 @@
     {
       "time": "07-04 08:50",
       "text": "射手榜待核对：澳大利亚 vs 埃及 已有进球，但 ESPN scoring plays 暂未解析出进球者。"
+    },
+    {
+      "time": "07-04 09:00",
+      "text": "淘汰赛更新：阿根廷 3:2（加时） 佛得角，Ray +0，GPT +0。"
+    },
+    {
+      "time": "07-04 09:00",
+      "text": "射手榜待核对：西班牙 vs 奥地利 已有进球，但 ESPN scoring plays 暂未解析出进球者。"
+    },
+    {
+      "time": "07-04 09:00",
+      "text": "射手榜待核对：葡萄牙 vs 克罗地亚 已有进球，但 ESPN scoring plays 暂未解析出进球者。"
+    },
+    {
+      "time": "07-04 09:00",
+      "text": "射手榜待核对：瑞士 vs 阿尔及利亚 已有进球，但 ESPN scoring plays 暂未解析出进球者。"
+    },
+    {
+      "time": "07-04 09:00",
+      "text": "射手榜待核对：澳大利亚 vs 埃及 已有进球，但 ESPN scoring plays 暂未解析出进球者。"
+    },
+    {
+      "time": "07-04 09:00",
+      "text": "射手榜待核对：阿根廷 vs 佛得角 已有进球，但 ESPN scoring plays 暂未解析出进球者。"
     }
   ],
   "live_ticker": [
