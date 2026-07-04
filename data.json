@@ -7,10 +7,10 @@
     "tagline": "World Cup Knockout Prediction Derby"
   },
   "meta": {
-    "updated_at": "2026-07-05 05:30 BJT",
+    "updated_at": "2026-07-05 05:40 BJT",
     "active_day": "2026-07-05",
     "timezone": "Asia/Beijing",
-    "version": "knockout-auto-202607042130"
+    "version": "knockout-auto-202607042140"
   },
   "phase": "knockout",
   "archive": {
@@ -1336,10 +1336,6 @@
   ],
   "update_log": [
     {
-      "time": "07-04 13:00",
-      "text": "32强全部结束，16强对阵产生；当前总分 GPT 5.5 以 70:59 领先 Ray。"
-    },
-    {
       "time": "07-04 13:20",
       "text": "录入16强预测池：加拿大/摩洛哥、巴拉圭/法国、巴西/挪威、墨西哥/英格兰、葡萄牙/西班牙、美国/比利时、阿根廷/埃及、瑞士/哥伦比亚。"
     },
@@ -1413,6 +1409,10 @@
     },
     {
       "time": "07-05 05:30",
+      "text": "射手榜待核对：加拿大 vs 摩洛哥 已有进球，但 ESPN scoring plays 暂未解析出进球者。"
+    },
+    {
+      "time": "07-05 05:40",
       "text": "射手榜待核对：加拿大 vs 摩洛哥 已有进球，但 ESPN scoring plays 暂未解析出进球者。"
     }
   ],
