@@ -7,10 +7,10 @@
     "tagline": "World Cup Knockout Prediction Derby"
   },
   "meta": {
-    "updated_at": "2026-07-04 12:30 BJT",
+    "updated_at": "2026-07-04 12:40 BJT",
     "active_day": "2026-06-30",
     "timezone": "Asia/Beijing",
-    "version": "knockout-auto-202607040430"
+    "version": "knockout-auto-202607040440"
   },
   "phase": "knockout",
   "archive": {
@@ -1167,30 +1167,6 @@
   ],
   "update_log": [
     {
-      "time": "07-04 12:00",
-      "text": "射手榜待核对：澳大利亚 vs 埃及 已有进球，但 ESPN scoring plays 暂未解析出进球者。"
-    },
-    {
-      "time": "07-04 12:00",
-      "text": "射手榜待核对：阿根廷 vs 佛得角 已有进球，但 ESPN scoring plays 暂未解析出进球者。"
-    },
-    {
-      "time": "07-04 12:10",
-      "text": "射手榜待核对：西班牙 vs 奥地利 已有进球，但 ESPN scoring plays 暂未解析出进球者。"
-    },
-    {
-      "time": "07-04 12:10",
-      "text": "射手榜待核对：葡萄牙 vs 克罗地亚 已有进球，但 ESPN scoring plays 暂未解析出进球者。"
-    },
-    {
-      "time": "07-04 12:10",
-      "text": "射手榜待核对：瑞士 vs 阿尔及利亚 已有进球，但 ESPN scoring plays 暂未解析出进球者。"
-    },
-    {
-      "time": "07-04 12:10",
-      "text": "射手榜待核对：澳大利亚 vs 埃及 已有进球，但 ESPN scoring plays 暂未解析出进球者。"
-    },
-    {
       "time": "07-04 12:10",
       "text": "射手榜待核对：阿根廷 vs 佛得角 已有进球，但 ESPN scoring plays 暂未解析出进球者。"
     },
@@ -1244,6 +1220,30 @@
     },
     {
       "time": "07-04 12:30",
+      "text": "射手榜待核对：哥伦比亚 vs 加纳 已有进球，但 ESPN scoring plays 暂未解析出进球者。"
+    },
+    {
+      "time": "07-04 12:40",
+      "text": "射手榜待核对：西班牙 vs 奥地利 已有进球，但 ESPN scoring plays 暂未解析出进球者。"
+    },
+    {
+      "time": "07-04 12:40",
+      "text": "射手榜待核对：葡萄牙 vs 克罗地亚 已有进球，但 ESPN scoring plays 暂未解析出进球者。"
+    },
+    {
+      "time": "07-04 12:40",
+      "text": "射手榜待核对：瑞士 vs 阿尔及利亚 已有进球，但 ESPN scoring plays 暂未解析出进球者。"
+    },
+    {
+      "time": "07-04 12:40",
+      "text": "射手榜待核对：澳大利亚 vs 埃及 已有进球，但 ESPN scoring plays 暂未解析出进球者。"
+    },
+    {
+      "time": "07-04 12:40",
+      "text": "射手榜待核对：阿根廷 vs 佛得角 已有进球，但 ESPN scoring plays 暂未解析出进球者。"
+    },
+    {
+      "time": "07-04 12:40",
       "text": "射手榜待核对：哥伦比亚 vs 加纳 已有进球，但 ESPN scoring plays 暂未解析出进球者。"
     }
   ],
