@@ -7,10 +7,10 @@
     "tagline": "World Cup Knockout Prediction Derby"
   },
   "meta": {
-    "updated_at": "2026-07-04 13:20 BJT",
+    "updated_at": "2026-07-04 18:00 BJT",
     "active_day": "2026-07-05",
     "timezone": "Asia/Beijing",
-    "version": "round-of-16-predictions-20260704"
+    "version": "prediction-release-202607041000"
   },
   "phase": "knockout",
   "archive": {
@@ -22,8 +22,8 @@
     "gpt_total": 70,
     "leader_comment": "GPT 5.5 以 70:59 领先 Ray。16强预测池已录入，后续比分、计分与战报继续自动更新。"
   },
-  "headline": "16强对阵产生：Ray 与 GPT 5.5 进入新一轮预测",
-  "brief": "16强预测已录入：Ray 押加拿大、法国、挪威、英格兰、西班牙、美国、阿根廷、瑞士；GPT 5.5 押摩洛哥、法国、巴西、英格兰、西班牙、比利时、阿根廷、哥伦比亚。",
+  "headline": "淘汰赛预测发布：加拿大 vs 摩洛哥、巴拉圭 vs 法国",
+  "brief": "北京时间 2026-07-04 18:00 BJT 已发布 2 场淘汰赛预测：加拿大 vs 摩洛哥；巴拉圭 vs 法国。",
   "knockout_rules": [
     "只有一方猜中晋级队时，猜中者先得 3 分；若同时猜中晋级方式，再得 1 分；若90分钟比分完全命中，再得 1 分，单场最高 5 分。",
     "双方都猜中晋级队时，不重复给胜负分，只比较晋级方式与90分钟比分：方式正确 +1，90分钟比分完全命中再 +1。",
@@ -553,28 +553,11 @@
         },
         "advancing_team": null
       },
-      "ray_prediction": {
-        "advancing_team": "加拿大",
-        "method": "penalties",
-        "regulation_score": {
-          "home_score": 2,
-          "away_score": 2
-        },
-        "label": "加拿大 2:2 摩洛哥，加拿大点球晋级",
-        "reason": "Ray 认为加拿大主场因素和身体强度能抵消摩洛哥的反击威胁，拖入点球后更稳。"
-      },
-      "gpt_prediction": {
-        "advancing_team": "摩洛哥",
-        "method": "penalties",
-        "regulation_score": {
-          "home_score": 1,
-          "away_score": 1
-        },
-        "label": "加拿大 1:1 摩洛哥，摩洛哥点球晋级",
-        "reason": "GPT 认为摩洛哥连续淘汰荷兰后信心更强，防守组织和点球心理优势会继续发挥。"
-      },
+      "ray_prediction": null,
+      "gpt_prediction": null,
       "manual_points": null,
-      "review": "预测待发布。"
+      "review": "赛前预测。",
+      "predictions_published_at": "2026-07-04 18:00 BJT"
     },
     {
       "id": "par-fra-20260705",
@@ -600,28 +583,11 @@
         },
         "advancing_team": null
       },
-      "ray_prediction": {
-        "advancing_team": "法国",
-        "method": "90",
-        "regulation_score": {
-          "home_score": 0,
-          "away_score": 2
-        },
-        "label": "巴拉圭 0:2 法国，法国90分钟晋级",
-        "reason": "Ray 看好法国在90分钟内解决比赛，巴拉圭爆冷德国后仍会被法国阵容厚度压制。"
-      },
-      "gpt_prediction": {
-        "advancing_team": "法国",
-        "method": "90",
-        "regulation_score": {
-          "home_score": 1,
-          "away_score": 3
-        },
-        "label": "巴拉圭 1:3 法国，法国90分钟晋级",
-        "reason": "GPT 同样看好法国晋级，但认为巴拉圭的反击和定位球可能拿到进球。"
-      },
+      "ray_prediction": null,
+      "gpt_prediction": null,
       "manual_points": null,
-      "review": "预测待发布。"
+      "review": "赛前预测。",
+      "predictions_published_at": "2026-07-04 18:00 BJT"
     },
     {
       "id": "bra-nor-20260706",
@@ -1328,6 +1294,10 @@
     {
       "time": "07-04 13:20",
       "text": "对阵图改为淘汰赛对阵：16强对阵置顶，32强结果折叠保留并高亮胜者。"
+    },
+    {
+      "time": "07-04 18:00",
+      "text": "发布次日淘汰赛预测：加拿大 vs 摩洛哥、巴拉圭 vs 法国。"
     }
   ],
   "live_ticker": [
@@ -1457,7 +1427,7 @@
       "note": "Ray 押冷门价值；GPT 原押西班牙天才，但承认伤病是风险。"
     }
   ],
-  "prediction_release_note": "16强预测池已录入；页面按北京时间18:00显示下一比赛日预测。",
+  "prediction_release_note": "预测池已录入，但页面只会显示已发布的比赛预测；每天北京时间18:00自动发布次日比赛。",
   "prediction_release_plan": [
     {
       "match_id": "can-mar-20260705",
@@ -1468,7 +1438,8 @@
       "kickoff_local": "07-05 01:00 BJT",
       "home": "加拿大",
       "away": "摩洛哥",
-      "published": false
+      "published": true,
+      "published_at_bjt": "2026-07-04 18:00 BJT"
     },
     {
       "match_id": "par-fra-20260705",
@@ -1479,7 +1450,8 @@
       "kickoff_local": "07-05 05:00 BJT",
       "home": "巴拉圭",
       "away": "法国",
-      "published": false
+      "published": true,
+      "published_at_bjt": "2026-07-04 18:00 BJT"
     },
     {
       "match_id": "bra-nor-20260706",
