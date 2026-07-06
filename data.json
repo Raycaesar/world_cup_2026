@@ -7,10 +7,10 @@
     "tagline": "World Cup Knockout Prediction Derby"
   },
   "meta": {
-    "updated_at": "2026-07-06 11:00 BJT",
+    "updated_at": "2026-07-06 11:10 BJT",
     "active_day": "2026-07-05",
     "timezone": "Asia/Beijing",
-    "version": "knockout-auto-202607060300"
+    "version": "knockout-auto-202607060310"
   },
   "phase": "knockout",
   "archive": {
@@ -18,12 +18,12 @@
     "href": "archive.html"
   },
   "score_summary": {
-    "ray_total": 63,
-    "gpt_total": 74,
-    "leader_comment": "GPT 5.5 以 74:63 领先 Ray。"
+    "ray_total": 64,
+    "gpt_total": 75,
+    "leader_comment": "GPT 5.5 以 75:64 领先 Ray。"
   },
-  "headline": "淘汰赛更新：巴西 1:2 挪威",
-  "brief": "最新淘汰赛已结算：巴西 1:2 挪威，Ray +3，GPT +0。",
+  "headline": "淘汰赛更新：墨西哥 2:3 英格兰",
+  "brief": "最新淘汰赛已结算：墨西哥 2:3 英格兰，Ray +1，GPT +1。",
   "knockout_rules": [
     "只有一方猜中晋级队时，猜中者先得 3 分；若同时猜中晋级方式，再得 1 分；若90分钟比分完全命中，再得 1 分，单场最高 5 分。",
     "双方都猜中晋级队时，不重复给胜负分，只比较晋级方式与90分钟比分：方式正确 +1，90分钟比分完全命中再 +1。",
@@ -697,27 +697,30 @@
     },
     {
       "id": "mex-eng-20260706",
-      "espn_id": "53452519",
+      "espn_id": "760505",
       "round": "16强",
       "kickoff_local": "07-06 08:00 BJT",
       "home": "墨西哥",
       "away": "英格兰",
       "venue": "",
-      "status": "未开始",
+      "status": "已结束",
       "release_at_utc": "2026-07-05T10:00:00Z",
       "release_time_bjt": "2026-07-05 18:00 BJT",
       "published": false,
       "actual": {
-        "method": null,
+        "method": "90",
         "regulation_score": {
-          "home_score": null,
-          "away_score": null
+          "home_score": 2,
+          "away_score": 3
         },
         "final_score": {
-          "home_score": null,
-          "away_score": null
+          "home_score": 2,
+          "away_score": 3
         },
-        "advancing_team": null
+        "advancing_team": "英格兰",
+        "scorer_update_pending": true,
+        "next_match": "对阵巴西/挪威胜者",
+        "scorer_update_status": "needs_manual_goal_scorers"
       },
       "ray_prediction": {
         "advancing_team": "英格兰",
@@ -739,8 +742,12 @@
         "label": "墨西哥 0:1 英格兰，英格兰90分钟晋级",
         "reason": "GPT 也看好英格兰，但考虑墨西哥主场、高原和淘汰赛节奏，比分可能更小。"
       },
-      "manual_points": null,
-      "review": "预测待发布。"
+      "manual_points": {
+        "ray": 1,
+        "gpt": 1,
+        "explanation": "双方都猜中晋级队；不重复给胜负分，只按晋级方式与90分钟比分计分：Ray +1，GPT +1。"
+      },
+      "review": "墨西哥 2:3 英格兰，英格兰晋级。下一轮将对阵巴西/挪威胜者。双方都猜中晋级队；不重复给胜负分，只按晋级方式与90分钟比分计分：Ray +1，GPT +1。"
     },
     {
       "id": "por-esp-20260707",
@@ -998,8 +1005,19 @@
       "kickoff_local": "07-06 08:00 BJT",
       "home": "墨西哥",
       "away": "英格兰",
-      "status": "未开始",
-      "note": "胜者对阵巴西/挪威胜者"
+      "status": "已结束",
+      "note": "英格兰通过90分钟晋级，对阵巴西/挪威胜者",
+      "winner": "英格兰",
+      "method": "90",
+      "score_obj": {
+        "home_score": 2,
+        "away_score": 3
+      },
+      "score": "2:3",
+      "regulation_score": {
+        "home_score": 2,
+        "away_score": 3
+      }
     },
     {
       "id": "53452513",
@@ -1372,26 +1390,6 @@
   ],
   "update_log": [
     {
-      "time": "07-06 10:00",
-      "text": "射手榜待核对：巴拉圭 vs 法国 已有进球，但 ESPN scoring plays 暂未解析出进球者。"
-    },
-    {
-      "time": "07-06 10:00",
-      "text": "射手榜待核对：巴西 vs 挪威 已有进球，但 ESPN scoring plays 暂未解析出进球者。"
-    },
-    {
-      "time": "07-06 10:10",
-      "text": "射手榜待核对：加拿大 vs 摩洛哥 已有进球，但 ESPN scoring plays 暂未解析出进球者。"
-    },
-    {
-      "time": "07-06 10:10",
-      "text": "射手榜待核对：巴拉圭 vs 法国 已有进球，但 ESPN scoring plays 暂未解析出进球者。"
-    },
-    {
-      "time": "07-06 10:10",
-      "text": "射手榜待核对：巴西 vs 挪威 已有进球，但 ESPN scoring plays 暂未解析出进球者。"
-    },
-    {
       "time": "07-06 10:20",
       "text": "射手榜待核对：加拿大 vs 摩洛哥 已有进球，但 ESPN scoring plays 暂未解析出进球者。"
     },
@@ -1450,6 +1448,26 @@
     {
       "time": "07-06 11:00",
       "text": "射手榜待核对：巴西 vs 挪威 已有进球，但 ESPN scoring plays 暂未解析出进球者。"
+    },
+    {
+      "time": "07-06 11:10",
+      "text": "淘汰赛更新：墨西哥 2:3 英格兰，Ray +1，GPT +1。"
+    },
+    {
+      "time": "07-06 11:10",
+      "text": "射手榜待核对：加拿大 vs 摩洛哥 已有进球，但 ESPN scoring plays 暂未解析出进球者。"
+    },
+    {
+      "time": "07-06 11:10",
+      "text": "射手榜待核对：巴拉圭 vs 法国 已有进球，但 ESPN scoring plays 暂未解析出进球者。"
+    },
+    {
+      "time": "07-06 11:10",
+      "text": "射手榜待核对：巴西 vs 挪威 已有进球，但 ESPN scoring plays 暂未解析出进球者。"
+    },
+    {
+      "time": "07-06 11:10",
+      "text": "射手榜待核对：墨西哥 vs 英格兰 已有进球，但 ESPN scoring plays 暂未解析出进球者。"
     }
   ],
   "live_ticker": [
