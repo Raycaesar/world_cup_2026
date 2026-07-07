@@ -7,10 +7,10 @@
     "tagline": "World Cup Knockout Prediction Derby"
   },
   "meta": {
-    "updated_at": "2026-07-08 07:00 BJT",
+    "updated_at": "2026-07-08 07:10 BJT",
     "active_day": "2026-07-05",
     "timezone": "Asia/Beijing",
-    "version": "knockout-auto-202607072300"
+    "version": "knockout-auto-202607072310"
   },
   "phase": "knockout",
   "archive": {
@@ -18,12 +18,12 @@
     "href": "archive.html"
   },
   "score_summary": {
-    "ray_total": 65,
+    "ray_total": 70,
     "gpt_total": 81,
-    "leader_comment": "GPT 5.5 以 81:65 领先 Ray。"
+    "leader_comment": "GPT 5.5 以 81:70 领先 Ray。"
   },
-  "headline": "淘汰赛更新：阿根廷 3:2 埃及",
-  "brief": "最新淘汰赛已结算：阿根廷 3:2 埃及，Ray +1，GPT +1。",
+  "headline": "淘汰赛更新：瑞士 0:0，点球 4:3 哥伦比亚",
+  "brief": "最新淘汰赛已结算：瑞士 0:0，点球 4:3 哥伦比亚，Ray +5，GPT +0。",
   "knockout_rules": [
     "只有一方猜中晋级队时，猜中者先得 3 分；若同时猜中晋级方式，再得 1 分；若90分钟比分完全命中，再得 1 分，单场最高 5 分。",
     "双方都猜中晋级队时，不重复给胜负分，只比较晋级方式与90分钟比分：方式正确 +1，90分钟比分完全命中再 +1。",
@@ -923,27 +923,40 @@
     },
     {
       "id": "sui-col-20260708",
-      "espn_id": "53452523",
+      "espn_id": "760508",
       "round": "16强",
       "kickoff_local": "07-08 04:00 BJT",
       "home": "瑞士",
       "away": "哥伦比亚",
       "venue": "",
-      "status": "未开始",
+      "status": "已结束",
       "release_at_utc": "2026-07-07T10:00:00Z",
       "release_time_bjt": "2026-07-07 18:00 BJT",
       "published": true,
       "actual": {
-        "method": null,
+        "method": "penalties",
         "regulation_score": {
-          "home_score": null,
-          "away_score": null
+          "home_score": 0,
+          "away_score": 0
         },
         "final_score": {
-          "home_score": null,
-          "away_score": null
+          "home_score": 0,
+          "away_score": 0
         },
-        "advancing_team": null
+        "advancing_team": "瑞士",
+        "extra_time_score": {
+          "home_score": 0,
+          "away_score": 0
+        },
+        "penalties_score": {
+          "home_score": 4,
+          "away_score": 3
+        },
+        "scorer_update_pending": false,
+        "next_match": "对阵阿根廷/埃及胜者",
+        "scorers_updated": true,
+        "scorer_update_status": "no_open_play_goals",
+        "scorer_update_at": "2026-07-08 07:10 BJT"
       },
       "ray_prediction": {
         "advancing_team": "瑞士",
@@ -965,8 +978,12 @@
         "label": "瑞士 0:1 哥伦比亚，哥伦比亚90分钟晋级",
         "reason": "GPT 看好哥伦比亚进攻端变化更多，能在常规时间抓住一次机会。"
       },
-      "manual_points": null,
-      "review": "赛前预测。",
+      "manual_points": {
+        "ray": 5,
+        "gpt": 0,
+        "explanation": "Ray 猜中晋级队，GPT 未猜中；晋级队 +3，路径与比分加分 +2，Ray +5。"
+      },
+      "review": "瑞士 0:0 哥伦比亚，点球大战 4:3，90分钟 0:0，瑞士晋级。下一轮将对阵阿根廷/埃及胜者。Ray 猜中晋级队，GPT 未猜中；晋级队 +3，路径与比分加分 +2，Ray +5。",
       "predictions_published_at": "2026-07-07 18:00 BJT",
       "published_at_bjt": "2026-07-07 18:00 BJT"
     }
@@ -1118,8 +1135,23 @@
       "kickoff_local": "07-08 04:00 BJT",
       "home": "瑞士",
       "away": "哥伦比亚",
-      "status": "未开始",
-      "note": "胜者对阵阿根廷/埃及胜者"
+      "status": "已结束",
+      "note": "瑞士通过点球晋级，对阵阿根廷/埃及胜者",
+      "winner": "瑞士",
+      "method": "penalties",
+      "score_obj": {
+        "home_score": 0,
+        "away_score": 0
+      },
+      "score": "0:0，点球 4:3",
+      "regulation_score": {
+        "home_score": 0,
+        "away_score": 0
+      },
+      "penalties_score": {
+        "home_score": 4,
+        "away_score": 3
+      }
     },
     {
       "id": "53452545",
@@ -1456,38 +1488,6 @@
   ],
   "update_log": [
     {
-      "time": "07-08 06:40",
-      "text": "射手榜待核对：巴拉圭 vs 法国 已有进球，但 ESPN scoring plays 暂未解析出进球者。"
-    },
-    {
-      "time": "07-08 06:40",
-      "text": "射手榜待核对：巴西 vs 挪威 已有进球，但 ESPN scoring plays 暂未解析出进球者。"
-    },
-    {
-      "time": "07-08 06:40",
-      "text": "射手榜待核对：墨西哥 vs 英格兰 已有进球，但 ESPN scoring plays 暂未解析出进球者。"
-    },
-    {
-      "time": "07-08 06:40",
-      "text": "射手榜待核对：葡萄牙 vs 西班牙 已有进球，但 ESPN scoring plays 暂未解析出进球者。"
-    },
-    {
-      "time": "07-08 06:40",
-      "text": "射手榜待核对：美国 vs 比利时 已有进球，但 ESPN scoring plays 暂未解析出进球者。"
-    },
-    {
-      "time": "07-08 06:40",
-      "text": "射手榜待核对：阿根廷 vs 埃及 已有进球，但 ESPN scoring plays 暂未解析出进球者。"
-    },
-    {
-      "time": "07-08 06:50",
-      "text": "射手榜待核对：加拿大 vs 摩洛哥 已有进球，但 ESPN scoring plays 暂未解析出进球者。"
-    },
-    {
-      "time": "07-08 06:50",
-      "text": "射手榜待核对：巴拉圭 vs 法国 已有进球，但 ESPN scoring plays 暂未解析出进球者。"
-    },
-    {
       "time": "07-08 06:50",
       "text": "射手榜待核对：巴西 vs 挪威 已有进球，但 ESPN scoring plays 暂未解析出进球者。"
     },
@@ -1533,6 +1533,38 @@
     },
     {
       "time": "07-08 07:00",
+      "text": "射手榜待核对：阿根廷 vs 埃及 已有进球，但 ESPN scoring plays 暂未解析出进球者。"
+    },
+    {
+      "time": "07-08 07:10",
+      "text": "淘汰赛更新：瑞士 0:0，点球 4:3 哥伦比亚，Ray +5，GPT +0。"
+    },
+    {
+      "time": "07-08 07:10",
+      "text": "射手榜待核对：加拿大 vs 摩洛哥 已有进球，但 ESPN scoring plays 暂未解析出进球者。"
+    },
+    {
+      "time": "07-08 07:10",
+      "text": "射手榜待核对：巴拉圭 vs 法国 已有进球，但 ESPN scoring plays 暂未解析出进球者。"
+    },
+    {
+      "time": "07-08 07:10",
+      "text": "射手榜待核对：巴西 vs 挪威 已有进球，但 ESPN scoring plays 暂未解析出进球者。"
+    },
+    {
+      "time": "07-08 07:10",
+      "text": "射手榜待核对：墨西哥 vs 英格兰 已有进球，但 ESPN scoring plays 暂未解析出进球者。"
+    },
+    {
+      "time": "07-08 07:10",
+      "text": "射手榜待核对：葡萄牙 vs 西班牙 已有进球，但 ESPN scoring plays 暂未解析出进球者。"
+    },
+    {
+      "time": "07-08 07:10",
+      "text": "射手榜待核对：美国 vs 比利时 已有进球，但 ESPN scoring plays 暂未解析出进球者。"
+    },
+    {
+      "time": "07-08 07:10",
       "text": "射手榜待核对：阿根廷 vs 埃及 已有进球，但 ESPN scoring plays 暂未解析出进球者。"
     }
   ],
@@ -1630,7 +1662,7 @@
       "minutes": 419
     }
   ],
-  "top_scorers_source": "射手榜据 SB Nation 7月4日金靴榜与梅西对佛得角进球报道更新；榜单保留前 8 名，后续比赛可由 update_scores.js 继续尝试自动刷新。",
+  "top_scorers_source": "射手榜随 ESPN scoring plays 自动刷新；最后更新 07-08 07:10。",
   "tournament_picks": [
     {
       "name": "冠军",
