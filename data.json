@@ -7,10 +7,10 @@
     "tagline": "World Cup Knockout Prediction Derby"
   },
   "meta": {
-    "updated_at": "2026-07-07 09:50 BJT",
+    "updated_at": "2026-07-07 10:00 BJT",
     "active_day": "2026-07-05",
     "timezone": "Asia/Beijing",
-    "version": "knockout-auto-202607070150"
+    "version": "knockout-auto-202607070200"
   },
   "phase": "knockout",
   "archive": {
@@ -19,11 +19,11 @@
   },
   "score_summary": {
     "ray_total": 64,
-    "gpt_total": 76,
-    "leader_comment": "GPT 5.5 以 76:64 领先 Ray。"
+    "gpt_total": 80,
+    "leader_comment": "GPT 5.5 以 80:64 领先 Ray。"
   },
-  "headline": "淘汰赛更新：葡萄牙 0:1 西班牙",
-  "brief": "最新淘汰赛已结算：葡萄牙 0:1 西班牙，Ray +0，GPT +1。",
+  "headline": "淘汰赛更新：美国 1:4 比利时",
+  "brief": "最新淘汰赛已结算：美国 1:4 比利时，Ray +0，GPT +4。",
   "knockout_rules": [
     "只有一方猜中晋级队时，猜中者先得 3 分；若同时猜中晋级方式，再得 1 分；若90分钟比分完全命中，再得 1 分，单场最高 5 分。",
     "双方都猜中晋级队时，不重复给胜负分，只比较晋级方式与90分钟比分：方式正确 +1，90分钟比分完全命中再 +1。",
@@ -805,27 +805,30 @@
     },
     {
       "id": "usa-bel-20260707",
-      "espn_id": "53452515",
+      "espn_id": "760507",
       "round": "16强",
       "kickoff_local": "07-07 08:00 BJT",
       "home": "美国",
       "away": "比利时",
       "venue": "",
-      "status": "未开始",
+      "status": "已结束",
       "release_at_utc": "2026-07-06T10:00:00Z",
       "release_time_bjt": "2026-07-06 18:00 BJT",
       "published": false,
       "actual": {
-        "method": null,
+        "method": "90",
         "regulation_score": {
-          "home_score": null,
-          "away_score": null
+          "home_score": 1,
+          "away_score": 4
         },
         "final_score": {
-          "home_score": null,
-          "away_score": null
+          "home_score": 1,
+          "away_score": 4
         },
-        "advancing_team": null
+        "advancing_team": "比利时",
+        "scorer_update_pending": true,
+        "next_match": "对阵葡萄牙/西班牙胜者",
+        "scorer_update_status": "needs_manual_goal_scorers"
       },
       "ray_prediction": {
         "advancing_team": "美国",
@@ -847,8 +850,12 @@
         "label": "美国 1:2 比利时，比利时90分钟晋级",
         "reason": "GPT 看好比利时从加时逆转塞内加尔后延续经验优势，美国会制造压力但难以完全控制节奏。"
       },
-      "manual_points": null,
-      "review": "预测待发布。"
+      "manual_points": {
+        "ray": 0,
+        "gpt": 4,
+        "explanation": "GPT 猜中晋级队，Ray 未猜中；晋级队 +3，路径与比分加分 +1，GPT +4。"
+      },
+      "review": "美国 1:4 比利时，比利时晋级。下一轮将对阵葡萄牙/西班牙胜者。GPT 猜中晋级队，Ray 未猜中；晋级队 +3，路径与比分加分 +1，GPT +4。"
     },
     {
       "id": "arg-egy-20260708",
@@ -1052,8 +1059,19 @@
       "kickoff_local": "07-07 08:00 BJT",
       "home": "美国",
       "away": "比利时",
-      "status": "未开始",
-      "note": "胜者对阵葡萄牙/西班牙胜者"
+      "status": "已结束",
+      "note": "比利时通过90分钟晋级，对阵葡萄牙/西班牙胜者",
+      "winner": "比利时",
+      "method": "90",
+      "score_obj": {
+        "home_score": 1,
+        "away_score": 4
+      },
+      "score": "1:4",
+      "regulation_score": {
+        "home_score": 1,
+        "away_score": 4
+      }
     },
     {
       "id": "53452521",
@@ -1408,34 +1426,6 @@
   ],
   "update_log": [
     {
-      "time": "07-07 09:20",
-      "text": "射手榜待核对：加拿大 vs 摩洛哥 已有进球，但 ESPN scoring plays 暂未解析出进球者。"
-    },
-    {
-      "time": "07-07 09:20",
-      "text": "射手榜待核对：巴拉圭 vs 法国 已有进球，但 ESPN scoring plays 暂未解析出进球者。"
-    },
-    {
-      "time": "07-07 09:20",
-      "text": "射手榜待核对：巴西 vs 挪威 已有进球，但 ESPN scoring plays 暂未解析出进球者。"
-    },
-    {
-      "time": "07-07 09:20",
-      "text": "射手榜待核对：墨西哥 vs 英格兰 已有进球，但 ESPN scoring plays 暂未解析出进球者。"
-    },
-    {
-      "time": "07-07 09:20",
-      "text": "射手榜待核对：葡萄牙 vs 西班牙 已有进球，但 ESPN scoring plays 暂未解析出进球者。"
-    },
-    {
-      "time": "07-07 09:30",
-      "text": "射手榜待核对：加拿大 vs 摩洛哥 已有进球，但 ESPN scoring plays 暂未解析出进球者。"
-    },
-    {
-      "time": "07-07 09:30",
-      "text": "射手榜待核对：巴拉圭 vs 法国 已有进球，但 ESPN scoring plays 暂未解析出进球者。"
-    },
-    {
       "time": "07-07 09:30",
       "text": "射手榜待核对：巴西 vs 挪威 已有进球，但 ESPN scoring plays 暂未解析出进球者。"
     },
@@ -1486,6 +1476,34 @@
     {
       "time": "07-07 09:50",
       "text": "射手榜待核对：葡萄牙 vs 西班牙 已有进球，但 ESPN scoring plays 暂未解析出进球者。"
+    },
+    {
+      "time": "07-07 10:00",
+      "text": "淘汰赛更新：美国 1:4 比利时，Ray +0，GPT +4。"
+    },
+    {
+      "time": "07-07 10:00",
+      "text": "射手榜待核对：加拿大 vs 摩洛哥 已有进球，但 ESPN scoring plays 暂未解析出进球者。"
+    },
+    {
+      "time": "07-07 10:00",
+      "text": "射手榜待核对：巴拉圭 vs 法国 已有进球，但 ESPN scoring plays 暂未解析出进球者。"
+    },
+    {
+      "time": "07-07 10:00",
+      "text": "射手榜待核对：巴西 vs 挪威 已有进球，但 ESPN scoring plays 暂未解析出进球者。"
+    },
+    {
+      "time": "07-07 10:00",
+      "text": "射手榜待核对：墨西哥 vs 英格兰 已有进球，但 ESPN scoring plays 暂未解析出进球者。"
+    },
+    {
+      "time": "07-07 10:00",
+      "text": "射手榜待核对：葡萄牙 vs 西班牙 已有进球，但 ESPN scoring plays 暂未解析出进球者。"
+    },
+    {
+      "time": "07-07 10:00",
+      "text": "射手榜待核对：美国 vs 比利时 已有进球，但 ESPN scoring plays 暂未解析出进球者。"
     }
   ],
   "live_ticker": [
