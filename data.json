@@ -1,16 +1,16 @@
 {
   "site": {
     "title": "Ray大战GPT 5.5｜淘汰赛篇",
-    "subtitle": "16强开战：预测池已录入，比分与战报继续自动更新。",
+    "subtitle": "1/4决赛开战：8强预测已录入，比分与战报继续自动更新。",
     "status": "LIVE",
     "refresh_seconds": 30,
     "tagline": "World Cup Knockout Prediction Derby"
   },
   "meta": {
-    "updated_at": "2026-07-08 22:50 BJT",
-    "active_day": "2026-07-05",
+    "updated_at": "2026-07-08 23:00 BJT",
+    "active_day": "2026-07-10",
     "timezone": "Asia/Beijing",
-    "version": "knockout-auto-202607081450"
+    "version": "quarterfinal-predictions-20260708"
   },
   "phase": "knockout",
   "archive": {
@@ -20,10 +20,10 @@
   "score_summary": {
     "ray_total": 70,
     "gpt_total": 81,
-    "leader_comment": "GPT 5.5 以 81:70 领先 Ray。"
+    "leader_comment": "GPT 5.5 以 81:70 领先 Ray。1/4决赛由 GPT 5.5 先手预测，Ray 随后应战。"
   },
-  "headline": "淘汰赛更新：瑞士 0:0，点球 4:3 哥伦比亚",
-  "brief": "最新淘汰赛已结算：瑞士 0:0，点球 4:3 哥伦比亚，Ray +5，GPT +0。",
+  "headline": "1/4决赛预测发布：法国、 西班牙、英格兰、阿根廷被看好晋级",
+  "brief": "8强对阵与双方预测已录入：法国 vs 摩洛哥、西班牙 vs 比利时、挪威 vs 英格兰、阿根廷 vs 瑞士。页面保留32强与16强折叠对阵图，并新增8强对阵图。",
   "knockout_rules": [
     "只有一方猜中晋级队时，猜中者先得 3 分；若同时猜中晋级方式，再得 1 分；若90分钟比分完全命中，再得 1 分，单场最高 5 分。",
     "双方都猜中晋级队时，不重复给胜负分，只比较晋级方式与90分钟比分：方式正确 +1，90分钟比分完全命中再 +1。",
@@ -531,7 +531,7 @@
     },
     {
       "id": "can-mar-20260705",
-      "espn_id": "760502",
+      "espn_id": "53452511",
       "round": "16强",
       "kickoff_local": "07-05 01:00 BJT",
       "home": "加拿大",
@@ -540,7 +540,7 @@
       "status": "已结束",
       "release_at_utc": "2026-07-04T10:00:00Z",
       "release_time_bjt": "2026-07-04 18:00 BJT",
-      "published": true,
+      "published": false,
       "actual": {
         "method": "90",
         "regulation_score": {
@@ -552,9 +552,7 @@
           "away_score": 3
         },
         "advancing_team": "摩洛哥",
-        "scorer_update_pending": true,
-        "next_match": "对阵巴拉圭/法国胜者",
-        "scorer_update_status": "needs_manual_goal_scorers"
+        "next_match": "对阵法国"
       },
       "ray_prediction": {
         "advancing_team": "加拿大",
@@ -579,15 +577,14 @@
       "manual_points": {
         "ray": 0,
         "gpt": 3,
-        "explanation": "GPT 猜中晋级队，Ray 未猜中；晋级队 +3，路径与比分加分 +0，GPT +3。"
+        "explanation": "GPT 猜中摩洛哥晋级，Ray 未猜中；实际为90分钟晋级，GPT 未命中方式和比分，本场 GPT +3。"
       },
-      "review": "加拿大 0:3 摩洛哥，摩洛哥晋级。下一轮将对阵巴拉圭/法国胜者。GPT 猜中晋级队，Ray 未猜中；晋级队 +3，路径与比分加分 +0，GPT +3。",
-      "predictions_published_at": "2026-07-04 18:00 BJT",
-      "published_at_bjt": "2026-07-04 18:00 BJT"
+      "review": "加拿大 0:3 摩洛哥，摩洛哥90分钟晋级。Ray 预测加拿大点球晋级未中；GPT 猜中摩洛哥晋级但未命中方式与比分，本场 Ray +0，GPT +3。",
+      "predictions_published_at": "2026-07-04 18:00 BJT"
     },
     {
       "id": "par-fra-20260705",
-      "espn_id": "760503",
+      "espn_id": "53452509",
       "round": "16强",
       "kickoff_local": "07-05 05:00 BJT",
       "home": "巴拉圭",
@@ -596,7 +593,7 @@
       "status": "已结束",
       "release_at_utc": "2026-07-04T10:00:00Z",
       "release_time_bjt": "2026-07-04 18:00 BJT",
-      "published": true,
+      "published": false,
       "actual": {
         "method": "90",
         "regulation_score": {
@@ -608,9 +605,7 @@
           "away_score": 1
         },
         "advancing_team": "法国",
-        "scorer_update_pending": true,
-        "next_match": "对阵加拿大/摩洛哥胜者",
-        "scorer_update_status": "needs_manual_goal_scorers"
+        "next_match": "对阵摩洛哥"
       },
       "ray_prediction": {
         "advancing_team": "法国",
@@ -635,11 +630,10 @@
       "manual_points": {
         "ray": 1,
         "gpt": 1,
-        "explanation": "双方都猜中晋级队；不重复给胜负分，只按晋级方式与90分钟比分计分：Ray +1，GPT +1。"
+        "explanation": "双方都猜中法国晋级；双方都命中90分钟方式，但未命中比分，Ray +1，GPT +1。"
       },
-      "review": "巴拉圭 0:1 法国，法国晋级。下一轮将对阵加拿大/摩洛哥胜者。双方都猜中晋级队；不重复给胜负分，只按晋级方式与90分钟比分计分：Ray +1，GPT +1。",
-      "predictions_published_at": "2026-07-04 18:00 BJT",
-      "published_at_bjt": "2026-07-04 18:00 BJT"
+      "review": "巴拉圭 0:1 法国，法国90分钟晋级。双方都猜中法国晋级和90分钟方式，但均未命中准确比分，本场 Ray +1，GPT +1。",
+      "predictions_published_at": "2026-07-04 18:00 BJT"
     },
     {
       "id": "bra-nor-20260706",
@@ -652,7 +646,7 @@
       "status": "已结束",
       "release_at_utc": "2026-07-05T10:00:00Z",
       "release_time_bjt": "2026-07-05 18:00 BJT",
-      "published": true,
+      "published": false,
       "actual": {
         "method": "90",
         "regulation_score": {
@@ -664,9 +658,7 @@
           "away_score": 2
         },
         "advancing_team": "挪威",
-        "scorer_update_pending": true,
-        "next_match": "对阵墨西哥/英格兰胜者",
-        "scorer_update_status": "needs_manual_goal_scorers"
+        "next_match": "对阵英格兰"
       },
       "ray_prediction": {
         "advancing_team": "挪威",
@@ -691,11 +683,10 @@
       "manual_points": {
         "ray": 3,
         "gpt": 0,
-        "explanation": "Ray 猜中晋级队，GPT 未猜中；晋级队 +3，路径与比分加分 +0，Ray +3。"
+        "explanation": "Ray 猜中挪威晋级，GPT 未猜中；实际为90分钟晋级，Ray 未命中方式和比分，本场 Ray +3。"
       },
-      "review": "巴西 1:2 挪威，挪威晋级。下一轮将对阵墨西哥/英格兰胜者。Ray 猜中晋级队，GPT 未猜中；晋级队 +3，路径与比分加分 +0，Ray +3。",
-      "predictions_published_at": "2026-07-07 18:00 BJT",
-      "published_at_bjt": "2026-07-07 18:00 BJT"
+      "review": "巴西 1:2 挪威，挪威90分钟晋级。Ray 猜中挪威晋级但预测加时，GPT 预测巴西晋级未中，本场 Ray +3，GPT +0。",
+      "predictions_published_at": "2026-07-05 18:00 BJT"
     },
     {
       "id": "mex-eng-20260706",
@@ -708,7 +699,7 @@
       "status": "已结束",
       "release_at_utc": "2026-07-05T10:00:00Z",
       "release_time_bjt": "2026-07-05 18:00 BJT",
-      "published": true,
+      "published": false,
       "actual": {
         "method": "90",
         "regulation_score": {
@@ -720,9 +711,7 @@
           "away_score": 3
         },
         "advancing_team": "英格兰",
-        "scorer_update_pending": true,
-        "next_match": "对阵巴西/挪威胜者",
-        "scorer_update_status": "needs_manual_goal_scorers"
+        "next_match": "对阵挪威"
       },
       "ray_prediction": {
         "advancing_team": "英格兰",
@@ -747,11 +736,10 @@
       "manual_points": {
         "ray": 1,
         "gpt": 1,
-        "explanation": "双方都猜中晋级队；不重复给胜负分，只按晋级方式与90分钟比分计分：Ray +1，GPT +1。"
+        "explanation": "双方都猜中英格兰晋级；双方都命中90分钟方式，但未命中比分，Ray +1，GPT +1。"
       },
-      "review": "墨西哥 2:3 英格兰，英格兰晋级。下一轮将对阵巴西/挪威胜者。双方都猜中晋级队；不重复给胜负分，只按晋级方式与90分钟比分计分：Ray +1，GPT +1。",
-      "predictions_published_at": "2026-07-07 18:00 BJT",
-      "published_at_bjt": "2026-07-07 18:00 BJT"
+      "review": "墨西哥 2:3 英格兰，英格兰90分钟晋级。双方都猜中英格兰晋级和90分钟方式，但均未命中准确比分，本场 Ray +1，GPT +1。",
+      "predictions_published_at": "2026-07-05 18:00 BJT"
     },
     {
       "id": "por-esp-20260707",
@@ -764,7 +752,7 @@
       "status": "已结束",
       "release_at_utc": "2026-07-06T10:00:00Z",
       "release_time_bjt": "2026-07-06 18:00 BJT",
-      "published": true,
+      "published": false,
       "actual": {
         "method": "90",
         "regulation_score": {
@@ -776,9 +764,7 @@
           "away_score": 1
         },
         "advancing_team": "西班牙",
-        "scorer_update_pending": true,
-        "next_match": "对阵美国/比利时胜者",
-        "scorer_update_status": "needs_manual_goal_scorers"
+        "next_match": "对阵比利时"
       },
       "ray_prediction": {
         "advancing_team": "西班牙",
@@ -803,11 +789,10 @@
       "manual_points": {
         "ray": 0,
         "gpt": 1,
-        "explanation": "双方都猜中晋级队；不重复给胜负分，只按晋级方式与90分钟比分计分：Ray +0，GPT +1。"
+        "explanation": "双方都猜中西班牙晋级；GPT 命中90分钟方式，Ray 预测加时，本场 Ray +0，GPT +1。"
       },
-      "review": "葡萄牙 0:1 西班牙，西班牙晋级。下一轮将对阵美国/比利时胜者。双方都猜中晋级队；不重复给胜负分，只按晋级方式与90分钟比分计分：Ray +0，GPT +1。",
-      "predictions_published_at": "2026-07-07 18:00 BJT",
-      "published_at_bjt": "2026-07-07 18:00 BJT"
+      "review": "葡萄牙 0:1 西班牙，西班牙90分钟晋级。双方都猜中西班牙晋级；GPT 命中90分钟方式，Ray 预测加时未得方式分，本场 Ray +0，GPT +1。",
+      "predictions_published_at": "2026-07-06 18:00 BJT"
     },
     {
       "id": "usa-bel-20260707",
@@ -820,7 +805,7 @@
       "status": "已结束",
       "release_at_utc": "2026-07-06T10:00:00Z",
       "release_time_bjt": "2026-07-06 18:00 BJT",
-      "published": true,
+      "published": false,
       "actual": {
         "method": "90",
         "regulation_score": {
@@ -832,9 +817,7 @@
           "away_score": 4
         },
         "advancing_team": "比利时",
-        "scorer_update_pending": true,
-        "next_match": "对阵葡萄牙/西班牙胜者",
-        "scorer_update_status": "needs_manual_goal_scorers"
+        "next_match": "对阵西班牙"
       },
       "ray_prediction": {
         "advancing_team": "美国",
@@ -859,15 +842,14 @@
       "manual_points": {
         "ray": 0,
         "gpt": 4,
-        "explanation": "GPT 猜中晋级队，Ray 未猜中；晋级队 +3，路径与比分加分 +1，GPT +4。"
+        "explanation": "GPT 猜中比利时晋级，Ray 未猜中；GPT 同时命中90分钟方式，本场 GPT +4。"
       },
-      "review": "美国 1:4 比利时，比利时晋级。下一轮将对阵葡萄牙/西班牙胜者。GPT 猜中晋级队，Ray 未猜中；晋级队 +3，路径与比分加分 +1，GPT +4。",
-      "predictions_published_at": "2026-07-07 18:00 BJT",
-      "published_at_bjt": "2026-07-07 18:00 BJT"
+      "review": "美国 1:4 比利时，比利时90分钟晋级。Ray 预测美国晋级未中；GPT 猜中比利时晋级并命中90分钟方式，本场 Ray +0，GPT +4。",
+      "predictions_published_at": "2026-07-06 18:00 BJT"
     },
     {
       "id": "arg-egy-20260708",
-      "espn_id": "760509",
+      "espn_id": "53452521",
       "round": "16强",
       "kickoff_local": "07-08 00:00 BJT",
       "home": "阿根廷",
@@ -876,7 +858,7 @@
       "status": "已结束",
       "release_at_utc": "2026-07-07T10:00:00Z",
       "release_time_bjt": "2026-07-07 18:00 BJT",
-      "published": true,
+      "published": false,
       "actual": {
         "method": "90",
         "regulation_score": {
@@ -888,9 +870,7 @@
           "away_score": 2
         },
         "advancing_team": "阿根廷",
-        "scorer_update_pending": true,
-        "next_match": "对阵瑞士/哥伦比亚胜者",
-        "scorer_update_status": "needs_manual_goal_scorers"
+        "next_match": "对阵瑞士"
       },
       "ray_prediction": {
         "advancing_team": "阿根廷",
@@ -915,15 +895,14 @@
       "manual_points": {
         "ray": 1,
         "gpt": 1,
-        "explanation": "双方都猜中晋级队；不重复给胜负分，只按晋级方式与90分钟比分计分：Ray +1，GPT +1。"
+        "explanation": "双方都猜中阿根廷晋级；双方都命中90分钟方式，但未命中比分，Ray +1，GPT +1。"
       },
-      "review": "阿根廷 3:2 埃及，阿根廷晋级。下一轮将对阵瑞士/哥伦比亚胜者。双方都猜中晋级队；不重复给胜负分，只按晋级方式与90分钟比分计分：Ray +1，GPT +1。",
-      "predictions_published_at": "2026-07-07 18:00 BJT",
-      "published_at_bjt": "2026-07-07 18:00 BJT"
+      "review": "阿根廷 3:2 埃及，阿根廷90分钟晋级。双方都猜中阿根廷晋级和90分钟方式，但均未命中准确比分，本场 Ray +1，GPT +1。",
+      "predictions_published_at": "2026-07-07 18:00 BJT"
     },
     {
       "id": "sui-col-20260708",
-      "espn_id": "760508",
+      "espn_id": "53452523",
       "round": "16强",
       "kickoff_local": "07-08 04:00 BJT",
       "home": "瑞士",
@@ -932,7 +911,7 @@
       "status": "已结束",
       "release_at_utc": "2026-07-07T10:00:00Z",
       "release_time_bjt": "2026-07-07 18:00 BJT",
-      "published": true,
+      "published": false,
       "actual": {
         "method": "penalties",
         "regulation_score": {
@@ -952,11 +931,7 @@
           "home_score": 4,
           "away_score": 3
         },
-        "scorer_update_pending": false,
-        "next_match": "对阵阿根廷/埃及胜者",
-        "scorers_updated": true,
-        "scorer_update_status": "no_open_play_goals",
-        "scorer_update_at": "2026-07-08 07:10 BJT"
+        "next_match": "对阵阿根廷"
       },
       "ray_prediction": {
         "advancing_team": "瑞士",
@@ -981,14 +956,237 @@
       "manual_points": {
         "ray": 5,
         "gpt": 0,
-        "explanation": "Ray 猜中晋级队，GPT 未猜中；晋级队 +3，路径与比分加分 +2，Ray +5。"
+        "explanation": "Ray 猜中瑞士晋级，GPT 未猜中；Ray 同时命中点球方式和90分钟0:0比分，本场 Ray +5。"
       },
-      "review": "瑞士 0:0 哥伦比亚，点球大战 4:3，90分钟 0:0，瑞士晋级。下一轮将对阵阿根廷/埃及胜者。Ray 猜中晋级队，GPT 未猜中；晋级队 +3，路径与比分加分 +2，Ray +5。",
-      "predictions_published_at": "2026-07-07 18:00 BJT",
-      "published_at_bjt": "2026-07-07 18:00 BJT"
+      "review": "瑞士 0:0 哥伦比亚，点球大战 4:3，瑞士晋级。Ray 命中瑞士晋级、点球方式和90分钟0:0比分，本场 Ray +5；GPT 预测哥伦比亚晋级未中。",
+      "predictions_published_at": "2026-07-07 18:00 BJT"
+    },
+    {
+      "id": "fra-mar-20260710",
+      "espn_id": "53452525",
+      "round": "1/4决赛",
+      "kickoff_local": "07-10 04:00 BJT",
+      "home": "法国",
+      "away": "摩洛哥",
+      "venue": "",
+      "status": "未开始",
+      "actual": {
+        "method": null,
+        "regulation_score": {
+          "home_score": null,
+          "away_score": null
+        },
+        "final_score": {
+          "home_score": null,
+          "away_score": null
+        },
+        "advancing_team": null
+      },
+      "ray_prediction": {
+        "advancing_team": "法国",
+        "method": "extra_time",
+        "regulation_score": {
+          "home_score": 1,
+          "away_score": 1
+        },
+        "label": "法国 1:1 摩洛哥，法国加时晋级",
+        "reason": "Ray 认为摩洛哥防守和反击足以把法国拖入加时，但法国阵容厚度和巨星能力最终更稳。"
+      },
+      "gpt_prediction": {
+        "advancing_team": "法国",
+        "method": "90",
+        "regulation_score": {
+          "home_score": 2,
+          "away_score": 1
+        },
+        "label": "法国 2:1 摩洛哥，法国90分钟晋级",
+        "reason": "GPT 看好法国前场个人能力和转换速度，摩洛哥能进球但难以把比赛拖过90分钟。"
+      },
+      "manual_points": null,
+      "review": "赛前预测。",
+      "predictions_published_at": "2026-07-08 23:00 BJT",
+      "published": true,
+      "published_at_bjt": "2026-07-08 23:00 BJT"
+    },
+    {
+      "id": "esp-bel-20260711",
+      "espn_id": "53452527",
+      "round": "1/4决赛",
+      "kickoff_local": "07-11 03:00 BJT",
+      "home": "西班牙",
+      "away": "比利时",
+      "venue": "",
+      "status": "未开始",
+      "actual": {
+        "method": null,
+        "regulation_score": {
+          "home_score": null,
+          "away_score": null
+        },
+        "final_score": {
+          "home_score": null,
+          "away_score": null
+        },
+        "advancing_team": null
+      },
+      "ray_prediction": {
+        "advancing_team": "西班牙",
+        "method": "90",
+        "regulation_score": {
+          "home_score": 2,
+          "away_score": 0
+        },
+        "label": "西班牙 2:0 比利时，西班牙90分钟晋级",
+        "reason": "Ray 看好西班牙控球和压迫优势，认为比利时连续硬仗后防线会被持续消耗。"
+      },
+      "gpt_prediction": {
+        "advancing_team": "西班牙",
+        "method": "90",
+        "regulation_score": {
+          "home_score": 2,
+          "away_score": 1
+        },
+        "label": "西班牙 2:1 比利时，西班牙90分钟晋级",
+        "reason": "GPT 也看好西班牙晋级，但比利时进攻经验足以制造一个进球。"
+      },
+      "manual_points": null,
+      "review": "赛前预测。",
+      "predictions_published_at": "2026-07-08 23:00 BJT",
+      "published": true,
+      "published_at_bjt": "2026-07-08 23:00 BJT"
+    },
+    {
+      "id": "nor-eng-20260712",
+      "espn_id": "53452529",
+      "round": "1/4决赛",
+      "kickoff_local": "07-12 05:00 BJT",
+      "home": "挪威",
+      "away": "英格兰",
+      "venue": "",
+      "status": "未开始",
+      "actual": {
+        "method": null,
+        "regulation_score": {
+          "home_score": null,
+          "away_score": null
+        },
+        "final_score": {
+          "home_score": null,
+          "away_score": null
+        },
+        "advancing_team": null
+      },
+      "ray_prediction": {
+        "advancing_team": "英格兰",
+        "method": "penalties",
+        "regulation_score": {
+          "home_score": 2,
+          "away_score": 2
+        },
+        "label": "挪威 2:2 英格兰，英格兰点球晋级",
+        "reason": "Ray 认为哈兰德会把比赛拖成高比分拉锯，但英格兰整体阵容和点球准备更稳。"
+      },
+      "gpt_prediction": {
+        "advancing_team": "英格兰",
+        "method": "90",
+        "regulation_score": {
+          "home_score": 1,
+          "away_score": 2
+        },
+        "label": "挪威 1:2 英格兰，英格兰90分钟晋级",
+        "reason": "GPT 判断挪威终结点危险，但英格兰阵容更均衡，定位球和替补深度可在90分钟内解决。"
+      },
+      "manual_points": null,
+      "review": "赛前预测。",
+      "predictions_published_at": "2026-07-08 23:00 BJT",
+      "published": true,
+      "published_at_bjt": "2026-07-08 23:00 BJT"
+    },
+    {
+      "id": "arg-sui-20260712",
+      "espn_id": "53452531",
+      "round": "1/4决赛",
+      "kickoff_local": "07-12 09:00 BJT",
+      "home": "阿根廷",
+      "away": "瑞士",
+      "venue": "",
+      "status": "未开始",
+      "actual": {
+        "method": null,
+        "regulation_score": {
+          "home_score": null,
+          "away_score": null
+        },
+        "final_score": {
+          "home_score": null,
+          "away_score": null
+        },
+        "advancing_team": null
+      },
+      "ray_prediction": {
+        "advancing_team": "阿根廷",
+        "method": "90",
+        "regulation_score": {
+          "home_score": 3,
+          "away_score": 2
+        },
+        "label": "阿根廷 3:2 瑞士，阿根廷90分钟晋级",
+        "reason": "Ray 认为瑞士防守会制造麻烦，但阿根廷淘汰赛处理关键球的能力仍能在90分钟内胜出。"
+      },
+      "gpt_prediction": {
+        "advancing_team": "阿根廷",
+        "method": "90",
+        "regulation_score": {
+          "home_score": 2,
+          "away_score": 0
+        },
+        "label": "阿根廷 2:0 瑞士，阿根廷90分钟晋级",
+        "reason": "GPT 看好阿根廷避免拖入点球，通过控制节奏和球星解决问题在90分钟内过关。"
+      },
+      "manual_points": null,
+      "review": "赛前预测。",
+      "predictions_published_at": "2026-07-08 23:00 BJT",
+      "published": true,
+      "published_at_bjt": "2026-07-08 23:00 BJT"
     }
   ],
   "bracket": [
+    {
+      "id": "53452525",
+      "round": "1/4决赛",
+      "kickoff_local": "07-10 04:00 BJT",
+      "home": "法国",
+      "away": "摩洛哥",
+      "status": "未开始",
+      "note": "胜者对阵西班牙/比利时胜者"
+    },
+    {
+      "id": "53452527",
+      "round": "1/4决赛",
+      "kickoff_local": "07-11 03:00 BJT",
+      "home": "西班牙",
+      "away": "比利时",
+      "status": "未开始",
+      "note": "胜者对阵法国/摩洛哥胜者"
+    },
+    {
+      "id": "53452529",
+      "round": "1/4决赛",
+      "kickoff_local": "07-12 05:00 BJT",
+      "home": "挪威",
+      "away": "英格兰",
+      "status": "未开始",
+      "note": "胜者对阵阿根廷/瑞士胜者"
+    },
+    {
+      "id": "53452531",
+      "round": "1/4决赛",
+      "kickoff_local": "07-12 09:00 BJT",
+      "home": "阿根廷",
+      "away": "瑞士",
+      "status": "未开始",
+      "note": "胜者对阵挪威/英格兰胜者"
+    },
     {
       "id": "53452511",
       "round": "16强",
@@ -996,7 +1194,7 @@
       "home": "加拿大",
       "away": "摩洛哥",
       "status": "已结束",
-      "note": "摩洛哥通过90分钟晋级，对阵巴拉圭/法国胜者",
+      "note": "摩洛哥晋级",
       "winner": "摩洛哥",
       "method": "90",
       "score_obj": {
@@ -1016,7 +1214,7 @@
       "home": "巴拉圭",
       "away": "法国",
       "status": "已结束",
-      "note": "法国通过90分钟晋级，对阵加拿大/摩洛哥胜者",
+      "note": "法国晋级",
       "winner": "法国",
       "method": "90",
       "score_obj": {
@@ -1036,7 +1234,7 @@
       "home": "巴西",
       "away": "挪威",
       "status": "已结束",
-      "note": "挪威通过90分钟晋级，对阵墨西哥/英格兰胜者",
+      "note": "挪威晋级",
       "winner": "挪威",
       "method": "90",
       "score_obj": {
@@ -1056,7 +1254,7 @@
       "home": "墨西哥",
       "away": "英格兰",
       "status": "已结束",
-      "note": "英格兰通过90分钟晋级，对阵巴西/挪威胜者",
+      "note": "英格兰晋级",
       "winner": "英格兰",
       "method": "90",
       "score_obj": {
@@ -1076,7 +1274,7 @@
       "home": "葡萄牙",
       "away": "西班牙",
       "status": "已结束",
-      "note": "西班牙通过90分钟晋级，对阵美国/比利时胜者",
+      "note": "西班牙晋级",
       "winner": "西班牙",
       "method": "90",
       "score_obj": {
@@ -1096,7 +1294,7 @@
       "home": "美国",
       "away": "比利时",
       "status": "已结束",
-      "note": "比利时通过90分钟晋级，对阵葡萄牙/西班牙胜者",
+      "note": "比利时晋级",
       "winner": "比利时",
       "method": "90",
       "score_obj": {
@@ -1116,7 +1314,7 @@
       "home": "阿根廷",
       "away": "埃及",
       "status": "已结束",
-      "note": "阿根廷通过90分钟晋级，对阵瑞士/哥伦比亚胜者",
+      "note": "阿根廷晋级",
       "winner": "阿根廷",
       "method": "90",
       "score_obj": {
@@ -1136,7 +1334,7 @@
       "home": "瑞士",
       "away": "哥伦比亚",
       "status": "已结束",
-      "note": "瑞士通过点球晋级，对阵阿根廷/埃及胜者",
+      "note": "瑞士晋级",
       "winner": "瑞士",
       "method": "penalties",
       "score_obj": {
@@ -1488,84 +1686,16 @@
   ],
   "update_log": [
     {
-      "time": "07-08 22:20",
-      "text": "射手榜待核对：巴西 vs 挪威 已有进球，但 ESPN scoring plays 暂未解析出进球者。"
-    },
-    {
-      "time": "07-08 22:20",
-      "text": "射手榜待核对：墨西哥 vs 英格兰 已有进球，但 ESPN scoring plays 暂未解析出进球者。"
-    },
-    {
-      "time": "07-08 22:20",
-      "text": "射手榜待核对：葡萄牙 vs 西班牙 已有进球，但 ESPN scoring plays 暂未解析出进球者。"
-    },
-    {
-      "time": "07-08 22:20",
-      "text": "射手榜待核对：美国 vs 比利时 已有进球，但 ESPN scoring plays 暂未解析出进球者。"
-    },
-    {
-      "time": "07-08 22:20",
-      "text": "射手榜待核对：阿根廷 vs 埃及 已有进球，但 ESPN scoring plays 暂未解析出进球者。"
-    },
-    {
-      "time": "07-08 22:30",
-      "text": "射手榜待核对：巴西 vs 挪威 已有进球，但 ESPN scoring plays 暂未解析出进球者。"
-    },
-    {
-      "time": "07-08 22:30",
-      "text": "射手榜待核对：墨西哥 vs 英格兰 已有进球，但 ESPN scoring plays 暂未解析出进球者。"
-    },
-    {
-      "time": "07-08 22:30",
-      "text": "射手榜待核对：葡萄牙 vs 西班牙 已有进球，但 ESPN scoring plays 暂未解析出进球者。"
-    },
-    {
-      "time": "07-08 22:30",
-      "text": "射手榜待核对：美国 vs 比利时 已有进球，但 ESPN scoring plays 暂未解析出进球者。"
-    },
-    {
-      "time": "07-08 22:30",
-      "text": "射手榜待核对：阿根廷 vs 埃及 已有进球，但 ESPN scoring plays 暂未解析出进球者。"
-    },
-    {
       "time": "07-08 22:41",
-      "text": "射手榜待核对：巴西 vs 挪威 已有进球，但 ESPN scoring plays 暂未解析出进球者。"
+      "text": "1/8决赛全部结束：法国、摩洛哥、西班牙、比利时、挪威、英格兰、阿根廷、瑞士晋级8强。"
     },
     {
-      "time": "07-08 22:41",
-      "text": "射手榜待核对：墨西哥 vs 英格兰 已有进球，但 ESPN scoring plays 暂未解析出进球者。"
+      "time": "07-08 23:00",
+      "text": "1/4决赛预测已录入：法国 vs 摩洛哥、西班牙 vs 比利时、挪威 vs 英格兰、阿根廷 vs 瑞士。"
     },
     {
-      "time": "07-08 22:41",
-      "text": "射手榜待核对：葡萄牙 vs 西班牙 已有进球，但 ESPN scoring plays 暂未解析出进球者。"
-    },
-    {
-      "time": "07-08 22:41",
-      "text": "射手榜待核对：美国 vs 比利时 已有进球，但 ESPN scoring plays 暂未解析出进球者。"
-    },
-    {
-      "time": "07-08 22:41",
-      "text": "射手榜待核对：阿根廷 vs 埃及 已有进球，但 ESPN scoring plays 暂未解析出进球者。"
-    },
-    {
-      "time": "07-08 22:50",
-      "text": "射手榜待核对：巴西 vs 挪威 已有进球，但 ESPN scoring plays 暂未解析出进球者。"
-    },
-    {
-      "time": "07-08 22:50",
-      "text": "射手榜待核对：墨西哥 vs 英格兰 已有进球，但 ESPN scoring plays 暂未解析出进球者。"
-    },
-    {
-      "time": "07-08 22:50",
-      "text": "射手榜待核对：葡萄牙 vs 西班牙 已有进球，但 ESPN scoring plays 暂未解析出进球者。"
-    },
-    {
-      "time": "07-08 22:50",
-      "text": "射手榜待核对：美国 vs 比利时 已有进球，但 ESPN scoring plays 暂未解析出进球者。"
-    },
-    {
-      "time": "07-08 22:50",
-      "text": "射手榜待核对：阿根廷 vs 埃及 已有进球，但 ESPN scoring plays 暂未解析出进球者。"
+      "time": "07-08 23:00",
+      "text": "射手榜更新：梅西8球领跑，姆巴佩和哈兰德7球紧追。"
     }
   ],
   "live_ticker": [
@@ -1599,35 +1729,36 @@
       "rank": 1,
       "player": "Lionel Messi",
       "team": "阿根廷",
-      "goals": 7,
-      "assists": 0,
-      "minutes": 223,
-      "note": "对佛得角破门后升至 7 球。"
+      "goals": 8,
+      "assists": 1,
+      "minutes": null,
+      "note": "对埃及进球后以8球领跑金靴榜。"
     },
     {
       "rank": 2,
       "player": "Kylian Mbappé",
       "team": "法国",
-      "goals": 6,
+      "goals": 7,
       "assists": 2,
-      "minutes": 378,
-      "note": "对瑞典梅开二度，继续紧追金靴。"
+      "minutes": null,
+      "note": "法国进入1/4决赛，继续紧追金靴。"
     },
     {
       "rank": 3,
       "player": "Erling Haaland",
       "team": "挪威",
-      "goals": 5,
+      "goals": 7,
       "assists": 0,
-      "minutes": 310
+      "minutes": null,
+      "note": "挪威淘汰巴西后仍在金靴竞争中。"
     },
     {
       "rank": 4,
       "player": "Harry Kane",
       "team": "英格兰",
-      "goals": 5,
-      "assists": 0,
-      "minutes": 394
+      "goals": 6,
+      "assists": 1,
+      "minutes": null
     },
     {
       "rank": 5,
@@ -1635,7 +1766,7 @@
       "team": "法国",
       "goals": 4,
       "assists": 2,
-      "minutes": 304
+      "minutes": null
     },
     {
       "rank": 6,
@@ -1643,26 +1774,27 @@
       "team": "西班牙",
       "goals": 4,
       "assists": 1,
-      "minutes": 328
+      "minutes": null
     },
     {
       "rank": 7,
+      "player": "Jude Bellingham",
+      "team": "英格兰",
+      "goals": 4,
+      "assists": 1,
+      "minutes": null
+    },
+    {
+      "rank": 8,
       "player": "Vinicius Jr.",
       "team": "巴西",
       "goals": 4,
       "assists": 1,
-      "minutes": 398
-    },
-    {
-      "rank": 8,
-      "player": "Ismaila Sarr",
-      "team": "塞内加尔",
-      "goals": 4,
-      "assists": 1,
-      "minutes": 419
+      "minutes": null,
+      "note": "巴西已出局，排名仅作当前榜单参考。"
     }
   ],
-  "top_scorers_source": "射手榜随 ESPN scoring plays 自动刷新；最后更新 07-08 07:10。",
+  "top_scorers_source": "射手榜据 2026-07-08 公开金靴榜更新：梅西8球领跑，姆巴佩和哈兰德7球，凯恩6球；后续比赛由自动脚本继续尝试刷新。",
   "tournament_picks": [
     {
       "name": "冠军",
@@ -1695,7 +1827,7 @@
       "note": "Ray 押冷门价值；GPT 原押西班牙天才，但承认伤病是风险。"
     }
   ],
-  "prediction_release_note": "预测池已录入，但页面只会显示已发布的比赛预测；每天北京时间18:00自动发布次日比赛。",
+  "prediction_release_note": "1/4决赛预测已全部公开；比分、计分与战报继续由自动更新脚本处理。",
   "prediction_release_plan": [
     {
       "match_id": "can-mar-20260705",
@@ -1706,28 +1838,7 @@
       "kickoff_local": "07-05 01:00 BJT",
       "home": "加拿大",
       "away": "摩洛哥",
-      "published": true,
-      "published_at_bjt": "2026-07-04 18:00 BJT",
-      "ray_prediction": {
-        "advancing_team": "加拿大",
-        "method": "penalties",
-        "regulation_score": {
-          "home_score": 2,
-          "away_score": 2
-        },
-        "label": "加拿大 2:2 摩洛哥，加拿大点球晋级",
-        "reason": "Ray 认为加拿大主场因素和身体强度能抵消摩洛哥的反击威胁，拖入点球后更稳。"
-      },
-      "gpt_prediction": {
-        "advancing_team": "摩洛哥",
-        "method": "penalties",
-        "regulation_score": {
-          "home_score": 1,
-          "away_score": 1
-        },
-        "label": "加拿大 1:1 摩洛哥，摩洛哥点球晋级",
-        "reason": "GPT 认为摩洛哥连续淘汰荷兰后信心更强，防守组织和点球心理优势会继续发挥。"
-      }
+      "published": false
     },
     {
       "match_id": "par-fra-20260705",
@@ -1738,28 +1849,7 @@
       "kickoff_local": "07-05 05:00 BJT",
       "home": "巴拉圭",
       "away": "法国",
-      "published": true,
-      "published_at_bjt": "2026-07-04 18:00 BJT",
-      "ray_prediction": {
-        "advancing_team": "法国",
-        "method": "90",
-        "regulation_score": {
-          "home_score": 0,
-          "away_score": 2
-        },
-        "label": "巴拉圭 0:2 法国，法国90分钟晋级",
-        "reason": "Ray 看好法国在90分钟内解决比赛，巴拉圭爆冷德国后仍会被法国阵容厚度压制。"
-      },
-      "gpt_prediction": {
-        "advancing_team": "法国",
-        "method": "90",
-        "regulation_score": {
-          "home_score": 1,
-          "away_score": 3
-        },
-        "label": "巴拉圭 1:3 法国，法国90分钟晋级",
-        "reason": "GPT 同样看好法国晋级，但认为巴拉圭的反击和定位球可能拿到进球。"
-      }
+      "published": false
     },
     {
       "match_id": "bra-nor-20260706",
@@ -1770,28 +1860,7 @@
       "kickoff_local": "07-06 04:00 BJT",
       "home": "巴西",
       "away": "挪威",
-      "published": true,
-      "ray_prediction": {
-        "advancing_team": "挪威",
-        "method": "extra_time",
-        "regulation_score": {
-          "home_score": 1,
-          "away_score": 1
-        },
-        "label": "巴西 1:1 挪威，挪威加时晋级",
-        "reason": "Ray 押挪威锋线冲击力与加时阶段的身体优势，认为巴西可能被拖入消耗战。"
-      },
-      "gpt_prediction": {
-        "advancing_team": "巴西",
-        "method": "90",
-        "regulation_score": {
-          "home_score": 2,
-          "away_score": 1
-        },
-        "label": "巴西 2:1 挪威，巴西90分钟晋级",
-        "reason": "GPT 认为巴西边路和中前场个人能力仍更完整，能在90分钟内压住挪威。"
-      },
-      "published_at_bjt": "2026-07-07 18:00 BJT"
+      "published": false
     },
     {
       "match_id": "mex-eng-20260706",
@@ -1802,28 +1871,7 @@
       "kickoff_local": "07-06 08:00 BJT",
       "home": "墨西哥",
       "away": "英格兰",
-      "published": true,
-      "ray_prediction": {
-        "advancing_team": "英格兰",
-        "method": "90",
-        "regulation_score": {
-          "home_score": 1,
-          "away_score": 2
-        },
-        "label": "墨西哥 1:2 英格兰，英格兰90分钟晋级",
-        "reason": "Ray 看好英格兰在90分钟内靠阵容深度和定位球解决比赛。"
-      },
-      "gpt_prediction": {
-        "advancing_team": "英格兰",
-        "method": "90",
-        "regulation_score": {
-          "home_score": 0,
-          "away_score": 1
-        },
-        "label": "墨西哥 0:1 英格兰，英格兰90分钟晋级",
-        "reason": "GPT 也看好英格兰，但考虑墨西哥主场、高原和淘汰赛节奏，比分可能更小。"
-      },
-      "published_at_bjt": "2026-07-07 18:00 BJT"
+      "published": false
     },
     {
       "match_id": "por-esp-20260707",
@@ -1834,28 +1882,7 @@
       "kickoff_local": "07-07 03:00 BJT",
       "home": "葡萄牙",
       "away": "西班牙",
-      "published": true,
-      "ray_prediction": {
-        "advancing_team": "西班牙",
-        "method": "extra_time",
-        "regulation_score": {
-          "home_score": 2,
-          "away_score": 2
-        },
-        "label": "葡萄牙 2:2 西班牙，西班牙加时晋级",
-        "reason": "Ray 认为伊比利亚内战会非常胶着，西班牙在加时阶段靠控球和替补深度胜出。"
-      },
-      "gpt_prediction": {
-        "advancing_team": "西班牙",
-        "method": "90",
-        "regulation_score": {
-          "home_score": 1,
-          "away_score": 2
-        },
-        "label": "葡萄牙 1:2 西班牙，西班牙90分钟晋级",
-        "reason": "GPT 看好西班牙整体压迫和中场控制，但认为比赛不一定拖到加时。"
-      },
-      "published_at_bjt": "2026-07-07 18:00 BJT"
+      "published": false
     },
     {
       "match_id": "usa-bel-20260707",
@@ -1866,28 +1893,7 @@
       "kickoff_local": "07-07 08:00 BJT",
       "home": "美国",
       "away": "比利时",
-      "published": true,
-      "ray_prediction": {
-        "advancing_team": "美国",
-        "method": "90",
-        "regulation_score": {
-          "home_score": 3,
-          "away_score": 2
-        },
-        "label": "美国 3:2 比利时，美国90分钟晋级",
-        "reason": "Ray 押美国主场强度和转换速度，认为可以在90分钟内打穿比利时防线。"
-      },
-      "gpt_prediction": {
-        "advancing_team": "比利时",
-        "method": "90",
-        "regulation_score": {
-          "home_score": 1,
-          "away_score": 2
-        },
-        "label": "美国 1:2 比利时，比利时90分钟晋级",
-        "reason": "GPT 看好比利时从加时逆转塞内加尔后延续经验优势，美国会制造压力但难以完全控制节奏。"
-      },
-      "published_at_bjt": "2026-07-07 18:00 BJT"
+      "published": false
     },
     {
       "match_id": "arg-egy-20260708",
@@ -1898,28 +1904,7 @@
       "kickoff_local": "07-08 00:00 BJT",
       "home": "阿根廷",
       "away": "埃及",
-      "published": true,
-      "ray_prediction": {
-        "advancing_team": "阿根廷",
-        "method": "90",
-        "regulation_score": {
-          "home_score": 2,
-          "away_score": 1
-        },
-        "label": "阿根廷 2:1 埃及，阿根廷90分钟晋级",
-        "reason": "Ray 认为阿根廷虽然刚经历加时苦战，但淘汰赛控制力仍足以90分钟过关。"
-      },
-      "gpt_prediction": {
-        "advancing_team": "阿根廷",
-        "method": "90",
-        "regulation_score": {
-          "home_score": 3,
-          "away_score": 1
-        },
-        "label": "阿根廷 3:1 埃及，阿根廷90分钟晋级",
-        "reason": "GPT 看好阿根廷进攻效率回升，埃及能进一球但难以持续承压。"
-      },
-      "published_at_bjt": "2026-07-07 18:00 BJT"
+      "published": false
     },
     {
       "match_id": "sui-col-20260708",
@@ -1930,28 +1915,135 @@
       "kickoff_local": "07-08 04:00 BJT",
       "home": "瑞士",
       "away": "哥伦比亚",
+      "published": false
+    },
+    {
+      "match_id": "fra-mar-20260710",
+      "espn_id": "53452525",
+      "release_at_utc": "2026-07-08T14:00:00Z",
+      "release_time_bjt": "2026-07-08 23:00 BJT",
+      "round": "1/4决赛",
+      "kickoff_local": "07-10 04:00 BJT",
+      "home": "法国",
+      "away": "摩洛哥",
       "published": true,
+      "published_at_bjt": "2026-07-08 23:00 BJT",
       "ray_prediction": {
-        "advancing_team": "瑞士",
-        "method": "penalties",
+        "advancing_team": "法国",
+        "method": "extra_time",
         "regulation_score": {
-          "home_score": 0,
-          "away_score": 0
-        },
-        "label": "瑞士 0:0 哥伦比亚，瑞士点球晋级",
-        "reason": "Ray 押瑞士防守纪律和点球稳定性，认为哥伦比亚会被拖入低比分拉锯。"
-      },
-      "gpt_prediction": {
-        "advancing_team": "哥伦比亚",
-        "method": "90",
-        "regulation_score": {
-          "home_score": 0,
+          "home_score": 1,
           "away_score": 1
         },
-        "label": "瑞士 0:1 哥伦比亚，哥伦比亚90分钟晋级",
-        "reason": "GPT 看好哥伦比亚进攻端变化更多，能在常规时间抓住一次机会。"
+        "label": "法国 1:1 摩洛哥，法国加时晋级",
+        "reason": "Ray 认为摩洛哥防守和反击足以把法国拖入加时，但法国阵容厚度和巨星能力最终更稳。"
       },
-      "published_at_bjt": "2026-07-07 18:00 BJT"
+      "gpt_prediction": {
+        "advancing_team": "法国",
+        "method": "90",
+        "regulation_score": {
+          "home_score": 2,
+          "away_score": 1
+        },
+        "label": "法国 2:1 摩洛哥，法国90分钟晋级",
+        "reason": "GPT 看好法国前场个人能力和转换速度，摩洛哥能进球但难以把比赛拖过90分钟。"
+      }
+    },
+    {
+      "match_id": "esp-bel-20260711",
+      "espn_id": "53452527",
+      "release_at_utc": "2026-07-08T14:00:00Z",
+      "release_time_bjt": "2026-07-08 23:00 BJT",
+      "round": "1/4决赛",
+      "kickoff_local": "07-11 03:00 BJT",
+      "home": "西班牙",
+      "away": "比利时",
+      "published": true,
+      "published_at_bjt": "2026-07-08 23:00 BJT",
+      "ray_prediction": {
+        "advancing_team": "西班牙",
+        "method": "90",
+        "regulation_score": {
+          "home_score": 2,
+          "away_score": 0
+        },
+        "label": "西班牙 2:0 比利时，西班牙90分钟晋级",
+        "reason": "Ray 看好西班牙控球和压迫优势，认为比利时连续硬仗后防线会被持续消耗。"
+      },
+      "gpt_prediction": {
+        "advancing_team": "西班牙",
+        "method": "90",
+        "regulation_score": {
+          "home_score": 2,
+          "away_score": 1
+        },
+        "label": "西班牙 2:1 比利时，西班牙90分钟晋级",
+        "reason": "GPT 也看好西班牙晋级，但比利时进攻经验足以制造一个进球。"
+      }
+    },
+    {
+      "match_id": "nor-eng-20260712",
+      "espn_id": "53452529",
+      "release_at_utc": "2026-07-08T14:00:00Z",
+      "release_time_bjt": "2026-07-08 23:00 BJT",
+      "round": "1/4决赛",
+      "kickoff_local": "07-12 05:00 BJT",
+      "home": "挪威",
+      "away": "英格兰",
+      "published": true,
+      "published_at_bjt": "2026-07-08 23:00 BJT",
+      "ray_prediction": {
+        "advancing_team": "英格兰",
+        "method": "penalties",
+        "regulation_score": {
+          "home_score": 2,
+          "away_score": 2
+        },
+        "label": "挪威 2:2 英格兰，英格兰点球晋级",
+        "reason": "Ray 认为哈兰德会把比赛拖成高比分拉锯，但英格兰整体阵容和点球准备更稳。"
+      },
+      "gpt_prediction": {
+        "advancing_team": "英格兰",
+        "method": "90",
+        "regulation_score": {
+          "home_score": 1,
+          "away_score": 2
+        },
+        "label": "挪威 1:2 英格兰，英格兰90分钟晋级",
+        "reason": "GPT 判断挪威终结点危险，但英格兰阵容更均衡，定位球和替补深度可在90分钟内解决。"
+      }
+    },
+    {
+      "match_id": "arg-sui-20260712",
+      "espn_id": "53452531",
+      "release_at_utc": "2026-07-08T14:00:00Z",
+      "release_time_bjt": "2026-07-08 23:00 BJT",
+      "round": "1/4决赛",
+      "kickoff_local": "07-12 09:00 BJT",
+      "home": "阿根廷",
+      "away": "瑞士",
+      "published": true,
+      "published_at_bjt": "2026-07-08 23:00 BJT",
+      "ray_prediction": {
+        "advancing_team": "阿根廷",
+        "method": "90",
+        "regulation_score": {
+          "home_score": 3,
+          "away_score": 2
+        },
+        "label": "阿根廷 3:2 瑞士，阿根廷90分钟晋级",
+        "reason": "Ray 认为瑞士防守会制造麻烦，但阿根廷淘汰赛处理关键球的能力仍能在90分钟内胜出。"
+      },
+      "gpt_prediction": {
+        "advancing_team": "阿根廷",
+        "method": "90",
+        "regulation_score": {
+          "home_score": 2,
+          "away_score": 0
+        },
+        "label": "阿根廷 2:0 瑞士，阿根廷90分钟晋级",
+        "reason": "GPT 看好阿根廷避免拖入点球，通过控制节奏和球星解决问题在90分钟内过关。"
+      }
     }
   ]
 }

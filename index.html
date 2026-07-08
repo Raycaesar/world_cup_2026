@@ -46,7 +46,7 @@
         </div>
         <p class="eyebrow" id="tagline">World Cup Knockout Prediction Derby</p>
         <h1 id="pageTitle">Ray大战GPT 5.5｜淘汰赛篇</h1>
-        <p class="subtitle" id="pageSubtitle">16强开战：预测池已录入，比分与战报继续自动更新。</p>
+        <p class="subtitle" id="pageSubtitle">1/4决赛开战：8强预测已录入，比分与战报继续自动更新。</p>
         <div class="hero-actions">
           <a href="#next" class="button primary">查看下一场预测</a>
           <a href="archive.html" class="button ghost">小组赛归档</a>
@@ -546,9 +546,9 @@
 
     function roundRank(round) {
       const value = String(round || "");
+      if (value.includes("8") || value.includes("1/4")) return 0;
       if (value.includes("16")) return 1;
       if (value.includes("32")) return 2;
-      if (value.includes("8") || value.includes("1/4")) return 0;
       return 9;
     }
 
@@ -586,9 +586,11 @@
         details.open = index === 0;
         const matches = groups.get(round).slice().sort((a, b) => parseBjDateTime(a.kickoff_local) - parseBjDateTime(b.kickoff_local));
         const summary = create("summary", "review-day-summary");
-        summary.appendChild(create("span", "", round.includes("16") ? "16强对阵图" : `${round}对阵图`));
+        const roundName = round.includes("1/4") || round.includes("8") ? "8强对阵图" : round.includes("16") ? "16强对阵图" : round.includes("32") ? "32强对阵图" : `${round}对阵图`;
+        const roundNote = round.includes("1/4") || round.includes("8") ? "待赛，双方预测已录入" : (round.includes("16") || round.includes("32")) ? "已完赛，附比分并高亮胜者" : "淘汰赛对阵";
+        summary.appendChild(create("span", "", roundName));
         summary.appendChild(create("strong", "", `${matches.length} 场`));
-        summary.appendChild(create("em", "", round.includes("32") ? "已完赛，附比分并高亮胜者" : "待赛，预测陆续发布"));
+        summary.appendChild(create("em", "", roundNote));
         details.appendChild(summary);
         const grid = create("div", "bracket-grid");
         matches.forEach(item => grid.appendChild(renderBracketCard(item)));
