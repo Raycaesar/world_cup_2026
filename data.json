@@ -7,10 +7,10 @@
     "tagline": "World Cup Knockout Prediction Derby"
   },
   "meta": {
-    "updated_at": "2026-07-09 18:00 BJT",
+    "updated_at": "2026-07-10 06:10 BJT",
     "active_day": "2026-07-10",
     "timezone": "Asia/Beijing",
-    "version": "prediction-release-202607091000"
+    "version": "knockout-auto-202607092210"
   },
   "phase": "knockout",
   "archive": {
@@ -19,11 +19,11 @@
   },
   "score_summary": {
     "ray_total": 70,
-    "gpt_total": 81,
-    "leader_comment": "GPT 5.5 以 81:70 领先 Ray。1/4决赛由 GPT 5.5 先手预测，Ray 随后应战。"
+    "gpt_total": 82,
+    "leader_comment": "GPT 5.5 以 82:70 领先 Ray。"
   },
-  "headline": "淘汰赛预测发布：加拿大 vs 摩洛哥、巴拉圭 vs 法国、巴西 vs 挪威、墨西哥 vs 英格兰、葡萄牙 vs 西班牙、美国 vs 比利时、阿根廷 vs 埃及、瑞士 vs 哥伦比亚",
-  "brief": "北京时间 2026-07-09 18:00 BJT 已发布 8 场淘汰赛预测：加拿大 vs 摩洛哥；巴拉圭 vs 法国；巴西 vs 挪威；墨西哥 vs 英格兰；葡萄牙 vs 西班牙；美国 vs 比利时；阿根廷 vs 埃及；瑞士 vs 哥伦比亚。",
+  "headline": "淘汰赛更新：法国 2:0 摩洛哥",
+  "brief": "最新淘汰赛已结算：法国 2:0 摩洛哥，Ray +0，GPT +1。",
   "knockout_rules": [
     "只有一方猜中晋级队时，猜中者先得 3 分；若同时猜中晋级方式，再得 1 分；若90分钟比分完全命中，再得 1 分，单场最高 5 分。",
     "双方都猜中晋级队时，不重复给胜负分，只比较晋级方式与90分钟比分：方式正确 +1，90分钟比分完全命中再 +1。",
@@ -971,24 +971,27 @@
     },
     {
       "id": "fra-mar-20260710",
-      "espn_id": "53452525",
+      "espn_id": "760510",
       "round": "1/4决赛",
       "kickoff_local": "07-10 04:00 BJT",
       "home": "法国",
       "away": "摩洛哥",
       "venue": "",
-      "status": "未开始",
+      "status": "已结束",
       "actual": {
-        "method": null,
+        "method": "90",
         "regulation_score": {
-          "home_score": null,
-          "away_score": null
+          "home_score": 2,
+          "away_score": 0
         },
         "final_score": {
-          "home_score": null,
-          "away_score": null
+          "home_score": 2,
+          "away_score": 0
         },
-        "advancing_team": null
+        "advancing_team": "法国",
+        "scorer_update_pending": true,
+        "next_match": "对阵西班牙/比利时胜者",
+        "scorer_update_status": "needs_manual_goal_scorers"
       },
       "ray_prediction": {
         "advancing_team": "法国",
@@ -1010,8 +1013,12 @@
         "label": "法国 2:1 摩洛哥，法国90分钟晋级",
         "reason": "GPT 看好法国前场个人能力和转换速度，摩洛哥能进球但难以把比赛拖过90分钟。"
       },
-      "manual_points": null,
-      "review": "赛前预测。",
+      "manual_points": {
+        "ray": 0,
+        "gpt": 1,
+        "explanation": "双方都猜中晋级队；不重复给胜负分，只按晋级方式与90分钟比分计分：Ray +0，GPT +1。"
+      },
+      "review": "法国 2:0 摩洛哥，法国晋级。下一轮将对阵西班牙/比利时胜者。双方都猜中晋级队；不重复给胜负分，只按晋级方式与90分钟比分计分：Ray +0，GPT +1。",
       "predictions_published_at": "2026-07-08 23:00 BJT",
       "published": true,
       "published_at_bjt": "2026-07-08 23:00 BJT"
@@ -1165,8 +1172,19 @@
       "kickoff_local": "07-10 04:00 BJT",
       "home": "法国",
       "away": "摩洛哥",
-      "status": "未开始",
-      "note": "胜者对阵西班牙/比利时胜者"
+      "status": "已结束",
+      "note": "法国通过90分钟晋级，对阵西班牙/比利时胜者",
+      "winner": "法国",
+      "method": "90",
+      "score_obj": {
+        "home_score": 2,
+        "away_score": 0
+      },
+      "score": "2:0",
+      "regulation_score": {
+        "home_score": 2,
+        "away_score": 0
+      }
     },
     {
       "id": "53452527",
@@ -1708,6 +1726,14 @@
     {
       "time": "07-09 18:00",
       "text": "发布次日淘汰赛预测：加拿大 vs 摩洛哥、巴拉圭 vs 法国、巴西 vs 挪威、墨西哥 vs 英格兰、葡萄牙 vs 西班牙、美国 vs 比利时、阿根廷 vs 埃及、瑞士 vs 哥伦比亚。"
+    },
+    {
+      "time": "07-10 06:10",
+      "text": "淘汰赛更新：法国 2:0 摩洛哥，Ray +0，GPT +1。"
+    },
+    {
+      "time": "07-10 06:10",
+      "text": "射手榜待核对：法国 vs 摩洛哥 已有进球，但 ESPN scoring plays 暂未解析出进球者。"
     }
   ],
   "live_ticker": [
