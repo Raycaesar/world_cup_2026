@@ -7,10 +7,10 @@
     "tagline": "World Cup Knockout Prediction Derby"
   },
   "meta": {
-    "updated_at": "2026-07-10 08:30 BJT",
+    "updated_at": "2026-07-10 08:40 BJT",
     "active_day": "2026-07-10",
     "timezone": "Asia/Beijing",
-    "version": "knockout-auto-202607100030"
+    "version": "knockout-auto-202607100040"
   },
   "phase": "knockout",
   "archive": {
@@ -1712,10 +1712,6 @@
   ],
   "update_log": [
     {
-      "time": "07-08 22:41",
-      "text": "1/8决赛全部结束：法国、摩洛哥、西班牙、比利时、挪威、英格兰、阿根廷、瑞士晋级8强。"
-    },
-    {
       "time": "07-08 23:00",
       "text": "1/4决赛预测已录入：法国 vs 摩洛哥、西班牙 vs 比利时、挪威 vs 英格兰、阿根廷 vs 瑞士。"
     },
@@ -1789,6 +1785,10 @@
     },
     {
       "time": "07-10 08:30",
+      "text": "射手榜待核对：法国 vs 摩洛哥 已有进球，但 ESPN scoring plays 暂未解析出进球者。"
+    },
+    {
+      "time": "07-10 08:40",
       "text": "射手榜待核对：法国 vs 摩洛哥 已有进球，但 ESPN scoring plays 暂未解析出进球者。"
     }
   ],
