@@ -7,10 +7,10 @@
     "tagline": "World Cup Knockout Prediction Derby"
   },
   "meta": {
-    "updated_at": "2026-07-11 04:50 BJT",
+    "updated_at": "2026-07-11 05:00 BJT",
     "active_day": "2026-07-10",
     "timezone": "Asia/Beijing",
-    "version": "knockout-auto-202607102050"
+    "version": "knockout-auto-202607102100"
   },
   "phase": "knockout",
   "archive": {
@@ -18,12 +18,12 @@
     "href": "archive.html"
   },
   "score_summary": {
-    "ray_total": 70,
-    "gpt_total": 82,
-    "leader_comment": "GPT 5.5 以 82:70 领先 Ray。"
+    "ray_total": 71,
+    "gpt_total": 84,
+    "leader_comment": "GPT 5.5 以 84:71 领先 Ray。"
   },
-  "headline": "淘汰赛更新：法国 2:0 摩洛哥",
-  "brief": "最新淘汰赛已结算：法国 2:0 摩洛哥，Ray +0，GPT +1。",
+  "headline": "淘汰赛更新：西班牙 2:1 比利时",
+  "brief": "最新淘汰赛已结算：西班牙 2:1 比利时，Ray +1，GPT +2。",
   "knockout_rules": [
     "只有一方猜中晋级队时，猜中者先得 3 分；若同时猜中晋级方式，再得 1 分；若90分钟比分完全命中，再得 1 分，单场最高 5 分。",
     "双方都猜中晋级队时，不重复给胜负分，只比较晋级方式与90分钟比分：方式正确 +1，90分钟比分完全命中再 +1。",
@@ -1025,24 +1025,27 @@
     },
     {
       "id": "esp-bel-20260711",
-      "espn_id": "53452527",
+      "espn_id": "760511",
       "round": "1/4决赛",
       "kickoff_local": "07-11 03:00 BJT",
       "home": "西班牙",
       "away": "比利时",
       "venue": "",
-      "status": "未开始",
+      "status": "已结束",
       "actual": {
-        "method": null,
+        "method": "90",
         "regulation_score": {
-          "home_score": null,
-          "away_score": null
+          "home_score": 2,
+          "away_score": 1
         },
         "final_score": {
-          "home_score": null,
-          "away_score": null
+          "home_score": 2,
+          "away_score": 1
         },
-        "advancing_team": null
+        "advancing_team": "西班牙",
+        "scorer_update_pending": true,
+        "next_match": "对阵法国/摩洛哥胜者",
+        "scorer_update_status": "needs_manual_goal_scorers"
       },
       "ray_prediction": {
         "advancing_team": "西班牙",
@@ -1064,8 +1067,12 @@
         "label": "西班牙 2:1 比利时，西班牙90分钟晋级",
         "reason": "GPT 也看好西班牙晋级，但比利时进攻经验足以制造一个进球。"
       },
-      "manual_points": null,
-      "review": "赛前预测。",
+      "manual_points": {
+        "ray": 1,
+        "gpt": 2,
+        "explanation": "双方都猜中晋级队；不重复给胜负分，只按晋级方式与90分钟比分计分：Ray +1，GPT +2。"
+      },
+      "review": "西班牙 2:1 比利时，西班牙晋级。下一轮将对阵法国/摩洛哥胜者。双方都猜中晋级队；不重复给胜负分，只按晋级方式与90分钟比分计分：Ray +1，GPT +2。",
       "predictions_published_at": "2026-07-08 23:00 BJT",
       "published": true,
       "published_at_bjt": "2026-07-08 23:00 BJT"
@@ -1192,8 +1199,19 @@
       "kickoff_local": "07-11 03:00 BJT",
       "home": "西班牙",
       "away": "比利时",
-      "status": "未开始",
-      "note": "胜者对阵法国/摩洛哥胜者"
+      "status": "已结束",
+      "note": "西班牙通过90分钟晋级，对阵法国/摩洛哥胜者",
+      "winner": "西班牙",
+      "method": "90",
+      "score_obj": {
+        "home_score": 2,
+        "away_score": 1
+      },
+      "score": "2:1",
+      "regulation_score": {
+        "home_score": 2,
+        "away_score": 1
+      }
     },
     {
       "id": "53452529",
@@ -1712,18 +1730,6 @@
   ],
   "update_log": [
     {
-      "time": "07-11 01:40",
-      "text": "射手榜待核对：法国 vs 摩洛哥 已有进球，但 ESPN scoring plays 暂未解析出进球者。"
-    },
-    {
-      "time": "07-11 01:50",
-      "text": "射手榜待核对：法国 vs 摩洛哥 已有进球，但 ESPN scoring plays 暂未解析出进球者。"
-    },
-    {
-      "time": "07-11 02:00",
-      "text": "射手榜待核对：法国 vs 摩洛哥 已有进球，但 ESPN scoring plays 暂未解析出进球者。"
-    },
-    {
       "time": "07-11 02:10",
       "text": "射手榜待核对：法国 vs 摩洛哥 已有进球，但 ESPN scoring plays 暂未解析出进球者。"
     },
@@ -1790,6 +1796,18 @@
     {
       "time": "07-11 04:50",
       "text": "射手榜待核对：法国 vs 摩洛哥 已有进球，但 ESPN scoring plays 暂未解析出进球者。"
+    },
+    {
+      "time": "07-11 05:00",
+      "text": "淘汰赛更新：西班牙 2:1 比利时，Ray +1，GPT +2。"
+    },
+    {
+      "time": "07-11 05:00",
+      "text": "射手榜待核对：法国 vs 摩洛哥 已有进球，但 ESPN scoring plays 暂未解析出进球者。"
+    },
+    {
+      "time": "07-11 05:00",
+      "text": "射手榜待核对：西班牙 vs 比利时 已有进球，但 ESPN scoring plays 暂未解析出进球者。"
     }
   ],
   "live_ticker": [
