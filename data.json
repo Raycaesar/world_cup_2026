@@ -7,10 +7,10 @@
     "tagline": "World Cup Knockout Prediction Derby"
   },
   "meta": {
-    "updated_at": "2026-07-10 11:20 BJT",
+    "updated_at": "2026-07-10 11:30 BJT",
     "active_day": "2026-07-10",
     "timezone": "Asia/Beijing",
-    "version": "knockout-auto-202607100320"
+    "version": "knockout-auto-202607100330"
   },
   "phase": "knockout",
   "archive": {
@@ -1712,10 +1712,6 @@
   ],
   "update_log": [
     {
-      "time": "07-10 08:10",
-      "text": "射手榜待核对：法国 vs 摩洛哥 已有进球，但 ESPN scoring plays 暂未解析出进球者。"
-    },
-    {
       "time": "07-10 08:20",
       "text": "射手榜待核对：法国 vs 摩洛哥 已有进球，但 ESPN scoring plays 暂未解析出进球者。"
     },
@@ -1789,6 +1785,10 @@
     },
     {
       "time": "07-10 11:20",
+      "text": "射手榜待核对：法国 vs 摩洛哥 已有进球，但 ESPN scoring plays 暂未解析出进球者。"
+    },
+    {
+      "time": "07-10 11:30",
       "text": "射手榜待核对：法国 vs 摩洛哥 已有进球，但 ESPN scoring plays 暂未解析出进球者。"
     }
   ],
