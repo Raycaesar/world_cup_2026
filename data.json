@@ -7,10 +7,10 @@
     "tagline": "World Cup Knockout Prediction Derby"
   },
   "meta": {
-    "updated_at": "2026-07-10 08:50 BJT",
+    "updated_at": "2026-07-10 09:00 BJT",
     "active_day": "2026-07-10",
     "timezone": "Asia/Beijing",
-    "version": "knockout-auto-202607100050"
+    "version": "knockout-auto-202607100100"
   },
   "phase": "knockout",
   "archive": {
@@ -1712,10 +1712,6 @@
   ],
   "update_log": [
     {
-      "time": "07-08 23:00",
-      "text": "射手榜更新：梅西8球领跑，姆巴佩和哈兰德7球紧追。"
-    },
-    {
       "time": "07-09 18:00",
       "text": "发布次日淘汰赛预测：加拿大 vs 摩洛哥、巴拉圭 vs 法国、巴西 vs 挪威、墨西哥 vs 英格兰、葡萄牙 vs 西班牙、美国 vs 比利时、阿根廷 vs 埃及、瑞士 vs 哥伦比亚。"
     },
@@ -1789,6 +1785,10 @@
     },
     {
       "time": "07-10 08:50",
+      "text": "射手榜待核对：法国 vs 摩洛哥 已有进球，但 ESPN scoring plays 暂未解析出进球者。"
+    },
+    {
+      "time": "07-10 09:00",
       "text": "射手榜待核对：法国 vs 摩洛哥 已有进球，但 ESPN scoring plays 暂未解析出进球者。"
     }
   ],
