@@ -9,6 +9,28 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Black+Ops+One&family=Bebas+Neue&family=Rajdhani:wght@500;600;700&family=Noto+Sans+SC:wght@400;500;700;900&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="style.css?v=knockout-20260704-r16" />
+
+  <style id="semifinal-bracket-cyan-overrides">
+    .bracket-card.has-winner {
+      border-color: rgba(116, 231, 255, .38);
+      background: linear-gradient(135deg, rgba(116, 231, 255, .105), rgba(4, 18, 32, .50));
+      box-shadow: 0 0 0 1px rgba(116, 231, 255, .08), 0 16px 40px rgba(0, 0, 0, .20);
+    }
+    .bracket-card .winner {
+      color: #74e7ff;
+      text-shadow: 0 0 16px rgba(116, 231, 255, .58);
+      border-bottom: 2px solid rgba(116, 231, 255, .72);
+      padding-bottom: 2px;
+    }
+    .bracket-card.has-winner .vs-mini {
+      color: #74e7ff;
+      border-color: rgba(116, 231, 255, .36);
+      background: rgba(116, 231, 255, .12);
+    }
+    .bracket-round-section[open] .review-day-summary {
+      border-bottom-color: rgba(116, 231, 255, .22);
+    }
+  </style>
 </head>
 <body>
   <div class="stadium-light light-left" aria-hidden="true"></div>
@@ -546,9 +568,10 @@
 
     function roundRank(round) {
       const value = String(round || "");
-      if (value.includes("8") || value.includes("1/4")) return 0;
-      if (value.includes("16")) return 1;
-      if (value.includes("32")) return 2;
+      if (value.includes("半决") || /semi/i.test(value)) return 0;
+      if (value.includes("8") || value.includes("1/4") || /quarter/i.test(value)) return 1;
+      if (value.includes("16")) return 2;
+      if (value.includes("32")) return 3;
       return 9;
     }
 
@@ -586,8 +609,10 @@
         details.open = index === 0;
         const matches = groups.get(round).slice().sort((a, b) => parseBjDateTime(a.kickoff_local) - parseBjDateTime(b.kickoff_local));
         const summary = create("summary", "review-day-summary");
-        const roundName = round.includes("1/4") || round.includes("8") ? "8强对阵图" : round.includes("16") ? "16强对阵图" : round.includes("32") ? "32强对阵图" : `${round}对阵图`;
-        const roundNote = round.includes("1/4") || round.includes("8") ? "待赛，双方预测已录入" : (round.includes("16") || round.includes("32")) ? "已完赛，附比分并高亮胜者" : "淘汰赛对阵";
+        const isSemi = round.includes("半决") || /semi/i.test(round);
+        const isQuarter = round.includes("1/4") || round.includes("8") || /quarter/i.test(round);
+        const roundName = isSemi ? "半决赛对阵图" : isQuarter ? "8强对阵图" : round.includes("16") ? "16强对阵图" : round.includes("32") ? "32强对阵图" : `${round}对阵图`;
+        const roundNote = isSemi ? "待赛，双方预测已录入" : isQuarter ? "已完赛，附比分并高亮胜者" : (round.includes("16") || round.includes("32")) ? "已完赛，附比分并高亮胜者" : "淘汰赛对阵";
         summary.appendChild(create("span", "", roundName));
         summary.appendChild(create("strong", "", `${matches.length} 场`));
         summary.appendChild(create("em", "", roundNote));
