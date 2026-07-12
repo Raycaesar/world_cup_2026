@@ -7,10 +7,10 @@
     "tagline": "World Cup Knockout Prediction Derby"
   },
   "meta": {
-    "updated_at": "2026-07-12 11:51 BJT",
+    "updated_at": "2026-07-12 12:01 BJT",
     "active_day": "2026-07-10",
     "timezone": "Asia/Beijing",
-    "version": "knockout-auto-202607120351"
+    "version": "knockout-auto-202607120401"
   },
   "phase": "knockout",
   "archive": {
@@ -22,8 +22,8 @@
     "gpt_total": 84,
     "leader_comment": "GPT 5.5 以 84:71 领先 Ray。"
   },
-  "headline": "淘汰赛更新：挪威 1:2（加时） 英格兰",
-  "brief": "最新淘汰赛已结算：挪威 1:2（加时） 英格兰，Ray +0，GPT +0。",
+  "headline": "淘汰赛更新：阿根廷 3:1（加时） 瑞士",
+  "brief": "最新淘汰赛已结算：阿根廷 3:1（加时） 瑞士，Ray +0，GPT +0。",
   "knockout_rules": [
     "只有一方猜中晋级队时，猜中者先得 3 分；若同时猜中晋级方式，再得 1 分；若90分钟比分完全命中，再得 1 分，单场最高 5 分。",
     "双方都猜中晋级队时，不重复给胜负分，只比较晋级方式与90分钟比分：方式正确 +1，90分钟比分完全命中再 +1。",
@@ -1137,24 +1137,31 @@
     },
     {
       "id": "arg-sui-20260712",
-      "espn_id": "53452531",
+      "espn_id": "760513",
       "round": "1/4决赛",
       "kickoff_local": "07-12 09:00 BJT",
       "home": "阿根廷",
       "away": "瑞士",
       "venue": "",
-      "status": "未开始",
+      "status": "已结束",
       "actual": {
-        "method": null,
+        "method": "extra_time",
         "regulation_score": {
-          "home_score": null,
-          "away_score": null
+          "home_score": 1,
+          "away_score": 1
         },
         "final_score": {
-          "home_score": null,
-          "away_score": null
+          "home_score": 3,
+          "away_score": 1
         },
-        "advancing_team": null
+        "advancing_team": "阿根廷",
+        "extra_time_score": {
+          "home_score": 3,
+          "away_score": 1
+        },
+        "scorer_update_pending": true,
+        "next_match": "对阵挪威/英格兰胜者",
+        "scorer_update_status": "needs_manual_goal_scorers"
       },
       "ray_prediction": {
         "advancing_team": "阿根廷",
@@ -1176,8 +1183,12 @@
         "label": "阿根廷 2:0 瑞士，阿根廷90分钟晋级",
         "reason": "GPT 看好阿根廷避免拖入点球，通过控制节奏和球星解决问题在90分钟内过关。"
       },
-      "manual_points": null,
-      "review": "赛前预测。",
+      "manual_points": {
+        "ray": 0,
+        "gpt": 0,
+        "explanation": "双方都猜中晋级队；不重复给胜负分，只按晋级方式与90分钟比分计分：Ray +0，GPT +0。"
+      },
+      "review": "阿根廷 3:1 瑞士，加时，90分钟 1:1，阿根廷晋级。下一轮将对阵挪威/英格兰胜者。双方都猜中晋级队；不重复给胜负分，只按晋级方式与90分钟比分计分：Ray +0，GPT +0。",
       "predictions_published_at": "2026-07-08 23:00 BJT",
       "published": true,
       "published_at_bjt": "2026-07-08 23:00 BJT"
@@ -1250,8 +1261,19 @@
       "kickoff_local": "07-12 09:00 BJT",
       "home": "阿根廷",
       "away": "瑞士",
-      "status": "未开始",
-      "note": "胜者对阵挪威/英格兰胜者"
+      "status": "已结束",
+      "note": "阿根廷通过加时晋级，对阵挪威/英格兰胜者",
+      "winner": "阿根廷",
+      "method": "extra_time",
+      "score_obj": {
+        "home_score": 3,
+        "away_score": 1
+      },
+      "score": "3:1（加时）",
+      "regulation_score": {
+        "home_score": 1,
+        "away_score": 1
+      }
     },
     {
       "id": "53452511",
@@ -1752,26 +1774,6 @@
   ],
   "update_log": [
     {
-      "time": "07-12 10:51",
-      "text": "射手榜待核对：西班牙 vs 比利时 已有进球，但 ESPN scoring plays 暂未解析出进球者。"
-    },
-    {
-      "time": "07-12 10:51",
-      "text": "射手榜待核对：挪威 vs 英格兰 已有进球，但 ESPN scoring plays 暂未解析出进球者。"
-    },
-    {
-      "time": "07-12 11:01",
-      "text": "射手榜待核对：法国 vs 摩洛哥 已有进球，但 ESPN scoring plays 暂未解析出进球者。"
-    },
-    {
-      "time": "07-12 11:01",
-      "text": "射手榜待核对：西班牙 vs 比利时 已有进球，但 ESPN scoring plays 暂未解析出进球者。"
-    },
-    {
-      "time": "07-12 11:01",
-      "text": "射手榜待核对：挪威 vs 英格兰 已有进球，但 ESPN scoring plays 暂未解析出进球者。"
-    },
-    {
       "time": "07-12 11:11",
       "text": "射手榜待核对：法国 vs 摩洛哥 已有进球，但 ESPN scoring plays 暂未解析出进球者。"
     },
@@ -1830,6 +1832,26 @@
     {
       "time": "07-12 11:51",
       "text": "射手榜待核对：挪威 vs 英格兰 已有进球，但 ESPN scoring plays 暂未解析出进球者。"
+    },
+    {
+      "time": "07-12 12:01",
+      "text": "淘汰赛更新：阿根廷 3:1（加时） 瑞士，Ray +0，GPT +0。"
+    },
+    {
+      "time": "07-12 12:01",
+      "text": "射手榜待核对：法国 vs 摩洛哥 已有进球，但 ESPN scoring plays 暂未解析出进球者。"
+    },
+    {
+      "time": "07-12 12:01",
+      "text": "射手榜待核对：西班牙 vs 比利时 已有进球，但 ESPN scoring plays 暂未解析出进球者。"
+    },
+    {
+      "time": "07-12 12:01",
+      "text": "射手榜待核对：挪威 vs 英格兰 已有进球，但 ESPN scoring plays 暂未解析出进球者。"
+    },
+    {
+      "time": "07-12 12:01",
+      "text": "射手榜待核对：阿根廷 vs 瑞士 已有进球，但 ESPN scoring plays 暂未解析出进球者。"
     }
   ],
   "live_ticker": [
