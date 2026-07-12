@@ -7,10 +7,10 @@
     "tagline": "World Cup Knockout Prediction Derby"
   },
   "meta": {
-    "updated_at": "2026-07-12 17:01 BJT",
+    "updated_at": "2026-07-12 17:11 BJT",
     "active_day": "2026-07-10",
     "timezone": "Asia/Beijing",
-    "version": "knockout-auto-202607120901"
+    "version": "knockout-auto-202607120911"
   },
   "phase": "knockout",
   "archive": {
@@ -1774,22 +1774,6 @@
   ],
   "update_log": [
     {
-      "time": "07-12 16:21",
-      "text": "射手榜待核对：法国 vs 摩洛哥 已有进球，但 ESPN scoring plays 暂未解析出进球者。"
-    },
-    {
-      "time": "07-12 16:21",
-      "text": "射手榜待核对：西班牙 vs 比利时 已有进球，但 ESPN scoring plays 暂未解析出进球者。"
-    },
-    {
-      "time": "07-12 16:21",
-      "text": "射手榜待核对：挪威 vs 英格兰 已有进球，但 ESPN scoring plays 暂未解析出进球者。"
-    },
-    {
-      "time": "07-12 16:21",
-      "text": "射手榜待核对：阿根廷 vs 瑞士 已有进球，但 ESPN scoring plays 暂未解析出进球者。"
-    },
-    {
       "time": "07-12 16:31",
       "text": "射手榜待核对：法国 vs 摩洛哥 已有进球，但 ESPN scoring plays 暂未解析出进球者。"
     },
@@ -1851,6 +1835,22 @@
     },
     {
       "time": "07-12 17:01",
+      "text": "射手榜待核对：阿根廷 vs 瑞士 已有进球，但 ESPN scoring plays 暂未解析出进球者。"
+    },
+    {
+      "time": "07-12 17:11",
+      "text": "射手榜待核对：法国 vs 摩洛哥 已有进球，但 ESPN scoring plays 暂未解析出进球者。"
+    },
+    {
+      "time": "07-12 17:11",
+      "text": "射手榜待核对：西班牙 vs 比利时 已有进球，但 ESPN scoring plays 暂未解析出进球者。"
+    },
+    {
+      "time": "07-12 17:11",
+      "text": "射手榜待核对：挪威 vs 英格兰 已有进球，但 ESPN scoring plays 暂未解析出进球者。"
+    },
+    {
+      "time": "07-12 17:11",
       "text": "射手榜待核对：阿根廷 vs 瑞士 已有进球，但 ESPN scoring plays 暂未解析出进球者。"
     }
   ],
