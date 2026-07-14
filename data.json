@@ -7,10 +7,10 @@
     "tagline": "World Cup Knockout Prediction Derby"
   },
   "meta": {
-    "updated_at": "2026-07-13 18:01 BJT",
+    "updated_at": "2026-07-15 05:11 BJT",
     "active_day": "2026-07-15",
     "timezone": "Asia/Beijing",
-    "version": "prediction-release-202607131001"
+    "version": "knockout-auto-202607142111"
   },
   "phase": "knockout",
   "archive": {
@@ -19,11 +19,11 @@
   },
   "score_summary": {
     "ray_total": 71,
-    "gpt_total": 84,
-    "leader_comment": "GPT 5.5 以 84:71 领先 Ray。半决赛预测已录入。"
+    "gpt_total": 88,
+    "leader_comment": "GPT 5.5 以 88:71 领先 Ray。"
   },
-  "headline": "半决赛预测发布：法国 vs 西班牙、阿根廷 vs 英格兰",
-  "brief": "北京时间 2026-07-13 18:01 BJT 已发布半决赛预测：法国 vs 西班牙；阿根廷 vs 英格兰。",
+  "headline": "淘汰赛更新：法国 0:2 西班牙",
+  "brief": "最新淘汰赛已结算：法国 0:2 西班牙，Ray +0，GPT +4。",
   "knockout_rules": [
     "只有一方猜中晋级队时，猜中者先得 3 分；若同时猜中晋级方式，再得 1 分；若90分钟比分完全命中，再得 1 分，单场最高 5 分。",
     "双方都猜中晋级队时，不重复给胜负分，只比较晋级方式与90分钟比分：方式正确 +1，90分钟比分完全命中再 +1。",
@@ -1187,24 +1187,27 @@
     },
     {
       "id": "fra-esp-20260715",
-      "espn_id": "53452533",
+      "espn_id": "760514",
       "round": "半决赛",
       "kickoff_local": "07-15 03:00 BJT",
       "home": "法国",
       "away": "西班牙",
       "venue": "Dallas Stadium",
-      "status": "未开始",
+      "status": "已结束",
       "actual": {
-        "method": null,
+        "method": "90",
         "regulation_score": {
-          "home_score": null,
-          "away_score": null
+          "home_score": 0,
+          "away_score": 2
         },
         "final_score": {
-          "home_score": null,
-          "away_score": null
+          "home_score": 0,
+          "away_score": 2
         },
-        "advancing_team": null
+        "advancing_team": "西班牙",
+        "scorer_update_pending": true,
+        "next_match": "",
+        "scorer_update_status": "needs_manual_goal_scorers"
       },
       "ray_prediction": {
         "advancing_team": "法国",
@@ -1226,8 +1229,12 @@
         "label": "法国 1:2 西班牙，西班牙90分钟晋级",
         "reason": "GPT 认为西班牙中场控制和压迫连续性更好，能在90分钟内抓住法国防线转换空档。"
       },
-      "manual_points": null,
-      "review": "赛前预测。",
+      "manual_points": {
+        "ray": 0,
+        "gpt": 4,
+        "explanation": "GPT 猜中晋级队，Ray 未猜中；晋级队 +3，路径与比分加分 +1，GPT +4。"
+      },
+      "review": "法国 0:2 西班牙，西班牙晋级。GPT 猜中晋级队，Ray 未猜中；晋级队 +3，路径与比分加分 +1，GPT +4。",
       "predictions_published_at": "2026-07-12 23:00 BJT",
       "published": true,
       "published_at_bjt": "2026-07-12 23:00 BJT"
@@ -1863,9 +1870,20 @@
       "kickoff_local": "07-15 03:00 BJT",
       "home": "法国",
       "away": "西班牙",
-      "status": "未开始",
-      "note": "双方预测已录入。",
-      "venue": "Dallas Stadium"
+      "status": "已结束",
+      "note": "西班牙通过90分钟晋级",
+      "venue": "Dallas Stadium",
+      "winner": "西班牙",
+      "method": "90",
+      "score_obj": {
+        "home_score": 0,
+        "away_score": 2
+      },
+      "score": "0:2",
+      "regulation_score": {
+        "home_score": 0,
+        "away_score": 2
+      }
     },
     {
       "id": "53452535",
@@ -1894,6 +1912,14 @@
     {
       "time": "07-13 18:01",
       "text": "发布次日淘汰赛预测：加拿大 vs 摩洛哥、巴拉圭 vs 法国、巴西 vs 挪威、墨西哥 vs 英格兰、葡萄牙 vs 西班牙、美国 vs 比利时、阿根廷 vs 埃及、瑞士 vs 哥伦比亚。"
+    },
+    {
+      "time": "07-15 05:11",
+      "text": "淘汰赛更新：法国 0:2 西班牙，Ray +0，GPT +4。"
+    },
+    {
+      "time": "07-15 05:11",
+      "text": "射手榜待核对：法国 vs 西班牙 已有进球，但 ESPN scoring plays 暂未解析出进球者。"
     }
   ],
   "live_ticker": [
