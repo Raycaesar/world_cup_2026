@@ -7,10 +7,10 @@
     "tagline": "World Cup Knockout Prediction Derby"
   },
   "meta": {
-    "updated_at": "2026-07-15 07:31 BJT",
+    "updated_at": "2026-07-15 07:41 BJT",
     "active_day": "2026-07-15",
     "timezone": "Asia/Beijing",
-    "version": "knockout-auto-202607142331"
+    "version": "knockout-auto-202607142341"
   },
   "phase": "knockout",
   "archive": {
@@ -1898,10 +1898,6 @@
   ],
   "update_log": [
     {
-      "time": "07-12 22:40",
-      "text": "1/4决赛结束：法国、西班牙、英格兰、阿根廷晋级四强。"
-    },
-    {
       "time": "07-12 22:50",
       "text": "积分更新：Ray 71，GPT 84；GPT 5.5 继续领先。"
     },
@@ -1975,6 +1971,10 @@
     },
     {
       "time": "07-15 07:31",
+      "text": "射手榜待核对：法国 vs 西班牙 已有进球，但 ESPN scoring plays 暂未解析出进球者。"
+    },
+    {
+      "time": "07-15 07:41",
       "text": "射手榜待核对：法国 vs 西班牙 已有进球，但 ESPN scoring plays 暂未解析出进球者。"
     }
   ],
