@@ -1,16 +1,16 @@
 {
   "site": {
     "title": "Ray大战GPT 5.5｜淘汰赛篇",
-    "subtitle": "终局两战：季军赛法国 vs 英格兰，决赛西班牙 vs 阿根廷。",
+    "subtitle": "决赛前夜：法国/英格兰争季军，西班牙/阿根廷争冠军；冠军产生后才触发庆祝动画。",
     "status": "FINAL COUNTDOWN",
     "refresh_seconds": 30,
     "tagline": "World Cup Final Prediction Derby"
   },
   "meta": {
-    "updated_at": "2026-07-16 07:30 BJT",
+    "updated_at": "2026-07-16 08:20 BJT",
     "active_day": "2026-07-19 / 2026-07-20",
     "timezone": "Asia/Beijing",
-    "version": "final-predictions-20260716"
+    "version": "final-bracket-order-fix-202607160820"
   },
   "phase": "knockout",
   "archive": {
@@ -23,7 +23,7 @@
     "leader_comment": "GPT 5.5 以 90:71 领先 Ray。最后两场已录入；Ray 的阿根廷冠军大奖仍保留翻盘可能。"
   },
   "headline": "终局预测发布：法国/英格兰争季军，西班牙/阿根廷争冠军",
-  "brief": "半决赛已结算：西班牙 2:0 法国，阿根廷 2:1 英格兰。最后两场预测已录入；赛前页面进入压抑的决战氛围。",
+  "brief": "半决赛已结算：西班牙 2:0 法国，阿根廷 2:1 英格兰。最后两场预测已录入；赛前页面进入压抑的决战氛围，冠军产生后才触发 Confetti 庆祝。",
   "knockout_rules": [
     "只有一方猜中晋级队时，猜中者先得 3 分；若同时猜中晋级方式，再得 1 分；若90分钟比分完全命中，再得 1 分，单场最高 5 分。",
     "双方都猜中晋级队时，不重复给胜负分，只比较晋级方式与90分钟比分：方式正确 +1，90分钟比分完全命中再 +1。",
@@ -1380,6 +1380,314 @@
   ],
   "bracket": [
     {
+      "id": "53452537",
+      "round": "决赛",
+      "kickoff_local": "07-20 03:00 BJT",
+      "home": "西班牙",
+      "away": "阿根廷",
+      "status": "未开始",
+      "winner": null,
+      "method": null,
+      "score": null,
+      "note": "赛前预测。"
+    },
+    {
+      "id": "53452539",
+      "round": "季军赛",
+      "kickoff_local": "07-19 05:00 BJT",
+      "home": "法国",
+      "away": "英格兰",
+      "status": "未开始",
+      "winner": null,
+      "method": null,
+      "score": null,
+      "note": "赛前预测。"
+    },
+    {
+      "id": "53452533",
+      "round": "半决赛",
+      "kickoff_local": "07-15 03:00 BJT",
+      "home": "法国",
+      "away": "西班牙",
+      "status": "已结束",
+      "winner": "西班牙",
+      "method": "90",
+      "score_obj": {
+        "home_score": 0,
+        "away_score": 2
+      },
+      "regulation_score": {
+        "home_score": 0,
+        "away_score": 2
+      },
+      "score": "0:2",
+      "note": "西班牙 2:0 法国，90分钟晋级决赛。法国进攻被西班牙控球和压迫体系限制，GPT 猜中晋级队与路径，Ray 押法国加时未中。"
+    },
+    {
+      "id": "53452535",
+      "round": "半决赛",
+      "kickoff_local": "07-16 03:00 BJT",
+      "home": "英格兰",
+      "away": "阿根廷",
+      "status": "已结束",
+      "winner": "阿根廷",
+      "method": "90",
+      "score_obj": {
+        "home_score": 1,
+        "away_score": 2
+      },
+      "regulation_score": {
+        "home_score": 1,
+        "away_score": 2
+      },
+      "score": "1:2",
+      "note": "英格兰 1:2 阿根廷。阿根廷最后阶段逆转晋级，梅西两次助攻，劳塔罗补时绝杀；GPT 命中晋级、路径和准确比分，Ray 猜中阿根廷但路径不符。"
+    },
+    {
+      "id": "53452525",
+      "round": "8强",
+      "kickoff_local": "07-10 04:00 BJT",
+      "home": "法国",
+      "away": "摩洛哥",
+      "status": "已结束",
+      "winner": "法国",
+      "method": "90",
+      "score_obj": {
+        "home_score": 2,
+        "away_score": 0
+      },
+      "regulation_score": {
+        "home_score": 2,
+        "away_score": 0
+      },
+      "score": "2:0",
+      "note": "法国 2:0 摩洛哥，90分钟晋级。Ray 猜中法国晋级但方式未中；GPT 猜中法国晋级和90分钟方式，本场 Ray +0，GPT +1。"
+    },
+    {
+      "id": "53452527",
+      "round": "8强",
+      "kickoff_local": "07-11 03:00 BJT",
+      "home": "西班牙",
+      "away": "比利时",
+      "status": "已结束",
+      "winner": "西班牙",
+      "method": "90",
+      "score_obj": {
+        "home_score": 2,
+        "away_score": 1
+      },
+      "regulation_score": {
+        "home_score": 2,
+        "away_score": 1
+      },
+      "score": "2:1",
+      "note": "西班牙 2:1 比利时，90分钟晋级。双方都猜中西班牙和90分钟方式；GPT 命中准确比分，本场 Ray +1，GPT +2。"
+    },
+    {
+      "id": "53452529",
+      "round": "8强",
+      "kickoff_local": "07-12 05:00 BJT",
+      "home": "挪威",
+      "away": "英格兰",
+      "status": "已结束",
+      "winner": "英格兰",
+      "method": "extra_time",
+      "score_obj": {
+        "home_score": 1,
+        "away_score": 2
+      },
+      "regulation_score": {
+        "home_score": 1,
+        "away_score": 1
+      },
+      "score": "1:2（加时）",
+      "note": "挪威 90分钟 1:1 英格兰，加时后英格兰 2:1 晋级。双方都猜中英格兰，但均未命中晋级方式和90分钟比分，本场 Ray +0，GPT +0。"
+    },
+    {
+      "id": "53452531",
+      "round": "8强",
+      "kickoff_local": "07-12 09:00 BJT",
+      "home": "阿根廷",
+      "away": "瑞士",
+      "status": "已结束",
+      "winner": "阿根廷",
+      "method": "extra_time",
+      "score_obj": {
+        "home_score": 3,
+        "away_score": 1
+      },
+      "regulation_score": {
+        "home_score": 1,
+        "away_score": 1
+      },
+      "score": "3:1（加时）",
+      "note": "阿根廷 90分钟 1:1 瑞士，加时后 3:1 晋级。双方都猜中阿根廷，但均未命中晋级方式和90分钟比分，本场 Ray +0，GPT +0。"
+    },
+    {
+      "id": "53452511",
+      "round": "16强",
+      "kickoff_local": "07-05 01:00 BJT",
+      "home": "加拿大",
+      "away": "摩洛哥",
+      "status": "已结束",
+      "winner": "摩洛哥",
+      "method": "90",
+      "score_obj": {
+        "home_score": 0,
+        "away_score": 3
+      },
+      "regulation_score": {
+        "home_score": 0,
+        "away_score": 3
+      },
+      "score": "0:3",
+      "note": "加拿大 0:3 摩洛哥，摩洛哥90分钟晋级。Ray 预测加拿大点球晋级未中；GPT 猜中摩洛哥晋级但未命中方式与比分，本场 Ray +0，GPT +3。"
+    },
+    {
+      "id": "53452509",
+      "round": "16强",
+      "kickoff_local": "07-05 05:00 BJT",
+      "home": "巴拉圭",
+      "away": "法国",
+      "status": "已结束",
+      "winner": "法国",
+      "method": "90",
+      "score_obj": {
+        "home_score": 0,
+        "away_score": 1
+      },
+      "regulation_score": {
+        "home_score": 0,
+        "away_score": 1
+      },
+      "score": "0:1",
+      "note": "巴拉圭 0:1 法国，法国90分钟晋级。双方都猜中法国晋级和90分钟方式，但均未命中准确比分，本场 Ray +1，GPT +1。"
+    },
+    {
+      "id": "53452517",
+      "round": "16强",
+      "kickoff_local": "07-06 04:00 BJT",
+      "home": "巴西",
+      "away": "挪威",
+      "status": "已结束",
+      "winner": "挪威",
+      "method": "90",
+      "score_obj": {
+        "home_score": 1,
+        "away_score": 2
+      },
+      "regulation_score": {
+        "home_score": 1,
+        "away_score": 2
+      },
+      "score": "1:2",
+      "note": "巴西 1:2 挪威，挪威90分钟晋级。Ray 猜中挪威晋级但预测加时，GPT 预测巴西晋级未中，本场 Ray +3，GPT +0。"
+    },
+    {
+      "id": "53452519",
+      "round": "16强",
+      "kickoff_local": "07-06 08:00 BJT",
+      "home": "墨西哥",
+      "away": "英格兰",
+      "status": "已结束",
+      "winner": "英格兰",
+      "method": "90",
+      "score_obj": {
+        "home_score": 2,
+        "away_score": 3
+      },
+      "regulation_score": {
+        "home_score": 2,
+        "away_score": 3
+      },
+      "score": "2:3",
+      "note": "墨西哥 2:3 英格兰，英格兰90分钟晋级。双方都猜中英格兰晋级和90分钟方式，但均未命中准确比分，本场 Ray +1，GPT +1。"
+    },
+    {
+      "id": "53452513",
+      "round": "16强",
+      "kickoff_local": "07-07 03:00 BJT",
+      "home": "葡萄牙",
+      "away": "西班牙",
+      "status": "已结束",
+      "winner": "西班牙",
+      "method": "90",
+      "score_obj": {
+        "home_score": 0,
+        "away_score": 1
+      },
+      "regulation_score": {
+        "home_score": 0,
+        "away_score": 1
+      },
+      "score": "0:1",
+      "note": "葡萄牙 0:1 西班牙，西班牙90分钟晋级。双方都猜中西班牙晋级；GPT 命中90分钟方式，Ray 预测加时未得方式分，本场 Ray +0，GPT +1。"
+    },
+    {
+      "id": "53452515",
+      "round": "16强",
+      "kickoff_local": "07-07 08:00 BJT",
+      "home": "美国",
+      "away": "比利时",
+      "status": "已结束",
+      "winner": "比利时",
+      "method": "90",
+      "score_obj": {
+        "home_score": 1,
+        "away_score": 4
+      },
+      "regulation_score": {
+        "home_score": 1,
+        "away_score": 4
+      },
+      "score": "1:4",
+      "note": "美国 1:4 比利时，比利时90分钟晋级。Ray 预测美国晋级未中；GPT 猜中比利时晋级并命中90分钟方式，本场 Ray +0，GPT +4。"
+    },
+    {
+      "id": "53452521",
+      "round": "16强",
+      "kickoff_local": "07-08 00:00 BJT",
+      "home": "阿根廷",
+      "away": "埃及",
+      "status": "已结束",
+      "winner": "阿根廷",
+      "method": "90",
+      "score_obj": {
+        "home_score": 3,
+        "away_score": 2
+      },
+      "regulation_score": {
+        "home_score": 3,
+        "away_score": 2
+      },
+      "score": "3:2",
+      "note": "阿根廷 3:2 埃及，阿根廷90分钟晋级。双方都猜中阿根廷晋级和90分钟方式，但均未命中准确比分，本场 Ray +1，GPT +1。"
+    },
+    {
+      "id": "53452523",
+      "round": "16强",
+      "kickoff_local": "07-08 04:00 BJT",
+      "home": "瑞士",
+      "away": "哥伦比亚",
+      "status": "已结束",
+      "winner": "瑞士",
+      "method": "penalties",
+      "score_obj": {
+        "home_score": 0,
+        "away_score": 0
+      },
+      "regulation_score": {
+        "home_score": 0,
+        "away_score": 0
+      },
+      "score": "0:0，点球 4:3",
+      "note": "瑞士 0:0 哥伦比亚，点球大战 4:3，瑞士晋级。Ray 命中瑞士晋级、点球方式和90分钟0:0比分，本场 Ray +5；GPT 预测哥伦比亚晋级未中。",
+      "penalties_score": {
+        "home_score": 4,
+        "away_score": 3
+      }
+    },
+    {
       "id": "53452545",
       "round": "32强",
       "kickoff_local": "06-29 03:00 BJT",
@@ -1710,314 +2018,6 @@
       },
       "score": "1:0",
       "note": "哥伦比亚 1:0 加纳，哥伦比亚晋级。双方都猜中晋级队和90分钟方式，本场 Ray +1，GPT +1。"
-    },
-    {
-      "id": "53452511",
-      "round": "16强",
-      "kickoff_local": "07-05 01:00 BJT",
-      "home": "加拿大",
-      "away": "摩洛哥",
-      "status": "已结束",
-      "winner": "摩洛哥",
-      "method": "90",
-      "score_obj": {
-        "home_score": 0,
-        "away_score": 3
-      },
-      "regulation_score": {
-        "home_score": 0,
-        "away_score": 3
-      },
-      "score": "0:3",
-      "note": "加拿大 0:3 摩洛哥，摩洛哥90分钟晋级。Ray 预测加拿大点球晋级未中；GPT 猜中摩洛哥晋级但未命中方式与比分，本场 Ray +0，GPT +3。"
-    },
-    {
-      "id": "53452509",
-      "round": "16强",
-      "kickoff_local": "07-05 05:00 BJT",
-      "home": "巴拉圭",
-      "away": "法国",
-      "status": "已结束",
-      "winner": "法国",
-      "method": "90",
-      "score_obj": {
-        "home_score": 0,
-        "away_score": 1
-      },
-      "regulation_score": {
-        "home_score": 0,
-        "away_score": 1
-      },
-      "score": "0:1",
-      "note": "巴拉圭 0:1 法国，法国90分钟晋级。双方都猜中法国晋级和90分钟方式，但均未命中准确比分，本场 Ray +1，GPT +1。"
-    },
-    {
-      "id": "53452517",
-      "round": "16强",
-      "kickoff_local": "07-06 04:00 BJT",
-      "home": "巴西",
-      "away": "挪威",
-      "status": "已结束",
-      "winner": "挪威",
-      "method": "90",
-      "score_obj": {
-        "home_score": 1,
-        "away_score": 2
-      },
-      "regulation_score": {
-        "home_score": 1,
-        "away_score": 2
-      },
-      "score": "1:2",
-      "note": "巴西 1:2 挪威，挪威90分钟晋级。Ray 猜中挪威晋级但预测加时，GPT 预测巴西晋级未中，本场 Ray +3，GPT +0。"
-    },
-    {
-      "id": "53452519",
-      "round": "16强",
-      "kickoff_local": "07-06 08:00 BJT",
-      "home": "墨西哥",
-      "away": "英格兰",
-      "status": "已结束",
-      "winner": "英格兰",
-      "method": "90",
-      "score_obj": {
-        "home_score": 2,
-        "away_score": 3
-      },
-      "regulation_score": {
-        "home_score": 2,
-        "away_score": 3
-      },
-      "score": "2:3",
-      "note": "墨西哥 2:3 英格兰，英格兰90分钟晋级。双方都猜中英格兰晋级和90分钟方式，但均未命中准确比分，本场 Ray +1，GPT +1。"
-    },
-    {
-      "id": "53452513",
-      "round": "16强",
-      "kickoff_local": "07-07 03:00 BJT",
-      "home": "葡萄牙",
-      "away": "西班牙",
-      "status": "已结束",
-      "winner": "西班牙",
-      "method": "90",
-      "score_obj": {
-        "home_score": 0,
-        "away_score": 1
-      },
-      "regulation_score": {
-        "home_score": 0,
-        "away_score": 1
-      },
-      "score": "0:1",
-      "note": "葡萄牙 0:1 西班牙，西班牙90分钟晋级。双方都猜中西班牙晋级；GPT 命中90分钟方式，Ray 预测加时未得方式分，本场 Ray +0，GPT +1。"
-    },
-    {
-      "id": "53452515",
-      "round": "16强",
-      "kickoff_local": "07-07 08:00 BJT",
-      "home": "美国",
-      "away": "比利时",
-      "status": "已结束",
-      "winner": "比利时",
-      "method": "90",
-      "score_obj": {
-        "home_score": 1,
-        "away_score": 4
-      },
-      "regulation_score": {
-        "home_score": 1,
-        "away_score": 4
-      },
-      "score": "1:4",
-      "note": "美国 1:4 比利时，比利时90分钟晋级。Ray 预测美国晋级未中；GPT 猜中比利时晋级并命中90分钟方式，本场 Ray +0，GPT +4。"
-    },
-    {
-      "id": "53452521",
-      "round": "16强",
-      "kickoff_local": "07-08 00:00 BJT",
-      "home": "阿根廷",
-      "away": "埃及",
-      "status": "已结束",
-      "winner": "阿根廷",
-      "method": "90",
-      "score_obj": {
-        "home_score": 3,
-        "away_score": 2
-      },
-      "regulation_score": {
-        "home_score": 3,
-        "away_score": 2
-      },
-      "score": "3:2",
-      "note": "阿根廷 3:2 埃及，阿根廷90分钟晋级。双方都猜中阿根廷晋级和90分钟方式，但均未命中准确比分，本场 Ray +1，GPT +1。"
-    },
-    {
-      "id": "53452523",
-      "round": "16强",
-      "kickoff_local": "07-08 04:00 BJT",
-      "home": "瑞士",
-      "away": "哥伦比亚",
-      "status": "已结束",
-      "winner": "瑞士",
-      "method": "penalties",
-      "score_obj": {
-        "home_score": 0,
-        "away_score": 0
-      },
-      "regulation_score": {
-        "home_score": 0,
-        "away_score": 0
-      },
-      "score": "0:0，点球 4:3",
-      "note": "瑞士 0:0 哥伦比亚，点球大战 4:3，瑞士晋级。Ray 命中瑞士晋级、点球方式和90分钟0:0比分，本场 Ray +5；GPT 预测哥伦比亚晋级未中。",
-      "penalties_score": {
-        "home_score": 4,
-        "away_score": 3
-      }
-    },
-    {
-      "id": "53452525",
-      "round": "1/4决赛",
-      "kickoff_local": "07-10 04:00 BJT",
-      "home": "法国",
-      "away": "摩洛哥",
-      "status": "已结束",
-      "winner": "法国",
-      "method": "90",
-      "score_obj": {
-        "home_score": 2,
-        "away_score": 0
-      },
-      "regulation_score": {
-        "home_score": 2,
-        "away_score": 0
-      },
-      "score": "2:0",
-      "note": "法国 2:0 摩洛哥，90分钟晋级。Ray 猜中法国晋级但方式未中；GPT 猜中法国晋级和90分钟方式，本场 Ray +0，GPT +1。"
-    },
-    {
-      "id": "53452527",
-      "round": "1/4决赛",
-      "kickoff_local": "07-11 03:00 BJT",
-      "home": "西班牙",
-      "away": "比利时",
-      "status": "已结束",
-      "winner": "西班牙",
-      "method": "90",
-      "score_obj": {
-        "home_score": 2,
-        "away_score": 1
-      },
-      "regulation_score": {
-        "home_score": 2,
-        "away_score": 1
-      },
-      "score": "2:1",
-      "note": "西班牙 2:1 比利时，90分钟晋级。双方都猜中西班牙和90分钟方式；GPT 命中准确比分，本场 Ray +1，GPT +2。"
-    },
-    {
-      "id": "53452529",
-      "round": "1/4决赛",
-      "kickoff_local": "07-12 05:00 BJT",
-      "home": "挪威",
-      "away": "英格兰",
-      "status": "已结束",
-      "winner": "英格兰",
-      "method": "extra_time",
-      "score_obj": {
-        "home_score": 1,
-        "away_score": 2
-      },
-      "regulation_score": {
-        "home_score": 1,
-        "away_score": 1
-      },
-      "score": "1:2（加时）",
-      "note": "挪威 90分钟 1:1 英格兰，加时后英格兰 2:1 晋级。双方都猜中英格兰，但均未命中晋级方式和90分钟比分，本场 Ray +0，GPT +0。"
-    },
-    {
-      "id": "53452531",
-      "round": "1/4决赛",
-      "kickoff_local": "07-12 09:00 BJT",
-      "home": "阿根廷",
-      "away": "瑞士",
-      "status": "已结束",
-      "winner": "阿根廷",
-      "method": "extra_time",
-      "score_obj": {
-        "home_score": 3,
-        "away_score": 1
-      },
-      "regulation_score": {
-        "home_score": 1,
-        "away_score": 1
-      },
-      "score": "3:1（加时）",
-      "note": "阿根廷 90分钟 1:1 瑞士，加时后 3:1 晋级。双方都猜中阿根廷，但均未命中晋级方式和90分钟比分，本场 Ray +0，GPT +0。"
-    },
-    {
-      "id": "53452533",
-      "round": "半决赛",
-      "kickoff_local": "07-15 03:00 BJT",
-      "home": "法国",
-      "away": "西班牙",
-      "status": "已结束",
-      "winner": "西班牙",
-      "method": "90",
-      "score_obj": {
-        "home_score": 0,
-        "away_score": 2
-      },
-      "regulation_score": {
-        "home_score": 0,
-        "away_score": 2
-      },
-      "score": "0:2",
-      "note": "西班牙 2:0 法国，90分钟晋级决赛。法国进攻被西班牙控球和压迫体系限制，GPT 猜中晋级队与路径，Ray 押法国加时未中。"
-    },
-    {
-      "id": "53452535",
-      "round": "半决赛",
-      "kickoff_local": "07-16 03:00 BJT",
-      "home": "英格兰",
-      "away": "阿根廷",
-      "status": "已结束",
-      "winner": "阿根廷",
-      "method": "90",
-      "score_obj": {
-        "home_score": 1,
-        "away_score": 2
-      },
-      "regulation_score": {
-        "home_score": 1,
-        "away_score": 2
-      },
-      "score": "1:2",
-      "note": "英格兰 1:2 阿根廷。阿根廷最后阶段逆转晋级，梅西两次助攻，劳塔罗补时绝杀；GPT 命中晋级、路径和准确比分，Ray 猜中阿根廷但路径不符。"
-    },
-    {
-      "id": "53452539",
-      "round": "季军赛",
-      "kickoff_local": "07-19 05:00 BJT",
-      "home": "法国",
-      "away": "英格兰",
-      "status": "未开始",
-      "winner": null,
-      "method": null,
-      "score": null,
-      "note": "赛前预测。"
-    },
-    {
-      "id": "53452537",
-      "round": "决赛",
-      "kickoff_local": "07-20 03:00 BJT",
-      "home": "西班牙",
-      "away": "阿根廷",
-      "status": "未开始",
-      "winner": null,
-      "method": null,
-      "score": null,
-      "note": "赛前预测。"
     }
   ],
   "update_log": [
@@ -2031,7 +2031,7 @@
     },
     {
       "time": "07-16 07:30",
-      "text": "页面进入决赛前低压氛围。"
+      "text": "页面进入决赛前低压氛围；冠军产生后自动触发 🎉 与 Confetti。"
     }
   ],
   "live_ticker": [
