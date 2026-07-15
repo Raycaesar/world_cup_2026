@@ -7,10 +7,10 @@
     "tagline": "World Cup Knockout Prediction Derby"
   },
   "meta": {
-    "updated_at": "2026-07-15 07:51 BJT",
+    "updated_at": "2026-07-15 08:01 BJT",
     "active_day": "2026-07-15",
     "timezone": "Asia/Beijing",
-    "version": "knockout-auto-202607142351"
+    "version": "knockout-auto-202607150001"
   },
   "phase": "knockout",
   "archive": {
@@ -1898,10 +1898,6 @@
   ],
   "update_log": [
     {
-      "time": "07-12 23:00",
-      "text": "半决赛预测发布：法国 vs 西班牙、英格兰 vs 阿根廷。"
-    },
-    {
       "time": "07-13 18:01",
       "text": "发布次日淘汰赛预测：加拿大 vs 摩洛哥、巴拉圭 vs 法国、巴西 vs 挪威、墨西哥 vs 英格兰、葡萄牙 vs 西班牙、美国 vs 比利时、阿根廷 vs 埃及、瑞士 vs 哥伦比亚。"
     },
@@ -1975,6 +1971,10 @@
     },
     {
       "time": "07-15 07:51",
+      "text": "射手榜待核对：法国 vs 西班牙 已有进球，但 ESPN scoring plays 暂未解析出进球者。"
+    },
+    {
+      "time": "07-15 08:01",
       "text": "射手榜待核对：法国 vs 西班牙 已有进球，但 ESPN scoring plays 暂未解析出进球者。"
     }
   ],
