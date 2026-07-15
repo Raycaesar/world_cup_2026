@@ -8,7 +8,7 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Black+Ops+One&family=Bebas+Neue&family=Rajdhani:wght@500;600;700&family=Noto+Sans+SC:wght@400;500;700;900&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="style.css?v=knockout-20260704-r16" />
+  <link rel="stylesheet" href="style.css?v=final-countdown-20260716" />
 
   <style id="semifinal-bracket-cyan-overrides">
     .bracket-card.has-winner {
@@ -31,8 +31,128 @@
       border-bottom-color: rgba(116, 231, 255, .22);
     }
   </style>
+
+  <style id="final-countdown-and-confetti">
+    body.final-countdown {
+      background:
+        radial-gradient(circle at 50% -10%, rgba(255, 255, 255, 0.10), transparent 28rem),
+        radial-gradient(circle at 18% 18%, rgba(255, 82, 82, 0.22), transparent 25rem),
+        radial-gradient(circle at 82% 12%, rgba(116, 231, 255, 0.15), transparent 24rem),
+        linear-gradient(135deg, #030407 0%, #14080d 43%, #07131d 100%);
+    }
+    body.final-countdown .hero-copy::after {
+      content: "FINAL PRESSURE";
+      position: absolute;
+      left: 0;
+      bottom: 0;
+      font-family: var(--display);
+      letter-spacing: .16em;
+      color: rgba(255, 82, 82, .28);
+      font-size: clamp(28px, 7vw, 88px);
+      line-height: .8;
+      pointer-events: none;
+      mix-blend-mode: screen;
+      filter: blur(.2px);
+    }
+    body.final-countdown .headline-panel {
+      background: linear-gradient(135deg, rgba(88, 12, 30, .82), rgba(8, 34, 52, .70));
+      border-color: rgba(255, 82, 82, .24);
+      box-shadow: 0 0 0 1px rgba(255, 82, 82, .07), 0 30px 90px rgba(0,0,0,.45);
+    }
+    body.final-countdown .live-pill {
+      border-color: rgba(255,82,82,.46);
+      color: #ffd8d8;
+      background: rgba(255,82,82,.14);
+    }
+    body.final-countdown .pulse {
+      background: #ff5252;
+      animation-duration: .85s;
+    }
+    body.final-countdown .panel {
+      border-color: rgba(255, 255, 255, .10);
+    }
+    .champion-celebration[hidden] { display: none !important; }
+    .champion-celebration {
+      position: fixed;
+      inset: 0;
+      z-index: 9999;
+      display: grid;
+      place-items: center;
+      pointer-events: none;
+      background: radial-gradient(circle at 50% 35%, rgba(255,255,255,.20), rgba(0,0,0,.62) 72%);
+      transition: background .8s ease, opacity .8s ease;
+    }
+    .champion-confetti-canvas {
+      position: absolute;
+      inset: 0;
+      width: 100%;
+      height: 100%;
+    }
+    .celebration-card {
+      position: relative;
+      z-index: 1;
+      width: min(680px, calc(100% - 36px));
+      border: 1px solid rgba(248, 201, 71, .45);
+      border-radius: 34px;
+      padding: 34px 30px 30px;
+      text-align: center;
+      background:
+        radial-gradient(circle at 50% 0%, rgba(248,201,71,.28), transparent 44%),
+        linear-gradient(145deg, rgba(255,255,255,.16), rgba(255,255,255,.05)),
+        rgba(3, 8, 6, .88);
+      box-shadow: 0 35px 110px rgba(0,0,0,.58), 0 0 70px rgba(248,201,71,.24);
+      animation: championPop .72s cubic-bezier(.2,1.2,.2,1) both;
+    }
+    .celebration-emoji {
+      display: block;
+      font-size: clamp(54px, 12vw, 112px);
+      line-height: 1;
+      margin-bottom: 8px;
+      filter: drop-shadow(0 18px 42px rgba(248,201,71,.35));
+    }
+    .celebration-title {
+      margin: 0 0 8px;
+      font-family: var(--display);
+      font-size: clamp(30px, 6vw, 66px);
+      letter-spacing: .03em;
+      color: #fff7c8;
+      text-shadow: 0 0 30px rgba(248,201,71,.36);
+    }
+    .celebration-copy {
+      margin: 0;
+      color: rgba(255,255,255,.82);
+      font-size: clamp(16px, 2vw, 22px);
+      font-weight: 900;
+    }
+    .champion-celebration.settled {
+      background: transparent;
+    }
+    .champion-celebration.settled .celebration-card {
+      transform: translateY(-36vh) scale(.76);
+      opacity: .78;
+      transition: transform .9s ease, opacity .9s ease;
+    }
+    @keyframes championPop {
+      from { opacity: 0; transform: translateY(24px) scale(.92); }
+      to { opacity: 1; transform: translateY(0) scale(1); }
+    }
+    @media (max-width: 640px) {
+      .champion-celebration.settled .celebration-card { transform: translateY(-34vh) scale(.70); }
+    }
+  </style>
+
 </head>
 <body>
+
+  <div class="champion-celebration" id="championCelebration" hidden aria-live="polite">
+    <canvas class="champion-confetti-canvas" id="confettiCanvas" aria-hidden="true"></canvas>
+    <div class="celebration-card">
+      <span class="celebration-emoji" aria-hidden="true">🎉</span>
+      <h2 class="celebration-title" id="celebrationTitle">冠军诞生</h2>
+      <p class="celebration-copy" id="celebrationCopy">World Cup champion confirmed.</p>
+    </div>
+  </div>
+
   <div class="stadium-light light-left" aria-hidden="true"></div>
   <div class="stadium-light light-right" aria-hidden="true"></div>
   <div class="pitch-overlay" aria-hidden="true"></div>
@@ -568,10 +688,12 @@
 
     function roundRank(round) {
       const value = String(round || "");
-      if (value.includes("半决") || /semi/i.test(value)) return 0;
-      if (value.includes("8") || value.includes("1/4") || /quarter/i.test(value)) return 1;
-      if (value.includes("16")) return 2;
-      if (value.includes("32")) return 3;
+      if (value.includes("决赛") && !value.includes("季军")) return 0;
+      if (value.includes("季军") || /third|3rd/i.test(value)) return 1;
+      if (value.includes("半决") || /semi/i.test(value)) return 2;
+      if (value.includes("8") || value.includes("1/4") || /quarter/i.test(value)) return 3;
+      if (value.includes("16")) return 4;
+      if (value.includes("32")) return 5;
       return 9;
     }
 
@@ -606,13 +728,16 @@
       Array.from(groups.keys()).sort((a, b) => roundRank(a) - roundRank(b)).forEach((round, index) => {
         const details = document.createElement("details");
         details.className = "bracket-round-section";
-        details.open = index === 0;
+        details.open = index <= 1;
         const matches = groups.get(round).slice().sort((a, b) => parseBjDateTime(a.kickoff_local) - parseBjDateTime(b.kickoff_local));
         const summary = create("summary", "review-day-summary");
+        const isFinal = round.includes("决赛") && !round.includes("季军");
+        const isThird = round.includes("季军") || /third|3rd/i.test(round);
         const isSemi = round.includes("半决") || /semi/i.test(round);
         const isQuarter = round.includes("1/4") || round.includes("8") || /quarter/i.test(round);
-        const roundName = isSemi ? "半决赛对阵图" : isQuarter ? "8强对阵图" : round.includes("16") ? "16强对阵图" : round.includes("32") ? "32强对阵图" : `${round}对阵图`;
-        const roundNote = isSemi ? "待赛，双方预测已录入" : isQuarter ? "已完赛，附比分并高亮胜者" : (round.includes("16") || round.includes("32")) ? "已完赛，附比分并高亮胜者" : "淘汰赛对阵";
+        const roundName = isFinal ? "冠军战对阵图" : isThird ? "季军赛对阵图" : isSemi ? "半决赛对阵图" : isQuarter ? "8强对阵图" : round.includes("16") ? "16强对阵图" : round.includes("32") ? "32强对阵图" : `${round}对阵图`;
+        const finished = matches.every(item => item.status === "已结束" || item.winner);
+        const roundNote = isFinal ? (finished ? "冠军已产生，庆祝动画生效" : "大战前夜，冠军产生后自动庆祝") : isThird ? (finished ? "季军归属已定" : "三四名战，通常更开放") : isSemi ? "已完赛，附比分并高亮胜者" : isQuarter ? "已完赛，附比分并高亮胜者" : (round.includes("16") || round.includes("32")) ? "已完赛，附比分并高亮胜者" : "淘汰赛对阵";
         summary.appendChild(create("span", "", roundName));
         summary.appendChild(create("strong", "", `${matches.length} 场`));
         summary.appendChild(create("em", "", roundNote));
@@ -644,6 +769,90 @@
       });
     }
 
+
+    let celebrationLaunched = false;
+
+    function getFinalMatch(data) {
+      return (data.knockout_matches || []).find(match => {
+        const round = String(match.round || "");
+        return (round.includes("决赛") && !round.includes("季军")) || String(match.espn_id || "") === "53452537";
+      });
+    }
+
+    function getChampion(data) {
+      const finalMatch = getFinalMatch(data);
+      return finalMatch && finalMatch.actual && finalMatch.actual.advancing_team ? finalMatch.actual.advancing_team : null;
+    }
+
+    function setFinalAtmosphere(data) {
+      const champion = getChampion(data);
+      const hasFinal = !!getFinalMatch(data);
+      document.body.classList.toggle("final-countdown", hasFinal && !champion);
+      document.body.classList.toggle("champion-decided", !!champion);
+      const celebration = document.getElementById("championCelebration");
+      if (!celebration) return;
+      if (!champion) {
+        celebration.hidden = true;
+        celebration.classList.remove("settled");
+        return;
+      }
+      celebration.hidden = false;
+      const title = document.getElementById("celebrationTitle");
+      const copy = document.getElementById("celebrationCopy");
+      if (title) title.textContent = `🎉 ${champion} 捧起大力神杯`;
+      if (copy) copy.textContent = "冠军已产生，Ray vs GPT 5.5 终局结算开启。";
+      if (!celebrationLaunched) {
+        celebrationLaunched = true;
+        launchConfetti();
+        window.setTimeout(() => celebration.classList.add("settled"), 5600);
+      }
+    }
+
+    function launchConfetti() {
+      const canvas = document.getElementById("confettiCanvas");
+      if (!canvas) return;
+      const ctx = canvas.getContext("2d");
+      const colors = ["#74e7ff", "#f8c947", "#32d56f", "#ff5252", "#ffffff", "#7aa7ff"];
+      let width = canvas.width = window.innerWidth * window.devicePixelRatio;
+      let height = canvas.height = window.innerHeight * window.devicePixelRatio;
+      canvas.style.width = window.innerWidth + "px";
+      canvas.style.height = window.innerHeight + "px";
+      const scale = window.devicePixelRatio || 1;
+      const particles = Array.from({ length: 190 }, (_, i) => ({
+        x: Math.random() * width,
+        y: -Math.random() * height * .55,
+        r: (4 + Math.random() * 8) * scale,
+        vx: (-2.5 + Math.random() * 5) * scale,
+        vy: (3.2 + Math.random() * 6.8) * scale,
+        rot: Math.random() * Math.PI,
+        spin: (-.12 + Math.random() * .24),
+        color: colors[i % colors.length],
+        life: 1
+      }));
+      const started = performance.now();
+      function draw(now) {
+        const elapsed = now - started;
+        ctx.clearRect(0, 0, width, height);
+        particles.forEach(p => {
+          p.x += p.vx;
+          p.y += p.vy;
+          p.vy += .045 * scale;
+          p.rot += p.spin;
+          p.life = Math.max(0, 1 - elapsed / 6200);
+          ctx.save();
+          ctx.globalAlpha = Math.min(1, p.life + .15);
+          ctx.translate(p.x, p.y);
+          ctx.rotate(p.rot);
+          ctx.fillStyle = p.color;
+          ctx.fillRect(-p.r / 2, -p.r / 3, p.r, p.r * .66);
+          ctx.restore();
+        });
+        if (elapsed < 6500) requestAnimationFrame(draw);
+        else ctx.clearRect(0, 0, width, height);
+      }
+      requestAnimationFrame(draw);
+    }
+
     function render(data) {
       const site = data.site || FALLBACK_DATA.site;
       const meta = data.meta || FALLBACK_DATA.meta;
@@ -652,6 +861,7 @@
       document.getElementById("pageSubtitle").textContent = site.subtitle || "";
       document.getElementById("tagline").textContent = site.tagline || FALLBACK_DATA.site.tagline;
       document.getElementById("liveStatus").textContent = site.status || "KNOCKOUT";
+      setFinalAtmosphere(data);
       document.getElementById("activeDay").textContent = `${meta.active_day || "—"} · ${meta.timezone || ""}`;
       document.getElementById("updatedAt").textContent = meta.updated_at || "—";
       const refresh = Number(site.refresh_seconds || 30);
