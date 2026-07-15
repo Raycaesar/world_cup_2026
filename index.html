@@ -157,7 +157,7 @@
   <div class="champion-celebration" id="championCelebration" hidden aria-live="polite">
     <canvas class="champion-confetti-canvas" id="confettiCanvas" aria-hidden="true"></canvas>
     <div class="celebration-card">
-      <span class="celebration-emoji" aria-hidden="true">🎉</span>
+      <span class="celebration-emoji" aria-hidden="true">🎉🏆🎉</span>
       <h2 class="celebration-title" id="celebrationTitle">冠军产生后显示</h2>
       <p class="celebration-copy" id="celebrationCopy">World Cup champion confirmed.</p>
     </div>
@@ -747,7 +747,7 @@
         const isQuarter = round.includes("1/4") || round.includes("8") || /quarter/i.test(round);
         const roundName = isFinal ? "冠军战对阵图" : isThird ? "季军赛对阵图" : isSemi ? "半决赛对阵图" : isQuarter ? "8强对阵图" : round.includes("16") ? "16强对阵图" : round.includes("32") ? "32强对阵图" : `${round}对阵图`;
         const finished = matches.every(item => item.status === "已结束" || item.winner);
-        const roundNote = isFinal ? (finished ? "冠军已产生，庆祝动画生效" : "大战前夜，冠军产生后自动庆祝") : isThird ? (finished ? "季军归属已定" : "三四名战，通常更开放") : isSemi ? "已完赛，附比分并高亮胜者" : isQuarter ? "已完赛，附比分并高亮胜者" : (round.includes("16") || round.includes("32")) ? "已完赛，附比分并高亮胜者" : "淘汰赛对阵";
+        const roundNote = isFinal ? (finished ? "冠军已产生，庆祝动画生效" : "大战前夜") : isThird ? (finished ? "季军归属已定" : "三四名战，通常更开放") : isSemi ? "已完赛，附比分并高亮胜者" : isQuarter ? "已完赛，附比分并高亮胜者" : (round.includes("16") || round.includes("32")) ? "已完赛，附比分并高亮胜者" : "淘汰赛对阵";
         summary.appendChild(create("span", "", roundName));
         summary.appendChild(create("strong", "", `${matches.length} 场`));
         summary.appendChild(create("em", "", roundNote));
@@ -829,7 +829,7 @@
       celebration.hidden = false;
       const title = document.getElementById("celebrationTitle");
       const copy = document.getElementById("celebrationCopy");
-      if (title) title.textContent = `🎉 ${champion} 捧起大力神杯`;
+      if (title) title.textContent = `🎉🏆🎉 ${champion} 捧起大力神杯`;
       if (copy) copy.textContent = "冠军已产生，Ray vs GPT 5.5 终局结算开启。";
       if (!celebrationLaunched) {
         celebrationLaunched = true;
