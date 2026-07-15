@@ -7,10 +7,10 @@
     "tagline": "World Cup Knockout Prediction Derby"
   },
   "meta": {
-    "updated_at": "2026-07-16 05:00 BJT",
+    "updated_at": "2026-07-16 05:10 BJT",
     "active_day": "2026-07-15",
     "timezone": "Asia/Beijing",
-    "version": "knockout-auto-202607152100"
+    "version": "knockout-auto-202607152110"
   },
   "phase": "knockout",
   "archive": {
@@ -19,11 +19,11 @@
   },
   "score_summary": {
     "ray_total": 71,
-    "gpt_total": 88,
-    "leader_comment": "GPT 5.5 以 88:71 领先 Ray。"
+    "gpt_total": 90,
+    "leader_comment": "GPT 5.5 以 90:71 领先 Ray。"
   },
-  "headline": "淘汰赛更新：法国 0:2 西班牙",
-  "brief": "最新淘汰赛已结算：法国 0:2 西班牙，Ray +0，GPT +4。",
+  "headline": "淘汰赛更新：英格兰 1:2 阿根廷",
+  "brief": "最新淘汰赛已结算：英格兰 1:2 阿根廷，Ray +0，GPT +2。",
   "knockout_rules": [
     "只有一方猜中晋级队时，猜中者先得 3 分；若同时猜中晋级方式，再得 1 分；若90分钟比分完全命中，再得 1 分，单场最高 5 分。",
     "双方都猜中晋级队时，不重复给胜负分，只比较晋级方式与90分钟比分：方式正确 +1，90分钟比分完全命中再 +1。",
@@ -1241,24 +1241,27 @@
     },
     {
       "id": "eng-arg-20260716",
-      "espn_id": "53452535",
+      "espn_id": "760515",
       "round": "半决赛",
       "kickoff_local": "07-16 03:00 BJT",
       "home": "英格兰",
       "away": "阿根廷",
       "venue": "Mercedes-Benz Stadium, Atlanta",
-      "status": "未开始",
+      "status": "已结束",
       "actual": {
-        "method": null,
+        "method": "90",
         "regulation_score": {
-          "home_score": null,
-          "away_score": null
+          "home_score": 1,
+          "away_score": 2
         },
         "final_score": {
-          "home_score": null,
-          "away_score": null
+          "home_score": 1,
+          "away_score": 2
         },
-        "advancing_team": null
+        "advancing_team": "阿根廷",
+        "scorer_update_pending": true,
+        "next_match": "",
+        "scorer_update_status": "needs_manual_goal_scorers"
       },
       "ray_prediction": {
         "advancing_team": "阿根廷",
@@ -1280,8 +1283,12 @@
         "label": "英格兰 1:2 阿根廷，阿根廷90分钟晋级",
         "reason": "GPT 看好阿根廷在大赛节奏控制和前场效率上略胜一筹，避免连续两轮进入加时。"
       },
-      "manual_points": null,
-      "review": "赛前预测。",
+      "manual_points": {
+        "ray": 0,
+        "gpt": 2,
+        "explanation": "双方都猜中晋级队；不重复给胜负分，只按晋级方式与90分钟比分计分：Ray +0，GPT +2。"
+      },
+      "review": "英格兰 1:2 阿根廷，阿根廷晋级。双方都猜中晋级队；不重复给胜负分，只按晋级方式与90分钟比分计分：Ray +0，GPT +2。",
       "predictions_published_at": "2026-07-12 23:00 BJT",
       "published": true,
       "published_at_bjt": "2026-07-12 23:00 BJT"
@@ -1891,24 +1898,23 @@
       "kickoff_local": "07-16 03:00 BJT",
       "home": "英格兰",
       "away": "阿根廷",
-      "status": "未开始",
-      "note": "双方预测已录入。",
-      "venue": "Mercedes-Benz Stadium, Atlanta"
+      "status": "已结束",
+      "note": "阿根廷通过90分钟晋级",
+      "venue": "Mercedes-Benz Stadium, Atlanta",
+      "winner": "阿根廷",
+      "method": "90",
+      "score_obj": {
+        "home_score": 1,
+        "away_score": 2
+      },
+      "score": "1:2",
+      "regulation_score": {
+        "home_score": 1,
+        "away_score": 2
+      }
     }
   ],
   "update_log": [
-    {
-      "time": "07-16 01:50",
-      "text": "射手榜待核对：法国 vs 西班牙 已有进球，但 ESPN scoring plays 暂未解析出进球者。"
-    },
-    {
-      "time": "07-16 02:00",
-      "text": "射手榜待核对：法国 vs 西班牙 已有进球，但 ESPN scoring plays 暂未解析出进球者。"
-    },
-    {
-      "time": "07-16 02:10",
-      "text": "射手榜待核对：法国 vs 西班牙 已有进球，但 ESPN scoring plays 暂未解析出进球者。"
-    },
     {
       "time": "07-16 02:20",
       "text": "射手榜待核对：法国 vs 西班牙 已有进球，但 ESPN scoring plays 暂未解析出进球者。"
@@ -1976,6 +1982,18 @@
     {
       "time": "07-16 05:00",
       "text": "射手榜待核对：法国 vs 西班牙 已有进球，但 ESPN scoring plays 暂未解析出进球者。"
+    },
+    {
+      "time": "07-16 05:10",
+      "text": "淘汰赛更新：英格兰 1:2 阿根廷，Ray +0，GPT +2。"
+    },
+    {
+      "time": "07-16 05:10",
+      "text": "射手榜待核对：法国 vs 西班牙 已有进球，但 ESPN scoring plays 暂未解析出进球者。"
+    },
+    {
+      "time": "07-16 05:10",
+      "text": "射手榜待核对：英格兰 vs 阿根廷 已有进球，但 ESPN scoring plays 暂未解析出进球者。"
     }
   ],
   "live_ticker": [
