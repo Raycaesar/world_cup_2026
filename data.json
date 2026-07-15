@@ -2105,15 +2105,6 @@
     },
     {
       "rank": 7,
-      "player": "Lautaro Martínez",
-      "team": "阿根廷",
-      "goals": 5,
-      "assists": 1,
-      "minutes": 360,
-      "note": "半决赛补时绝杀英格兰，进入决赛。"
-    },
-    {
-      "rank": 8,
       "player": "Mikel Oyarzabal",
       "team": "西班牙",
       "goals": 4,
@@ -2122,7 +2113,8 @@
       "note": "西班牙进入决赛。"
     }
   ],
-  "top_scorers_source": "射手榜按半决赛后公开金靴榜与半决赛战报手动更新：梅西、姆巴佩同为8球；梅西半决赛两次助攻，最后两战仍可能改变金靴归属。",
+  "top_scorers_source": "
+  按半决赛后公开金靴榜与半决赛战报手动更新：梅西、姆巴佩同为8球；梅西半决赛两次助攻，最后两战仍可能改变金靴归属。",
   "tournament_picks": [
     {
       "name": "冠军",
