@@ -8,7 +8,7 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Black+Ops+One&family=Bebas+Neue&family=Rajdhani:wght@500;600;700&family=Noto+Sans+SC:wght@400;500;700;900&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="style.css?v=final-countdown-toast-fix-20260716" />
+  <link rel="stylesheet" href="style.css?v=final-bracket-order-fix-20260716" />
 
   <style id="semifinal-bracket-cyan-overrides">
     .bracket-card.has-winner {
@@ -157,7 +157,7 @@
   <div class="champion-celebration" id="championCelebration" hidden aria-live="polite">
     <canvas class="champion-confetti-canvas" id="confettiCanvas" aria-hidden="true"></canvas>
     <div class="celebration-card">
-      <span class="celebration-emoji" aria-hidden="true">🎉🏆🎉</span>
+      <span class="celebration-emoji" aria-hidden="true">🎉</span>
       <h2 class="celebration-title" id="celebrationTitle">冠军产生后显示</h2>
       <p class="celebration-copy" id="celebrationCopy">World Cup champion confirmed.</p>
     </div>
@@ -696,15 +696,21 @@
       });
     }
 
+    function normalizeRoundType(round) {
+      const value = String(round || "").trim();
+      const lower = value.toLowerCase();
+      if (value === "决赛" || lower === "final" || lower === "championship") return "final";
+      if (value === "季军赛" || value.includes("三四名") || lower.includes("third") || lower.includes("3rd")) return "third";
+      if (value === "半决赛" || value.includes("半决") || lower.includes("semi")) return "semi";
+      if (value === "8强" || value === "八强" || value.includes("1/4") || lower.includes("quarter")) return "quarter";
+      if (value === "16强" || value === "1/8决赛" || lower.includes("round of 16")) return "r16";
+      if (value === "32强" || value === "1/16决赛" || lower.includes("round of 32")) return "r32";
+      return "other";
+    }
+
     function roundRank(round) {
-      const value = String(round || "");
-      if (value.includes("决赛") && !value.includes("季军")) return 0;
-      if (value.includes("季军") || /third|3rd/i.test(value)) return 1;
-      if (value.includes("半决") || /semi/i.test(value)) return 2;
-      if (value.includes("8") || value.includes("1/4") || /quarter/i.test(value)) return 3;
-      if (value.includes("16")) return 4;
-      if (value.includes("32")) return 5;
-      return 9;
+      const ranks = { final: 0, third: 1, semi: 2, quarter: 3, r16: 4, r32: 5, other: 9 };
+      return ranks[normalizeRoundType(round)] ?? 9;
     }
 
     function renderBracketCard(item) {
@@ -741,13 +747,16 @@
         details.open = index <= 1;
         const matches = groups.get(round).slice().sort((a, b) => parseBjDateTime(a.kickoff_local) - parseBjDateTime(b.kickoff_local));
         const summary = create("summary", "review-day-summary");
-        const isFinal = round.includes("决赛") && !round.includes("季军");
-        const isThird = round.includes("季军") || /third|3rd/i.test(round);
-        const isSemi = round.includes("半决") || /semi/i.test(round);
-        const isQuarter = round.includes("1/4") || round.includes("8") || /quarter/i.test(round);
-        const roundName = isFinal ? "冠军战对阵图" : isThird ? "季军赛对阵图" : isSemi ? "半决赛对阵图" : isQuarter ? "8强对阵图" : round.includes("16") ? "16强对阵图" : round.includes("32") ? "32强对阵图" : `${round}对阵图`;
+        const roundType = normalizeRoundType(round);
+        const isFinal = roundType === "final";
+        const isThird = roundType === "third";
+        const isSemi = roundType === "semi";
+        const isQuarter = roundType === "quarter";
+        const isR16 = roundType === "r16";
+        const isR32 = roundType === "r32";
+        const roundName = isFinal ? "冠军战对阵图" : isThird ? "季军赛对阵图" : isSemi ? "半决赛对阵图" : isQuarter ? "8强对阵图" : isR16 ? "16强对阵图" : isR32 ? "32强对阵图" : `${round}对阵图`;
         const finished = matches.every(item => item.status === "已结束" || item.winner);
-        const roundNote = isFinal ? (finished ? "大战前夜" : "冠军已产生" ) : isThird ? (finished ? "季军归属已定" : "三四名战，通常更开放") : isSemi ? "已完赛，附比分并高亮胜者" : isQuarter ? "已完赛，附比分并高亮胜者" : (round.includes("16") || round.includes("32")) ? "已完赛，附比分并高亮胜者" : "淘汰赛对阵";
+        const roundNote = isFinal ? (finished ? "冠军已产生，庆祝动画生效" : "大战前夜，冠军产生后自动庆祝") : isThird ? (finished ? "季军归属已定" : "三四名战，通常更开放") : (isSemi || isQuarter || isR16 || isR32) ? "已完赛，附比分并高亮胜者" : "淘汰赛对阵";
         summary.appendChild(create("span", "", roundName));
         summary.appendChild(create("strong", "", `${matches.length} 场`));
         summary.appendChild(create("em", "", roundNote));
@@ -829,8 +838,8 @@
       celebration.hidden = false;
       const title = document.getElementById("celebrationTitle");
       const copy = document.getElementById("celebrationCopy");
-      if (title) title.textContent = `🎉🏆🎉 ${champion} 捧起大力神杯`;
-      if (copy) copy.textContent = "2026世界杯冠军！";
+      if (title) title.textContent = `🎉 ${champion} 捧起大力神杯`;
+      if (copy) copy.textContent = "冠军已产生，Ray vs GPT 5.5 终局结算开启。";
       if (!celebrationLaunched) {
         celebrationLaunched = true;
         celebration.classList.remove("settled", "closing");
