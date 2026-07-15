@@ -2031,7 +2031,7 @@
     },
     {
       "time": "07-16 07:30",
-      "text": "页面进入决赛前低压氛围i。"
+      "text": "页面进入决赛前低压氛围。"
     }
   ],
   "live_ticker": [
@@ -2054,7 +2054,7 @@
       "player": "Lionel Messi",
       "team": "阿根廷",
       "goals": 8,
-      "assists": 3,
+      "assists": 4,
       "minutes": 493,
       "note": "半决赛对英格兰送出两次助攻；与姆巴佩同为8球，助攻持平时暂按出场时间优势列前。"
     },
@@ -2081,7 +2081,7 @@
       "player": "Jude Bellingham",
       "team": "英格兰",
       "goals": 6,
-      "assists": 2,
+      "assists": 1,
       "minutes": 520,
       "note": "英格兰仍有季军赛。"
     },
@@ -2107,10 +2107,19 @@
       "rank": 7,
       "player": "Mikel Oyarzabal",
       "team": "西班牙",
-      "goals": 4,
+      "goals": 5,
       "assists": 1,
       "minutes": 420,
       "note": "西班牙进入决赛。"
+    },
+    {
+      "rank": 7,
+      "player": "Vinicius Jr",
+      "team": "巴西",
+      "goals": 4,
+      "assists": 1,
+      "minutes": 360,
+      "note": "巴西已出局。"
     }
   ],
   "top_scorers_source": "
