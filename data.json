@@ -7,10 +7,10 @@
     "tagline": "World Cup Knockout Prediction Derby"
   },
   "meta": {
-    "updated_at": "2026-07-16 06:00 BJT",
+    "updated_at": "2026-07-16 06:10 BJT",
     "active_day": "2026-07-15",
     "timezone": "Asia/Beijing",
-    "version": "knockout-auto-202607152200"
+    "version": "knockout-auto-202607152210"
   },
   "phase": "knockout",
   "archive": {
@@ -1916,14 +1916,6 @@
   ],
   "update_log": [
     {
-      "time": "07-16 04:00",
-      "text": "射手榜待核对：法国 vs 西班牙 已有进球，但 ESPN scoring plays 暂未解析出进球者。"
-    },
-    {
-      "time": "07-16 04:10",
-      "text": "射手榜待核对：法国 vs 西班牙 已有进球，但 ESPN scoring plays 暂未解析出进球者。"
-    },
-    {
       "time": "07-16 04:20",
       "text": "射手榜待核对：法国 vs 西班牙 已有进球，但 ESPN scoring plays 暂未解析出进球者。"
     },
@@ -1993,6 +1985,14 @@
     },
     {
       "time": "07-16 06:00",
+      "text": "射手榜待核对：英格兰 vs 阿根廷 已有进球，但 ESPN scoring plays 暂未解析出进球者。"
+    },
+    {
+      "time": "07-16 06:10",
+      "text": "射手榜待核对：法国 vs 西班牙 已有进球，但 ESPN scoring plays 暂未解析出进球者。"
+    },
+    {
+      "time": "07-16 06:10",
       "text": "射手榜待核对：英格兰 vs 阿根廷 已有进球，但 ESPN scoring plays 暂未解析出进球者。"
     }
   ],
