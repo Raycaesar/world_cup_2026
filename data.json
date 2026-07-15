@@ -2031,7 +2031,7 @@
     },
     {
       "time": "07-16 07:30",
-      "text": "页面进入决赛前低压氛围；冠军产生后自动触发 🎉 与 Confetti。"
+      "text": "页面进入决赛前低压氛围i。"
     }
   ],
   "live_ticker": [
@@ -2155,7 +2155,7 @@
       "note": "Ray 押冷门价值；GPT 原押西班牙天才，但承认伤病是风险。"
     }
   ],
-  "prediction_release_note": "最后两场预测已发布。冠军产生前页面保持决战前氛围；决赛结算后自动触发冠军庆祝动画。",
+  "prediction_release_note": "最后两场预测已发布。页面保持决战前氛围。",
   "prediction_release_plan": [
     {
       "match_id": "can-mar-20260705",
