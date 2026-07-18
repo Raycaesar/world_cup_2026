@@ -7,10 +7,10 @@
     "tagline": "World Cup Final Prediction Derby"
   },
   "meta": {
-    "updated_at": "2026-07-16 08:20 BJT",
+    "updated_at": "2026-07-19 07:27 BJT",
     "active_day": "2026-07-19 / 2026-07-20",
     "timezone": "Asia/Beijing",
-    "version": "final-bracket-order-fix-202607160820"
+    "version": "knockout-auto-202607182327"
   },
   "phase": "knockout",
   "archive": {
@@ -22,8 +22,8 @@
     "gpt_total": 90,
     "leader_comment": "GPT 5.5 以 90:71 领先 Ray。最后两场已录入；Ray 的阿根廷冠军大奖仍保留翻盘可能。"
   },
-  "headline": "终局预测发布：法国/英格兰争季军，西班牙/阿根廷争冠军",
-  "brief": "半决赛已结算：西班牙 2:0 法国，阿根廷 2:1 英格兰。最后两场预测已录入；赛前页面进入压抑的决战氛围。",
+  "headline": "淘汰赛更新：法国 4:6 英格兰",
+  "brief": "最新淘汰赛已结算：法国 4:6 英格兰，Ray +0，GPT +0。",
   "knockout_rules": [
     "只有一方猜中晋级队时，猜中者先得 3 分；若同时猜中晋级方式，再得 1 分；若90分钟比分完全命中，再得 1 分，单场最高 5 分。",
     "双方都猜中晋级队时，不重复给胜负分，只比较晋级方式与90分钟比分：方式正确 +1，90分钟比分完全命中再 +1。",
@@ -1283,28 +1283,31 @@
     },
     {
       "id": "fra-eng-20260719",
-      "espn_id": "53452539",
+      "espn_id": "760516",
       "round": "季军赛",
       "kickoff_local": "07-19 05:00 BJT",
       "home": "法国",
       "away": "英格兰",
       "venue": "迈阿密 Hard Rock Stadium",
-      "status": "未开始",
+      "status": "已结束",
       "release_at_utc": "2026-07-16T00:00:00Z",
       "release_time_bjt": "2026-07-16 08:00 BJT",
       "published": true,
       "predictions_published_at": "2026-07-16 07:30 BJT",
       "actual": {
-        "method": null,
+        "method": "90",
         "regulation_score": {
-          "home_score": null,
-          "away_score": null
+          "home_score": 4,
+          "away_score": 6
         },
         "final_score": {
-          "home_score": null,
-          "away_score": null
+          "home_score": 4,
+          "away_score": 6
         },
-        "advancing_team": null
+        "advancing_team": "英格兰",
+        "scorer_update_pending": true,
+        "next_match": "",
+        "scorer_update_status": "needs_manual_goal_scorers"
       },
       "ray_prediction": {
         "advancing_team": "法国",
@@ -1326,8 +1329,12 @@
         "label": "法国 2:1 英格兰，法国90分钟拿下季军",
         "reason": "GPT 认为法国仍有姆巴佩争金靴和回应半决赛失利的动机，英格兰连续硬仗后体能与心理消耗更大。"
       },
-      "manual_points": null,
-      "review": "赛前预测。"
+      "manual_points": {
+        "ray": 0,
+        "gpt": 0,
+        "explanation": "双方都未猜中晋级队，本场不计分。"
+      },
+      "review": "法国 4:6 英格兰，英格兰晋级。双方都未猜中晋级队，本场不计分。"
     },
     {
       "id": "esp-arg-20260720",
@@ -1397,11 +1404,19 @@
       "kickoff_local": "07-19 05:00 BJT",
       "home": "法国",
       "away": "英格兰",
-      "status": "未开始",
-      "winner": null,
-      "method": null,
-      "score": null,
-      "note": "赛前预测。"
+      "status": "已结束",
+      "winner": "英格兰",
+      "method": "90",
+      "score": "4:6",
+      "note": "英格兰通过90分钟晋级",
+      "score_obj": {
+        "home_score": 4,
+        "away_score": 6
+      },
+      "regulation_score": {
+        "home_score": 4,
+        "away_score": 6
+      }
     },
     {
       "id": "53452533",
@@ -2032,6 +2047,14 @@
     {
       "time": "07-16 07:30",
       "text": "页面进入决赛前低压氛围。"
+    },
+    {
+      "time": "07-19 07:27",
+      "text": "淘汰赛更新：法国 4:6 英格兰，Ray +0，GPT +0。"
+    },
+    {
+      "time": "07-19 07:27",
+      "text": "射手榜待核对：法国 vs 英格兰 已有进球，但 ESPN scoring plays 暂未解析出进球者。"
     }
   ],
   "live_ticker": [
@@ -2122,7 +2145,6 @@
       "note": "巴西已出局。"
     }
   ],
-  
   "tournament_picks": [
     {
       "name": "冠军",
