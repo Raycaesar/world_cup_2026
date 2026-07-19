@@ -19,11 +19,11 @@
   },
   "score_summary": {
     "ray_total": 71,
-    "gpt_total": 103,
-    "leader_comment": "GPT 5.5 以 103:71 领先 Ray。"
+    "gpt_total": 98,
+    "leader_comment": "GPT 5.5 以 98:71 领先 Ray。"
   },
   "headline": "淘汰赛更新：西班牙 1:0（加时） 阿根廷",
-  "brief": "世界杯落幕：西班牙 1:0（加时） 阿根廷，Ray +0，GPT +3。GPT 5.5 命中金童奖和金靴奖 + 10，最终以 103:71 战胜 Ray。Ray的失败不代表人类懂球能力比AI差，但GPT 5.5 的表现确实令人印象深刻！",
+  "brief": "世界杯落幕：西班牙 1:0（加时） 阿根廷，Ray +0，GPT +3。GPT 5.5 命中金靴奖 + 5，最终以 98:71 战胜 Ray。Ray的失败不代表人类懂球能力比AI差，但GPT 5.5 的表现确实令人印象深刻！",
   "knockout_rules": [
     "只有一方猜中晋级队时，猜中者先得 3 分；若同时猜中晋级方式，再得 1 分；若90分钟比分完全命中，再得 1 分，单场最高 5 分。",
     "双方都猜中晋级队时，不重复给胜负分，只比较晋级方式与90分钟比分：方式正确 +1，90分钟比分完全命中再 +1。",
@@ -2121,25 +2121,25 @@
       "minutes": 493,
       "note": "阿根廷决赛完全被动，梅西无力再刷进球。"
     },
-    
-    {
+     {
       "rank": 3,
+      "player": "Jude Bellingham",
+      "team": "英格兰",
+      "goals": 7,
+      "assists": 1,
+      "minutes": 520,
+      "note": "世界杯落幕。"
+    },
+    {
+      "rank": 4,
       "player": "Erling Haaland",
       "team": "挪威",
       "goals": 7,
       "assists": 0,
       "minutes": 430,
-      "note": "挪威已出局。"
+      "note": "世界杯落幕。"
     },
-    {
-      "rank": 4,
-      "player": "Jude Bellingham",
-      "team": "英格兰",
-      "goals": 6,
-      "assists": 1,
-      "minutes": 520,
-      "note": "英格兰仍有季军赛。"
-    },
+   
     {
       "rank": 5,
       "player": "Ousmane Dembélé",
@@ -2147,7 +2147,7 @@
       "goals": 6,
       "assists": 2,
       "minutes": 410,
-      "note": "法国仍有季军赛。"
+      "note": "世界杯落幕。"
     },
     {
       "rank": 6,
@@ -2156,7 +2156,7 @@
       "goals": 6,
       "assists": 1,
       "minutes": 560,
-      "note": "英格兰仍有季军赛。"
+      "note": "世界杯落幕。"
     },
     
     {
@@ -2166,7 +2166,7 @@
       "goals": 5,
       "assists": 1,
       "minutes": 420,
-      "note": "西班牙进入决赛。"
+      "note": "世界杯落幕。"
     },
     {
       "rank": 8,
@@ -2175,7 +2175,7 @@
       "goals": 4,
       "assists": 1,
       "minutes": 360,
-      "note": "巴西已出局。"
+      "note": "世界杯落幕。"
     }
   ],
   "tournament_picks": [
