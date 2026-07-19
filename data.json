@@ -1,7 +1,7 @@
 {
   "site": {
     "title": "Ray大战GPT 5.5｜淘汰赛篇",
-    "subtitle": "决赛前夜：法国/英格兰季军战，西班牙/阿根廷向冠军冲刺。",
+    "subtitle": "决赛落幕：西班牙是冠军！",
     "status": "FINAL COUNTDOWN",
     "refresh_seconds": 30,
     "tagline": "World Cup Final Prediction Derby"
@@ -19,11 +19,11 @@
   },
   "score_summary": {
     "ray_total": 71,
-    "gpt_total": 93,
-    "leader_comment": "GPT 5.5 以 93:71 领先 Ray。"
+    "gpt_total": 103,
+    "leader_comment": "GPT 5.5 以 103:71 领先 Ray。"
   },
   "headline": "淘汰赛更新：西班牙 1:0（加时） 阿根廷",
-  "brief": "最新淘汰赛已结算：西班牙 1:0（加时） 阿根廷，Ray +0，GPT +3。",
+  "brief": "世界杯落幕：西班牙 1:0（加时） 阿根廷，Ray +0，GPT +3。GPT 5.5 命中金童奖和金靴奖 + 10，最终以 103:71 战胜 Ray。Ray的失败不代表人类懂球能力比AI差，但GPT 5.5 的表现确实令人印象深刻！",
   "knockout_rules": [
     "只有一方猜中晋级队时，猜中者先得 3 分；若同时猜中晋级方式，再得 1 分；若90分钟比分完全命中，再得 1 分，单场最高 5 分。",
     "双方都猜中晋级队时，不重复给胜负分，只比较晋级方式与90分钟比分：方式正确 +1，90分钟比分完全命中再 +1。",
@@ -2105,22 +2105,23 @@
   "top_scorers": [
     {
       "rank": 1,
+      "player": "Kylian Mbappé",
+      "team": "法国",
+      "goals": 10,
+      "assists": 4,
+      "minutes": 558,
+      "note": "季军战又刷两球。"
+    },
+    {
+      "rank": 2,
       "player": "Lionel Messi",
       "team": "阿根廷",
       "goals": 8,
       "assists": 4,
       "minutes": 493,
-      "note": "半决赛对英格兰送出两次助攻；与姆巴佩同为8球，助攻持平时暂按出场时间优势列前。"
+      "note": "阿根廷决赛完全被动，梅西无力再刷进球。"
     },
-    {
-      "rank": 2,
-      "player": "Kylian Mbappé",
-      "team": "法国",
-      "goals": 8,
-      "assists": 3,
-      "minutes": 558,
-      "note": "法国还有季军赛；金靴仍可能在最后一战改写。"
-    },
+    
     {
       "rank": 3,
       "player": "Erling Haaland",
@@ -2141,6 +2142,15 @@
     },
     {
       "rank": 5,
+      "player": "Ousmane Dembélé",
+      "team": "法国",
+      "goals": 6,
+      "assists": 2,
+      "minutes": 410,
+      "note": "法国仍有季军赛。"
+    },
+    {
+      "rank": 6,
       "player": "Harry Kane",
       "team": "英格兰",
       "goals": 6,
@@ -2148,15 +2158,7 @@
       "minutes": 560,
       "note": "英格兰仍有季军赛。"
     },
-    {
-      "rank": 6,
-      "player": "Ousmane Dembélé",
-      "team": "法国",
-      "goals": 5,
-      "assists": 2,
-      "minutes": 410,
-      "note": "法国仍有季军赛。"
-    },
+    
     {
       "rank": 7,
       "player": "Mikel Oyarzabal",
