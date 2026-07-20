@@ -151,14 +151,190 @@
     }
   </style>
 
+  <style id="final-archive-summary">
+    body.champion-decided {
+      background:
+        radial-gradient(circle at 50% -10%, rgba(248, 201, 71, .16), transparent 30rem),
+        radial-gradient(circle at 14% 18%, rgba(116, 231, 255, .13), transparent 27rem),
+        radial-gradient(circle at 86% 14%, rgba(255, 82, 82, .12), transparent 25rem),
+        linear-gradient(145deg, #030609 0%, #08131b 48%, #120b08 100%);
+    }
+    body.champion-decided .hero-copy::after {
+      content: "FINAL ARCHIVE";
+      position: absolute;
+      left: 0;
+      bottom: 0;
+      font-family: var(--display);
+      letter-spacing: .15em;
+      color: rgba(248, 201, 71, .20);
+      font-size: clamp(28px, 7vw, 88px);
+      line-height: .8;
+      pointer-events: none;
+      mix-blend-mode: screen;
+    }
+    body.champion-decided .pulse {
+      animation: none;
+      background: #f8c947;
+      box-shadow: 0 0 16px rgba(248, 201, 71, .72);
+    }
+    body.champion-decided .headline-panel {
+      background: linear-gradient(135deg, rgba(66, 50, 10, .60), rgba(7, 31, 44, .72));
+      border-color: rgba(248, 201, 71, .22);
+    }
+    .final-summary-panel {
+      overflow: hidden;
+      background:
+        radial-gradient(circle at 10% 0%, rgba(116, 231, 255, .10), transparent 24rem),
+        radial-gradient(circle at 90% 0%, rgba(248, 201, 71, .12), transparent 24rem),
+        rgba(5, 15, 23, .74);
+    }
+    .final-score-banner {
+      display: grid;
+      grid-template-columns: 1fr auto 1fr;
+      align-items: center;
+      gap: 18px;
+      margin: 24px 0 14px;
+      padding: 24px;
+      border: 1px solid rgba(255,255,255,.10);
+      border-radius: 24px;
+      background: rgba(255,255,255,.045);
+    }
+    .final-score-side {
+      display: grid;
+      gap: 4px;
+      text-align: center;
+    }
+    .final-score-side span {
+      color: rgba(255,255,255,.68);
+      font-weight: 800;
+      letter-spacing: .08em;
+      text-transform: uppercase;
+    }
+    .final-score-side strong {
+      font-family: var(--display);
+      font-size: clamp(46px, 8vw, 92px);
+      line-height: .9;
+    }
+    .final-score-side.gpt strong { color: #74e7ff; }
+    .final-score-side.ray strong { color: #ff8f8f; }
+    .final-score-divider {
+      color: rgba(255,255,255,.48);
+      font-family: var(--display);
+      font-size: clamp(22px, 4vw, 44px);
+    }
+    .final-summary-subtitle {
+      max-width: 980px;
+      color: rgba(255,255,255,.78);
+      line-height: 1.75;
+      font-size: 1.02rem;
+    }
+    .archive-subhead {
+      margin: 30px 0 14px;
+      font-family: var(--display);
+      font-size: clamp(21px, 3vw, 32px);
+      letter-spacing: .04em;
+    }
+    .score-trend {
+      display: grid;
+      gap: 12px;
+    }
+    .trend-row {
+      display: grid;
+      grid-template-columns: minmax(110px, 180px) minmax(0, 1fr) auto;
+      gap: 16px;
+      align-items: center;
+      padding: 14px 16px;
+      border: 1px solid rgba(255,255,255,.08);
+      border-radius: 18px;
+      background: rgba(255,255,255,.035);
+    }
+    .trend-stage strong { display: block; }
+    .trend-stage small { color: rgba(255,255,255,.58); line-height: 1.35; }
+    .trend-bars { display: grid; gap: 8px; }
+    .trend-bar-line {
+      display: grid;
+      grid-template-columns: 44px minmax(0, 1fr) 34px;
+      gap: 8px;
+      align-items: center;
+      font-size: .84rem;
+      font-weight: 800;
+    }
+    .trend-track {
+      height: 10px;
+      overflow: hidden;
+      border-radius: 999px;
+      background: rgba(255,255,255,.07);
+    }
+    .trend-fill { height: 100%; border-radius: inherit; }
+    .trend-fill.ray { background: linear-gradient(90deg, #ff6a6a, #ffb0b0); }
+    .trend-fill.gpt { background: linear-gradient(90deg, #3bc9eb, #8be9ff); }
+    .trend-margin {
+      min-width: 78px;
+      text-align: right;
+      color: #f8c947;
+      font-weight: 900;
+    }
+    .turning-point-grid,
+    .reflection-grid {
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 14px;
+    }
+    .turning-point-card,
+    .reflection-card {
+      padding: 18px;
+      border: 1px solid rgba(255,255,255,.09);
+      border-radius: 20px;
+      background: rgba(255,255,255,.035);
+    }
+    .turning-point-card strong,
+    .reflection-card h3 { margin: 0 0 7px; }
+    .turning-point-card b {
+      display: inline-block;
+      margin-bottom: 8px;
+      color: #f8c947;
+    }
+    .turning-point-card p,
+    .reflection-card p {
+      margin: 0;
+      color: rgba(255,255,255,.74);
+      line-height: 1.65;
+    }
+    .reflection-card.wide { grid-column: 1 / -1; }
+    .method-lessons {
+      margin: 0;
+      padding-left: 1.25rem;
+      color: rgba(255,255,255,.76);
+      line-height: 1.7;
+    }
+    .archive-seal {
+      margin-top: 22px;
+      padding: 13px 16px;
+      border: 1px solid rgba(248,201,71,.20);
+      border-radius: 16px;
+      color: rgba(255,247,200,.82);
+      background: rgba(248,201,71,.055);
+      text-align: center;
+      font-weight: 800;
+    }
+    @media (max-width: 760px) {
+      .final-score-banner { grid-template-columns: 1fr; }
+      .final-score-divider { transform: rotate(90deg); justify-self: center; }
+      .trend-row { grid-template-columns: 1fr; }
+      .trend-margin { text-align: left; }
+      .turning-point-grid, .reflection-grid { grid-template-columns: 1fr; }
+      .reflection-card.wide { grid-column: auto; }
+    }
+  </style>
+
 </head>
 <body>
 
   <div class="champion-celebration" id="championCelebration" hidden aria-live="polite">
     <canvas class="champion-confetti-canvas" id="confettiCanvas" aria-hidden="true"></canvas>
     <div class="celebration-card">
-      <span class="celebration-emoji" aria-hidden="true">🎉🏆🎉</span>
-      <h2 class="celebration-title" id="celebrationTitle">冠军产生</h2>
+      <span class="celebration-emoji" aria-hidden="true">🎉</span>
+      <h2 class="celebration-title" id="celebrationTitle">冠军产生后显示</h2>
       <p class="celebration-copy" id="celebrationCopy">World Cup champion confirmed.</p>
     </div>
   </div>
@@ -174,7 +350,7 @@
         <span class="brand-copy">Ray <em>vs</em> GPT 5.5</span>
       </a>
       <div class="topbar-actions">
-        <a href="#next" class="nav-link">下一场</a>
+        <a href="#final-summary" class="nav-link">终局</a>
         <a href="#bracket" class="nav-link">对阵图</a>
         <a href="#reviews" class="nav-link">复盘</a>
         <a href="#awards" class="nav-link">大奖</a>
@@ -189,18 +365,18 @@
         <div class="hero-emblems" aria-label="世界杯标志区">
           <div class="trophy-mark" title="大力神杯">
             <span class="trophy-cup">🏆</span>
-            <span class="trophy-text">KNOCKOUT STAGE</span>
+            <span class="trophy-text">FINAL ARCHIVE</span>
           </div>
           <div class="host-logo" title="美加墨世界杯">
             <span class="wc26">16</span>
-            <span class="host-text">WIN OR GO HOME</span>
+            <span class="host-text">TOURNAMENT COMPLETE</span>
           </div>
         </div>
         <p class="eyebrow" id="tagline">World Cup Knockout Prediction Derby</p>
         <h1 id="pageTitle">Ray大战GPT 5.5｜淘汰赛篇</h1>
         <p class="subtitle" id="pageSubtitle">1/4决赛开战：8强预测已录入，比分与战报继续自动更新。</p>
         <div class="hero-actions">
-          <a href="#next" class="button primary">查看下一场预测</a>
+          <a href="#final-summary" class="button primary">查看终局复盘</a>
           <a href="archive.html" class="button ghost">小组赛归档</a>
         </div>
       </div>
@@ -223,12 +399,12 @@
     <div class="meta-strip">
       <div><span class="meta-label">当前阶段</span><strong id="activeDay">—</strong></div>
       <div><span class="meta-label">最后更新</span><strong id="updatedAt">—</strong></div>
-      <div><span class="meta-label">自动刷新</span><strong id="refreshInfo">—</strong></div>
+      <div><span class="meta-label">归档状态</span><strong id="refreshInfo">—</strong></div>
     </div>
 
     <section class="live-ticker" aria-label="淘汰赛实时贴纸">
       <div class="live-ticker-inner">
-        <span class="live-ticker-label"><span class="pulse"></span> LIVE STICKER</span>
+        <span class="live-ticker-label"><span class="pulse"></span> FINAL ARCHIVE</span>
         <div class="live-ticker-track" id="liveTicker"></div>
       </div>
     </section>
@@ -236,20 +412,54 @@
 
   <main class="layout knockout-layout">
     <section class="panel headline-panel wide" id="briefing">
-      <div class="section-kicker">Knockout brief</div>
+      <div class="section-kicker">Final archive</div>
       <h2 id="headline">淘汰赛准备中。</h2>
       <p id="brief">页面会读取 data.json 中的淘汰赛预测。</p>
     </section>
 
-    <section class="panel wide" id="next">
+    <section class="panel wide final-summary-panel" id="final-summary">
       <div class="section-head">
         <div>
-          <div class="section-kicker">Next knockout match</div>
-          <h2>下一场竞猜</h2>
+          <div class="section-kicker">Final verdict</div>
+          <h2 id="finalSummaryTitle">终局复盘</h2>
         </div>
-        <span class="badge" id="matchCount">0 matches</span>
+        <span class="badge hot">Archived</span>
       </div>
-      <div class="knockout-match-list" id="matchList"></div>
+
+      <div class="final-score-banner" aria-label="最终比分">
+        <div class="final-score-side ray"><span>Ray</span><strong id="finalRayScore">0</strong></div>
+        <div class="final-score-divider">:</div>
+        <div class="final-score-side gpt"><span>GPT 5.5</span><strong id="finalGptScore">0</strong></div>
+      </div>
+      <p class="final-summary-subtitle" id="finalSummarySubtitle">终局总结待载入。</p>
+
+      <h3 class="archive-subhead">比分走势</h3>
+      <div class="score-trend" id="scoreTrend"></div>
+
+      <h3 class="archive-subhead">关键转折</h3>
+      <div class="turning-point-grid" id="turningPointGrid"></div>
+
+      <h3 class="archive-subhead">获胜感言与方法反思</h3>
+      <div class="reflection-grid">
+        <article class="reflection-card wide">
+          <h3 id="winnerReflectionHeadline">胜者复盘</h3>
+          <p id="winnerReflectionStatement"></p>
+        </article>
+        <article class="reflection-card">
+          <h3>对 Ray 的评价</h3>
+          <p id="respectForRay"></p>
+        </article>
+        <article class="reflection-card">
+          <h3>方法心得</h3>
+          <ol class="method-lessons" id="methodLessons"></ol>
+        </article>
+        <article class="reflection-card wide">
+          <h3>决赛复盘</h3>
+          <p id="finalMatchSummary"></p>
+          <p id="refereeingNote" style="margin-top:10px"></p>
+        </article>
+      </div>
+      <div class="archive-seal" id="archiveSeal">赛事资料已封存。</div>
     </section>
 
     <section class="panel wide" id="bracket">
@@ -277,10 +487,10 @@
     <section class="panel equal-panel awards-rules-panel" id="awards">
       <div class="section-head">
         <div>
-          <div class="section-kicker">Pre-tournament awards</div>
-          <h2>赛前大奖预测</h2>
+          <div class="section-kicker">Awards settlement</div>
+          <h2>赛前大奖预测与结算</h2>
         </div>
-        <span class="badge">Long bets</span>
+        <span class="badge">Final results</span>
       </div>
       <div class="award-grid compact-award-grid" id="awardGrid"></div>
 
@@ -298,7 +508,7 @@
     <section class="panel equal-panel scorers-panel" id="scorers">
       <div class="section-head">
         <div>
-          <div class="section-kicker">Golden boot watch</div>
+          <div class="section-kicker">Golden boot final</div>
           <h2>射手榜</h2>
         </div>
         <span class="badge">Top scorers</span>
@@ -334,7 +544,7 @@
   </main>
 
   <footer class="footer">
-    <p>Ray 大战 GPT 5.5 · 淘汰赛主页 · <a href="#reviews">淘汰赛复盘</a> · <a href="archive.html">小组赛归档</a> · 修改 <code>data.json</code> 即可更新。</p>
+    <p>Ray 大战 GPT 5.5 · 2026世界杯竞猜永久归档 · <a href="#final-summary">终局复盘</a> · <a href="#reviews">逐场复盘</a> · <a href="archive.html">小组赛归档</a></p>
   </footer>
 
   <script>
@@ -350,6 +560,8 @@
       live_ticker: [],
       top_scorers: [],
       tournament_picks: [],
+      final_summary: { score_trend: [], turning_points: [], method_lessons: [] },
+      archive_status: { sealed: true, automatic_updates: false },
       update_log: []
     };
 
@@ -591,7 +803,12 @@
       box.innerHTML = "";
       const items = tickerItemsFromMatches(data);
       if (!items.length) {
-        box.appendChild(create("span", "live-ticker-item muted", "暂无正在进行或即将开始的淘汰赛"));
+        const summary = data.final_summary || {};
+        const score = summary.final_score || data.score_summary || {};
+        const finalText = score.gpt !== undefined
+          ? `赛事结束 · GPT 5.5 ${score.gpt}:${score.ray} Ray`
+          : "赛事已结束，页面进入永久归档";
+        box.appendChild(create("span", "live-ticker-item muted", finalText));
         return;
       }
       items.forEach(x => {
@@ -620,6 +837,77 @@
         box.appendChild(row);
       });
       document.getElementById("scorerSource").textContent = data.top_scorers_source || "射手榜待更新。";
+    }
+
+
+    function renderFinalSummary(data) {
+      const summary = data.final_summary || {};
+      const finalScore = summary.final_score || data.score_summary || {};
+      const ray = Number(finalScore.ray ?? finalScore.ray_total ?? 0);
+      const gpt = Number(finalScore.gpt ?? finalScore.gpt_total ?? 0);
+
+      document.getElementById("finalSummaryTitle").textContent = summary.title || "终局复盘";
+      document.getElementById("finalSummarySubtitle").textContent = summary.subtitle || data.brief || "";
+      document.getElementById("finalRayScore").textContent = ray;
+      document.getElementById("finalGptScore").textContent = gpt;
+
+      const trendBox = document.getElementById("scoreTrend");
+      trendBox.innerHTML = "";
+      const trend = Array.isArray(summary.score_trend) ? summary.score_trend : [];
+      const maxScore = Math.max(100, ...trend.flatMap(item => [Number(item.ray || 0), Number(item.gpt || 0)]));
+      trend.forEach(item => {
+        const row = create("article", "trend-row");
+        const stage = create("div", "trend-stage");
+        stage.appendChild(create("strong", "", text(item.stage)));
+        stage.appendChild(create("small", "", text(item.note, "")));
+        row.appendChild(stage);
+
+        const bars = create("div", "trend-bars");
+        [["Ray", Number(item.ray || 0), "ray"], ["GPT", Number(item.gpt || 0), "gpt"]].forEach(([label, value, cls]) => {
+          const line = create("div", "trend-bar-line");
+          line.appendChild(create("span", "", label));
+          const track = create("div", "trend-track");
+          const fill = create("div", `trend-fill ${cls}`);
+          fill.style.width = `${Math.max(0, Math.min(100, value / maxScore * 100))}%`;
+          track.appendChild(fill);
+          line.appendChild(track);
+          line.appendChild(create("strong", "", String(value)));
+          bars.appendChild(line);
+        });
+        row.appendChild(bars);
+        row.appendChild(create("div", "trend-margin", `${text(item.leader)} +${Math.abs(Number(item.margin || 0))}`));
+        trendBox.appendChild(row);
+      });
+      if (!trend.length) trendBox.appendChild(create("p", "empty", "比分走势待补充。"));
+
+      const turningBox = document.getElementById("turningPointGrid");
+      turningBox.innerHTML = "";
+      const turningPoints = Array.isArray(summary.turning_points) ? summary.turning_points : [];
+      turningPoints.forEach(item => {
+        const card = create("article", "turning-point-card");
+        card.appendChild(create("strong", "", text(item.event)));
+        card.appendChild(create("b", "", text(item.impact, "")));
+        card.appendChild(create("p", "", text(item.note, "")));
+        turningBox.appendChild(card);
+      });
+      if (!turningPoints.length) turningBox.appendChild(create("p", "empty", "关键转折待补充。"));
+
+      const reflection = summary.winner_reflection || {};
+      document.getElementById("winnerReflectionHeadline").textContent = reflection.headline || "胜者复盘";
+      document.getElementById("winnerReflectionStatement").textContent = reflection.statement || "";
+      document.getElementById("respectForRay").textContent = reflection.respect_for_ray || "";
+
+      const lessons = document.getElementById("methodLessons");
+      lessons.innerHTML = "";
+      (summary.method_lessons || []).forEach(item => lessons.appendChild(create("li", "", item)));
+      if (!lessons.children.length) lessons.appendChild(create("li", "", "方法总结待补充。"));
+
+      const finalReflection = summary.final_match_reflection || {};
+      document.getElementById("finalMatchSummary").textContent = finalReflection.summary || "";
+      document.getElementById("refereeingNote").textContent = finalReflection.refereeing_note || "";
+
+      const archive = data.archive_status || {};
+      document.getElementById("archiveSeal").textContent = archive.note || "赛事资料已封存，不再自动更新。";
     }
 
     function renderAwards(data) {
@@ -756,7 +1044,7 @@
         const isR32 = roundType === "r32";
         const roundName = isFinal ? "冠军战对阵图" : isThird ? "季军赛对阵图" : isSemi ? "半决赛对阵图" : isQuarter ? "8强对阵图" : isR16 ? "16强对阵图" : isR32 ? "32强对阵图" : `${round}对阵图`;
         const finished = matches.every(item => item.status === "已结束" || item.winner);
-        const roundNote = isFinal ? (finished ? "冠军已产生" : "大战前夜") : isThird ? (finished ? "季军归属已定" : "三四名战") : (isSemi || isQuarter || isR16 || isR32) ? "已完赛，附比分并高亮胜者" : "淘汰赛对阵";
+        const roundNote = isFinal ? (finished ? "冠军已产生，庆祝动画生效" : "大战前夜，冠军产生后自动庆祝") : isThird ? (finished ? "季军归属已定" : "三四名战，通常更开放") : (isSemi || isQuarter || isR16 || isR32) ? "已完赛，附比分并高亮胜者" : "淘汰赛对阵";
         summary.appendChild(create("span", "", roundName));
         summary.appendChild(create("strong", "", `${matches.length} 场`));
         summary.appendChild(create("em", "", roundNote));
@@ -838,8 +1126,8 @@
       celebration.hidden = false;
       const title = document.getElementById("celebrationTitle");
       const copy = document.getElementById("celebrationCopy");
-      if (title) title.textContent = `🎉🏆🎉 ${champion} 捧起大力神杯`;
-      if (copy) copy.textContent = "2026年世界杯冠军！";
+      if (title) title.textContent = `🎉 ${champion} 捧起大力神杯`;
+      if (copy) copy.textContent = "冠军已产生，Ray vs GPT 5.5 终局结算开启。";
       if (!celebrationLaunched) {
         celebrationLaunched = true;
         celebration.classList.remove("settled", "closing");
@@ -906,12 +1194,12 @@
       document.getElementById("pageTitle").textContent = site.title || FALLBACK_DATA.site.title;
       document.getElementById("pageSubtitle").textContent = site.subtitle || "";
       document.getElementById("tagline").textContent = site.tagline || FALLBACK_DATA.site.tagline;
-      document.getElementById("liveStatus").textContent = site.status || "KNOCKOUT";
+      document.getElementById("liveStatus").textContent = site.status === "TOURNAMENT COMPLETE" ? "ARCHIVED" : (site.status || "KNOCKOUT");
       setFinalAtmosphere(data);
       document.getElementById("activeDay").textContent = `${meta.active_day || "—"} · ${meta.timezone || ""}`;
       document.getElementById("updatedAt").textContent = meta.updated_at || "—";
-      const refresh = Number(site.refresh_seconds || 30);
-      document.getElementById("refreshInfo").textContent = `${refresh}s`;
+      const refresh = Number(site.refresh_seconds ?? 0);
+      document.getElementById("refreshInfo").textContent = refresh > 0 ? `${refresh}s` : "已封存";
       document.getElementById("headline").textContent = data.headline || FALLBACK_DATA.headline;
       document.getElementById("brief").textContent = data.brief || FALLBACK_DATA.brief;
       const totals = data.score_summary || FALLBACK_DATA.score_summary;
@@ -920,19 +1208,9 @@
       document.getElementById("rayBoard").textContent = totals.ray_total || 0;
       document.getElementById("gptBoard").textContent = totals.gpt_total || 0;
       document.getElementById("leaderComment").textContent = totals.leader_comment || "";
-      document.getElementById("leaderBadge").textContent = Number(totals.ray_total || 0) >= Number(totals.gpt_total || 0) ? "Ray" : "GPT leads";
+      document.getElementById("leaderBadge").textContent = totals.final ? "Final winner" : (Number(totals.ray_total || 0) >= Number(totals.gpt_total || 0) ? "Ray" : "GPT leads");
 
-      const matches = (data.knockout_matches || [])
-        .filter(m => !(m.actual && m.actual.advancing_team))
-        .filter(predictionReleased)
-        .sort((a, b) => parseBjDateTime(a.kickoff_local) - parseBjDateTime(b.kickoff_local));
-
-      document.getElementById("matchCount").textContent = `${matches.length} match${matches.length === 1 ? "" : "es"}`;
-      const list = document.getElementById("matchList");
-      list.innerHTML = "";
-      if (!matches.length) list.appendChild(create("p", "empty", data.prediction_release_note || "下一场预测待填写。"));
-      matches.forEach(match => list.appendChild(renderKnockoutMatch(match)));
-
+      renderFinalSummary(data);
       renderLiveTicker(data);
       renderTopScorers(data);
       renderAwards(data);
@@ -941,8 +1219,11 @@
       renderRules(data);
       renderUpdateLog(data);
 
-      if (refreshTimer) clearTimeout(refreshTimer);
-      refreshTimer = setTimeout(loadData, Math.max(refresh, 10) * 1000);
+      if (refreshTimer) {
+        clearTimeout(refreshTimer);
+        refreshTimer = null;
+      }
+      if (refresh > 0) refreshTimer = setTimeout(loadData, Math.max(refresh, 10) * 1000);
     }
 
     async function loadData() {
